@@ -125,6 +125,10 @@
       "status": "directory",
       "items": []
     },
+    "ai-frontline": {
+      "status": "directory",
+      "items": []
+    },
     "techcrunch-ai": {
       "status": "ok",
       "checkedAt": "2026-11-04T11:00:41Z",
@@ -1460,6 +1464,10 @@
       "status": "directory",
       "items": []
     },
+    "baai-wechat": {
+      "status": "directory",
+      "items": []
+    },
     "shlab": {
       "status": "directory",
       "items": []
@@ -2510,6 +2518,10 @@
         }
       ]
     },
+    "meituan-wechat": {
+      "status": "directory",
+      "items": []
+    },
     "mindspore": {
       "status": "directory",
       "items": []
@@ -3317,6 +3329,10 @@
         }
       ]
     },
+    "paperweekly": {
+      "status": "directory",
+      "items": []
+    },
     "openreview": {
       "status": "directory",
       "items": []
@@ -3621,22 +3637,6 @@
           "description": "Intelligence Index 54 · Google"
         }
       ]
-    },
-    "baai-wechat": {
-      "status": "directory",
-      "items": []
-    },
-    "meituan-wechat": {
-      "status": "directory",
-      "items": []
-    },
-    "paperweekly": {
-      "status": "directory",
-      "items": []
-    },
-    "ai-frontline": {
-      "status": "directory",
-      "items": []
     }
   }
 }

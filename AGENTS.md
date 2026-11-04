@@ -7,6 +7,7 @@ This repository is an index of original AI information sources. The source regis
 - Show all registered source channels by default, even when a channel is quiet or its fetch fails.
 - Link to the publisher's official index and original item. Store only title, date, publisher categories, link, and the publisher-provided teaser or paper abstract when available. Rankings may store current order and a public description. Never generate a teaser or copy full articles.
 - Preserve a publisher's native sections and item labels. The site's broad groups only organize the directory.
+- Group sources by the content readers seek, then label each source `zh` or `non_zh` based on the linked page's primary reading language. Language is a second-level display grouping; distribution channel (including WeChat) is not a standalone content group. Place rankings with the projects or resources they rank.
 - Rankings are current snapshots. Never call a trending repository “published today.”
 - Distinguish `directory`, `pending`, `ok`, and `error`. On errors, retain the last successful items and never claim they were freshly checked.
 - A missing feed is not a reason to drop a valuable source. Keep it as a link until a stable public extraction path is verified.

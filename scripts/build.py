@@ -20,6 +20,7 @@ def main():
         assert source["id"] not in ids, source["id"]
         ids.add(source["id"])
         assert source["group"] in groups, source["id"]
+        assert source.get("language") in {"zh", "non_zh"}, source["id"]
         assert source["mode"] in {"link", "feed", "publisher_page", "papers", "papers_trending", "hf_trending", "github_trending", "aa_leaderboard"}, source["id"]
         assert source["cadence"] in {"daily", "weekly", "monthly"}, source["id"]
         for field in ("url", "feed"):

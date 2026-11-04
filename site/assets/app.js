@@ -63,7 +63,7 @@ function sourceCard(source) {
   top.append(el('span', `status ${result.status === 'error' ? 'error' : stale ? 'stale' : fresh ? 'fresh' : result.status === 'ok' ? 'recent' : 'manual'}`,
     result.status === 'error' ? '同步异常' : fresh ? '今天有更新' : result.status === 'ok' ? (ranking ? (recentlySynced(result) ? '当前榜单' : '旧榜单快照') : '此前有发布') : source.mode === 'link' ? '官网入口' : '等待同步'));
   identity.append(top);
-  const title = el('h3', 'source-name'); title.append(link(source.name, source.url)); identity.append(title);
+  const title = el('h4', 'source-name'); title.append(link(source.name, source.url)); identity.append(title);
   identity.append(el('p', 'source-note', source.note));
   const links = el('div', 'source-links');
   links.append(link('打开官网 ↗', source.url, 'official-link'));
@@ -125,6 +125,8 @@ function matches(source) {
   if (state.activeGroup !== 'all' && source.group !== state.activeGroup) return false;
   if (state.todayOnly && !updatedToday(source)) return false;
   if (!state.query) return true;
+  if (state.query === '中文') return source.language === 'zh';
+  if (state.query === '非中文') return source.language === 'non_zh';
   return [source.name, source.org, source.note, ...(source.sections || [])].join(' ').toLocaleLowerCase().includes(state.query);
 }
 
@@ -164,8 +166,18 @@ function render() {
     const label = el('div'); label.append(el('span', 'section-kicker', group.id.toUpperCase()), el('h2', '', group.name));
     heading.append(label, el('p', '', group.description), el('span', 'group-count', `${entries.length} 个来源`));
     section.append(heading);
-    const list = el('div', 'source-list'); entries.forEach((source) => list.append(sourceCard(source)));
-    section.append(list); container.append(section);
+    for (const language of [{ id: 'zh', name: '中文' }, { id: 'non_zh', name: '非中文' }]) {
+      const languageEntries = entries.filter((source) => source.language === language.id);
+      if (!languageEntries.length) continue;
+      const subsection = el('div', 'language-section');
+      const subheading = el('div', 'language-heading');
+      subheading.append(el('h3', '', language.name), el('span', '', `${languageEntries.length} 个来源`));
+      subsection.append(subheading);
+      const list = el('div', 'source-list');
+      languageEntries.forEach((source) => list.append(sourceCard(source)));
+      subsection.append(list); section.append(subsection);
+    }
+    container.append(section);
   }
   if (!visible.length) container.append(el('div', 'empty', '没有匹配的来源。清除搜索或关闭“只看今天更新”即可浏览全部入口。'));
 }
