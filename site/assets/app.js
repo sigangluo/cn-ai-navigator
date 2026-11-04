@@ -32,6 +32,7 @@ const isRanking = (source) => ['github_trending', 'hf_trending', 'papers_trendin
 const recentlySynced = (result) => Boolean(result.lastSuccessAt && Date.now() - Date.parse(result.lastSuccessAt) <= 36 * 60 * 60 * 1000);
 const updatedToday = (source) => !isRanking(source) && resultFor(source).status === 'ok' && resultFor(source).items.some((item) => dateKey(item.publishedAt) === today);
 const PAGE_SIZE = 3;
+const orgCounts = new Map();
 
 const genericCategories = new Set(['ai', 'news', 'blog', '资讯', '人工智能', 'artificial intelligence', 'research blog']);
 const numberText = (value) => Number(value).toLocaleString('en-US');
@@ -164,6 +165,32 @@ function matches(source) {
   return [source.name, source.org, source.note, ...(source.sections || [])].join(' ').toLocaleLowerCase().includes(state.query);
 }
 
+function closeOrgPanel(returnFocus = false) {
+  $('#orgPanel').hidden = true;
+  $('#orgFilter').setAttribute('aria-expanded', 'false');
+  if (returnFocus) $('#orgFilter').focus();
+}
+
+function closeLanguagePanel(returnFocus = false) {
+  $('#languagePanel').hidden = true;
+  $('#languageFilter').setAttribute('aria-expanded', 'false');
+  if (returnFocus) $('#languageFilter').focus();
+}
+
+function renderOrgOptions() {
+  const query = $('#orgSearch').value.trim().toLocaleLowerCase();
+  const options = $('#orgOptions'); options.replaceChildren();
+  const names = ['all', ...[...orgCounts.keys()].sort(new Intl.Collator('zh-CN').compare)];
+  names.filter((org) => org === 'all' ? !query || '全部机构'.includes(query) : org.toLocaleLowerCase().includes(query)).forEach((org) => {
+    const choice = el('button', `org-option ${state.org === org ? 'selected' : ''}`);
+    choice.type = 'button'; choice.setAttribute('aria-pressed', String(state.org === org));
+    choice.append(el('span', '', org === 'all' ? '全部机构' : org), el('span', 'org-option-count', String(org === 'all' ? state.catalog.sources.length : orgCounts.get(org))));
+    choice.addEventListener('click', () => { state.org = org; render(); closeOrgPanel(true); });
+    options.append(choice);
+  });
+  if (!options.children.length) options.append(el('p', 'org-no-match', '没有匹配的机构'));
+}
+
 function renderNav() {
   const nav = $('#groupNav'); nav.replaceChildren();
   [{ id: 'all', name: '全部来源' }, ...state.catalog.groups].forEach((group, index) => {
@@ -182,6 +209,11 @@ function renderNav() {
 
 function render() {
   if (!state.catalog) return;
+  const languageNames = { all: '全部语言', zh: '中文', non_zh: '非中文' };
+  $('#languageFilterLabel').textContent = languageNames[state.language];
+  document.querySelectorAll('#languagePanel [data-language]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.language === state.language)));
+  $('#orgFilterLabel').textContent = state.org === 'all' ? '全部机构' : state.org;
+  renderOrgOptions();
   renderNav();
   const sources = state.catalog.sources;
   $('#sourceCount').textContent = sources.length;
@@ -223,22 +255,59 @@ async function init() {
     if (!catalogResponse.ok) throw new Error('来源目录加载失败');
     state.catalog = await catalogResponse.json();
     state.snapshot = snapshotResponse.ok ? await snapshotResponse.json() : null;
-    const counts = new Map();
-    state.catalog.sources.forEach((source) => counts.set(source.org, (counts.get(source.org) || 0) + 1));
-    [...counts.keys()].sort(new Intl.Collator('zh-CN').compare).forEach((org) => {
-      const option = el('option', '', `${org} (${counts.get(org)})`); option.value = org;
-      $('#orgFilter').append(option);
-    });
+    state.catalog.sources.forEach((source) => orgCounts.set(source.org, (orgCounts.get(source.org) || 0) + 1));
     render();
   } catch (error) { $('#sections').replaceChildren(el('div', 'empty', `${error.message}。请通过本地 HTTP 服务打开页面。`)); }
 }
 $('#search').addEventListener('input', (event) => { state.query = event.target.value.trim().toLocaleLowerCase(); render(); });
 $('#todayOnly').addEventListener('change', (event) => { state.todayOnly = event.target.checked; state.pages.clear(); render(); });
-$('#languageFilter').addEventListener('change', (event) => { state.language = event.target.value; render(); });
-$('#orgFilter').addEventListener('change', (event) => { state.org = event.target.value; render(); });
+$('#languageFilter').addEventListener('click', () => {
+  const opening = $('#languagePanel').hidden;
+  closeOrgPanel();
+  $('#languagePanel').hidden = !opening;
+  $('#languageFilter').setAttribute('aria-expanded', String(opening));
+  if (opening) $('#languagePanel [aria-pressed="true"]').focus();
+});
+$('#languagePanel').addEventListener('click', (event) => {
+  const button = event.target.closest('[data-language]');
+  if (button) { state.language = button.dataset.language; render(); closeLanguagePanel(true); }
+});
+$('#orgFilter').addEventListener('click', () => {
+  const opening = $('#orgPanel').hidden;
+  closeLanguagePanel();
+  $('#orgPanel').hidden = !opening;
+  $('#orgFilter').setAttribute('aria-expanded', String(opening));
+  if (opening) { $('#orgSearch').value = ''; renderOrgOptions(); $('#orgSearch').focus(); }
+});
+$('#orgSearch').addEventListener('input', renderOrgOptions);
+$('#orgSearch').addEventListener('keydown', (event) => {
+  if (event.key === 'ArrowDown') { $('#orgOptions .org-option')?.focus(); event.preventDefault(); }
+});
+$('#orgOptions').addEventListener('keydown', (event) => {
+  if (!['ArrowDown', 'ArrowUp'].includes(event.key)) return;
+  const choices = [...$('#orgOptions').querySelectorAll('.org-option')];
+  const index = choices.indexOf(document.activeElement);
+  choices[index + (event.key === 'ArrowDown' ? 1 : -1)]?.focus();
+  event.preventDefault();
+});
+document.addEventListener('pointerdown', (event) => {
+  if (!event.target.closest('.org-filter')) closeOrgPanel();
+  if (!event.target.closest('.language-filter')) closeLanguagePanel();
+});
+$('.org-filter').addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeOrgPanel(true); event.preventDefault(); } });
+$('.org-filter').addEventListener('focusout', (event) => { if (!event.relatedTarget || !event.currentTarget.contains(event.relatedTarget)) closeOrgPanel(); });
+$('.language-filter').addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') { closeLanguagePanel(true); event.preventDefault(); }
+  if (!['ArrowDown', 'ArrowUp'].includes(event.key) || $('#languagePanel').hidden) return;
+  const choices = [...$('#languagePanel').querySelectorAll('.language-option')];
+  const index = choices.indexOf(document.activeElement);
+  choices[(index + (event.key === 'ArrowDown' ? 1 : choices.length - 1)) % choices.length].focus();
+  event.preventDefault();
+});
+$('.language-filter').addEventListener('focusout', (event) => { if (!event.relatedTarget || !event.currentTarget.contains(event.relatedTarget)) closeLanguagePanel(); });
 $('#resetFilters').addEventListener('click', () => {
   state.query = ''; state.language = 'all'; state.org = 'all'; state.todayOnly = false; state.activeGroup = 'all';
-  $('#search').value = ''; $('#languageFilter').value = 'all'; $('#orgFilter').value = 'all'; $('#todayOnly').checked = false;
+  $('#search').value = ''; $('#todayOnly').checked = false; closeOrgPanel(); closeLanguagePanel();
   render();
 });
 init();

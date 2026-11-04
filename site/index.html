@@ -13,7 +13,7 @@
   <a class="skip" href="#content">跳到来源列表</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="home" href="#content" aria-label="AI Source Desk 首页"><span class="brand-mark" aria-hidden="true">✳</span><span>AI SOURCE DESK</span></a>
+      <a class="home" href="#content" aria-label="AI Source Desk 首页"><span class="brand-mark" aria-hidden="true">✳</span><span class="brand-copy"><strong>AI SOURCE DESK</strong><small>追踪 AI 来源更新，直达原站阅读</small></span></a>
       <div class="header-status"><span><strong id="sourceCount">—</strong> 个来源</span><span id="syncTime">正在加载…</span></div>
     </div>
   </header>
@@ -26,11 +26,11 @@
     </aside>
     <div class="main-panel">
       <div class="toolbar">
-        <div class="toolbar-title"><span class="section-kicker">SOURCE INDEX</span><h1>数据源 <span id="visibleCount"></span></h1></div>
+        <div class="toolbar-title"><span class="section-kicker">SOURCE INDEX</span><h1>数据源 <span id="visibleCount"></span></h1><p class="project-intro">按来源浏览 AI 资讯、研究、技术文章、论文、开源项目与榜单。可获取的内容定时更新；每个来源都保留官网入口，点击条目到原站阅读。</p></div>
         <div class="controls">
           <label class="search-wrap"><span class="sr-only">搜索来源</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="搜索来源、机构、官网栏目…"></label>
-          <label class="select-wrap"><span class="sr-only">筛选语言</span><select id="languageFilter"><option value="all">全部语言</option><option value="zh">中文</option><option value="non_zh">非中文</option></select></label>
-          <label class="select-wrap org-select"><span class="sr-only">筛选机构</span><select id="orgFilter"><option value="all">全部机构</option></select></label>
+          <div class="language-filter"><button id="languageFilter" class="language-filter-trigger" type="button" aria-expanded="false" aria-controls="languagePanel"><span id="languageFilterLabel">全部语言</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg></button><div id="languagePanel" class="language-panel" role="group" aria-label="筛选语言" hidden><button class="language-option" type="button" data-language="all" aria-pressed="true">全部语言</button><button class="language-option" type="button" data-language="zh" aria-pressed="false">中文</button><button class="language-option" type="button" data-language="non_zh" aria-pressed="false">非中文</button></div></div>
+          <div class="org-filter"><button id="orgFilter" class="org-filter-trigger" type="button" aria-expanded="false" aria-controls="orgPanel"><span id="orgFilterLabel">全部机构</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg></button><div id="orgPanel" class="org-panel" hidden><label class="org-search"><span class="sr-only">搜索机构</span><input id="orgSearch" type="search" placeholder="搜索机构…" autocomplete="off"></label><div id="orgOptions" class="org-options" role="group" aria-label="选择机构"></div></div></div>
           <label class="today-switch"><input id="todayOnly" type="checkbox"><span class="switch-track"></span>只看今天更新</label>
           <button id="resetFilters" class="reset-filters" type="button" hidden>清除筛选</button>
         </div>
