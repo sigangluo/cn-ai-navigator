@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b25">
+  <meta name="description" content="AI 信息来源的每日入口：资讯、研究、工程、论文、开源与榜单，直达官网。">
+  <title>AI Source Desk · AI 信息源看板</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#content">跳到来源列表</a>
+  <header class="hero">
+    <div class="topline"><span class="brand-mark" aria-hidden="true">✳</span><span class="brand">AI SOURCE DESK</span><span class="edition">公开数据源索引 / v1</span></div>
+    <div class="hero-body">
+      <div>
+        <p class="eyebrow">YOUR DAILY ROUTE INTO AI</p>
+        <h1>每天看一眼，<br><em>知道该去哪里读。</em></h1>
+        <p class="intro">把 AI 资讯、研究、工程文章、论文与开源项目的官方入口放在一处。这里展示来源和最新线索，阅读始终回到原网站。</p>
+      </div>
+      <div class="hero-side"><div class="pulse"><span class="pulse-dot"></span> 数据源目录</div><div class="hero-number" id="sourceCount">—</div><div class="hero-caption">个固定入口 · 低频来源也一直在</div><div class="hero-line"></div><div class="hero-sync" id="syncTime">正在加载更新状态…</div></div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="summary" aria-label="今日概览">
+      <div class="summary-lead"><span class="section-kicker">TODAY'S SIGNAL</span><h2>今日概览</h2><p>“今日”按新加坡时间计算。抓取失败时会保留上次成功的结果，并标出状态。</p></div>
+      <div class="metric"><strong id="updatedCount">—</strong><span>今天有新条目的来源</span></div>
+      <div class="metric"><strong id="trackedCount">—</strong><span>自动同步的来源</span></div>
+      <div class="metric"><strong id="rankingCount">—</strong><span>当前榜单</span></div>
+    </section>
+
+    <div class="workspace">
+      <aside class="sidebar" aria-label="分类导航"><div class="sidebar-title">浏览分类 <span>INDEX</span></div><nav id="groupNav"></nav><div class="sidebar-note"><span class="tiny-dot"></span> 没有新内容也能访问每个官网。<br>只收录标题、日期、分类与原文链接。</div></aside>
+      <div class="main-panel">
+        <div class="toolbar"><div class="toolbar-title"><span class="section-kicker">THE SOURCES</span><h2>来源目录 <span id="visibleCount"></span></h2></div><div class="controls"><label class="search-wrap"><span class="sr-only">搜索来源</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="搜索来源、机构、栏目、标题…"></label><label class="today-switch"><input id="todayOnly" type="checkbox"><span class="switch-track"></span>只看今日更新</label></div></div>
+        <div class="legend"><span><i class="dot fresh"></i> 今日更新</span><span><i class="dot recent"></i> 有历史条目</span><span><i class="dot manual"></i> 官网入口</span><span><i class="dot error"></i> 同步异常</span></div>
+        <div id="sections" aria-live="polite"><div class="loading">正在整理数据源…</div></div>
+      </div>
+    </div>
+  </main>
+  <footer><div><strong>AI SOURCE DESK</strong><p>来源索引，原文直达。内容与版权属于各发布者。</p></div><p>公开仓库中的 <code>data/sources.json</code> 是唯一的来源清单。<br>更新任务失败时，来源入口始终可用。</p></footer>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

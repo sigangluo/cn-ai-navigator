@@ -1,0 +1,54 @@
+name: Refresh sources and deploy Pages
+
+on:
+  push:
+    branches: [main]
+    paths: ["data/**", "scripts/**", "site/**", ".github/workflows/pages.yml"]
+  schedule:
+    # 09:17 and 21:17 Asia/Singapore; avoid the busy top of the hour.
+    - cron: "17 1,13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: ai-source-desk-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Refresh public sources
+        if: github.event_name != 'push'
+        run: python3 scripts/update.py
+      - name: Initialize snapshot on source pushes
+        if: github.event_name == 'push'
+        run: python3 scripts/update.py --offline
+      - name: Validate and build static data
+        run: python3 scripts/build.py
+      - name: Commit updated snapshot
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/latest.json site/data/sources.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: refresh source snapshot"
+            git push
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,828 @@
+{
+  "groups": [
+    {
+      "id": "news",
+      "name": "资讯与解读",
+      "description": "媒体报道、行业观察与独立评论"
+    },
+    {
+      "id": "labs",
+      "name": "模型机构与研究动态",
+      "description": "实验室、模型公司与研究机构的官方发布"
+    },
+    {
+      "id": "engineering",
+      "name": "工程与开发实践",
+      "description": "技术博客、开发文档与产品更新"
+    },
+    {
+      "id": "papers",
+      "name": "论文与学术",
+      "description": "预印本、论文库与社区论文榜"
+    },
+    {
+      "id": "open",
+      "name": "开源、模型与数据",
+      "description": "代码仓库、模型、数据集与应用"
+    },
+    {
+      "id": "rankings",
+      "name": "榜单与评测",
+      "description": "当前榜单快照和评测入口"
+    },
+    {
+      "id": "china",
+      "name": "中文社区与公众号",
+      "description": "中文技术社区及可公开访问的公众号入口"
+    }
+  ],
+  "sources": [
+    {
+      "id": "qbitai",
+      "name": "量子位",
+      "org": "量子位",
+      "group": "news",
+      "url": "https://www.qbitai.com/",
+      "note": "中文 AI 资讯与产品动态",
+      "cadence": "daily",
+      "mode": "feed",
+      "feed": "https://www.qbitai.com/feed"
+    },
+    {
+      "id": "aiera",
+      "name": "新智元",
+      "org": "新智元",
+      "group": "news",
+      "url": "https://aiera.com.cn/",
+      "note": "中文 AI 新闻、访谈与评论",
+      "cadence": "daily",
+      "mode": "link",
+      "sections": [
+        "ASI 爆点",
+        "ASI 启示录",
+        "ASI 坐标",
+        "ASI 新天地"
+      ]
+    },
+    {
+      "id": "jiqizhixin",
+      "name": "机器之心 · 文章",
+      "org": "机器之心",
+      "group": "news",
+      "url": "https://www.jiqizhixin.com/articles",
+      "note": "研究与产业资讯；页面动态加载",
+      "cadence": "daily",
+      "mode": "link"
+    },
+    {
+      "id": "infoq-ai",
+      "name": "InfoQ · AI",
+      "org": "InfoQ",
+      "group": "news",
+      "url": "https://www.infoq.cn/topic/AI",
+      "note": "技术新闻与实战文章",
+      "cadence": "daily",
+      "mode": "link"
+    },
+    {
+      "id": "techcrunch-ai",
+      "name": "TechCrunch · AI",
+      "org": "TechCrunch",
+      "group": "news",
+      "url": "https://techcrunch.com/category/artificial-intelligence/",
+      "note": "AI 产业与创业新闻",
+      "cadence": "daily",
+      "mode": "feed",
+      "feed": "https://techcrunch.com/category/artificial-intelligence/feed/"
+    },
+    {
+      "id": "the-decoder",
+      "name": "The Decoder",
+      "org": "The Decoder",
+      "group": "news",
+      "url": "https://the-decoder.com/",
+      "note": "AI 研究与产品报道",
+      "cadence": "daily",
+      "mode": "link"
+    },
+    {
+      "id": "the-verge-ai",
+      "name": "The Verge · AI",
+      "org": "The Verge",
+      "group": "news",
+      "url": "https://www.theverge.com/ai-artificial-intelligence",
+      "note": "AI 产品与行业新闻",
+      "cadence": "daily",
+      "mode": "feed",
+      "feed": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+    },
+    {
+      "id": "latent-space",
+      "name": "Latent Space",
+      "org": "Latent Space",
+      "group": "news",
+      "url": "https://www.latent.space/",
+      "note": "AI 工程访谈与深度文章",
+      "cadence": "weekly",
+      "mode": "feed",
+      "feed": "https://latent.space/feed"
+    },
+    {
+      "id": "simon",
+      "name": "Simon Willison",
+      "org": "Simon Willison",
+      "group": "news",
+      "url": "https://simonwillison.net/",
+      "note": "LLM 工具与开发观察",
+      "cadence": "daily",
+      "mode": "feed",
+      "feed": "https://simonwillison.net/atom/everything/"
+    },
+    {
+      "id": "aa-articles",
+      "name": "Artificial Analysis · Articles",
+      "org": "Artificial Analysis",
+      "group": "news",
+      "url": "https://artificialanalysis.ai/articles",
+      "note": "模型性能、成本与市场分析",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "openai-news",
+      "name": "OpenAI · News",
+      "org": "OpenAI",
+      "group": "labs",
+      "url": "https://openai.com/news/",
+      "note": "官方新闻；保留官网文章分类",
+      "cadence": "weekly",
+      "mode": "feed",
+      "feed": "https://openai.com/news/rss.xml",
+      "sections": [
+        "Company",
+        "Research",
+        "Product",
+        "Safety",
+        "Engineering",
+        "Security",
+        "Intelligence Age",
+        "Global Affairs",
+        "AI Adoption",
+        "Applied AI"
+      ]
+    },
+    {
+      "id": "openai-research",
+      "name": "OpenAI · Research Index",
+      "org": "OpenAI",
+      "group": "labs",
+      "url": "https://openai.com/research/index/",
+      "note": "研究索引",
+      "cadence": "weekly",
+      "mode": "link",
+      "sections": [
+        "Publication",
+        "Conclusion",
+        "Milestone",
+        "Release"
+      ]
+    },
+    {
+      "id": "anthropic-news",
+      "name": "Anthropic · News",
+      "org": "Anthropic",
+      "group": "labs",
+      "url": "https://www.anthropic.com/news",
+      "note": "产品、公司与政策公告",
+      "cadence": "weekly",
+      "mode": "link",
+      "sections": [
+        "Product",
+        "Company"
+      ]
+    },
+    {
+      "id": "anthropic-research",
+      "name": "Anthropic · Research",
+      "org": "Anthropic",
+      "group": "labs",
+      "url": "https://www.anthropic.com/research",
+      "note": "研究成果与团队文章",
+      "cadence": "weekly",
+      "mode": "link",
+      "sections": [
+        "Alignment",
+        "Economics",
+        "Engineering",
+        "Frontier Red Team",
+        "Interpretability",
+        "Societal Impacts",
+        "Science"
+      ]
+    },
+    {
+      "id": "deepmind",
+      "name": "Google DeepMind · Blog",
+      "org": "Google DeepMind",
+      "group": "labs",
+      "url": "https://deepmind.google/blog/",
+      "note": "模型、科学与安全研究",
+      "cadence": "weekly",
+      "mode": "feed",
+      "feed": "https://deepmind.google/blog/rss.xml",
+      "sections": [
+        "Models",
+        "Research",
+        "Science",
+        "Responsibility & Safety"
+      ]
+    },
+    {
+      "id": "google-research",
+      "name": "Google Research · Blog",
+      "org": "Google Research",
+      "group": "labs",
+      "url": "https://research.google/blog/",
+      "note": "Google 研究团队文章",
+      "cadence": "weekly",
+      "mode": "feed",
+      "feed": "https://research.google/blog/rss/"
+    },
+    {
+      "id": "google-ai",
+      "name": "Google · AI Blog",
+      "org": "Google",
+      "group": "labs",
+      "url": "https://blog.google/technology/ai/",
+      "note": "Google AI 产品与技术动态",
+      "cadence": "weekly",
+      "mode": "feed",
+      "feed": "https://blog.google/technology/ai/rss/"
+    },
+    {
+      "id": "meta-ai",
+      "name": "Meta AI · Blog",
+      "org": "Meta AI",
+      "group": "labs",
+      "url": "https://ai.meta.com/blog/",
+      "note": "Meta 模型与研究发布",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI · News",
+      "org": "Mistral AI",
+      "group": "labs",
+      "url": "https://mistral.ai/news/",
+      "note": "产品与研究发布",
+      "cadence": "weekly",
+      "mode": "link",
+      "sections": [
+        "Company",
+        "Solutions",
+        "Engineering",
+        "Research",
+        "Product"
+      ]
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere · Blog",
+      "org": "Cohere",
+      "group": "labs",
+      "url": "https://cohere.com/blog",
+      "note": "企业 AI 与开发者文章",
+      "cadence": "weekly",
+      "mode": "link",
+      "sections": [
+        "Enterprise AI",
+        "Research",
+        "AI for Developers",
+        "Product Launch",
+        "Company News"
+      ]
+    },
+    {
+      "id": "ai2",
+      "name": "Ai2 · Research",
+      "org": "Ai2",
+      "group": "labs",
+      "url": "https://allenai.org/research",
+      "note": "开放研究、模型与数据",
+      "cadence": "monthly",
+      "mode": "link",
+      "sections": [
+        "Olmo",
+        "Molmo",
+        "Asta",
+        "OlmoEarth",
+        "Climate Modeling"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek · News",
+      "org": "DeepSeek",
+      "group": "labs",
+      "url": "https://api-docs.deepseek.com/news",
+      "note": "DeepSeek 官方发布",
+      "cadence": "monthly",
+      "mode": "link"
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi · Blog",
+      "org": "Kimi",
+      "group": "labs",
+      "url": "https://www.kimi.ai/zh-hans/blog/",
+      "note": "Kimi 模型与研究动态",
+      "cadence": "monthly",
+      "mode": "link"
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen · Blog",
+      "org": "Qwen",
+      "group": "labs",
+      "url": "https://qwen.ai/blog",
+      "note": "通义千问模型发布；自动列表待验证",
+      "cadence": "monthly",
+      "mode": "link"
+    },
+    {
+      "id": "baai",
+      "name": "智源研究院 · 动态",
+      "org": "智源研究院",
+      "group": "labs",
+      "url": "https://www.baai.ac.cn/zh-cn/about-us",
+      "note": "部分官网条目直达公众号原文",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "shlab",
+      "name": "上海人工智能实验室 · 新闻",
+      "org": "上海人工智能实验室",
+      "group": "labs",
+      "url": "https://www.shlab.org.cn/",
+      "note": "研究进展与机构新闻",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "ms-research",
+      "name": "Microsoft Research · Blog",
+      "org": "Microsoft Research",
+      "group": "labs",
+      "url": "https://www.microsoft.com/en-us/research/blog/",
+      "note": "研究博客",
+      "cadence": "weekly",
+      "mode": "feed",
+      "feed": "https://www.microsoft.com/en-us/research/feed/"
+    },
+    {
+      "id": "apple-ml",
+      "name": "Apple Machine Learning Research",
+      "org": "Apple",
+      "group": "labs",
+      "url": "https://machinelearning.apple.com/",
+      "note": "Apple ML 研究",
+      "cadence": "monthly",
+      "mode": "link"
+    },
+    {
+      "id": "amazon-science",
+      "name": "Amazon Science",
+      "org": "Amazon",
+      "group": "labs",
+      "url": "https://www.amazon.science/",
+      "note": "科学与机器学习研究",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "ibm-research",
+      "name": "IBM Research · AI",
+      "org": "IBM Research",
+      "group": "labs",
+      "url": "https://research.ibm.com/artificial-intelligence",
+      "note": "IBM AI 研究",
+      "cadence": "monthly",
+      "mode": "link"
+    },
+    {
+      "id": "bair",
+      "name": "BAIR Blog",
+      "org": "Berkeley AI Research",
+      "group": "labs",
+      "url": "https://bair.berkeley.edu/blog/",
+      "note": "Berkeley AI 研究博客",
+      "cadence": "monthly",
+      "mode": "feed",
+      "feed": "https://bair.berkeley.edu/blog/feed.xml"
+    },
+    {
+      "id": "stanford-hai",
+      "name": "Stanford HAI · News",
+      "org": "Stanford HAI",
+      "group": "labs",
+      "url": "https://hai.stanford.edu/news",
+      "note": "研究、政策与 AI Index",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "openai-dev-blog",
+      "name": "OpenAI · Developer Blog",
+      "org": "OpenAI",
+      "group": "engineering",
+      "url": "https://developers.openai.com/blog",
+      "note": "API 与开发实践",
+      "cadence": "weekly",
+      "mode": "link",
+      "sections": [
+        "General",
+        "API",
+        "Apps SDK",
+        "Audio",
+        "Codex",
+        "Life sciences"
+      ]
+    },
+    {
+      "id": "openai-cookbook",
+      "name": "OpenAI · Cookbook",
+      "org": "OpenAI",
+      "group": "engineering",
+      "url": "https://developers.openai.com/cookbook",
+      "note": "示例与实践配方",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "openai-release-notes",
+      "name": "OpenAI · Release Notes",
+      "org": "OpenAI",
+      "group": "engineering",
+      "url": "https://openai.com/products/release-notes/",
+      "note": "产品更新日志",
+      "cadence": "weekly",
+      "mode": "link",
+      "sections": [
+        "ChatGPT",
+        "Codex",
+        "API"
+      ]
+    },
+    {
+      "id": "openai-api-changelog",
+      "name": "OpenAI · API Changelog",
+      "org": "OpenAI",
+      "group": "engineering",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "note": "API 变更记录",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "hf-blog",
+      "name": "Hugging Face · Blog",
+      "org": "Hugging Face",
+      "group": "engineering",
+      "url": "https://huggingface.co/blog",
+      "note": "模型、数据与社区技术文章",
+      "cadence": "weekly",
+      "mode": "feed",
+      "feed": "https://huggingface.co/blog/feed.xml"
+    },
+    {
+      "id": "pytorch",
+      "name": "PyTorch · Blog",
+      "org": "PyTorch",
+      "group": "engineering",
+      "url": "https://pytorch.org/blog/",
+      "note": "框架更新与开发实践",
+      "cadence": "weekly",
+      "mode": "feed",
+      "feed": "https://pytorch.org/blog/feed/"
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA · Blog",
+      "org": "NVIDIA",
+      "group": "engineering",
+      "url": "https://blogs.nvidia.com/",
+      "note": "AI 硬件、软件与开发文章",
+      "cadence": "weekly",
+      "mode": "feed",
+      "feed": "https://blogs.nvidia.com/feed/"
+    },
+    {
+      "id": "vllm",
+      "name": "vLLM · Blog",
+      "org": "vLLM",
+      "group": "engineering",
+      "url": "https://blog.vllm.ai/",
+      "note": "推理系统开发与发布",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama · Blog",
+      "org": "Ollama",
+      "group": "engineering",
+      "url": "https://ollama.com/blog",
+      "note": "本地模型运行更新",
+      "cadence": "weekly",
+      "mode": "feed",
+      "feed": "https://ollama.com/blog/rss.xml"
+    },
+    {
+      "id": "langchain",
+      "name": "LangChain · Blog",
+      "org": "LangChain",
+      "group": "engineering",
+      "url": "https://blog.langchain.com/",
+      "note": "Agent 与应用开发",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "llamaindex",
+      "name": "LlamaIndex · Blog",
+      "org": "LlamaIndex",
+      "group": "engineering",
+      "url": "https://www.llamaindex.ai/blog",
+      "note": "数据连接与 Agent 实践",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "modal",
+      "name": "Modal · Blog",
+      "org": "Modal",
+      "group": "engineering",
+      "url": "https://modal.com/blog",
+      "note": "模型部署与基础设施实践",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "cloudflare-ai",
+      "name": "Cloudflare · AI",
+      "org": "Cloudflare",
+      "group": "engineering",
+      "url": "https://blog.cloudflare.com/tag/ai/",
+      "note": "AI 平台与边缘工程",
+      "cadence": "weekly",
+      "mode": "feed",
+      "feed": "https://blog.cloudflare.com/tag/ai/rss/"
+    },
+    {
+      "id": "meituan-tech",
+      "name": "美团技术团队",
+      "org": "美团",
+      "group": "engineering",
+      "url": "https://tech.meituan.com/",
+      "note": "工程实践与 AI 相关技术文章",
+      "cadence": "weekly",
+      "mode": "feed",
+      "feed": "https://tech.meituan.com/rss.xml"
+    },
+    {
+      "id": "mindspore",
+      "name": "MindSpore · 新闻与博客",
+      "org": "MindSpore",
+      "group": "engineering",
+      "url": "https://www.mindspore.cn/news",
+      "note": "版本更新、新闻与技术博客",
+      "cadence": "weekly",
+      "mode": "link",
+      "sections": [
+        "版本更新",
+        "新闻",
+        "技术博客"
+      ]
+    },
+    {
+      "id": "arxiv-ai",
+      "name": "arXiv · cs.AI",
+      "org": "arXiv",
+      "group": "papers",
+      "url": "https://arxiv.org/list/cs.AI/new",
+      "note": "人工智能预印本；含交叉收录与更新",
+      "cadence": "daily",
+      "mode": "feed",
+      "feed": "https://rss.arxiv.org/rss/cs.AI"
+    },
+    {
+      "id": "arxiv-cl",
+      "name": "arXiv · cs.CL",
+      "org": "arXiv",
+      "group": "papers",
+      "url": "https://arxiv.org/list/cs.CL/new",
+      "note": "计算语言学预印本",
+      "cadence": "daily",
+      "mode": "feed",
+      "feed": "https://rss.arxiv.org/rss/cs.CL"
+    },
+    {
+      "id": "arxiv-lg",
+      "name": "arXiv · cs.LG",
+      "org": "arXiv",
+      "group": "papers",
+      "url": "https://arxiv.org/list/cs.LG/new",
+      "note": "机器学习预印本",
+      "cadence": "daily",
+      "mode": "feed",
+      "feed": "https://rss.arxiv.org/rss/cs.LG"
+    },
+    {
+      "id": "arxiv-cv",
+      "name": "arXiv · cs.CV",
+      "org": "arXiv",
+      "group": "papers",
+      "url": "https://arxiv.org/list/cs.CV/new",
+      "note": "计算机视觉预印本",
+      "cadence": "daily",
+      "mode": "feed",
+      "feed": "https://rss.arxiv.org/rss/cs.CV"
+    },
+    {
+      "id": "arxiv-ro",
+      "name": "arXiv · cs.RO",
+      "org": "arXiv",
+      "group": "papers",
+      "url": "https://arxiv.org/list/cs.RO/new",
+      "note": "机器人预印本",
+      "cadence": "daily",
+      "mode": "feed",
+      "feed": "https://rss.arxiv.org/rss/cs.RO"
+    },
+    {
+      "id": "hf-papers",
+      "name": "Hugging Face · Daily Papers",
+      "org": "Hugging Face",
+      "group": "papers",
+      "url": "https://huggingface.co/papers",
+      "note": "社区每日论文精选",
+      "cadence": "daily",
+      "mode": "papers"
+    },
+    {
+      "id": "hf-trending-papers",
+      "name": "Hugging Face · Trending Papers",
+      "org": "Hugging Face",
+      "group": "papers",
+      "url": "https://huggingface.co/papers/trending",
+      "note": "当前热门论文",
+      "cadence": "daily",
+      "mode": "papers_trending"
+    },
+    {
+      "id": "openreview",
+      "name": "OpenReview",
+      "org": "OpenReview",
+      "group": "papers",
+      "url": "https://openreview.net/",
+      "note": "会议投稿与同行评审",
+      "cadence": "daily",
+      "mode": "link"
+    },
+    {
+      "id": "acl",
+      "name": "ACL Anthology",
+      "org": "ACL Anthology",
+      "group": "papers",
+      "url": "https://aclanthology.org/",
+      "note": "自然语言处理正式论文库",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "github-ai-topics",
+      "name": "GitHub · AI Topic",
+      "org": "GitHub",
+      "group": "open",
+      "url": "https://github.com/topics/artificial-intelligence",
+      "note": "人工智能主题仓库",
+      "cadence": "daily",
+      "mode": "link"
+    },
+    {
+      "id": "github-llm-topics",
+      "name": "GitHub · LLM Topic",
+      "org": "GitHub",
+      "group": "open",
+      "url": "https://github.com/topics/llm",
+      "note": "大语言模型主题仓库",
+      "cadence": "daily",
+      "mode": "link"
+    },
+    {
+      "id": "hf-models",
+      "name": "Hugging Face · Models",
+      "org": "Hugging Face",
+      "group": "open",
+      "url": "https://huggingface.co/models?sort=trending",
+      "note": "模型目录及当前趋势",
+      "cadence": "daily",
+      "mode": "hf_trending",
+      "resource": "models"
+    },
+    {
+      "id": "hf-datasets",
+      "name": "Hugging Face · Datasets",
+      "org": "Hugging Face",
+      "group": "open",
+      "url": "https://huggingface.co/datasets?sort=trending",
+      "note": "数据集目录及当前趋势",
+      "cadence": "daily",
+      "mode": "hf_trending",
+      "resource": "datasets"
+    },
+    {
+      "id": "hf-spaces",
+      "name": "Hugging Face · Spaces",
+      "org": "Hugging Face",
+      "group": "open",
+      "url": "https://huggingface.co/spaces?sort=trending",
+      "note": "社区应用及当前趋势",
+      "cadence": "daily",
+      "mode": "hf_trending",
+      "resource": "spaces"
+    },
+    {
+      "id": "modelscope",
+      "name": "ModelScope · 模型",
+      "org": "ModelScope",
+      "group": "open",
+      "url": "https://www.modelscope.cn/models",
+      "note": "魔搭模型目录；自动列表待验证",
+      "cadence": "daily",
+      "mode": "link"
+    },
+    {
+      "id": "github-trending",
+      "name": "GitHub · Trending",
+      "org": "GitHub",
+      "group": "rankings",
+      "url": "https://github.com/trending",
+      "note": "当前热门仓库，非今日创建仓库",
+      "cadence": "daily",
+      "mode": "github_trending"
+    },
+    {
+      "id": "aa-leaderboard",
+      "name": "Artificial Analysis · Leaderboards",
+      "org": "Artificial Analysis",
+      "group": "rankings",
+      "url": "https://artificialanalysis.ai/leaderboards/models",
+      "note": "按官网 Intelligence Index 排序；还可比较速度与价格",
+      "cadence": "daily",
+      "mode": "aa_leaderboard"
+    },
+    {
+      "id": "baai-wechat",
+      "name": "智源研究院 · 公众号原文",
+      "org": "智源研究院",
+      "group": "china",
+      "url": "https://www.baai.ac.cn/zh-cn/about-us",
+      "note": "从官网动态进入公众号原文",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "meituan-wechat",
+      "name": "美团技术团队 · 公众号",
+      "org": "美团",
+      "group": "china",
+      "url": "https://tech.meituan.com/about.html",
+      "note": "公众号 ID：meituantech；官网同步技术文章",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "paperweekly",
+      "name": "PaperWeekly",
+      "org": "PaperWeekly",
+      "group": "china",
+      "url": "https://www.jiqizhixin.com/columns",
+      "note": "机器之心专栏入口；近期更新待核实",
+      "cadence": "weekly",
+      "mode": "link"
+    },
+    {
+      "id": "ai-frontline",
+      "name": "AI 前线",
+      "org": "InfoQ",
+      "group": "china",
+      "url": "https://www.infoq.cn/topic/AI",
+      "note": "从 InfoQ AI 频道进入；公众号独立列表待核实",
+      "cadence": "weekly",
+      "mode": "link"
+    }
+  ]
+}
