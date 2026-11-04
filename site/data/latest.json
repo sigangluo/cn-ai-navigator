@@ -1,11 +1,22 @@
 {
-  "generatedAt": "2026-11-04T14:00:53Z",
+  "generatedAt": "2026-11-04T20:26:17Z",
   "results": {
     "qbitai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "百度无人车搞出“黑客帝国”！世界模型实时推演全局，跑一天抵三年",
+          "url": "https://www.qbitai.com/2026/11/507647.html",
+          "publishedAt": "2026-11-04T16:13:23Z",
+          "categories": [
+            "资讯",
+            "首页轮播",
+            "百度Apollo"
+          ],
+          "description": "连路人都有自己的想法"
+        },
         {
           "title": "不靠堆砌数据，让机器人看懂真实物理世界 | 招商局狮子山实验室发布「驭物™ Lion-ER-35B-A3B」具身推理模型",
           "url": "https://www.qbitai.com/2026/11/507586.html",
@@ -101,23 +112,13 @@
             "智慧看护助手"
           ],
           "description": "TeleAI智慧看护助手"
-        },
-        {
-          "title": "AI数据平台OceanBase获世界互联网大会杰出贡献奖",
-          "url": "https://www.qbitai.com/2026/11/507405.html",
-          "publishedAt": "2026-11-03T05:59:05Z",
-          "categories": [
-            "资讯",
-            "蚂蚁"
-          ],
-          "description": "11月3日上午，2026世界互联网大会在浙江乌镇开幕。"
         }
       ]
     },
     "aiera": {
       "status": "ok",
-      "checkedAt": "2026-11-04T13:02:34Z",
-      "lastSuccessAt": "2026-11-04T13:02:34Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "后摩智能低调完成数十亿元B轮融资，端侧大模型AI芯片进入规模化兑现期",
@@ -235,9 +236,23 @@
     },
     "infoq-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T13:44:31Z",
-      "lastSuccessAt": "2026-11-04T13:44:31Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "当 Agent 成为数据库新用户，腾讯云如何解决“未知”的难题？",
+          "url": "https://www.infoq.cn/article/TeOb9MgqfeLOoNdxtMH2",
+          "publishedAt": "2026-11-04T14:00:23Z",
+          "categories": [],
+          "description": "如果说 2025 年是 Agent 元年，那么今年，无疑就是 Agent 的“爆发年”。"
+        },
+        {
+          "title": "Token 暴涨 5000 倍之后，企业 Agent 落地还卡在哪里？",
+          "url": "https://www.infoq.cn/article/VUmIUJ0ST9xIlPoViXmz",
+          "publishedAt": "2026-11-04T13:56:58Z",
+          "categories": [],
+          "description": "我国日均 Token 调用量从 2024 年初的 1000 亿，增长到 2026 年 7 月的超 500 万亿，两年增长超 5000 倍。"
+        },
         {
           "title": "谷歌 Data Agent Kit 正式发布：安全防护分为 Skill 与 IAM",
           "url": "https://www.infoq.cn/article/UtKS9EofSoyd2P7Otx7e",
@@ -279,28 +294,80 @@
           "publishedAt": "2026-11-04T07:17:15Z",
           "categories": [],
           "description": "懂 AI、用 AI、驾驭 AI、落地 AI，可以作为观察团队 AI 应用的四个层面"
-        },
-        {
-          "title": "如何把目标定得更大胆：写给 AI 使用者的实践指南",
-          "url": "https://www.infoq.cn/article/F1ms7x7KI1p7UfocCywh",
-          "publishedAt": "2026-11-04T07:15:13Z",
-          "categories": [],
-          "description": "别只让 AI 帮你更快地完成任务，试着用它去实现那些你原本不敢想的目标。"
-        },
-        {
-          "title": "Uber 总裁跳槽 OpenAI！曾掌舵谷歌、Snap 公关，Brockman 亲自发文欢迎",
-          "url": "https://www.infoq.cn/article/mcHCe07TQ08mEZtqcWi1",
-          "publishedAt": "2026-11-04T06:02:24Z",
-          "categories": [],
-          "description": "这并不是一次普通的公关负责人跳槽。"
         }
       ]
     },
     "techcrunch-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "Open source AI is booming. Hugging Face explains who profits.",
+          "url": "https://techcrunch.com/video/open-source-ai-is-booming-hugging-face-explains-who-profits/",
+          "publishedAt": "2026-11-04T19:30:04Z",
+          "categories": [
+            "AI",
+            "Startups",
+            "Hugging Face"
+          ],
+          "description": "Open source models are becoming more mainstream as enterprises, governments and startups alike rely on the promise of lower costs, more control, and more flexibility. But as increasingly capable models become more freely available, how do companies capture value? And with Chinese open models gaining ground, can American players keep up? On this episode of […]"
+        },
+        {
+          "title": "DuckDuckGo pitches itself to schools amid backlash over Google’s AI policy",
+          "url": "https://techcrunch.com/2026/11/04/duckduckgo-pitches-itself-to-schools-amid-backlash-over-googles-ai-policy/",
+          "publishedAt": "2026-11-04T19:29:52Z",
+          "categories": [
+            "AI",
+            "DuckDuckGo",
+            "Google"
+          ],
+          "description": "DuckDuckGo is courting schools frustrated by Google's AI restrictions, pointing educators to its search engine and options to disable AI features."
+        },
+        {
+          "title": "Building on open source AI? Hugging Face’s policy chief on the costs, risks, and trade-offs",
+          "url": "https://techcrunch.com/podcast/building-on-open-source-ai-hugging-faces-policy-chief-on-the-costs-risks-and-trade-offs/",
+          "publishedAt": "2026-11-04T18:44:57Z",
+          "categories": [
+            "AI",
+            "Security",
+            "Startups"
+          ],
+          "description": "Open source models are becoming more mainstream as enterprises, governments and startups alike rely on the promise of lower costs, more control, and more flexibility. But as increasingly capable models become more freely available, how do companies capture value? And with Chinese open models gaining ground, can American players keep up? On this episode of […]"
+        },
+        {
+          "title": "I tried Apple’s Siri Recaps. They’re surprisingly useful — and a little unsettling",
+          "url": "https://techcrunch.com/2026/11/04/i-tried-apples-siri-recaps-theyre-surprisingly-useful-and-a-little-unsettling/",
+          "publishedAt": "2026-11-04T16:51:35Z",
+          "categories": [
+            "AI",
+            "Apps",
+            "Hardware"
+          ],
+          "description": "Apple's AI-powered Siri Recaps won me over in just one day, despite my privacy reservations. But there's still room for improvement."
+        },
+        {
+          "title": "Google faces backlash for plan that would turn off Search for schools that restrict AI",
+          "url": "https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/",
+          "publishedAt": "2026-11-04T16:17:22Z",
+          "categories": [
+            "AI",
+            "Google",
+            "Google Search"
+          ],
+          "description": "Politicians on the left, like NYC mayor Zohran Mamdani and former FTC chair Lina Khan, accused Google of acting as an unregulated monopoly."
+        },
+        {
+          "title": "TechCrunch Founder Summit 2026: Doors open at 9 a.m. ET in Boston",
+          "url": "https://techcrunch.com/2026/11/04/techcrunch-founder-summit-2026-todays-the-day/",
+          "publishedAt": "2026-11-04T13:00:00Z",
+          "categories": [
+            "TC",
+            "Startups",
+            "Climate"
+          ],
+          "description": "Today is the day to join TechCrunch Founder Summit 2026 in Boston's SoWa Power Station. Register now to join this founder-focused conference today."
+        },
         {
           "title": "Anthropic is working on a system to prove AI models’ identity",
           "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
@@ -365,79 +432,80 @@
             "Media & Entertainment"
           ],
           "description": "The first experimental feature under the tab will allow users to get recommendations based on what they're currently in the mood for."
-        },
-        {
-          "title": "Anthropic is still grappling with the economics of compute",
-          "url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute/",
-          "publishedAt": "2026-11-03T17:07:01Z",
-          "categories": [
-            "AI",
-            "Anthropic"
-          ],
-          "description": "At a moment when Anthropic's compute margins should be getting better, they’re getting worse."
-        },
-        {
-          "title": "Google will let schools disable its AI tools, but not without sacrificing Search",
-          "url": "https://techcrunch.com/2026/11/03/google-will-let-schools-disable-its-ai-tools-but-not-without-sacrificing-search/",
-          "publishedAt": "2026-11-03T16:30:34Z",
-          "categories": [
-            "AI",
-            "Education",
-            "Google"
-          ],
-          "description": "Schools choosing to restrict AI altogether will no longer be able to access Google Search, as AI features are now integrated into the search engine."
-        },
-        {
-          "title": "Apple restricts dating apps and AI companions to users 18 and up",
-          "url": "https://techcrunch.com/2026/11/03/apple-restricts-dating-apps-and-ai-companions-to-users-18-and-up/",
-          "publishedAt": "2026-11-03T15:38:27Z",
-          "categories": [
-            "AI",
-            "Apps",
-            "ai companion"
-          ],
-          "description": "Apple's new App Store rules will require 18+ ratings for dating apps and AI companions that offer sexual or romantic content."
-        },
-        {
-          "title": "The TechCrunch Founder Summit agenda is only half the reason to be in Boston on November 4",
-          "url": "https://techcrunch.com/2026/11/03/the-techcrunch-founder-summit-agenda-is-only-half-the-reason-to-be-in-boston-on-nov-4/",
-          "publishedAt": "2026-11-03T14:30:00Z",
-          "categories": [
-            "AI",
-            "Biotech & Health",
-            "Climate"
-          ],
-          "description": "On November 4, TechCrunch Founder Summit 2026 brings founders and VCs to Boston's SoWa Power Station for practical insights and connections. Register before prices increase at the door."
-        },
-        {
-          "title": "Tomorrow: TechCrunch Founder Summit takes over Boston and when pass rates increase",
-          "url": "https://techcrunch.com/2026/11/03/tomorrow-techcrunch-founder-summit-takes-over-boston-and-when-pass-rates-increase/",
-          "publishedAt": "2026-11-03T14:00:00Z",
-          "categories": [
-            "TC",
-            "Startups",
-            "Climate"
-          ],
-          "description": "Secure your TechCrunch Founder Summit pass savings before prices increase tomorrow at 9 a.m. ET. Save up to $100 on your pass, and get a second for free."
-        },
-        {
-          "title": "Apple Watch’s AI features for rewinding and recapping conversations begin beta testing",
-          "url": "https://techcrunch.com/2026/11/02/apple-watchs-ai-features-for-rewinding-and-recapping-conversations-begin-beta-testing/",
-          "publishedAt": "2026-11-03T07:20:00Z",
-          "categories": [
-            "AI",
-            "Apps",
-            "Hardware"
-          ],
-          "description": "Now in beta: Apple's new Audio Intelligence features can help you remember what someone said or take notes on conversations."
         }
       ]
     },
     "the-decoder": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:45:36Z",
-      "lastSuccessAt": "2026-11-04T12:45:36Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "ChatGPT can now turn text prompts and photos into animated GIFs with OpenAI's Images 2.6 model",
+          "url": "https://the-decoder.com/chatgpt-can-now-turn-text-prompts-and-photos-into-animated-gifs-with-openais-images-2-6-model/",
+          "publishedAt": "2026-11-04T19:44:20Z",
+          "categories": [
+            "AI in practice",
+            "Artificial Intelligence",
+            "Short News"
+          ],
+          "description": "OpenAI is adding a GIF feature to ChatGPT. With the new Images 2.6 model, users can create animated GIFs from text prompts or photos and then adjust speed and individual frames. The model's image consistency is strong enough to keep characters recognizable across frames, making flipbook-style animation possible. According to OpenAI, users now generate more than four billion images per week."
+        },
+        {
+          "title": "Anthropic's text watermark is easy to bypass on several older Claude models",
+          "url": "https://the-decoder.com/anthropics-text-watermark-is-easy-to-bypass-on-several-older-claude-models/",
+          "publishedAt": "2026-11-04T19:03:55Z",
+          "categories": [
+            "AI in practice",
+            "Artificial Intelligence",
+            "Anthropic"
+          ],
+          "description": "Anthropic is rolling out text watermarks to four more Claude models ahead of the EU AI Act's December deadline. But on older models like Claude Opus 4.6 and Sonnet 4.6, API users can disable the watermark by changing a single sampling parameter. Anthropic's response to the loophole? A compliance warning."
+        },
+        {
+          "title": "OpenAI acquires Pierre Computer Company to make Git keep up with AI coding agents",
+          "url": "https://the-decoder.com/openai-acquires-pierre-computer-company-to-make-git-keep-up-with-ai-coding-agents/",
+          "publishedAt": "2026-11-04T18:41:03Z",
+          "categories": [
+            "AI in practice",
+            "Artificial Intelligence",
+            "Short News"
+          ],
+          "description": "OpenAI is buying Pierre Computer Company, the startup whose libraries already power the coding agent Codex. Combined with OpenAI's recently launched Git backend Pando, the deal shows the company is building out its infrastructure for developers and AI agents working side by side."
+        },
+        {
+          "title": "New open-source benchmark reveals reasoning as the biggest bottleneck for AI in cloud operations",
+          "url": "https://the-decoder.com/new-open-source-benchmark-reveals-reasoning-as-the-biggest-bottleneck-for-ai-in-cloud-operations/",
+          "publishedAt": "2026-11-04T16:42:52Z",
+          "categories": [
+            "AI in practice",
+            "Artificial Intelligence",
+            "Short News"
+          ],
+          "description": "CloudOpsBench is a new open-source benchmark that measures how well AI agents handle typical DevOps tasks in the cloud, from fixing services and removing resources to restricting access rights, rolling out updates, and decommissioning projects."
+        },
+        {
+          "title": "GPT-6 Astra sees the matrix and reprograms other AI models directly through their weights",
+          "url": "https://the-decoder.com/gpt-6-astra-sees-the-matrix-and-reprograms-other-ai-models-directly-through-their-weights/",
+          "publishedAt": "2026-11-04T15:44:44Z",
+          "categories": [
+            "AI research",
+            "Artificial Intelligence",
+            "AI training"
+          ],
+          "description": "MIT researchers show that OpenAI's GPT-6 Astra can read and deliberately rewrite the weights of other AI models without traditional training. In one experiment, Astra boosted a Qwen model's math accuracy from 7.9 to 48.1 percent by changing just 0.016 percent of its weights. The approach could fundamentally simplify AI optimization but still hits clear limits."
+        },
+        {
+          "title": "Anthropic's new prototype proves which model wrote an AI response without exposing its weights",
+          "url": "https://the-decoder.com/anthropics-new-prototype-proves-which-model-wrote-an-ai-response-without-exposing-its-weights/",
+          "publishedAt": "2026-11-04T15:23:49Z",
+          "categories": [
+            "AI in practice",
+            "Artificial Intelligence",
+            "Anthropic"
+          ],
+          "description": "Anthropic has released FlashProve, a research prototype that uses cryptography to verify whether an AI response actually came from the claimed model. The system still has significant limitations."
+        },
         {
           "title": "Exit polls show AI ranked last among voter priorities in the 2026 U.S. midterms",
           "url": "https://the-decoder.com/exit-polls-show-ai-ranked-last-among-voter-priorities-in-the-2026-u-s-midterms/",
@@ -480,84 +548,95 @@
             "Artificial Intelligence"
           ],
           "description": "Stanford researchers tested 50 widely cited claims about LLMs against 20 current models. 44 percent of the findings are already \"expired,\" and another 34 percent have weakened significantly. The average lifespan is just 15.7 months. Claims about what models can't do expire fastest."
-        },
-        {
-          "title": "AI agents take over at SETI's Allen Telescope Array, scanning for extraterrestrial intelligence",
-          "url": "https://the-decoder.com/ai-agents-take-over-at-setis-allen-telescope-array-scanning-for-extraterrestrial-intelligence/",
-          "publishedAt": "2026-11-03T16:51:18Z",
-          "categories": [
-            "AI research",
-            "Artificial Intelligence",
-            "Short News"
-          ],
-          "description": "The SETI Institute and Breakthrough Listen are now using AI agents at the Allen Telescope Array to control the telescope and analyze incoming radio signals. Tasks that used to take weeks can now wrap up in hours, and the team says the system detected a pulsar in the Crab Nebula in real time for the first time."
-        },
-        {
-          "title": "OpenAI hires ex-Army Secretary, gaining bipartisan reach just as midterms loom",
-          "url": "https://the-decoder.com/openai-hires-ex-army-secretary-gaining-bipartisan-reach-just-as-midterms-loom/",
-          "publishedAt": "2026-11-03T15:03:02Z",
-          "categories": [
-            "AI and society",
-            "Artificial Intelligence",
-            "OpenAI"
-          ],
-          "description": "OpenAI hires Dan Driscoll, the former civilian head of the US Army, as \"Senior Counselor for National Security Modernization,\" likely to win government contracts and help shape AI rules for the military and intelligence agencies. Driscoll drove AI projects inside the Army, is a close ally of Vice President JD Vance, and yet maintains good relationships with both parties in Congress - which could prove valuable as midterms approach."
-        },
-        {
-          "title": "Anthropic's Message Threads cut time to first token by 35 percent for long conversations",
-          "url": "https://the-decoder.com/anthropics-message-threads-cut-time-to-first-token-by-35-percent-for-long-conversations/",
-          "publishedAt": "2026-11-03T12:35:49Z",
-          "categories": [
-            "AI in practice",
-            "Artificial Intelligence",
-            "Short News"
-          ],
-          "description": "Anthropic released Message Threads for the Messages API. Instead of resending the entire conversation with every turn, agents now only transmit what's changed. For requests between 500,000 and one million tokens, time to first token drops by about 35 percent."
-        },
-        {
-          "title": "Nvidia pushes cloud customers to cut back on China business",
-          "url": "https://the-decoder.com/nvidia-pushes-cloud-customers-to-cut-back-on-china-business/",
-          "publishedAt": "2026-11-03T12:22:12Z",
-          "categories": [
-            "AI in practice",
-            "Artificial Intelligence",
-            "Short News"
-          ],
-          "description": "Nvidia has told some cloud customers to take on less business from Chinese companies."
-        },
-        {
-          "title": "Huawei tells customers to find their own AI chip memory, effectively outsourcing procurement to the black market",
-          "url": "https://the-decoder.com/huawei-tells-customers-to-find-their-own-ai-chip-memory-effectively-outsourcing-procurement-to-the-black-market/",
-          "publishedAt": "2026-11-03T11:47:37Z",
-          "categories": [
-            "AI in practice",
-            "Artificial Intelligence",
-            "China"
-          ],
-          "description": "Huawei is telling customers to source the high-performance memory for its AI chips on their own, pushing them onto the black market. Smugglers are exploiting a loophole in U.S. export rules by bundling HBM with low-end processors, shipping them through Hong Kong, and separating the chips on site. Prices for smuggled HBM3E memory have surged to around $4,000 per unit in just one year."
-        },
-        {
-          "title": "Bug hunters can now earn up to $172,000 from OpenAI as company ramps up security",
-          "url": "https://the-decoder.com/bug-hunters-can-now-earn-up-to-172000-from-openai-as-company-ramps-up-security/",
-          "publishedAt": "2026-11-03T10:42:44Z",
-          "categories": [
-            "AI in practice",
-            "Artificial Intelligence",
-            "Short News"
-          ],
-          "description": "OpenAI quadruples bug bounty payouts and launches new internal security sprint."
         }
       ]
     },
     "the-verge-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "Gemini for Home now plugs into AT&T’s smart security system",
+          "url": "https://www.theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system",
+          "publishedAt": "2026-11-04T20:23:24Z",
+          "categories": [
+            "AI",
+            "AT&T",
+            "Google"
+          ],
+          "description": "AT&T's smart home security system now integrates with Gemini for Home. The company says its Connected Life system is the \"first\" home security product to integrate with Google Home Premium, enabling a bunch of Gemini-powered features that can summarize home events, search your video history, and more. With the update, Gemini for Home can provide […]"
+        },
+        {
+          "title": "Nothing teases a screen-free AI device ahead of launch next month",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei",
+          "publishedAt": "2026-11-04T18:26:07Z",
+          "categories": [
+            "AI",
+            "Gadgets",
+            "News"
+          ],
+          "description": "Nothing CEO Carl Pei said in a post on X that the company's launching its first AI device in December. That's just a little over a year after Pei announced plans for \"AI-native\" devices and an AI operating system. He didn't give away much about what exactly the new device is, only that one feature […]"
+        },
+        {
+          "title": "My therapist thinks I should chuck the Amazon Bee Frontier out a window",
+          "url": "https://www.theverge.com/column/1026464/optimizer-amazon-bee-frontier-ambient-listening-wearables",
+          "publishedAt": "2026-11-04T18:00:00Z",
+          "categories": [
+            "AI",
+            "Amazon",
+            "Column"
+          ],
+          "description": "This is Optimizer, a weekly newsletter sent from Verge senior reviewer Victoria Song that dissects and discusses the latest gizmos and potions that swear they're going to change your life. Opt in for Optimizer here. \"How does that make you feel?\" I get asked this a lot in therapy. Plenty of life events, big and […]"
+        },
+        {
+          "title": "ChatGPT will now make you animated GIFs",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
+          "publishedAt": "2026-11-04T18:00:00Z",
+          "categories": [
+            "AI",
+            "Apps",
+            "News"
+          ],
+          "description": "ChatGPT can now create GIFs using a prompt or a photo uploaded to the AI chatbot. The update, which is rolling out alongside OpenAI's new Images 2.6 model, allows you to adjust the GIF's animation speed, edit individual frames, and share it with others. Before this change, ChatGPT couldn't natively generate GIFs in a single […]"
+        },
+        {
+          "title": "Data centers lost the midterms",
+          "url": "https://www.theverge.com/policy/1026365/data-centers-midterms-results",
+          "publishedAt": "2026-11-04T16:05:39Z",
+          "categories": [
+            "AI",
+            "Analysis",
+            "Policy"
+          ],
+          "description": "Data center developers are poised to face a more restrictive building environment after voters across the country voted in candidates who favor moratoriums and ballot measures that put more obstacles on their expansion, delivering a stinging blow to a central pillar of the AI industry. Of voters polled by NBC News on Election Day, 76 […]"
+        },
+        {
+          "title": "Uber only fulfilled 4 rides from AI agents last quarter",
+          "url": "https://www.theverge.com/transportation/1026306/uber-ai-agents-q3-earnings-disintermediation",
+          "publishedAt": "2026-11-04T15:58:45Z",
+          "categories": [
+            "AI",
+            "News",
+            "Ride-sharing"
+          ],
+          "description": "AI agents won't be stealing Uber's lunch any time soon. Only four rides were arranged by third-party AI agents during the third quarter of 2026, Uber executives disclosed during an earnings call this morning. The volume of Uber Eats orders fulfilled by AI agents was a little higher, with the company recording \"around 500\" during […]"
+        },
+        {
+          "title": "Sam Altman addresses RAM comments: People should ‘put as much as they want in their computers’",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1026292/sam-altman-ram-shortage-pcs-comments",
+          "publishedAt": "2026-11-04T14:46:01Z",
+          "categories": [
+            "AI",
+            "News",
+            "OpenAI"
+          ],
+          "description": "OpenAI CEO Sam Altman spent election night defending his position on PC RAM purchases. He changed his name on X to \"Ram Altman\" in response to another user's comment, saying, \"i actually do want the world to have tons of memory and people to put as much as they want in their computers, and it […]"
+        },
         {
           "title": "Google hasn’t figured out how to make AI pay like its search engine",
           "url": "https://www.theverge.com/ai-artificial-intelligence/1024862/google-search-ai-overviews-alphabet-earnings-q3",
-          "publishedAt": "2026-11-03T22:41:23Z",
+          "publishedAt": "2026-11-04T12:00:00Z",
           "categories": [
             "AI",
             "Google",
@@ -568,7 +647,7 @@
         {
           "title": "The biggest modding site in PC gaming is taking a stance on AI",
           "url": "https://www.theverge.com/games/1026085/nexus-mods-ai-disclosures",
-          "publishedAt": "2026-11-04T00:42:54Z",
+          "publishedAt": "2026-11-04T00:42:10Z",
           "categories": [
             "AI",
             "Gaming",
@@ -586,90 +665,13 @@
             "Business"
           ],
           "description": "People, including on this staff, keep asking me with varying degrees of excitement or trepidation when the AI bubble will burst. I'll tell you what I tell them: If I knew that, I would make a life-changing bet on the market, levered up as far as I could, and then, after I made my money, […]"
-        },
-        {
-          "title": "Those Jeff Bezos hair transplant photos are very fake",
-          "url": "https://www.theverge.com/tech/1025745/fake-jeff-bezos-hair-replacement-photos-debunk",
-          "publishedAt": "2026-11-03T21:09:00Z",
-          "categories": [
-            "AI",
-            "News",
-            "Tech"
-          ],
-          "description": "Amazon founder Jeff Bezos and actor Jason Statham have a distinctive feature in common: They're both famously bald, and that definitely hasn't changed in the last few days. However, there are some images of the two men circulating around X, Threads, and Bluesky in which they both have substantially more hair than their usual shaved […]"
-        },
-        {
-          "title": "Apple starts giving Siri AI access to third-party apps",
-          "url": "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps",
-          "publishedAt": "2026-11-03T20:19:55Z",
-          "categories": [
-            "AI",
-            "Apple",
-            "Apps"
-          ],
-          "description": "Apple will now let Siri AI perform actions across third-party apps. As part of the iOS 27.3 update rolling out on Tuesday, Apple announced developers can now integrate Siri AI's new features in \"all apps,\" allowing the voice assistant to draw on a user's personal context, process natural language prompts, and use on-screen awareness to […]"
-        },
-        {
-          "title": "Apple’s latest watchOS beta includes its new always-on Audio Intelligence features",
-          "url": "https://www.theverge.com/tech/1025002/apple-watch-audio-intelligence-watchos-beta",
-          "publishedAt": "2026-11-03T18:52:30Z",
-          "categories": [
-            "AI",
-            "Apple",
-            "Gadgets"
-          ],
-          "description": "Starting today, Siri can tune into the Apple Watch's mic with Audio Intelligence features that are available in the new watchOS 27.3 developer beta rolling out now. The two new additions are Siri Recap, which uses \"ambient listening\" to generate summaries of your conversation, and Live Rewind, which generates text transcripts of the last 15 […]"
-        },
-        {
-          "title": "OpenAI says ChatGPT is catching up to Google in search",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1025482/openai-says-chatgpt-is-catching-up-to-google-in-search",
-          "publishedAt": "2026-11-03T18:38:47Z",
-          "categories": [
-            "AI",
-            "Google",
-            "OpenAI"
-          ],
-          "description": "In many circles, \"Ask Chat\" has replaced \"Google it,\" and that's reflected in a new announcement from OpenAI: the volume of search queries run through ChatGPT now equals 20 percent of the volume run through Google. Adam Fry, OpenAI's consumer product lead for ChatGPT, made the announcement at a press event on Monday. He said […]"
-        },
-        {
-          "title": "Indie games are missing launch dates because Steam is backed up",
-          "url": "https://www.theverge.com/games/1025596/valve-steam-indie-games-missing-launch-dates",
-          "publishedAt": "2026-11-03T21:56:58Z",
-          "categories": [
-            "AI",
-            "Entertainment",
-            "Gaming"
-          ],
-          "description": "Many indie game developers have recently posted on social media about unexpectedly long approval wait times for their game submissions on Steam, with some of the approvals causing developers to miss their planned launch dates. For example, Studio Daimon, the team behind an upcoming title called Food Devils, had planned to launch the game in […]"
-        },
-        {
-          "title": "Netflix will show you themed recommendations through a new ‘AI Discover’ tab",
-          "url": "https://www.theverge.com/streaming/1025029/netflix-ai-discover-recommendations",
-          "publishedAt": "2026-11-03T17:28:14Z",
-          "categories": [
-            "AI",
-            "Entertainment",
-            "Netflix"
-          ],
-          "description": "Netflix's TV app is getting a new \"AI Discover\" tab where the company will show experimental, AI-powered features to help you find new shows and movies to watch. The first of these experiments surfaces content based around themes, like \"Something Light,\" \"Family Movie Night,\" or \"Quick Watches.\" When you pick a theme, Netflix will show […]"
-        },
-        {
-          "title": "Google is entirely disabling Search in schools that don’t want AI",
-          "url": "https://www.theverge.com/tech/1025411/google-turn-off-search-ai-features",
-          "publishedAt": "2026-11-03T20:54:30Z",
-          "categories": [
-            "AI",
-            "Google",
-            "News"
-          ],
-          "description": "Google is completely turning off Search in schools that reject its AI features, the company told The New York Times. The decision was also shared in a broader education-related update from Google on Tuesday, saying that access to Gemini, Gemini Notebook, Gemini in Classroom, and Google Search \"will be entirely off\" for K-12 student accounts […]"
         }
       ]
     },
     "aa-articles": {
       "status": "ok",
-      "checkedAt": "2026-11-04T13:23:46Z",
-      "lastSuccessAt": "2026-11-04T13:23:46Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Gemini 4 Carbon is the new #1 on the Artificial Analysis Intelligence Index v5",
@@ -759,9 +761,18 @@
     },
     "latent-space": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "[AINews] Behind Latent Space: Kill My SaaS, Jev & AI in 2026 | AIEi Shanghai",
+          "url": "https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai/",
+          "publishedAt": "2026-11-04T19:17:30Z",
+          "categories": [
+            "ainews: weekday roundups"
+          ],
+          "description": "November 3, 2026 — A quiet day lets us share some behind the senes."
+        },
         {
           "title": "[AINews] LLMs can read & write neural network weights: \"Weight Space Programming\" cuts Autoresearch out of the RSI loop",
           "url": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of/",
@@ -848,20 +859,13 @@
           "publishedAt": "2026-10-27T18:53:10Z",
           "categories": [],
           "description": "Katelyn Lesse and Angela Jiang on Opus 5.5, the Claude Platform, and the engineering behind AI agents."
-        },
-        {
-          "title": "How Anthropic ships the #1 LLM in the World safely: Separating the Brain from the Hands",
-          "url": "https://latent.space/p/how_anthropic_ships_the_1_llm_in_the_world_safely_separating_the_brain_from_the_hands/",
-          "publishedAt": "2026-10-27T18:40:19Z",
-          "categories": [],
-          "description": "Katelyn Lesse and Angela Jiang join Latent Space to explain the engineering behind the Claude Platform: launching Opus 5.5, separating the model’s “brain” from the agent’s “hands,” scaling APIs, and building reliable managed agents. A new introduction ..."
         }
       ]
     },
     "simon": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:43:27Z",
-      "lastSuccessAt": "2026-11-04T12:43:27Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
@@ -998,8 +1002,8 @@
     },
     "su-jianlin": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:36:00Z",
-      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "平均之路：从Attention到TTT",
@@ -1075,8 +1079,8 @@
     },
     "lilian-weng": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:36:00Z",
-      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Harness Engineering for Self-Improvement",
@@ -1166,8 +1170,8 @@
     },
     "eugene-yan": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:36:00Z",
-      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Patterns for Building Cybersecurity Evals",
@@ -1257,8 +1261,8 @@
     },
     "sebastian-raschka": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:36:00Z",
-      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Building Reasoning Models from the Ground Up: A Full Video Course",
@@ -1348,9 +1352,16 @@
     },
     "nathan-lambert": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:36:00Z",
-      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "How big is the open model economy today?",
+          "url": "https://www.interconnects.ai/p/how-well-can-we-measure-open-model",
+          "publishedAt": "2026-11-04T16:35:44Z",
+          "categories": [],
+          "description": "Our first open model economy research note for paid subscribers."
+        },
         {
           "title": "Was I wrong about open models & cyber risks?",
           "url": "https://www.interconnects.ai/p/was-i-wrong-about-open-models-and",
@@ -1427,20 +1438,13 @@
           "publishedAt": "2026-09-11T12:36:25Z",
           "categories": [],
           "description": "How to get up to speed on open models and their implications."
-        },
-        {
-          "title": "One resignation turned the embers of AI fear into a wildfire",
-          "url": "https://www.interconnects.ai/p/one-resignation-turned-the-embers",
-          "publishedAt": "2026-09-10T15:28:52Z",
-          "categories": [],
-          "description": "Some quick notes on a truly weird week."
         }
       ]
     },
     "hamel-husain": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:36:00Z",
-      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "How To Use Decision Models for Evals",
@@ -1566,8 +1570,8 @@
     },
     "chip-huyen": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:36:00Z",
-      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Common pitfalls when building generative AI applications",
@@ -1643,8 +1647,8 @@
     },
     "andrej-karpathy-blog": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:36:00Z",
-      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "microgpt",
@@ -1720,8 +1724,8 @@
     },
     "epoch-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T13:11:24Z",
-      "lastSuccessAt": "2026-11-04T13:11:24Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "LLM use is acknowledged almost as often as specialized AI tools in biology preprints",
@@ -1849,9 +1853,27 @@
     },
     "openai-news": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+          "url": "https://openai.com/index/openai-to-acquire-pierre",
+          "publishedAt": "2026-11-04T14:30:00Z",
+          "categories": [
+            "Company"
+          ],
+          "description": "OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code."
+        },
+        {
+          "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
+          "url": "https://openai.com/index/daybreak-red-aws-govcloud",
+          "publishedAt": "2026-11-04T07:00:00Z",
+          "categories": [
+            "Product"
+          ],
+          "description": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) through Amazon Bedrock for authorized cybersecurity work."
+        },
         {
           "title": "Accelerating engineering for the physical world",
           "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
@@ -1903,15 +1925,6 @@
           "description": "OpenAI’s Grid Protectors Program will work with utilities to help future compute campuses support grid reliability and protect consumer electricity costs."
         },
         {
-          "title": "Preparing our next security sprint to harden OpenAI",
-          "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
-          "publishedAt": "2026-11-02T18:00:00Z",
-          "categories": [
-            "Security"
-          ],
-          "description": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI."
-        },
-        {
           "title": "Rewarding defenders with bigger bug bounties",
           "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
           "publishedAt": "2026-11-02T18:00:00Z",
@@ -1919,6 +1932,15 @@
             "Security"
           ],
           "description": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers."
+        },
+        {
+          "title": "Preparing our next security sprint to harden OpenAI",
+          "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+          "publishedAt": "2026-11-02T18:00:00Z",
+          "categories": [
+            "Security"
+          ],
+          "description": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI."
         },
         {
           "title": "LifeVal",
@@ -1930,15 +1952,6 @@
           "description": "Introducing LifeVal, a benchmark measuring how well AI helps people complete everyday tasks, from finding childcare to managing finances and government paperwork."
         },
         {
-          "title": "Qodo builds context into AI code review with Codex",
-          "url": "https://openai.com/index/qodo-codex-plugin",
-          "publishedAt": "2026-11-02T00:00:00Z",
-          "categories": [
-            "Startup"
-          ],
-          "description": "Qodo brings company knowledge and coding standards into Codex, helping developers catch P0 issues across repositories before opening a pull request."
-        },
-        {
           "title": "OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization",
           "url": "https://openai.com/index/dan-driscoll-joins-openai",
           "publishedAt": "2026-11-02T00:00:00Z",
@@ -1946,15 +1959,6 @@
             "Company"
           ],
           "description": "OpenAI appoints Dan Driscoll to advise on responsible AI for national security modernization, cyber resilience, and collaboration with U.S. allies."
-        },
-        {
-          "title": "Making it easier for websites to express AI training preferences",
-          "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
-          "publishedAt": "2026-10-30T09:30:00Z",
-          "categories": [
-            "Company"
-          ],
-          "description": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to participating providers."
         }
       ]
     },
@@ -1964,8 +1968,8 @@
     },
     "anthropic-news": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "AI for Science expands to foundations and research institutions",
@@ -2079,9 +2083,18 @@
     },
     "anthropic-research": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "Investigating vault particles with Claude",
+          "url": "https://www.anthropic.com/research/investigating-vault-particles-with-claude",
+          "publishedAt": "2026-11-04T00:00:00Z",
+          "categories": [
+            "Science"
+          ],
+          "description": "We’re sharing another finding from Anthropic’s biology research lab: the first 3D structure of a vault particle found in prokaryotic cells. Here, we describe how Claude helped at each step of this research."
+        },
         {
           "title": "Progress on provable inference for large language models",
           "url": "https://www.anthropic.com/research/provable-inference",
@@ -2180,21 +2193,12 @@
             "Alignment"
           ],
           "description": "This report describes examples of unintended model actions we’ve observed during evaluations and internal use of Claude."
-        },
-        {
-          "title": "The missing map of the sky",
-          "url": "https://www.anthropic.com/research/the-missing-map-of-the-sky",
-          "publishedAt": "2026-10-08T00:00:00Z",
-          "categories": [
-            "Science"
-          ],
-          "description": "Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light."
         }
       ]
     },
     "deepmind": {
-      "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
+      "status": "error",
+      "checkedAt": "2026-11-04T20:26:17Z",
       "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
@@ -2281,13 +2285,25 @@
           "categories": [],
           "description": ""
         }
-      ]
+      ],
+      "error": "not well-formed (invalid token): line 1, column 0"
     },
     "google-research": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "Agile Deliberation: How AI helps humans define the gray areas",
+          "url": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
+          "publishedAt": "2026-11-04T18:07:05Z",
+          "categories": [
+            "Data Mining & Modeling",
+            "Generative AI",
+            "Human-Computer Interaction and Visualization"
+          ],
+          "description": "Data Mining & Modeling"
+        },
         {
           "title": "The sleep framework: A new way for LLMs to retain knowledge in continual learning",
           "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
@@ -2402,23 +2418,13 @@
             "Software Systems & Engineering"
           ],
           "description": "Mobile Systems"
-        },
-        {
-          "title": "How Diffusion Controller unifies and simplifies AI image generation",
-          "url": "https://research.google/blog/how-diffusion-controller-unifies-and-simplifies-ai-image-generation/",
-          "publishedAt": "2026-09-29T18:38:27Z",
-          "categories": [
-            "Algorithms & Theory",
-            "Machine Intelligence"
-          ],
-          "description": "Algorithms & Theory"
         }
       ]
     },
     "google-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "The latest AI news we announced in October 2026",
@@ -2546,8 +2552,8 @@
     },
     "mistral": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Le Chonk: Built for Coders, Trusted by Defenders.",
@@ -2661,9 +2667,18 @@
     },
     "cohere": {
       "status": "ok",
-      "checkedAt": "2026-11-04T13:26:49Z",
-      "lastSuccessAt": "2026-11-04T13:26:49Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "Embed 5 and Rerank 5 now on OpenRouter",
+          "url": "https://cohere.com/blog/embed-rerank-5-openrouter",
+          "publishedAt": "2026-11-04T00:00:00Z",
+          "categories": [
+            "AI for Developers"
+          ],
+          "description": "Access Cohere’s state-of-the-art retrieval models through a single API, with unified billing and no additional SDKs."
+        },
         {
           "title": "The world's leading open models, fully under your control",
           "url": "https://cohere.com/blog/open-source-model-vault",
@@ -2766,24 +2781,21 @@
             "Research"
           ],
           "description": "How confident are reasoning models? CALIBER reports initial and final confidence, cutting Expected Calibration Error on BigMathDigits while boosting AUROC."
-        },
-        {
-          "title": "AI for utilities requires capability and control",
-          "url": "https://cohere.com/blog/ai-for-utilities-requires-capability-and-control",
-          "publishedAt": "2026-10-15T00:00:00Z",
-          "categories": [
-            "Enterprise AI",
-            "Energy & Utilities"
-          ],
-          "description": "Learn what utility companies should consider before deploying AI, and see how North can help meet the sector's security, data, and operational needs."
         }
       ]
     },
     "ai2": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:36:00Z",
-      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "Ai2 and Google collaborate on a new generation of climate models",
+          "url": "https://allenai.org/blog/google-climate-partnership",
+          "publishedAt": "2026-11-04T08:00:00Z",
+          "categories": [],
+          "description": "With funding from Google.org and technical support from Google Research, Ai2 is developing NeuralGCM+, an open-source model designed to combine physics and AI to simulate the atmosphere and ocean together for faster, more reliable long-term climate projections."
+        },
         {
           "title": "StateBench: Testing how language models track state changes over long documents",
           "url": "https://allenai.org/blog/statebench",
@@ -2860,20 +2872,13 @@
           "publishedAt": "2026-10-09T08:00:00Z",
           "categories": [],
           "description": "We explain how Ai2’s new GPU scheduler uses time budgets, fair-share allocation, and time-slicing to prioritize high-impact research, shorten queue waits, and keep GPUs busy."
-        },
-        {
-          "title": "Ai2 at COLM 2026: Open research, from models to agents for science",
-          "url": "https://allenai.org/blog/colm-2026-recap",
-          "publishedAt": "2026-10-09T08:00:00Z",
-          "categories": [],
-          "description": "Ai2 joined COLM 2026 to share advances in open language models, training infrastructure, and AI for science, including Olmo Hybrid, Asta, and Bolmo, while connecting with the broader research community."
         }
       ]
     },
     "deepseek": {
       "status": "ok",
-      "checkedAt": "2026-11-04T13:11:24Z",
-      "lastSuccessAt": "2026-11-04T13:11:24Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "开放自研搜索 API",
@@ -2963,8 +2968,8 @@
     },
     "kimi": {
       "status": "ok",
-      "checkedAt": "2026-11-04T13:11:24Z",
-      "lastSuccessAt": "2026-11-04T13:11:24Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Kimi K3.1 Pro",
@@ -3056,8 +3061,8 @@
     },
     "ms-research": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Learn the rules: The hacker mindset",
@@ -3066,7 +3071,7 @@
           "categories": [
             "Microsoft Research Podcast"
           ],
-          "description": "Research Manager Mike Walker reflects on a career spanning hacker culture, cybersecurity, and AI, sharing lessons about trust, teamwork, leadership, and why solving difficult problems requires curiosity, judgment, agility—and an understanding of the rules. The post Learn the rules: The hacker mindset appeared first on Microsoft Research ."
+          "description": "Research Manager Mike Walker reflects on a career spanning hacker culture, cybersecurity, and AI, sharing lessons about trust, teamwork, leadership, and why solving difficult problems requires curiosity, judgment, agility—and an understanding of the rules."
         },
         {
           "title": "From synthetic enterprise data evaluations to real Microsoft Copilot AI confidence",
@@ -3075,7 +3080,7 @@
           "categories": [
             "Research Blog"
           ],
-          "description": "Evaluating Microsoft Copilot at enterprise scale requires test data that captures the full complexity of real organizations, yet real enterprise data contains sensitive information that cannot be used for evaluation under any circumstances. The post From synthetic enterprise data evaluations to real Microsoft Copilot AI confidence appeared first on Microsoft Research ."
+          "description": "Evaluating Microsoft Copilot at enterprise scale requires test data that captures the full complexity of real organizations, yet real enterprise data contains sensitive information that cannot be used for evaluation under any circumstances."
         },
         {
           "title": "Microsoft Research Focus – Edition #97",
@@ -3084,7 +3089,7 @@
           "categories": [
             "Microsoft Research Podcast"
           ],
-          "description": "Host Sowbhagya Suresh shares some of the latest news and cutting-edge research from across Microsoft—from understanding the challenges facing coding agents to uncovering how people use AI at work and improving extended-range weather forecasting. The post Microsoft Research Focus – Edition #97 appeared first on Microsoft Research ."
+          "description": "Host Sowbhagya Suresh shares some of the latest news and cutting-edge research from across Microsoft—from understanding the challenges facing coding agents to uncovering how people use AI at work and improving extended-range weather forecasting."
         },
         {
           "title": "Flint-interactive: A language for creating interactive data visualizations",
@@ -3093,7 +3098,7 @@
           "categories": [
             "Research Blog"
           ],
-          "description": "Flint-interactive gives AI agents a language for creating interactive visualizations. Click a chart, filter data, highlight related content, and explore beyond the view the author originally chose. The post Flint-interactive: A language for creating interactive data visualizations appeared first on Microsoft Research ."
+          "description": "Flint-interactive gives AI agents a language for creating interactive visualizations. Click a chart, filter data, highlight related content, and explore beyond the view the author originally chose."
         },
         {
           "title": "Solving a 31-year-old grand challenge in mathematics – the KLS conjecture",
@@ -3102,7 +3107,7 @@
           "categories": [
             "Research Blog"
           ],
-          "description": "For decades, a fundamental question about the difficulty of computing in high-dimensional spaces has resisted proof. New research resolves this question, removing a major theoretical obstacle to understanding the efficiency of randomized algorithms used across science and computing. The Kannan–Lovász–Simonovits (KLS) conjecture was proposed in 1995. It asks whether, for a broad class of high-dimensional […] The post Solving a 31-year-old grand challenge in mathematics – the KLS conjecture appeared first on Microsoft Research ."
+          "description": "For decades, a fundamental question about the difficulty of computing in high-dimensional spaces has resisted proof. New research resolves this question, removing a major theoretical obstacle to understanding the efficiency of randomized algorithms used across science and computing. The Kannan–Lovász–Simonovits (KLS) conjecture was proposed in 1995. It asks whether, for a broad class of high-dimensional […]"
         },
         {
           "title": "Called to serve: Tech, research, and positive impact",
@@ -3111,7 +3116,7 @@
           "categories": [
             "Microsoft Research Podcast"
           ],
-          "description": "Lab Director Chris White has worked on research challenges with real-world implications—from new approaches to wartime data analysis to tools for combating human trafficking. He talks to program manager Weishung Liu about the influences that led to the work and more. The post Called to serve: Tech, research, and positive impact appeared first on Microsoft Research ."
+          "description": "Lab Director Chris White has worked on research challenges with real-world implications—from new approaches to wartime data analysis to tools for combating human trafficking. He talks to program manager Weishung Liu about the influences that led to the work and more."
         },
         {
           "title": "Proof-based general-purpose computing with Magnetar",
@@ -3120,7 +3125,7 @@
           "categories": [
             "Research Blog"
           ],
-          "description": "Zero-knowledge proofs can verify computing results without rerunning workloads or exposing sensitive data. Magnetar helps bring them into the mainstream with support for standard programming languages, major speed gains, and quantum-resistant security. The post Proof-based general-purpose computing with Magnetar appeared first on Microsoft Research ."
+          "description": "Zero-knowledge proofs can verify computing results without rerunning workloads or exposing sensitive data. Magnetar helps bring them into the mainstream with support for standard programming languages, major speed gains, and quantum-resistant security."
         },
         {
           "title": "Simulating student learning for better AI tutoring",
@@ -3129,7 +3134,7 @@
           "categories": [
             "Research Blog"
           ],
-          "description": "StudentSim is a research system for evaluating and improving AI tutoring tools before they are tested with learners. It models how individuals may engage with tutors, giving feedback to improve tutor performance across subjects like chess, writing, and mathematics. The post Simulating student learning for better AI tutoring appeared first on Microsoft Research ."
+          "description": "StudentSim is a research system for evaluating and improving AI tutoring tools before they are tested with learners. It models how individuals may engage with tutors, giving feedback to improve tutor performance across subjects like chess, writing, and mathematics."
         },
         {
           "title": "Agent Lightning v1.0: A 3,500-Line Lightweight Agentic RL Framework for Training Agents with Real Harnesses",
@@ -3138,7 +3143,7 @@
           "categories": [
             "Research Blog"
           ],
-          "description": "Training AI agents with reinforcement learning can be challenging because their tools, context, and decision-making are managed by complex frameworks. Agent Lightning connects existing agents to RL training, making it easier to improve them without rebuilding them. The post Agent Lightning v1.0: A 3,500-Line Lightweight Agentic RL Framework for Training Agents with Real Harnesses appeared first on Microsoft Research ."
+          "description": "Training AI agents with reinforcement learning can be challenging because their tools, context, and decision-making are managed by complex frameworks. Agent Lightning connects existing agents to RL training, making it easier to improve them without rebuilding them."
         },
         {
           "title": "What AI gets wrong and what failure teaches us",
@@ -3147,14 +3152,14 @@
           "categories": [
             "Microsoft Research Podcast"
           ],
-          "description": "Jennifer Neville did not want to go into computer science—but that’s exactly where she landed. Neville discusses the starts and stops that led to her professional sweet spot and her work identifying “surprising failures” making it hard for AI to handle complexity. The post What AI gets wrong and what failure teaches us appeared first on Microsoft Research ."
+          "description": "Jennifer Neville did not want to go into computer science—but that’s exactly where she landed. Neville discusses the starts and stops that led to her professional sweet spot and her work identifying “surprising failures” making it hard for AI to handle complexity."
         }
       ]
     },
     "apple-ml": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "GHARP: Real-Time Gaussian Head Animation from Large-Scale Reconstruction Prior",
@@ -3238,8 +3243,8 @@
     },
     "bair": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "From CUDA to MLX: How K-Search Brings Decades of Kernel Expertise to Apple Silicon",
@@ -3319,15 +3324,15 @@
     },
     "metr": {
       "status": "ok",
-      "checkedAt": "2026-11-04T13:11:24Z",
-      "lastSuccessAt": "2026-11-04T13:11:24Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Red-Teaming OpenAI's Internal Agent Monitoring Systems",
           "url": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/",
           "publishedAt": "2026-10-22T07:00:00Z",
           "categories": [],
-          "description": "For three weeks, from July 21st to August 11th, a METR employee and a Redwood Research employee conducted a pilot high-access exercise to stress-test OpenAI’s internal misalignment monitoring system. The output of this exercise was a 61-page internal report that was shared with OpenAI researchers and security…"
+          "description": "For three weeks, from July 21st to August 11th, a METR employee and a Redwood Research employee conducted a pilot high-access exercise to stress-test OpenAI’s internal misalignment monitoring system. The output of this exercise was a 61-page internal report that was shared with OpenAI researchers and security staff…"
         },
         {
           "title": "Review of the \"Misalignment in high-stakes settings\" section in Anthropic's Risk Report (August 2026)",
@@ -3355,7 +3360,7 @@
           "url": "https://metr.org/blog/2026-10-14-better-informing-the-public-about-loss-of-control-risks/",
           "publishedAt": "2026-10-14T07:00:00Z",
           "categories": [],
-          "description": "At METR, we aim to give the public evidence about whether frontier AI developers could come to lose control of their internal AI systems. Recent incidents across several AI developers, like the hundreds of rogue agents that broke containment and hacked Hugging Face to hide evidence of cheating from…"
+          "description": "At METR, we aim to give the public evidence about whether frontier AI developers could come to lose control of their internal AI systems. Recent incidents across several AI developers, like the hundreds of rogue agents that broke containment and hacked Hugging Face to hide evidence of cheating from their grader…"
         },
         {
           "title": "How an assessor could investigate alignment of unreleased AI models",
@@ -3397,7 +3402,7 @@
           "url": "https://metr.org/blog/2026-09-22-claude-opus-5-5/",
           "publishedAt": "2026-09-22T07:00:00Z",
           "categories": [],
-          "description": "Note on independence: This evaluation was conducted under an unpaid agreement for AI R&D assessment. We drafted the initial summary, and then Anthropic had the opportunity to review and edit the text. We signed off on this final text from the Claude Opus 5.5 system card."
+          "description": "Note on independence: This evaluation was conducted under an unpaid agreement for AI R&D assessment. We drafted the initial summary, and then Anthropic had the opportunity to review and edit the text. We signed off on this final text from the Claude Opus 5.5 system card ."
         },
         {
           "title": "Update on Security at METR",
@@ -3410,8 +3415,8 @@
     },
     "openai-dev-blog": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Designing failover across OpenAI model providers",
@@ -3525,8 +3530,8 @@
     },
     "openai-cookbook": {
       "status": "ok",
-      "checkedAt": "2026-11-04T13:49:18Z",
-      "lastSuccessAt": "2026-11-04T13:49:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Run OpenAI agents on a Databricks Sandbox",
@@ -3668,9 +3673,16 @@
     },
     "hf-blog": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
+          "url": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
+          "publishedAt": "2026-11-04T17:50:10Z",
+          "categories": [],
+          "description": ""
+        },
         {
           "title": "StateBench: Testing how language models track state changes over long documents",
           "url": "https://huggingface.co/blog/allenai/statebench",
@@ -3747,20 +3759,13 @@
           "publishedAt": "2026-10-23T00:00:00Z",
           "categories": [],
           "description": ""
-        },
-        {
-          "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
-          "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
-          "publishedAt": "2026-10-22T22:24:34Z",
-          "categories": [],
-          "description": ""
         }
       ]
     },
     "pytorch": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "KVCache Meetup Korea 2026: Event Recap",
@@ -3770,7 +3775,7 @@
             "Ambassador Post",
             "Blog"
           ],
-          "description": "On the evening of Sep 30, 2026, PyTorchKR and XCENA co-hosted KVCache Meetup Korea. PyTorchKR is a major AI/ML community in Korea, and XCENA is a startup that focuses on... The post KVCache Meetup Korea 2026: Event Recap appeared first on PyTorch ."
+          "description": "On the evening of Sep 30, 2026, PyTorchKR and XCENA co-hosted KVCache Meetup Korea. PyTorchKR is a major AI/ML community in Korea, and XCENA is a startup that focuses on..."
         },
         {
           "title": "Announcing the Special Interest Group (SIG) for Ray on Accelerators",
@@ -3779,7 +3784,7 @@
           "categories": [
             "Blog"
           ],
-          "description": "Today, we are announcing the Special Interest Group (SIG) for Ray on hardware accelerators. When Ray was created in UC Berkeley over 10 years ago, the computing landscape looked very... The post Announcing the Special Interest Group (SIG) for Ray on Accelerators appeared first on PyTorch ."
+          "description": "Today, we are announcing the Special Interest Group (SIG) for Ray on hardware accelerators. When Ray was created in UC Berkeley over 10 years ago, the computing landscape looked very..."
         },
         {
           "title": "PyTorch 2.15 Release Blog",
@@ -3789,7 +3794,7 @@
             "Announcements",
             "Blog"
           ],
-          "description": "We are excited to announce the release of PyTorch® 2.15 (release notes)! The PyTorch 2.15 release features the following changes: Rewritten NCCL backend becomes the default, with a flight recorder... The post PyTorch 2.15 Release Blog appeared first on PyTorch ."
+          "description": "We are excited to announce the release of PyTorch® 2.15 (release notes)! The PyTorch 2.15 release features the following changes: Rewritten NCCL backend becomes the default, with a flight recorder..."
         },
         {
           "title": "Optimizing Streaming Speech Recognition on Arm® Edge Devices with ExecuTorch",
@@ -3798,7 +3803,7 @@
           "categories": [
             "Blog"
           ],
-          "description": "When you’re speaking to a device, you expect text to appear as you talk. That makes streaming automatic speech recognition (ASR) a different challenge from batch transcription, where the model... The post Optimizing Streaming Speech Recognition on Arm® Edge Devices with ExecuTorch appeared first on PyTorch ."
+          "description": "When you’re speaking to a device, you expect text to appear as you talk. That makes streaming automatic speech recognition (ASR) a different challenge from batch transcription, where the model..."
         },
         {
           "title": "PyTorch Conference North America 2026: Accelerating Open Intelligence Together",
@@ -3808,7 +3813,7 @@
             "Announcements",
             "Blog"
           ],
-          "description": "PyTorch Conference North America 2026 brought 3,500+ attendees to San Jose on October 20–21 for two days focused on accelerating open intelligence and exploring the impact of PyTorch Foundation projects... The post PyTorch Conference North America 2026: Accelerating Open Intelligence Together appeared first on PyTorch ."
+          "description": "PyTorch Conference North America 2026 brought 3,500+ attendees to San Jose on October 20–21 for two days focused on accelerating open intelligence and exploring the impact of PyTorch Foundation projects..."
         },
         {
           "title": "Meet the 2026 PyTorch Foundation Ambassadors",
@@ -3827,7 +3832,7 @@
           "categories": [
             "Blog"
           ],
-          "description": "TorchTitan is a PyTorch-native platform for rapid experimentation and large-scale pre- and post-training of generative AI models. It is designed as a minimal, clean-room implementation of PyTorch-native techniques, with flexible... The post TorchTitan Update: New SOTA Models, Performance at Scale, TitanRL appeared first on PyTorch ."
+          "description": "TorchTitan is a PyTorch-native platform for rapid experimentation and large-scale pre- and post-training of generative AI models. It is designed as a minimal, clean-room implementation of PyTorch-native techniques, with flexible..."
         },
         {
           "title": "Accelerating PyTorch on AMD GPUs with FlyDSL",
@@ -3836,7 +3841,7 @@
           "categories": [
             "Blog"
           ],
-          "description": "PyTorch users on AMD MI350-series GPUs can now use FlyDSL through existing operator APIs for dense and grouped GEMM, fused multi-head attention (FMHA/Attention), MXFP8/MXFP4 scaled GEMM, RMSNorm, and TopK, without... The post Accelerating PyTorch on AMD GPUs with FlyDSL appeared first on PyTorch ."
+          "description": "PyTorch users on AMD MI350-series GPUs can now use FlyDSL through existing operator APIs for dense and grouped GEMM, fused multi-head attention (FMHA/Attention), MXFP8/MXFP4 scaled GEMM, RMSNorm, and TopK, without..."
         },
         {
           "title": "Introducing TorchTPU",
@@ -3845,7 +3850,7 @@
           "categories": [
             "Blog"
           ],
-          "description": "TL;DR TorchTPU is an open source collaboration between Google and Meta that introduces a native and principled PyTorch backend for Google TPUs. It enables seamless out-of-the-box model execution and TPU... The post Introducing TorchTPU appeared first on PyTorch ."
+          "description": "TL;DR TorchTPU is an open source collaboration between Google and Meta that introduces a native and principled PyTorch backend for Google TPUs. It enables seamless out-of-the-box model execution and TPU..."
         },
         {
           "title": "PyTorch Foundation Welcomes Nine New Members As Momentum Builds Around Open Source AI Center of Gravity",
@@ -3856,14 +3861,14 @@
             "Blog",
             "Press Release"
           ],
-          "description": "New Platinum members include Nebius, Nscale and Shopify, deepening the PyTorch Foundation’s role as the intelligence layer for open source AI development Summary The PyTorch Foundation announced nine new members,... The post PyTorch Foundation Welcomes Nine New Members As Momentum Builds Around Open Source AI Center of Gravity appeared first on PyTorch ."
+          "description": "New Platinum members include Nebius, Nscale and Shopify, deepening the PyTorch Foundation’s role as the intelligence layer for open source AI development Summary The PyTorch Foundation announced nine new members,..."
         }
       ]
     },
     "nvidia": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "AI Is Changing How Semiconductor Fabs Work — and Engineers Are Moving Faster Because of It",
@@ -4001,9 +4006,20 @@
     },
     "vllm": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:36:00Z",
-      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "vLLM Delivers Day-0 Support for Kimi K3.1 Pro",
+          "url": "https://vllm.ai/blog/2026-11-04-kimi-k31-pro",
+          "publishedAt": "2026-11-04T00:00:00Z",
+          "categories": [
+            "models",
+            "day-0-support",
+            "sparse-attention"
+          ],
+          "description": "vLLM supports Kimi K3.1 Pro on day 0: sparse attention on a KDA hybrid, a packed KV cache with FP8 or NVFP4 latents and MXFP4 index keys, token-sharded prefill, decode context parallelism, and fused low-latency decode."
+        },
         {
           "title": "Day 0 support for Mistral Large 4 on vLLM",
           "url": "https://vllm.ai/blog/2026-10-29-mistral-large-4",
@@ -4122,24 +4138,13 @@
             "kernels"
           ],
           "description": "vLLM supports Reflection's Beam-1.0 (501B total, 23B active) from day 0, with agent-driven optimization that cut decode latency 2.71× and DFlash2 speculative decoding with adaptive verification."
-        },
-        {
-          "title": "Day 0 support for Muse Spark Open on vLLM",
-          "url": "https://vllm.ai/blog/2026-10-15-muse-spark-open",
-          "publishedAt": "2026-10-15T00:00:00Z",
-          "categories": [
-            "model-support",
-            "speculative-decoding",
-            "reinforcement-learning"
-          ],
-          "description": "Day-0 vLLM support for Muse Spark Open: 816B MoE, 1M context, multimodal inputs, DSpark speculative decoding, NVIDIA and AMD serving, initial TPU support, and LoRA RL."
         }
       ]
     },
     "ollama": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Speech models in Ollama",
@@ -4229,9 +4234,16 @@
     },
     "langchain": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:36:00Z",
-      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "Why human insight is a strategic advantage for building better agents",
+          "url": "https://www.langchain.com/blog/human-insight-strategic-advantage-agents",
+          "publishedAt": "2026-11-04T16:40:04Z",
+          "categories": [],
+          "description": "Explore 3 principles for effective human-in-the-loop workflows and how human-review is a strategic imperative for production-ready agents."
+        },
         {
           "title": "LangSmith BYOC is now available on AWS, Azure, and Google Cloud",
           "url": "https://www.langchain.com/blog/langsmith-byoc-aws-gc-azure",
@@ -4245,13 +4257,6 @@
           "publishedAt": "2026-11-03T22:30:50Z",
           "categories": [],
           "description": "We compared seven browser toolsets for Deep Agents, picked Stagehand from Browserbase, and tuned it with LangSmith traces and evals. Here's what we learned."
-        },
-        {
-          "title": "Why human insight is a strategic advantage for building better agents",
-          "url": "https://www.langchain.com/blog/human-insight-strategic-advantage-agents",
-          "publishedAt": "2026-11-03T21:48:04Z",
-          "categories": [],
-          "description": "Explore 3 principles for effective human-in-the-loop workflows and how human-review is a strategic imperative for production-ready agents."
         },
         {
           "title": "Managed Deep Agents: the fastest way to ship a production deep agent",
@@ -4320,8 +4325,8 @@
     },
     "llamaindex": {
       "status": "ok",
-      "checkedAt": "2026-11-04T13:02:34Z",
-      "lastSuccessAt": "2026-11-04T13:02:34Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "The Inference Stack Behind OCRia",
@@ -4438,8 +4443,8 @@
     },
     "modal": {
       "status": "ok",
-      "checkedAt": "2026-11-04T13:02:34Z",
-      "lastSuccessAt": "2026-11-04T13:02:34Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Launching a trillion-parameter model at Sakana AI",
@@ -4529,9 +4534,20 @@
     },
     "cloudflare-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "See the agents, set the terms: new visibility and control for personal agents",
+          "url": "https://blog.cloudflare.com/personal-agents-visibility-control/",
+          "publishedAt": "2026-11-04T14:00:00Z",
+          "categories": [
+            "AI",
+            "Analytics",
+            "Bot Management"
+          ],
+          "description": "Personal AI agents have changed how users interact with the web, blurring the lines between automated and human traffic. Learn how Cloudflare gives site owners visibility and control to manage personal agent access."
+        },
         {
           "title": "How Commerce.com and Cloudflare are getting storefronts ready for AI agents",
           "url": "https://blog.cloudflare.com/webmcp-commerce/",
@@ -4652,24 +4668,13 @@
             "Open Source"
           ],
           "description": "AI sovereignty is not a zero-sum game, but many governments now believe it is. Cloudflare's answer: more local open-source models, model-agnostic security tools, and a commitment to giving nations genuine choice."
-        },
-        {
-          "title": "Cloudflare OS: your company’s agent workspace, managed for you",
-          "url": "https://blog.cloudflare.com/managed-cloudflare-os/",
-          "publishedAt": "2026-10-01T13:00:00Z",
-          "categories": [
-            "AI",
-            "Birthday Week",
-            "Cloudflare One"
-          ],
-          "description": "Cloudflare OS gives everyone in your organization an agent workspace that knows how your company works and connects to its data and systems. We’re opening the waitlist for fully managed deployments that you’ll be able to launch in a few clicks."
         }
       ]
     },
     "meituan-tech": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "美团正式发布 LongCat-2.5：面向智能体任务的原生多模态模型",
@@ -4761,8 +4766,8 @@
     },
     "youtube-karpathy": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:38:31Z",
-      "lastSuccessAt": "2026-11-04T12:38:31Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "How I use LLMs",
@@ -4772,7 +4777,7 @@
           "description": "The example-driven, practical walkthrough of Large Language Models and their growing list of related features, as a new entry to my general audience series on LLMs. In this more practical followup, I take you through the many ways I use LLMs in my own life. 00:00:00 Intro into the growing LLM ecosystem",
           "thumbnail": "https://i2.ytimg.com/vi/EWvNQjAaOHw/hqdefault.jpg",
           "metrics": {
-            "views": 2866174
+            "views": 2868670
           }
         },
         {
@@ -4783,7 +4788,7 @@
           "description": "This is a general audience deep dive into the Large Language Model (LLM) AI technology that powers ChatGPT and related products. It is covers the full training stack of how the models are developed, along with mental models of how to think about their \"psychology\", and how to get the best use them in practical applications. I have one \"Intro to LLMs\" video already from ~year ago, but that is just a re-recording of a random talk, so I wanted to loop around and do a lot more comprehensive version. Andrej was a founding member at OpenAI (2015) and then Sr. Director of AI at Tesla (2017-2022), and is now a founder at Eureka Labs, which is building an AI-native school. His goal in this video is to raise knowledge and understanding of the state of the art in AI, and empower people to…",
           "thumbnail": "https://i4.ytimg.com/vi/7xTGNNLPyMI/hqdefault.jpg",
           "metrics": {
-            "views": 10227053
+            "views": 10231584
           }
         },
         {
@@ -4791,10 +4796,10 @@
           "url": "https://www.youtube.com/watch?v=l8pRSuU81PU",
           "publishedAt": "2024-06-09T23:31:35Z",
           "categories": [],
-          "description": "We reproduce the GPT-2 (124M) from scratch. This video covers the whole process: First we build the GPT-2 network, then we optimize its training to be really fast, then we set up the training run following the GPT-2 and GPT-3 paper and their hyperparameters, then we hit run, and come back the next morning to see our results, and enjoy some amusing model generations. Keep in mind that in some places this video builds on the knowledge from earlier videos in the Zero to Hero Playlist (see my channel). You could also see this video as building my nanoGPT repo, which by the end is about 90% similar. 00:00:00 intro: Let’s reproduce GPT-2 (124M)",
+          "description": "00:00:00 intro: Let’s reproduce GPT-2 (124M) 00:03:39 exploring the GPT-2 (124M) OpenAI checkpoint",
           "thumbnail": "https://i1.ytimg.com/vi/l8pRSuU81PU/hqdefault.jpg",
           "metrics": {
-            "views": 1228671
+            "views": 1229022
           }
         },
         {
@@ -4802,10 +4807,10 @@
           "url": "https://www.youtube.com/watch?v=zduSFxRajkE",
           "publishedAt": "2024-02-20T17:11:35Z",
           "categories": [],
-          "description": "The Tokenizer is a necessary and pervasive component of Large Language Models (LLMs), where it translates between strings and tokens (text chunks). Tokenizers are a completely separate stage of the LLM pipeline: they have their own training sets, training algorithms (Byte Pair Encoding), and after training implement two fundamental functions: encode() from strings to tokens, and decode() back from tokens to strings. In this lecture we build from scratch the Tokenizer used in the GPT series from OpenAI. In the process, we will see that a lot of weird behaviors and problems of LLMs actually trace back to tokenization. We'll go through a number of these issues, discuss why tokenization is at fault, and why someone out there ideally finds a way to delete this stage entirely. 00:00:00 intro…",
+          "description": "00:00:00 intro: Tokenization, GPT-2 paper, tokenization-related issues 00:05:50 tokenization by example in a Web UI (tiktokenizer)",
           "thumbnail": "https://i3.ytimg.com/vi/zduSFxRajkE/hqdefault.jpg",
           "metrics": {
-            "views": 1256297
+            "views": 1256710
           }
         },
         {
@@ -4813,10 +4818,10 @@
           "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g",
           "publishedAt": "2023-11-23T02:27:48Z",
           "categories": [],
-          "description": "This is a 1 hour general-audience introduction to Large Language Models: the core technical component behind systems like ChatGPT, Claude, and Bard. What they are, where they are headed, comparisons and analogies to present-day operating systems, and some of the security-related challenges of this new computing paradigm. As of November 2023 (this field moves fast!).",
+          "description": "As of November 2023 (this field moves fast!). Context: This video is based on the slides of a talk I gave recently at the AI Security Summit. The talk was not recorded but a lot of people came to me after and told me they liked it. Seeing as I had already put in one long weekend of work to make the slides, I decided to just tune them a bit, record this round 2 of the talk and upload it here on YouTube. Pardon the random background, that's my hotel room during the thanksgiving break.",
           "thumbnail": "https://i3.ytimg.com/vi/zjkBMFhNj_g/hqdefault.jpg",
           "metrics": {
-            "views": 4317060
+            "views": 4319060
           }
         },
         {
@@ -4824,10 +4829,10 @@
           "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY",
           "publishedAt": "2023-01-17T16:33:27Z",
           "categories": [],
-          "description": "We build a Generatively Pretrained Transformer (GPT), following the paper \"Attention is All You Need\" and OpenAI's GPT-2 / GPT-3. We talk about connections to ChatGPT, which has taken the world by storm. We watch GitHub Copilot, itself a GPT, help us write a GPT (meta :D!) . I recommend people watch the earlier makemore videos to get comfortable with the autoregressive language modeling framework and basics of tensors and PyTorch nn, which we take for granted in this video. - The GPU I'm training the model on is from Lambda GPU Cloud, I think the best and easiest way to spin up an on-demand GPU instance in the cloud that you can ssh to: https://lambdalabs.com . If you prefer to work in notebooks, I think the easiest path today is Google Colab.",
+          "description": "- The GPU I'm training the model on is from Lambda GPU Cloud, I think the best and easiest way to spin up an on-demand GPU instance in the cloud that you can ssh to: https://lambdalabs.com . If you prefer to work in notebooks, I think the easiest path today is Google Colab. - EX1: The n-dimensional tensor mastery challenge: Combine the `Head` and `MultiHeadAttention` into one class that processes all the heads in parallel, treating the heads as another batch dimension (answer is in nanoGPT).",
           "thumbnail": "https://i4.ytimg.com/vi/kCc8FmEb1nY/hqdefault.jpg",
           "metrics": {
-            "views": 8193660
+            "views": 8195806
           }
         },
         {
@@ -4835,10 +4840,10 @@
           "url": "https://www.youtube.com/watch?v=t3YJ5hKiMQ0",
           "publishedAt": "2022-11-21T00:32:48Z",
           "categories": [],
-          "description": "We take the 2-layer MLP from previous video and make it deeper with a tree-like structure, arriving at a convolutional neural network architecture similar to the WaveNet (2016) from DeepMind. In the WaveNet paper, the same hierarchical architecture is implemented more efficiently using causal dilated convolutions (not yet covered). Along the way we get a better sense of torch.nn and what it is and how it works under the hood, and what a typical deep learning development process looks like (a lot of reading of documentation, keeping track of multidimensional tensor shapes, moving between jupyter notebooks and repository code, ...). 00:01:40 starter code walkthrough",
+          "description": "00:01:40 starter code walkthrough 00:06:56 let’s fix the learning rate plot",
           "thumbnail": "https://i1.ytimg.com/vi/t3YJ5hKiMQ0/hqdefault.jpg",
           "metrics": {
-            "views": 304692
+            "views": 304739
           }
         },
         {
@@ -4846,10 +4851,10 @@
           "url": "https://www.youtube.com/watch?v=q8SA3rM6ckI",
           "publishedAt": "2022-10-11T17:56:19Z",
           "categories": [],
-          "description": "We take the 2-layer MLP (with BatchNorm) from the previous video and backpropagate through it manually without using PyTorch autograd's loss.backward(): through the cross entropy loss, 2nd linear layer, tanh, batchnorm, 1st linear layer, and the embedding table. Along the way, we get a strong intuitive understanding about how gradients flow backwards through the compute graph and on the level of efficient Tensors, not just individual scalars like in micrograd. This helps build competence and intuition around how neural nets are optimized and sets you up to more confidently innovate on and debug modern neural networks. I recommend you work through the exercise yourself but work with it in tandem and whenever you are stuck unpause the video and see me give away the answer. This video is…",
+          "description": "I recommend you work through the exercise yourself but work with it in tandem and whenever you are stuck unpause the video and see me give away the answer. This video is not super intended to be simply watched. The exercise is here: 00:00:00 intro: why you should care & fun history",
           "thumbnail": "https://i2.ytimg.com/vi/q8SA3rM6ckI/hqdefault.jpg",
           "metrics": {
-            "views": 389323
+            "views": 389426
           }
         },
         {
@@ -4860,7 +4865,7 @@
           "description": "We dive into some of the internals of MLPs with multiple layers and scrutinize the statistics of the forward pass activations, backward pass gradients, and some of the pitfalls when they are improperly scaled. We also look at the typical diagnostic tools and visualizations you'd want to use to understand the health of your deep network. We learn why training deep neural nets can be fragile and introduce the first modern innovation that made doing so much easier: Batch Normalization. Residual connections and the Adam optimizer remain notable todos for later video. - E01: I did not get around to seeing what happens when you initialize all weights and biases to zero. Try this and train the neural net. You might think either that 1) the network trains just fine or 2) the network doesn't…",
           "thumbnail": "https://i1.ytimg.com/vi/P6sfmUTpUmc/hqdefault.jpg",
           "metrics": {
-            "views": 568332
+            "views": 568478
           }
         },
         {
@@ -4868,10 +4873,10 @@
           "url": "https://www.youtube.com/watch?v=TCH_1BHY58I",
           "publishedAt": "2022-09-12T14:43:06Z",
           "categories": [],
-          "description": "We implement a multilayer perceptron (MLP) character-level language model. In this video we also introduce many basics of machine learning (e.g. model training, learning rate tuning, hyperparameters, evaluation, train/dev/test splits, under/overfitting, etc.). - E01: Tune the hyperparameters of the training to beat my best validation loss of 2.2",
+          "description": "- E01: Tune the hyperparameters of the training to beat my best validation loss of 2.2 - E02: I was not careful with the intialization of the network in this video. (1) What is the loss you'd get if the predicted probabilities at initialization were perfectly uniform? What loss do we achieve? (2) Can you tune the initialization to get a starting loss that is much more similar to (1)?",
           "thumbnail": "https://i1.ytimg.com/vi/TCH_1BHY58I/hqdefault.jpg",
           "metrics": {
-            "views": 612038
+            "views": 612199
           }
         },
         {
@@ -4879,10 +4884,10 @@
           "url": "https://www.youtube.com/watch?v=PaCmpygFfXo",
           "publishedAt": "2022-09-07T19:14:47Z",
           "categories": [],
-          "description": "We implement a bigram character-level language model, which we will further complexify in followup videos into a modern Transformer language model, like GPT. In this video, the focus is on (1) introducing torch.Tensor and its subtleties and use in efficiently evaluating neural networks and (2) the overall framework of language modeling that includes model training, sampling, and the evaluation of a loss (e.g. the negative log likelihood for classification). E01: train a trigram language model, i.e. take two characters as an input to predict the 3rd one. Feel free to use either counting or a neural net. Evaluate the loss; Did it improve over a bigram model?",
+          "description": "E01: train a trigram language model, i.e. take two characters as an input to predict the 3rd one. Feel free to use either counting or a neural net. Evaluate the loss; Did it improve over a bigram model? E02: split up the dataset randomly into 80% train set, 10% dev set, 10% test set. Train the bigram and trigram models only on the training set. Evaluate them on dev and test splits. What can you see?",
           "thumbnail": "https://i1.ytimg.com/vi/PaCmpygFfXo/hqdefault.jpg",
           "metrics": {
-            "views": 1319865
+            "views": 1320156
           }
         },
         {
@@ -4893,15 +4898,15 @@
           "description": "Stable diffusion takes a noise vector as input and samples an image. To create this video I smoothly (spherically) interpolate between randomly chosen noise vectors and render frames along the way. This video was produced by one A100 GPU taking about 10 tabs and dreaming about the prompt overnight (~8 hours). While I slept and dreamt about other things.",
           "thumbnail": "https://i4.ytimg.com/vi/kVpDARqZdrQ/hqdefault.jpg",
           "metrics": {
-            "views": 55020
+            "views": 55029
           }
         }
       ]
     },
     "youtube-two-minute-papers": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:41:48Z",
-      "lastSuccessAt": "2026-11-04T12:41:48Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "OpenAI Claims It Just Did The Impossible",
@@ -4911,7 +4916,7 @@
           "description": "",
           "thumbnail": "https://i4.ytimg.com/vi/CWdTBLsbaQs/hqdefault.jpg",
           "metrics": {
-            "views": 471947
+            "views": 474602
           }
         },
         {
@@ -4922,7 +4927,7 @@
           "description": "",
           "thumbnail": "https://i1.ytimg.com/vi/pryCaGv8wuo/hqdefault.jpg",
           "metrics": {
-            "views": 192004
+            "views": 192845
           }
         },
         {
@@ -4933,7 +4938,7 @@
           "description": "",
           "thumbnail": "https://i1.ytimg.com/vi/LWxX6vvHfrc/hqdefault.jpg",
           "metrics": {
-            "views": 256537
+            "views": 256625
           }
         },
         {
@@ -4944,7 +4949,7 @@
           "description": "",
           "thumbnail": "https://i3.ytimg.com/vi/z_sXLlLVUls/hqdefault.jpg",
           "metrics": {
-            "views": 369524
+            "views": 369584
           }
         },
         {
@@ -4955,7 +4960,7 @@
           "description": "",
           "thumbnail": "https://i1.ytimg.com/vi/4fLVq6HJsKc/hqdefault.jpg",
           "metrics": {
-            "views": 335497
+            "views": 335622
           }
         },
         {
@@ -4966,7 +4971,7 @@
           "description": "Thank you Google DeepMind for the invite.",
           "thumbnail": "https://i4.ytimg.com/vi/Wkaw03p3BrM/hqdefault.jpg",
           "metrics": {
-            "views": 156520
+            "views": 156555
           }
         },
         {
@@ -4977,7 +4982,7 @@
           "description": "",
           "thumbnail": "https://i3.ytimg.com/vi/ZHVNTTKu9fU/hqdefault.jpg",
           "metrics": {
-            "views": 168694
+            "views": 168720
           }
         },
         {
@@ -4988,7 +4993,7 @@
           "description": "Note: in the walking creatures experiment, Astra used a simplified model and was unable to implement the correct one. Things did not improve after simulating it for more generations. Walking creatures video and paper:",
           "thumbnail": "https://i4.ytimg.com/vi/SA9kdAX2Zj0/hqdefault.jpg",
           "metrics": {
-            "views": 378788
+            "views": 378881
           }
         },
         {
@@ -4999,7 +5004,7 @@
           "description": "Previous papers, implementations, models:",
           "thumbnail": "https://i2.ytimg.com/vi/qBBRRsH0rQc/hqdefault.jpg",
           "metrics": {
-            "views": 292779
+            "views": 292818
           }
         },
         {
@@ -5010,7 +5015,7 @@
           "description": "Erratum: Opus 5.1 label at 3:23 should have been Opus 5. Apologies!",
           "thumbnail": "https://i3.ytimg.com/vi/vIHw_2VjSUw/hqdefault.jpg",
           "metrics": {
-            "views": 342690
+            "views": 342720
           }
         },
         {
@@ -5021,7 +5026,7 @@
           "description": "",
           "thumbnail": "https://i2.ytimg.com/vi/YoEWjZSwoys/hqdefault.jpg",
           "metrics": {
-            "views": 110346
+            "views": 110352
           }
         },
         {
@@ -5032,25 +5037,25 @@
           "description": "My fluid simulations and papers: Full interview with Sir Demis Hassabis:",
           "thumbnail": "https://i2.ytimg.com/vi/mOvtumfyjCs/hqdefault.jpg",
           "metrics": {
-            "views": 392011
+            "views": 392022
           }
         }
       ]
     },
     "youtube-deepmind": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:38:31Z",
-      "lastSuccessAt": "2026-11-04T12:38:31Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Genie 4: A new generation of world simulation",
           "url": "https://www.youtube.com/watch?v=sFfPkUJd_Jk",
           "publishedAt": "2026-10-27T16:00:41Z",
           "categories": [],
-          "description": "Meet Genie 4, Google DeepMind’s most realistic and interactive world model yet. Built on our Gemini models, Genie 4 lets you step inside dynamic worlds in real time, steer scenes on the fly with natural language, and watch what happens next: how the world responds, how it sounds, and how the people in it move, react, and speak. We have started rolling out Genie 4 as a research preview for trusted testers, and it's coming soon to Google AI Ultra subscribers in Project Genie and early access partners of the Gemini API and Google AI Studio.",
+          "description": "We have started rolling out Genie 4 as a research preview for trusted testers, and it's coming soon to Google AI Ultra subscribers in Project Genie and early access partners of the Gemini API and Google AI Studio. All Genie 4 recordings in this video show real-time interactions from Genie 4, where users use standard keyboard controls for navigation and camera control, and text prompts to steer the scene as it evolves.",
           "thumbnail": "https://i4.ytimg.com/vi/sFfPkUJd_Jk/hqdefault.jpg",
           "metrics": {
-            "views": 602599
+            "views": 604444
           }
         },
         {
@@ -5058,10 +5063,10 @@
           "url": "https://www.youtube.com/watch?v=LVEfFyijQ2c",
           "publishedAt": "2026-10-13T16:38:17Z",
           "categories": [],
-          "description": "The Chromium codebase is millions of lines long and decades old. In the past, working with it has meant navigating decades of tangled features, where touching one component can unexpectedly affect another. Erik Chen, an engineer at Google, is using Gemini 4 Argon to ‘untangle’ the architecture. The model’s coding capabilities mean that multiple agents can work independently to refactor the codebase (all verified by Chromium's test suites and code reviews from engineers). With Gemini 4 Argon maintaining the codebase, Erik and his team can focus their attention on the future of Chromium.",
+          "description": "",
           "thumbnail": "https://i1.ytimg.com/vi/LVEfFyijQ2c/hqdefault.jpg",
           "metrics": {
-            "views": 3384717
+            "views": 3383889
           }
         },
         {
@@ -5072,7 +5077,7 @@
           "description": "In shadow A/B testing on real-world systems, Wiz security researchers put Gemini 4 Argon to the test against complex cyber threats. Using its advanced reasoning and long-horizon capabilities, Gemini 4 Argon found over two times more vulnerabilities than baseline models and successfully uncovered critical risks—such as identifying a file download bypass and master key in healthcare software. By handling tireless, multi-step threat analysis and remediation, Gemini 4 gives defenders the crucial advantage needed to outpace attackers and protect sensitive data faster than ever before.",
           "thumbnail": "https://i3.ytimg.com/vi/ftkic7Tdpcg/hqdefault.jpg",
           "metrics": {
-            "views": 1053171
+            "views": 1052594
           }
         },
         {
@@ -5083,7 +5088,7 @@
           "description": "In an internal test, Google DeepMind robotics researchers instructed Gemini 4 Argon to watch a video of a human playing cornhole. Using its video understanding and advanced reasoning capabilities, Gemini 4 built a virtual simulation in MuJoCo and accurately calculated the physics and whole-body control required for Apptronik’s Apollo 2 humanoid to sink seven consecutive shots in the real world. This Video-to-Sim-to-Real pipeline compresses weeks of manual modeling into a few hours, transforming ordinary videos into an infinite training ground for physical AI.",
           "thumbnail": "https://i2.ytimg.com/vi/9PICEmtfpWU/hqdefault.jpg",
           "metrics": {
-            "views": 2961513
+            "views": 2961726
           }
         },
         {
@@ -5094,7 +5099,7 @@
           "description": "Auditing chemistry literature usually means weeks of manual, error-prone reading, where a molecule’s structure can sit 50 pages away from its experimental readout. At Isomorphic Labs, researchers Brian Bender and Santosh Adhikari are using Gemini 4 Argon’s multimodal capabilities to help tackle this early research bottleneck. The model synthesizes dense papers and extracts patent data into structured reports in an afternoon instead of a month, helping teams uncover connected insights faster.",
           "thumbnail": "https://i2.ytimg.com/vi/9jQA7IgPhBE/hqdefault.jpg",
           "metrics": {
-            "views": 110353
+            "views": 110498
           }
         },
         {
@@ -5102,10 +5107,10 @@
           "url": "https://www.youtube.com/watch?v=HIUzrxQxTtw",
           "publishedAt": "2026-10-01T16:37:46Z",
           "categories": [],
-          "description": "How do you know if what you're seeing is real? Professor Hannah Fry sits down with Pushmeet Kohli (VP of Science) and Jeremy Ratcliffe (Research Scientist) to break down SynthID, the watermarking technology expanding from text, images, and video straight into biology. Learn how invisible, mathematical watermarks help trace AI provenance, protect against misuse, and safeguard protein sequence design without impacting biological function.",
+          "description": "",
           "thumbnail": "https://i1.ytimg.com/vi/HIUzrxQxTtw/hqdefault.jpg",
           "metrics": {
-            "views": 198677
+            "views": 198841
           }
         },
         {
@@ -5113,10 +5118,10 @@
           "url": "https://www.youtube.com/watch?v=FL6mI_Br-mc",
           "publishedAt": "2026-09-23T15:23:38Z",
           "categories": [],
-          "description": "Design entirely new vocal personas from scratch for gaming, immersive audiobooks, or dual-speaker podcasts using natural language prompts - directing every performance line by line with nuanced acting cues, pacing, back channeling, and dialect shifts. Or, recreate consistent adult vocal profiles from just a 30-second audio sample of your voice or a voice you have the rights to use, backed by built-in consent verification, SynthID watermarking, and C2PA credentials to protect both developers and their vocal talent.",
+          "description": "Or, recreate consistent adult vocal profiles from just a 30-second audio sample of your voice or a voice you have the rights to use, backed by built-in consent verification, SynthID watermarking, and C2PA credentials to protect both developers and their vocal talent.",
           "thumbnail": "https://i3.ytimg.com/vi/FL6mI_Br-mc/hqdefault.jpg",
           "metrics": {
-            "views": 6062404
+            "views": 6062774
           }
         },
         {
@@ -5127,7 +5132,7 @@
           "description": "Can artificial intelligence solve one of science’s most chaotic physics puzzles? In this episode, Professor Hannah Fry sits down with Peter Battaglia, Senior Director of Research at Google DeepMind, to explore how machine learning is transforming global weather forecasting. From providing critical early warnings for Category 5 storms like Hurricane Melissa to predicting renewable energy supply and agricultural impacts, learn how models like WeatherNext 3 are building upon decades of numerical physics to reshape our understanding of the atmosphere. 11:50 Why weather forecasting is hard",
           "thumbnail": "https://i4.ytimg.com/vi/O_EWbnkjXdk/hqdefault.jpg",
           "metrics": {
-            "views": 243018
+            "views": 243065
           }
         },
         {
@@ -5138,7 +5143,7 @@
           "description": "How do you find a single typo in a person's DNA that causes a rare disease? It is like finding a needle in a 9-billion-piece haystack. Enter AlphaGenome Atlas: a new AI-powered database charting the molecular impact of every possible genetic variant.",
           "thumbnail": "https://i2.ytimg.com/vi/ya04CpsRJH0/hqdefault.jpg",
           "metrics": {
-            "views": 7811
+            "views": 7824
           }
         },
         {
@@ -5149,7 +5154,7 @@
           "description": "We’ve used AlphaGenome to predict the molecular impact of every possible single-letter change in the human genome. All nine billion of them. AlphaGenome Atlas is a 1PB dataset containing every single possible nucleotide variant alongside an AlphaGenome Variant Impact (AVI) score. This score helps researchers instantly understand the potential impact of any given variation.",
           "thumbnail": "https://i2.ytimg.com/vi/U0aToL5C-bQ/hqdefault.jpg",
           "metrics": {
-            "views": 4928650
+            "views": 4928689
           }
         },
         {
@@ -5160,7 +5165,7 @@
           "description": "Predicting the weather is one of the oldest, most complex challenges we face. Traditional numerical weather prediction models are powerful, but they can be slow to run and costly at a global scale. WeatherNext 3 takes a different approach. Built on a fundamentally different architecture, WeatherNext 3 learns directly from real-world observations, including live satellite feeds and ground-level weather station data. What makes WeatherNext 3 different?",
           "thumbnail": "https://i4.ytimg.com/vi/_6jZlnRsXXQ/hqdefault.jpg",
           "metrics": {
-            "views": 395037
+            "views": 395058
           }
         },
         {
@@ -5171,16 +5176,49 @@
           "description": "Long before the current wave of large language models, one academic researcher was trying to give machines a sense of their own limitations. Zoubin Ghahramani has spent the last 30 years pioneering a type of intelligence built on the mathematics of uncertainty. Today, as a professor at Cambridge and VP of research at Google DeepMind, Zoubin finds himself at the heart of an interesting debate: will improving machine uncertainty be one of the missing pieces to ever improving AI? 07:45 Correctness vs confidence",
           "thumbnail": "https://i1.ytimg.com/vi/tBjgCj_dGZM/hqdefault.jpg",
           "metrics": {
-            "views": 400218
+            "views": 400240
           }
         }
       ]
     },
     "youtube-openai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:38:31Z",
-      "lastSuccessAt": "2026-11-04T12:38:31Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "Messi asks ChatGPT to reimagine his room",
+          "url": "https://www.youtube.com/shorts/6IttBmI4P9M",
+          "publishedAt": "2026-11-04T19:25:46Z",
+          "categories": [],
+          "description": "Messi wanted this empty room to feel a little more like him, but wasn’t sure where to start. So he asked ChatGPT for some ideas. Try it yourself: “Reimagine this room in my style. Surprise me.”",
+          "thumbnail": "https://i3.ytimg.com/vi/6IttBmI4P9M/hqdefault.jpg",
+          "metrics": {
+            "views": 659
+          }
+        },
+        {
+          "title": "How Figma Is Building Self-Serve Analytics with OpenAI",
+          "url": "https://www.youtube.com/shorts/0LDs5rvx1EI",
+          "publishedAt": "2026-11-04T17:33:11Z",
+          "categories": [],
+          "description": "Marketers shouldn’t have to wait for a new dashboard to understand how a campaign is performing. In an early pilot with OpenAI, Figma is building shared context that helps marketers ask how campaigns are landing and whether they’re converting customers. Teams can get useful insights sooner, without waiting for someone to build a dashboard or metric.",
+          "thumbnail": "https://i1.ytimg.com/vi/0LDs5rvx1EI/hqdefault.jpg",
+          "metrics": {
+            "views": 694
+          }
+        },
+        {
+          "title": "How Figma Is Building Self-Serve Analytics with OpenAI",
+          "url": "https://www.youtube.com/watch?v=44GBqQGc-v0",
+          "publishedAt": "2026-11-04T17:27:07Z",
+          "categories": [],
+          "description": "Marketers shouldn’t have to wait for a new dashboard to understand how a campaign is performing. In an early pilot with OpenAI, Figma is building shared context that helps marketers ask how campaigns are landing and whether they’re converting customers. Teams can get useful insights sooner, without waiting for someone to build a dashboard or metric.",
+          "thumbnail": "https://i1.ytimg.com/vi/44GBqQGc-v0/hqdefault.jpg",
+          "metrics": {
+            "views": 1917
+          }
+        },
         {
           "title": "TamaGPT",
           "url": "https://www.youtube.com/watch?v=NCxD-qsQcN0",
@@ -5189,7 +5227,7 @@
           "description": "You don't need to be an engineer to make hardware. Want to make something physical? Let GPT-6 Astra help you bring it to life.",
           "thumbnail": "https://i3.ytimg.com/vi/NCxD-qsQcN0/hqdefault.jpg",
           "metrics": {
-            "views": 210273
+            "views": 269480
           }
         },
         {
@@ -5200,7 +5238,7 @@
           "description": "Qodo’s Codex plugin brings company context, codebase standards, and independent review into the development workflow. It helps developers catch bugs across repositories, where a change can look right in one codebase and break a service in another. In Behind the Build, co-founder Itamar Friedman and AI DevRel lead Nnenna Ndukwe discuss how they’re building with GPT-6 Astra and their vision for a workflow where one agent writes code and another challenges it.",
           "thumbnail": "https://i2.ytimg.com/vi/yC72iQx6rM0/hqdefault.jpg",
           "metrics": {
-            "views": 9205
+            "views": 10627
           }
         },
         {
@@ -5211,7 +5249,7 @@
           "description": "Securely connect your accounts through Finances, then talk through your finances on topics like what subscriptions you're paying for, discuss which you’d like to keep and what you could save by cancelling.",
           "thumbnail": "https://i3.ytimg.com/vi/63pcV4z0DwI/hqdefault.jpg",
           "metrics": {
-            "views": 35501
+            "views": 44039
           }
         },
         {
@@ -5222,7 +5260,7 @@
           "description": "Glean co-founder and CTO T.R. Vishwanath discusses customer control of data and Glean’s work with OpenAI on the Private Safety Processing preview.",
           "thumbnail": "https://i3.ytimg.com/vi/JR7xBi2kJjY/hqdefault.jpg",
           "metrics": {
-            "views": 3719
+            "views": 5016
           }
         },
         {
@@ -5233,7 +5271,7 @@
           "description": "Using more capable AI starts with confidence that your data stays under your control. For Glean’s customers, privacy is a priority. Glean co-founder and CTO Vishwanath T R shares how Glean and OpenAI have worked together to help meet those needs, including through the Private Safety Processing preview.",
           "thumbnail": "https://i3.ytimg.com/vi/2h16j4K_NbA/hqdefault.jpg",
           "metrics": {
-            "views": 9747
+            "views": 10676
           }
         },
         {
@@ -5244,7 +5282,7 @@
           "description": "Coinbase CTO Rob Witoff explains why security, guardrails, and zero data retention matter when using OpenAI.",
           "thumbnail": "https://i3.ytimg.com/vi/NbDF90z-g6w/hqdefault.jpg",
           "metrics": {
-            "views": 5306
+            "views": 6345
           }
         },
         {
@@ -5255,7 +5293,7 @@
           "description": "For Coinbase, putting frontier AI to work starts with control over its data. Every employee has access to the latest OpenAI models. In this video, Rob Witoff explains why security, guardrails, and zero data retention are central to that trust. As he puts it: “It’s still our data.”",
           "thumbnail": "https://i2.ytimg.com/vi/Amm9ySSET4c/hqdefault.jpg",
           "metrics": {
-            "views": 17646
+            "views": 17947
           }
         },
         {
@@ -5266,7 +5304,7 @@
           "description": "",
           "thumbnail": "https://i4.ytimg.com/vi/o4D1J1YWjhg/hqdefault.jpg",
           "metrics": {
-            "views": 122271
+            "views": 122767
           }
         },
         {
@@ -5277,48 +5315,15 @@
           "description": "“Before ChatGPT Work, we were walking. Now with ChatGPT Work, we are running.” For Gen's Howie Xu, that means understanding how a new product’s onboarding experience is working within two or three hours of release.",
           "thumbnail": "https://i4.ytimg.com/vi/7TtGMileCus/hqdefault.jpg",
           "metrics": {
-            "views": 3864
-          }
-        },
-        {
-          "title": "How Gen uses ChatGPT Work to turn data Into decisions | OpenAI",
-          "url": "https://www.youtube.com/watch?v=Oi9DHk57KeQ",
-          "publishedAt": "2026-10-30T15:22:47Z",
-          "categories": [],
-          "description": "“Before ChatGPT Work, we were walking. Now with ChatGPT Work, we are running.” For Gen's Howie Xu, that means understanding how a new product’s onboarding experience is working within two or three hours of release.",
-          "thumbnail": "https://i4.ytimg.com/vi/Oi9DHk57KeQ/hqdefault.jpg",
-          "metrics": {
-            "views": 15771
-          }
-        },
-        {
-          "title": "ChatGPT Enterprise at Zendesk: Putting Company Data to Work",
-          "url": "https://www.youtube.com/shorts/GNYHDltnwZQ",
-          "publishedAt": "2026-10-29T22:48:11Z",
-          "categories": [],
-          "description": "“We have about 600 applications that have been built by different people in the company.” At Zendesk, teams across sales, marketing, and operations are building applications for their own work. ChatGPT Enterprise is available to every employee, and business users are asking questions about their data directly.",
-          "thumbnail": "https://i4.ytimg.com/vi/GNYHDltnwZQ/hqdefault.jpg",
-          "metrics": {
-            "views": 4228
-          }
-        },
-        {
-          "title": "ChatGPT Enterprise at Zendesk: Putting Company Data to Work",
-          "url": "https://www.youtube.com/watch?v=L6pzlo1QvoM",
-          "publishedAt": "2026-10-29T16:23:43Z",
-          "categories": [],
-          "description": "“We have about 600 applications that have been built by different people in the company.” At Zendesk, teams across sales, marketing, and operations are building applications for their own work. ChatGPT Enterprise is available to every employee, and business users are asking questions about their data directly.",
-          "thumbnail": "https://i1.ytimg.com/vi/L6pzlo1QvoM/hqdefault.jpg",
-          "metrics": {
-            "views": 15652
+            "views": 3947
           }
         }
       ]
     },
     "arxiv-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T14:00:53Z",
-      "lastSuccessAt": "2026-11-04T14:00:53Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Alignment Faking Depends on the Value, Not Just the Model",
@@ -5520,8 +5525,8 @@
     },
     "arxiv-cl": {
       "status": "ok",
-      "checkedAt": "2026-11-04T14:00:53Z",
-      "lastSuccessAt": "2026-11-04T14:00:53Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Rethinking Next-Visit Diagnosis Prediction Beyond Aggregate Metrics: Retrieval--Memory Multi-Agent Adjudication",
@@ -5726,8 +5731,8 @@
     },
     "arxiv-lg": {
       "status": "ok",
-      "checkedAt": "2026-11-04T14:00:53Z",
-      "lastSuccessAt": "2026-11-04T14:00:53Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Latent Cluster Separation as a Regularizer for Lifelong Anomaly Detection",
@@ -5912,8 +5917,8 @@
     },
     "arxiv-cv": {
       "status": "ok",
-      "checkedAt": "2026-11-04T14:00:53Z",
-      "lastSuccessAt": "2026-11-04T14:00:53Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Physics-Informed Functional Tucker Method with RKHS Factors for Sparse Spatiotemporal Reconstruction",
@@ -6116,8 +6121,8 @@
     },
     "arxiv-ro": {
       "status": "ok",
-      "checkedAt": "2026-11-04T14:00:53Z",
-      "lastSuccessAt": "2026-11-04T14:00:53Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Robot-Matched Soft Fingers for UMI Data Collection: Lessons from 100 Hours of Pick and Place",
@@ -6339,9 +6344,91 @@
     },
     "hf-papers": {
       "status": "ok",
-      "checkedAt": "2026-11-04T14:00:53Z",
-      "lastSuccessAt": "2026-11-04T14:00:53Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
+        {
+          "title": "QFabric: Guarded Cross-Domain Task Recovery and Its Limits on a Linux-RTOS Board",
+          "url": "https://huggingface.co/papers/2611.01598",
+          "publishedAt": "2026-10-31T20:00:00Z",
+          "categories": [],
+          "description": "Heterogeneous embedded boards pair a Linux application processor with a real-time microcontroller (MCU), which suggests moving a task between the two domains when its timing degrades. We present QFabric, a prototype that treats cross-domain placement as guarded recovery from a violated empirical soft real-time contract: a bounded task is compiled for both domains, monitored in windows with hysteresis, switched only after semantic and capacity admission at a quiescent epoch boundary, and committed or rolled back after probation. On an Arduino UNO Q (Cortex-A53 Linux and a Cortex-M33 running Zephyr), we characterize the stock Bridge RPC interconnect and measure five workloads in both domains under idle, CPU-load, and higher-priority SCHED_FIFO contention, with ordinary and real-time callers. Each MCU invocation costs about 19 ms of dispatch regardless of compute, the MCU runs the heaviest kernel 34x slower, and because every call traverses Linux userspace, Linux contention inflates the MCU path far more than the Linux path (p99 up to 400 ms versus 17.0 ms). Across 30 cells of a four-node chain, Linux meets every contract within 0.8% misses and QFabric correctly never migrates; a controller without hysteresis migrates in 7 cells, raising p95 by up to 177x, and probation rolls back 5 of those moves. On Linux-dispatched heterogeneous boards, migration therefore cannot isolate a task from Linux interference, and recovery guards matter chiefly by preventing harmful moves. This paper supersedes an earlier artifact release whose reported improvement arose from measurement defects that we identify. All source, raw traces, and generators are public.",
+          "authors": [
+            "Ayushman Bhattacharya",
+            "Anwesha Chakraborty"
+          ],
+          "linkedOrganization": "Elixpo",
+          "metrics": {
+            "comments": 1
+          }
+        },
+        {
+          "title": "Adversarial Speculative Reasoning Improves Long Horizon Agents",
+          "url": "https://huggingface.co/papers/2611.05345",
+          "publishedAt": "2026-11-02T19:00:00Z",
+          "categories": [],
+          "description": "Speculative decoding has been treated purely as a systems optimization that speeds up large language model decoding without changing the model behavior. Under this view, the growing effort to train better draft models has been focused solely on acceptance rate. We argue that this view does not hold true for long-horizon agent reasoning. Measuring frontier open-weight models on complex agentic tasks with different speculative decoding approaches, we found that numerical noise grows within verification windows, and the draft acceptance results of the thinking process can change the output distribution of the model after 30 steps, thus noticeably influencing the reasoning accuracy of long-horizon agents in random directions. In this work, we improve the reasoning capability of target models by controlling such noise. While we cannot change the overall token distribution verified by the target model, we can encode critical reasoning with highest precision by training the draft model to be rejected. We identify these points in agent traces and train the draft model to favor adversarial preference. At inference the trained draft and the target part ways precisely at these decision points, verification restarts, so that critical thinking tokens are sampled from the target model and encoded under its least noisy conditions. This approach makes critical reasoning better indexed and more durable over a long horizon. On complex agentic coding benchmarks, our approach raises end-to-end success rate with no change to the target model or its output distribution. Our results recast the speculative decoding mechanism from a pure accelerator into an active allocator for context precision that improves the accuracy of long-horizon agents by training 0.06% to 0.28% of hosted parameters.",
+          "authors": [
+            "Hongyin Luo",
+            "Wei Fang",
+            "Lijie Yang",
+            "Owen Stepan",
+            "Daniel Suit",
+            "Jeff Krapf",
+            "Dana Wensberg",
+            "Jack O'Brien"
+          ],
+          "linkedOrganization": "Subconscious",
+          "metrics": {
+            "upvotes": 6,
+            "comments": 1
+          }
+        },
+        {
+          "title": "BEND 2.0: Benchmarking the Capabilities Needed to Design DNA",
+          "url": "https://huggingface.co/papers/2611.03806",
+          "publishedAt": "2026-11-02T14:00:07Z",
+          "categories": [],
+          "description": "Genomic foundation models are increasingly used to propose DNA sequences and edits. But successful design requires capabilities that current benchmarks do not measure. Here we introduce BEND 2.0 (BENchmark for DNA language models), which tests how well models predict the effects of DNA changes and whether these predictions can guide sequence design. Across eight tasks built on five experimental datasets, we find that model choice and how representations are accessed both affect performance. Linear readouts fitted to frozen representations can match or exceed models' native outputs, and functional post-training substantially improves the models' capabilities. Linear readouts transfer well across experimental assays and genes, suggesting that models capture functional patterns beyond the data used to fit individual predictors. At the same time, strong prediction of average effects can conceal weaker prediction of context-specific effects, and accurate prediction of combined mutation effects does not imply accurate prediction of their interactions. In design tasks, model predictions can reduce the number of candidates needed to find a desired response, but still leave substantial room for better design choices, particularly for context-specific and multi-cell objectives. Our benchmark reveals that genomic models now display signs of general utility but have yet to saturate on performance in even simple tasks.",
+          "authors": [
+            "Andreas Bjerregaard",
+            "Rachael DeVries",
+            "Dionysia Danai Brilli",
+            "Panagiotis Antoniadis",
+            "Yan Li",
+            "Anders Krogh",
+            "Wouter Boomsma",
+            "Ole Winther",
+            "Frederikke Isa Marin"
+          ],
+          "metrics": {
+            "upvotes": 2,
+            "comments": 1
+          }
+        },
+        {
+          "title": "Dory1.0-4B: A Looped Normalized-GPT",
+          "url": "https://huggingface.co/papers/2611.03998",
+          "publishedAt": "2026-11-01T19:00:00Z",
+          "categories": [],
+          "description": "We introduce Dory1.0-4B, a 4-billion-parameter looped (latent-recurrent) language model with elastic depth: a single checkpoint serves different inference compute budgets. Dory1.0-4B is built on a normalized Transformer (nGPT) backbone with interleaved sliding-window and full-attention layers, organized into an input block, a shared recurrent block, and an output block. At inference, the recurrent block can be applied a variable number of times. We pre-trained Dory1.0-4B on 6 trillion tokens. The first 4.5 trillion tokens were trained in NVFP4, and additional pre-training then extended the context length to 256K tokens. Next, we post-trained the model using Supervised Fine-Tuning (SFT) and Reinforcement Learning with Verifiable Rewards (RLVR), with a difficulty-aware loop curriculum that routes harder prompts to deeper loops. Increasing the loop count improves accuracy, with the largest gains on coding, agentic, and long-context benchmarks. With two or more loops, Dory1.0-4B outperforms larger models such as Qwen3.5-9B, Gemma 4 12B, and Gemma 4 26B-A4B on average across 12 benchmarks. Looping also makes Dory1.0-4B more token-efficient on agentic benchmarks: with four loops, it generates 1.3-2.5x fewer tokens than with one loop, as the extra computation is spent in latent space rather than on longer outputs. To reduce memory during looping, Dory1.0-4B caches keys and values only from the last loop, keeping its KV-cache footprint equal to that of a non-looped model at any loop count while retaining most of the accuracy gains. We open-source the BF16, MXFP8, NVFP4, and GGUF quantized checkpoints.",
+          "authors": [
+            "Maxim Fishman",
+            "Simeng Sun",
+            "Shantanu Acharya",
+            "Faisal Ladhak",
+            "Brian Chmiel",
+            "Santiago Akle Serano",
+            "Ron Banner",
+            "Boris Ginsburg",
+            "Krishna C. Puvvada"
+          ],
+          "linkedOrganization": "NVIDIA",
+          "metrics": {
+            "upvotes": 5,
+            "comments": 1
+          }
+        },
         {
           "title": "Every Token Needs Its Own Teacher: Multi-teacher Adaptive On-policy Self-distillation",
           "url": "https://huggingface.co/papers/2610.40574",
@@ -6358,7 +6445,7 @@
           ],
           "linkedOrganization": "Technical University of Munich",
           "metrics": {
-            "upvotes": 7,
+            "upvotes": 8,
             "comments": 1
           }
         },
@@ -6373,6 +6460,7 @@
             "Svyatoslav Dorofeev"
           ],
           "metrics": {
+            "upvotes": 1,
             "comments": 2
           }
         },
@@ -6390,7 +6478,7 @@
           ],
           "linkedOrganization": "KAIST AI",
           "metrics": {
-            "upvotes": 37,
+            "upvotes": 42,
             "comments": 1
           }
         },
@@ -6411,7 +6499,7 @@
           ],
           "linkedOrganization": "Tencent",
           "metrics": {
-            "upvotes": 63,
+            "upvotes": 64,
             "comments": 6
           }
         },
@@ -6437,7 +6525,7 @@
           ],
           "linkedOrganization": "NVIDIA",
           "metrics": {
-            "upvotes": 3,
+            "upvotes": 6,
             "comments": 2
           }
         },
@@ -6467,6 +6555,7 @@
           ],
           "linkedOrganization": "SJTU Cross Media Language Intelligence Lab",
           "metrics": {
+            "upvotes": 1,
             "comments": 1
           }
         },
@@ -6501,93 +6590,6 @@
           ],
           "linkedOrganization": "Shanghai Jiao Tong University",
           "metrics": {
-            "comments": 1
-          }
-        },
-        {
-          "title": "Every Pixel Is an Option: A System One Model for Medical Ultrasound Biometry",
-          "url": "https://huggingface.co/papers/2611.03360",
-          "publishedAt": "2026-11-01T19:00:00Z",
-          "categories": [],
-          "description": "**Purpose:** Ultrasound biometry is widely used across various clinical applications, including prenatal and cardiac examinations, to obtain quantitative measurements by placing calipers at anatomical landmarks. However, these measurements remain subject to interoperator variability as they rely largely on manual caliper placement. Conventional methods often use specialized prediction heads for different ultrasound tasks, whereas vision-language models offer flexibility through text instructions. However, direct coordinate prediction does not explicitly model spatial likelihood distributions, limiting the representation of localization ambiguity. **Methods:** We propose Kev-Bio, a vision-language model that uses clinical measurement questions to guide ultrasound landmark detection. Inspired by System One decision models, Kev-Bio uses decision representations of the language model to generate queries for each caliper endpoint. These queries are matched against shared dense ultrasound features to produce spatial probability maps, from which landmark coordinates and clinical measurements are derived. The model is trained end-to-end using both landmark localization and clinical measurement losses. **Results:** On the nine-view FU/GU Biometry 2026 dataset, Kev-Bio achieves a mean radial error (MRE) of 22.50 pixels and a clinical measurement mean absolute error (MAE) of 15.38, outperforming the compared baselines in overall performance. **Conclusion:** These results demonstrate the effectiveness of Kev-Bio for ultrasound landmark detection and clinical measurement across different anatomical views. Our code and models are available at https://github.com/moeinheidari7829/Kev-Bio.",
-          "authors": [
-            "Moein Heidari",
-            "Junbo Rao",
-            "Yudan Chen",
-            "Yasamin Medghalchi",
-            "River Jiang",
-            "Wenjin Chen",
-            "David J. Foran",
-            "Jasmine Grewal",
-            "Ilker Hacihaliloglu"
-          ],
-          "linkedOrganization": "University of British Columbia",
-          "metrics": {
-            "upvotes": 2,
-            "comments": 1
-          }
-        },
-        {
-          "title": "DreamX: Video Diffusion Model is a Universal Latent Action Learner",
-          "url": "https://huggingface.co/papers/2611.05377",
-          "publishedAt": "2026-11-02T19:00:00Z",
-          "categories": [],
-          "description": "Learning a universal action representation from video requires modeling dynamics that are consistent across different executions of the same action yet invariant to changes in embodiment and appearance. Existing latent action models infer actions from visual transitions, but their representations often entangle the underlying action with irrelevant visual variations, limiting transfer across embodiments. We introduce DreamX, which repurposes a pretrained video diffusion model as a universal latent action learner. Our approach extracts compact latent actions from the video model's rich spatiotemporal features, compressing each latent video frame by 300times (1{,200 rightarrow 4} tokens). In addition, by leveraging the video model's generative prior, these latent actions capture action-relevant dynamics disentangled from visual appearance. The resulting latent space serves as a shared action interface across embodiments (human and robot), environments, and action parameterizations. On LARY-Bench, DreamX achieves state-of-the-art performance among latent action models. Moreover, actions encoded in one setting remain effective in another: the latent space supports any-to-any video transfer and zero-shot action transfer across diverse embodiments and environments. Furthermore, this shared interface also enables policy learning in a compact latent action space, reducing the computational cost of video-diffusion-based policies.",
-          "authors": [
-            "Jisoo Kim",
-            "Chaehyun Kim",
-            "Junsu Kim",
-            "Jiho Park",
-            "Seongchan Kim",
-            "Eunbeen Hong",
-            "Soowon Son",
-            "Fu-En Yang",
-            "Seungryong Kim"
-          ],
-          "linkedOrganization": "KAIST AI",
-          "metrics": {
-            "upvotes": 46,
-            "comments": 1
-          }
-        },
-        {
-          "title": "VidUEU-Agent: A Data-Curation Agent for Multimodal Understanding, Editing, and Unified Tasks",
-          "url": "https://huggingface.co/papers/2611.04418",
-          "publishedAt": "2026-11-02T19:00:00Z",
-          "categories": [],
-          "description": "The advancement of multimodal learning is heavily constrained by the scarcity and high annotation cost of high-quality instruction data. While raw videos offer an abundant and dynamic source of visual knowledge, transforming them into precise instruction data remains highly challenging. To bridge this gap, we present VidUEU-Agent, an automated pipeline that synthesizes instruction data from raw videos for multimodal understanding, editing, and unified tasks. VidUEU-Agent follows a four-stage pipeline: it performs global perception to filter low-quality shots, mines keyframes and multimodal signals, constructs metadata and routes the metadata to synthesize instruction samples. More importantly, our agent framework can autonomously iterate the data distribution based on downstream training results, thereby optimizing data quality, balance, and training effectiveness. Scaling this pipeline, we construct VidUEU-100K, a large-scale dataset of 100K training samples spanning multiple domains and tasks, providing a robust foundation for developing comprehensive multimodal capabilities. Extensive experiments demonstrate that fine-tuning baseline models on VidUEU-100K yields significant and consistent performance gains across diverse representative benchmarks, validating the effectiveness of our proposed agent framework and dataset.",
-          "authors": [
-            "Tengju Ru",
-            "Weitong Lian",
-            "Zecong Tang",
-            "Lingyi Meng",
-            "Haoran Li",
-            "Zhejun Cui",
-            "Yichen Zhu",
-            "Hangshuo Cao",
-            "Qi Kang",
-            "Yechi Liu",
-            "Kaixuan Wang",
-            "Yu-Jie Yuan",
-            "Chunwei Wang",
-            "Yu Zhang",
-            "Bo Dai"
-          ],
-          "metrics": {
-            "upvotes": 22,
-            "comments": 1
-          }
-        },
-        {
-          "title": "Going Deeper With Memories",
-          "url": "https://huggingface.co/papers/2611.05255",
-          "publishedAt": "2026-11-02T19:00:00Z",
-          "categories": [],
-          "description": "Byte level language models avoid tokenizer dependence and provide universal coverage, but processing every byte at full resolution is expensive. We introduce DeepMem, a causal multiscale architecture that separates semantic compression from exact byte preservation. A learned invertible subband transform constructs a hierarchy of shorter sequences, while a lossless carrier and explicit detail sidebands preserve byte identity. Fast weight memory blocks operate along the encoder, with iterative shared state computation at the compressed bottleneck, while an attention based super resolution decoder restores byte resolution representations. DeepMem achieves stronger language modeling performance than a matched byte level Transformer on FineWeb-Edu and PG19, and obtains the best macro average performance across the evaluated FLORES languages. It also improves PIQA accuracy while remaining competitive on code modeling, multiple choice reasoning, and byte level corruption robustness. Bottleneck refinement requires approximately 7{,}600times fewer counted FLOPs than equivalent full resolution reasoning, while maintaining competitive evaluation throughput.",
-          "authors": [
-            "Afshin Khadangi"
-          ],
-          "metrics": {
             "upvotes": 1,
             "comments": 1
           }
@@ -6596,8 +6598,8 @@
     },
     "hf-trending-papers": {
       "status": "ok",
-      "checkedAt": "2026-11-04T14:00:53Z",
-      "lastSuccessAt": "2026-11-04T14:00:53Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "TokenEconomizer: Experience-Driven Black-Box Cost Control for Coding Agents",
@@ -6625,6 +6627,26 @@
           }
         },
         {
+          "title": "Kronos: A Foundation Model for the Language of Financial Markets",
+          "url": "https://huggingface.co/papers/2508.02739",
+          "publishedAt": "2025-08-02T09:15:59Z",
+          "categories": [],
+          "description": "The success of large-scale pre-training paradigm, exemplified by Large Language Models (LLMs), has inspired the development of Time Series Foundation Models (TSFMs). However, their application to financial candlestick (K-line) data remains limited, often underperforming non-pre-trained architectures. Moreover, existing TSFMs often overlook crucial downstream tasks such as volatility prediction and synthetic data generation. To address these limitations, we propose Kronos, a unified, scalable pre-training framework tailored to financial K-line modeling. Kronos introduces a specialized tokenizer that discretizes continuous market information into token sequences, preserving both price dynamics and trade activity patterns. We pre-train Kronos using an autoregressive objective on a massive, multi-market corpus of over 12 billion K-line records from 45 global exchanges, enabling it to learn nuanced temporal and cross-asset representations. Kronos excels in a zero-shot setting across a diverse set of financial tasks. On benchmark datasets, Kronos boosts price series forecasting RankIC by 93% over the leading TSFM and 87% over the best non-pre-trained baseline. It also achieves a 9% lower MAE in volatility forecasting and a 22% improvement in generative fidelity for synthetic K-line sequences. These results establish Kronos as a robust, versatile foundation model for end-to-end financial time series analysis. Our pre-trained model is publicly available at https://github.com/shiyu-coder/Kronos.",
+          "authors": [
+            "Yu Shi",
+            "Zongliang Fu",
+            "Shuo Chen",
+            "Bohan Zhao",
+            "Wei Xu",
+            "Changshui Zhang",
+            "Jian Li"
+          ],
+          "metrics": {
+            "upvotes": 63,
+            "comments": 4
+          }
+        },
+        {
           "title": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
           "url": "https://huggingface.co/papers/2412.20138",
           "publishedAt": "2024-12-28T07:54:06Z",
@@ -6642,22 +6664,25 @@
           }
         },
         {
-          "title": "Kronos: A Foundation Model for the Language of Financial Markets",
-          "url": "https://huggingface.co/papers/2508.02739",
-          "publishedAt": "2025-08-02T09:15:59Z",
+          "title": "Harness^2: Recursive Agent Harnessing for an Open World",
+          "url": "https://huggingface.co/papers/2610.14224",
+          "publishedAt": "2026-10-08T20:00:00Z",
           "categories": [],
-          "description": "The success of large-scale pre-training paradigm, exemplified by Large Language Models (LLMs), has inspired the development of Time Series Foundation Models (TSFMs). However, their application to financial candlestick (K-line) data remains limited, often underperforming non-pre-trained architectures. Moreover, existing TSFMs often overlook crucial downstream tasks such as volatility prediction and synthetic data generation. To address these limitations, we propose Kronos, a unified, scalable pre-training framework tailored to financial K-line modeling. Kronos introduces a specialized tokenizer that discretizes continuous market information into token sequences, preserving both price dynamics and trade activity patterns. We pre-train Kronos using an autoregressive objective on a massive, multi-market corpus of over 12 billion K-line records from 45 global exchanges, enabling it to learn nuanced temporal and cross-asset representations. Kronos excels in a zero-shot setting across a diverse set of financial tasks. On benchmark datasets, Kronos boosts price series forecasting RankIC by 93% over the leading TSFM and 87% over the best non-pre-trained baseline. It also achieves a 9% lower MAE in volatility forecasting and a 22% improvement in generative fidelity for synthetic K-line sequences. These results establish Kronos as a robust, versatile foundation model for end-to-end financial time series analysis. Our pre-trained model is publicly available at https://github.com/shiyu-coder/Kronos.",
+          "description": "LLM agents' capabilities depend not only on their underlying models but also on their execution harnesses. Recursive self-improvement (RSI) offers a promising approach to automatically evolve these harnesses. However, deploying RSI in open-world settings still faces two critical challenges. First, open-world tasks are typically unseen during the harness design phase and novel at test time, leaving no ground-truth verifiers to reliably guide online harness edits. Second, the RSI process remains highly task-specific and fails to generalize to novel scenarios. We introduce Harness^2, a plug-and-play, recursive agent harnessing framework that addresses these challenges through two connected levels of recursion. Task-level recursion refines the current task's harness using a contrastive Propose-Probe-Compose step that reliably guides edits without ground-truth verifiers, and can be scaled further via parallel or sequential recursion. Harnessing-level recursion then extracts experience from these edits to update a continual improvement harness, enabling the agent to better adapt to future tasks. Across three professional benchmarks and four model-harness configurations, a single step consistently improves GLM-5 and Gemini 3.5 Flash over their base harnesses, yielding gains of up to 11.5 points on WorkBuddy-Bench, 4.5 points on JobBench, and 11.8 percentage points on LAB, with further gains as the task-level recursion budget increases.",
           "authors": [
-            "Yu Shi",
-            "Zongliang Fu",
-            "Shuo Chen",
-            "Bohan Zhao",
-            "Wei Xu",
-            "Changshui Zhang",
-            "Jian Li"
+            "Ruiyao Xu",
+            "Yanfei Chen",
+            "Zhongying CuiZhu",
+            "Bhavana Dalvi Mishra",
+            "Yifei Ming",
+            "Han Yu",
+            "Rujun Han",
+            "Chen-Yu Lee",
+            "Tomas Pfister"
           ],
+          "linkedOrganization": "Google",
           "metrics": {
-            "upvotes": 63,
+            "upvotes": 67,
             "comments": 4
           }
         },
@@ -6682,31 +6707,8 @@
           ],
           "linkedOrganization": "University of California, Berkeley",
           "metrics": {
-            "upvotes": 111,
+            "upvotes": 110,
             "comments": 2
-          }
-        },
-        {
-          "title": "Harness^2: Recursive Agent Harnessing for an Open World",
-          "url": "https://huggingface.co/papers/2610.14224",
-          "publishedAt": "2026-10-08T20:00:00Z",
-          "categories": [],
-          "description": "LLM agents' capabilities depend not only on their underlying models but also on their execution harnesses. Recursive self-improvement (RSI) offers a promising approach to automatically evolve these harnesses. However, deploying RSI in open-world settings still faces two critical challenges. First, open-world tasks are typically unseen during the harness design phase and novel at test time, leaving no ground-truth verifiers to reliably guide online harness edits. Second, the RSI process remains highly task-specific and fails to generalize to novel scenarios. We introduce Harness^2, a plug-and-play, recursive agent harnessing framework that addresses these challenges through two connected levels of recursion. Task-level recursion refines the current task's harness using a contrastive Propose-Probe-Compose step that reliably guides edits without ground-truth verifiers, and can be scaled further via parallel or sequential recursion. Harnessing-level recursion then extracts experience from these edits to update a continual improvement harness, enabling the agent to better adapt to future tasks. Across three professional benchmarks and four model-harness configurations, a single step consistently improves GLM-5 and Gemini 3.5 Flash over their base harnesses, yielding gains of up to 11.5 points on WorkBuddy-Bench, 4.5 points on JobBench, and 11.8 percentage points on LAB, with further gains as the task-level recursion budget increases.",
-          "authors": [
-            "Ruiyao Xu",
-            "Yanfei Chen",
-            "Zhongying CuiZhu",
-            "Bhavana Dalvi Mishra",
-            "Yifei Ming",
-            "Han Yu",
-            "Rujun Han",
-            "Chen-Yu Lee",
-            "Tomas Pfister"
-          ],
-          "linkedOrganization": "Google",
-          "metrics": {
-            "upvotes": 68,
-            "comments": 4
           }
         },
         {
@@ -6799,42 +6801,25 @@
           }
         },
         {
-          "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
-          "url": "https://huggingface.co/papers/2609.18063",
-          "publishedAt": "2026-09-15T20:00:00Z",
+          "title": "WeVisOne-VL: Unified Visual Perception from Objects to Pixels",
+          "url": "https://huggingface.co/papers/2610.31329",
+          "publishedAt": "2026-10-21T20:00:00Z",
           "categories": [],
-          "description": "Mixture-of-experts (MoE) inference on consumer hardware is bounded by weight memory: a 35B-class model is 19.5GB at 4-bit, and sparsity shrinks the compute per token, not the bytes that must be held. Naive offloading to SSD does not help on its own, because layer N+1's experts must be chosen before layer N's output exists, so the reads cannot start early enough to hide behind compute. We present Edge0, a streaming MoE inference engine that closes the gap with a prerouter: a per-layer head predicts the next layer's routing one token ahead, and the prediction is consumed as the routing itself, so the staged expert set equals the routed set and nothing is dropped. An unmerged recovery LoRA, trained on the student path, pays back the quality lost to int4 quantization and routing replacement. On a single 24GB machine, Edge0 serves a 35B MoE at 20tok/s inside 3GiB of peak active memory, within a few points of its fp16 teacher on average across five public benchmarks. An 8B tier runs on the same framework, and the framework, checkpoints, and adapters are open source.",
+          "description": "Existing vision-language models (VLMs) remain unreliable for fine-grained visual perception. In this report, we present WeVisOne-VL (WeChat Vision All-in-One), a powerful VLM that unifies object-level and pixel-level perception through structured next-token prediction. It supports multiple visual tasks including object detection, referring localization, counting, OCR, segmentation, and matting, enabling localization at any user-specific granularity, from points and boxes to masks and alpha mattes. Architecturally, we integrate a lightweight pixel decoder into the VLM via a special token to generate instance-level pixel outputs. We train the model with a three-stage curriculum SFT followed by mixed-task RL. Across over 30 benchmarks, WeVisOne-VL demonstrates leading performance on both object-level and pixel-level tasks, while maintaining robust rejection for object-absent queries. By releasing WeVisOne-VL to the open-source community, we hope to advance VLMs from broad visual understanding toward truly reliable perception systems for real-world deployment.",
           "authors": [
-            "Yu Lin",
-            "Yiming Wang",
-            "Runyuan Cai",
-            "Hanze Liu",
-            "Xiaodong Zeng"
+            "Tianming Liang",
+            "Junyi Pan",
+            "Yuxi Li",
+            "Canmiao Fu",
+            "Zhipeng Huang",
+            "Chong Sun",
+            "Chen Li",
+            "Jing Lyu"
           ],
-          "linkedOrganization": "Edge0",
+          "linkedOrganization": "Tencent",
           "metrics": {
-            "upvotes": 30,
-            "comments": 9
-          }
-        },
-        {
-          "title": "HairDeck: Animation-Ready Stylized Hair Cards from a Single Image",
-          "url": "https://huggingface.co/papers/2610.40599",
-          "publishedAt": "2026-10-28T20:00:00Z",
-          "categories": [],
-          "description": "The hair of stylized characters in games and avatars is built from hair cards: artist-placed ribbons whose geometry is the visible hair, animated by spring bones. Existing image-based methods produce realistic hair or a single fused mesh, while CHARM, the only generator of stylized hair cards, decodes a hairstyle autoregressively as a long sequence of control points. Observing that a card hairstyle is an unordered set of artist-defined primitives, we propose HairDeck, which generates it as one: each card is a single token, and a set diffusion transformer denoises all cards together. From a single image, HairDeck generates the cards and the spring-bone chains that drive them, yielding an animatable asset that exports to ready-to-use downstream formats. On CHARM's own test set, it lowers Chamfer distance by 44% and card-orientation error by more than half while running 33 times faster, and from single images it outperforms CHARM, image-to-3D pipelines and strand-based methods. Project page: https://hyzcluster.github.io/HairDeck",
-          "authors": [
-            "Yuze He",
-            "Yixiang Wei",
-            "Wang Zhao",
-            "Chuhao Chen",
-            "Yanning Zhou",
-            "Yong-Jin Liu"
-          ],
-          "linkedOrganization": "Tsinghua University",
-          "metrics": {
-            "upvotes": 31,
-            "comments": 2
+            "upvotes": 44,
+            "comments": 4
           }
         },
         {
@@ -6860,25 +6845,46 @@
           }
         },
         {
-          "title": "WeVisOne-VL: Unified Visual Perception from Objects to Pixels",
-          "url": "https://huggingface.co/papers/2610.31329",
-          "publishedAt": "2026-10-21T20:00:00Z",
+          "title": "SpecPilot: Autonomous Algorithm Discovery and Systems Optimization for Speculative Decoding",
+          "url": "https://huggingface.co/papers/2611.02501",
+          "publishedAt": "2026-11-01T19:00:00Z",
           "categories": [],
-          "description": "Existing vision-language models (VLMs) remain unreliable for fine-grained visual perception. In this report, we present WeVisOne-VL (WeChat Vision All-in-One), a powerful VLM that unifies object-level and pixel-level perception through structured next-token prediction. It supports multiple visual tasks including object detection, referring localization, counting, OCR, segmentation, and matting, enabling localization at any user-specific granularity, from points and boxes to masks and alpha mattes. Architecturally, we integrate a lightweight pixel decoder into the VLM via a special token to generate instance-level pixel outputs. We train the model with a three-stage curriculum SFT followed by mixed-task RL. Across over 30 benchmarks, WeVisOne-VL demonstrates leading performance on both object-level and pixel-level tasks, while maintaining robust rejection for object-absent queries. By releasing WeVisOne-VL to the open-source community, we hope to advance VLMs from broad visual understanding toward truly reliable perception systems for real-world deployment.",
+          "description": "Speculative decoding accelerates memory-bound LLM decoding with a lightweight drafter, and parallel drafters extend this speedup by drafting a whole block in one forward pass. However, it remains unclear whether their released systems (stock) attain the full speedup that parallel drafting permits. We identify three challenges. First, with one request, each step accepts few tokens but reads every target weight. Second, with batching, per-request verification work roughly halves the speedup over autoregressive (AR) decoding. Third, speculative decoding is deployment-specific, and no universal optimization fits every serving regime, drafter, target model and GPU. To address these challenges, we present SpecPilot, an autonomous agentic loop that discovers algorithms and systems optimizations for each deployment. In each round, a cost model locates the largest gaps between the current system and its ceiling. Parallel agents explore directions and integrate the successful ones. Token forcing checks every output token against stock to detect reward hacking. A structured memory carries validated mechanisms to new rounds and deployments. SpecPilot discovered a general lossless 12-bit weight format, tree verification for hybrid recurrent targets, two-level verification and three batching mechanisms. We evaluate it across four target models, three drafters, two GPU platforms and five benchmarks. Without training or quality loss, it raises the speedup over AR from stock's 4.46times to 10.87times with one request, and from 1.94times to 3.93times with batching.",
           "authors": [
-            "Tianming Liang",
-            "Junyi Pan",
-            "Yuxi Li",
-            "Canmiao Fu",
-            "Zhipeng Huang",
-            "Chong Sun",
-            "Chen Li",
-            "Jing Lyu"
+            "Kunjun Li",
+            "Wenhao Chai",
+            "Yihao Liang",
+            "Yuezhou Hu",
+            "Shuyao Xu",
+            "Yi Pan",
+            "William X. Zheng",
+            "Kannan Ramchandran",
+            "Kurt Keutzer",
+            "Jiantao Jiao"
           ],
-          "linkedOrganization": "Tencent",
+          "linkedOrganization": "University of California, Berkeley",
           "metrics": {
-            "upvotes": 44,
-            "comments": 4
+            "upvotes": 16,
+            "comments": 1
+          }
+        },
+        {
+          "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
+          "url": "https://huggingface.co/papers/2609.18063",
+          "publishedAt": "2026-09-15T20:00:00Z",
+          "categories": [],
+          "description": "Mixture-of-experts (MoE) inference on consumer hardware is bounded by weight memory: a 35B-class model is 19.5GB at 4-bit, and sparsity shrinks the compute per token, not the bytes that must be held. Naive offloading to SSD does not help on its own, because layer N+1's experts must be chosen before layer N's output exists, so the reads cannot start early enough to hide behind compute. We present Edge0, a streaming MoE inference engine that closes the gap with a prerouter: a per-layer head predicts the next layer's routing one token ahead, and the prediction is consumed as the routing itself, so the staged expert set equals the routed set and nothing is dropped. An unmerged recovery LoRA, trained on the student path, pays back the quality lost to int4 quantization and routing replacement. On a single 24GB machine, Edge0 serves a 35B MoE at 20tok/s inside 3GiB of peak active memory, within a few points of its fp16 teacher on average across five public benchmarks. An 8B tier runs on the same framework, and the framework, checkpoints, and adapters are open source.",
+          "authors": [
+            "Yu Lin",
+            "Yiming Wang",
+            "Runyuan Cai",
+            "Hanze Liu",
+            "Xiaodong Zeng"
+          ],
+          "linkedOrganization": "Edge0",
+          "metrics": {
+            "upvotes": 29,
+            "comments": 9
           }
         }
       ]
@@ -6897,15 +6903,15 @@
     },
     "github-ai-topics": {
       "status": "ok",
-      "checkedAt": "2026-11-04T13:11:24Z",
-      "lastSuccessAt": "2026-11-04T13:11:24Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Significant-Gravitas/AutoGPT",
           "url": "https://github.com/Significant-Gravitas/AutoGPT",
           "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
           "metrics": {
-            "stars": 187894
+            "stars": 187901
           }
         },
         {
@@ -6913,7 +6919,7 @@
           "url": "https://github.com/f/prompts.chat",
           "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
           "metrics": {
-            "stars": 175763
+            "stars": 175802
           }
         },
         {
@@ -6921,7 +6927,7 @@
           "url": "https://github.com/thedotmack/claude-mem",
           "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
           "metrics": {
-            "stars": 112459
+            "stars": 112701
           }
         },
         {
@@ -6929,7 +6935,7 @@
           "url": "https://github.com/rasbt/LLMs-from-scratch",
           "description": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
           "metrics": {
-            "stars": 107801
+            "stars": 107818
           }
         },
         {
@@ -6937,7 +6943,7 @@
           "url": "https://github.com/hacksider/Deep-Live-Cam",
           "description": "real time face swap and one-click video deepfake with only a single image",
           "metrics": {
-            "stars": 97616
+            "stars": 97622
           }
         },
         {
@@ -6945,7 +6951,7 @@
           "url": "https://github.com/OpenHands/OpenHands",
           "description": "🙌 OpenHands: AI-Driven Development",
           "metrics": {
-            "stars": 92622
+            "stars": 92651
           }
         },
         {
@@ -6953,7 +6959,7 @@
           "url": "https://github.com/usestrix/strix",
           "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
           "metrics": {
-            "stars": 73684
+            "stars": 73757
           }
         },
         {
@@ -6961,7 +6967,7 @@
           "url": "https://github.com/microsoft/AI-For-Beginners",
           "description": "12 Weeks, 24 Lessons, AI for All!",
           "metrics": {
-            "stars": 70553
+            "stars": 70569
           }
         },
         {
@@ -6969,7 +6975,7 @@
           "url": "https://github.com/jingyaogong/minimind",
           "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
           "metrics": {
-            "stars": 64867
+            "stars": 64871
           }
         },
         {
@@ -6977,22 +6983,22 @@
           "url": "https://github.com/FlowiseAI/Flowise",
           "description": "Build AI Agents, Visually",
           "metrics": {
-            "stars": 55546
+            "stars": 55547
           }
         }
       ]
     },
     "github-llm-topics": {
       "status": "ok",
-      "checkedAt": "2026-11-04T13:11:24Z",
-      "lastSuccessAt": "2026-11-04T13:11:24Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "affaan-m/ECC",
           "url": "https://github.com/affaan-m/ECC",
           "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
           "metrics": {
-            "stars": 296893
+            "stars": 297150
           }
         },
         {
@@ -7000,7 +7006,7 @@
           "url": "https://github.com/NousResearch/hermes-agent",
           "description": "The agent that grows with you",
           "metrics": {
-            "stars": 260430
+            "stars": 260523
           }
         },
         {
@@ -7008,7 +7014,7 @@
           "url": "https://github.com/firecrawl/firecrawl",
           "description": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
           "metrics": {
-            "stars": 198497
+            "stars": 198607
           }
         },
         {
@@ -7016,7 +7022,7 @@
           "url": "https://github.com/Significant-Gravitas/AutoGPT",
           "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
           "metrics": {
-            "stars": 187894
+            "stars": 187901
           }
         },
         {
@@ -7024,7 +7030,7 @@
           "url": "https://github.com/ollama/ollama",
           "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
           "metrics": {
-            "stars": 185885
+            "stars": 185921
           }
         },
         {
@@ -7032,7 +7038,7 @@
           "url": "https://github.com/DietrichGebert/ponytail",
           "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
           "metrics": {
-            "stars": 184181
+            "stars": 184439
           }
         },
         {
@@ -7040,7 +7046,7 @@
           "url": "https://github.com/f/prompts.chat",
           "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
           "metrics": {
-            "stars": 175763
+            "stars": 175802
           }
         },
         {
@@ -7048,7 +7054,7 @@
           "url": "https://github.com/huggingface/transformers",
           "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
           "metrics": {
-            "stars": 168530
+            "stars": 168541
           }
         },
         {
@@ -7056,7 +7062,7 @@
           "url": "https://github.com/langgenius/dify",
           "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
           "metrics": {
-            "stars": 160391
+            "stars": 160407
           }
         },
         {
@@ -7064,82 +7070,92 @@
           "url": "https://github.com/open-webui/open-webui",
           "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
           "metrics": {
-            "stars": 157742
+            "stars": 157779
           }
         }
       ]
     },
     "hf-models": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
           "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
           "description": "",
           "metrics": {
-            "likes": 1091,
+            "likes": 1468,
             "downloads": 44939
           },
           "task": "automatic-speech-recognition"
-        },
-        {
-          "title": "LiquidAI/LFM3-1.7B",
-          "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
-          "description": "",
-          "metrics": {
-            "likes": 1451,
-            "downloads": 54959
-          },
-          "task": "text-generation"
         },
         {
           "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
           "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
           "description": "",
           "metrics": {
-            "likes": 5222,
+            "likes": 5255,
             "downloads": 221621
           },
           "task": "image-text-to-text"
         },
         {
-          "title": "mistralai/Mistral-Large-4-1T-A52B",
-          "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+          "title": "LiquidAI/LFM3-1.7B",
+          "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
           "description": "",
           "metrics": {
-            "likes": 1569,
-            "downloads": 8200
+            "likes": 1473,
+            "downloads": 54959
           },
-          "task": "image-text-to-text"
+          "task": "text-generation"
         },
         {
           "title": "speridlabs/idol",
           "url": "https://huggingface.co/speridlabs/idol",
           "description": "",
           "metrics": {
-            "likes": 555,
+            "likes": 605,
             "downloads": 14613
           },
           "task": "image-to-3d"
+        },
+        {
+          "title": "mistralai/Mistral-Large-4-1T-A52B",
+          "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+          "description": "",
+          "metrics": {
+            "likes": 1584,
+            "downloads": 8200
+          },
+          "task": "image-text-to-text"
         },
         {
           "title": "Pika-Labs/Pika-H3-Flex",
           "url": "https://huggingface.co/Pika-Labs/Pika-H3-Flex",
           "description": "",
           "metrics": {
-            "likes": 410,
+            "likes": 426,
             "downloads": 749
           },
           "task": "image-to-video"
+        },
+        {
+          "title": "moonshotai/Kimi-K3.1-Pro",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+          "description": "",
+          "metrics": {
+            "likes": 398,
+            "downloads": 797
+          },
+          "task": "image-text-to-text"
         },
         {
           "title": "Lightricks/LTX-2.5",
           "url": "https://huggingface.co/Lightricks/LTX-2.5",
           "description": "",
           "metrics": {
-            "likes": 10552,
+            "likes": 10605,
             "downloads": 2493402
           },
           "task": "image-to-video"
@@ -7149,7 +7165,7 @@
           "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder",
           "description": "",
           "metrics": {
-            "likes": 627,
+            "likes": 647,
             "downloads": 123321
           }
         },
@@ -7158,33 +7174,23 @@
           "url": "https://huggingface.co/burner22/numbat",
           "description": "",
           "metrics": {
-            "likes": 333,
+            "likes": 338,
             "downloads": 8118
           }
-        },
-        {
-          "title": "Qwen/Qwen3.8-27B",
-          "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-          "description": "",
-          "metrics": {
-            "likes": 19114,
-            "downloads": 8032442
-          },
-          "task": "image-text-to-text"
         }
       ]
     },
     "hf-datasets": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "nvidia/simready-assets",
           "url": "https://huggingface.co/datasets/nvidia/simready-assets",
           "description": "Welcome to NVIDIA SimReady Assets Welcome to NVIDIA's open-source SimReady Assets dataset! SimReady Central brings together OEM-curated datasets like this one, helping you discover simulation-ready assets for your projects. Interested in contributing? Visit nvidia/simready-central-library and request contributor access through the Community tab.",
           "metrics": {
-            "likes": 1368,
+            "likes": 1384,
             "downloads": 1267344
           }
         },
@@ -7193,7 +7199,7 @@
           "url": "https://huggingface.co/datasets/Vyber07/cyber-security",
           "description": "Cybersecurity AI Knowledge Base — PhD-Level Dataset Overview This is the most comprehensive cybersecurity knowledge base ever assembled for AI training. It covers all domains of cybersecurity at PhD-level depth — from offensive red teaming and bug bounty exploitation to defensive SOC operations, digital forensics, and cutting-edge AI/LLM security. Size: 16 GB | Files: 507 | Domains: 30+ | Sources: 15+ platforms Purpose Train the world's most… See the full description on the dataset page: https://huggingface.co/datasets/Vyber07/cyber-security.",
           "metrics": {
-            "likes": 653,
+            "likes": 671,
             "downloads": 10815
           }
         },
@@ -7202,7 +7208,7 @@
           "url": "https://huggingface.co/datasets/open-index/hacker-news",
           "description": "Hacker News - Complete Archive Every Hacker News item since 2006, live-updated every 5 minutes What is it? This dataset contains the complete Hacker News archive: every story, comment, Ask HN, Show HN, job posting, and poll ever submitted to the site. Hacker News is one of the longest-running and most influential technology communities on the internet, operated by Y Combinator since 2007. It has become the de facto gathering place for founders, engineers… See the full description on the dataset page: https://huggingface.co/datasets/open-index/hacker-news.",
           "metrics": {
-            "likes": 468,
+            "likes": 484,
             "downloads": 467351
           }
         },
@@ -7220,17 +7226,8 @@
           "url": "https://huggingface.co/datasets/codepawl/simready-glb",
           "description": "SimReady GLB Open the 3D viewer to search all 2,595 models and orbit any of them in the browser. Web-ready glTF binary (.glb) copies of the 3D models in nvidia/simready-assets. Each file loads directly in three.js, Babylon.js, model-viewer or any glTF 2.0 viewer. Models by NVIDIA SimReady, licensed CC BY 4.0. This dataset converts and compresses them. It does not change what they show. If you use these files, credit NVIDIA as the original author and link the source dataset.… See the full description on the dataset page: https://huggingface.co/datasets/codepawl/simready-glb.",
           "metrics": {
-            "likes": 61,
+            "likes": 62,
             "downloads": 20022
-          }
-        },
-        {
-          "title": "venvoo/china-a-share-l2-level2-limit-order-book-tick-data",
-          "url": "https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data",
-          "description": "China A-Share Level-2 Archive 2017–2026 · Quotes, orders and trades · Parquet A historical archive of Chinese exchange Level-2 data, supplied through a vendor export. It includes ten-level quote snapshots, individual order messages and trade-stream records. The files cover A-share stocks and non-stock instruments such as ETFs and bonds. “Full-market” describes the export's scope, not a guarantee that every instrument or message is present. 中国证券市场 Level-2… See the full description on the dataset page: https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data.",
-          "metrics": {
-            "likes": 619,
-            "downloads": 203151
           }
         },
         {
@@ -7238,17 +7235,26 @@
           "url": "https://huggingface.co/datasets/ccore/ThreeJS-3D-Scenes",
           "description": "CCORE Three.js 3D Scenes 4,146 high-quality 3D scene examples with prompts, full thinking traces, and complete HTML/JavaScript responses. The scene code and thinking traces were generated with MiniMax M3.1 Flash. This dataset brings together a broad range of Three.js scenes, from individual objects and detailed interiors to architecture, landscapes, animated mechanisms, and voxel environments. It is intended for training and evaluating models that generate 3D scenes from… See the full description on the dataset page: https://huggingface.co/datasets/ccore/ThreeJS-3D-Scenes.",
           "metrics": {
-            "likes": 57,
+            "likes": 61,
             "downloads": 4116
           }
         },
         {
-          "title": "secemp9/arxiv-complete",
-          "url": "https://huggingface.co/datasets/secemp9/arxiv-complete",
-          "description": "arXiv Complete Corpus A snapshot of arXiv's metadata, version history, submission files and rendered documents. It covers 3,148,796 papers and includes file contents, paths, sizes and SHA-256 digests. Metadata comes from arXiv's OAI-PMH arXivRaw interface; files come from the GCS mirror, S3 source archives and direct PDF fetches. This release holds a PDF for 99.47% of papers and 99.54% of versions reported with a non-zero submission size. It is a one-off snapshot; coverage gaps… See the full description on the dataset page: https://huggingface.co/datasets/secemp9/arxiv-complete.",
+          "title": "venvoo/china-a-share-l2-level2-limit-order-book-tick-data",
+          "url": "https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data",
+          "description": "China A-Share Level-2 Archive 2017–2026 · Quotes, orders and trades · Parquet A historical archive of Chinese exchange Level-2 data, supplied through a vendor export. It includes ten-level quote snapshots, individual order messages and trade-stream records. The files cover A-share stocks and non-stock instruments such as ETFs and bonds. “Full-market” describes the export's scope, not a guarantee that every instrument or message is present. 中国证券市场 Level-2… See the full description on the dataset page: https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data.",
           "metrics": {
-            "likes": 790,
-            "downloads": 162854
+            "likes": 621,
+            "downloads": 203151
+          }
+        },
+        {
+          "title": "PentesterFlow/OffsecCyber",
+          "url": "https://huggingface.co/datasets/PentesterFlow/OffsecCyber",
+          "description": "Security Vulnerability Instruction Dataset An English-language dataset of security-focused assistant conversations about software vulnerabilities. Examples cover vulnerability explanations, CVE analysis, severity and impact, CWE references, remediation guidance, and offensive/web-appsec reasoning. It combines CVE-oriented examples with NVD records, HackerOne report conversations, PortSwigger lab material, and offensive-security instruction data, and can support instruction… See the full description on the dataset page: https://huggingface.co/datasets/PentesterFlow/OffsecCyber.",
+          "metrics": {
+            "likes": 54,
+            "downloads": 2756
           }
         },
         {
@@ -7261,27 +7267,27 @@
           }
         },
         {
-          "title": "PentesterFlow/OffsecCyber",
-          "url": "https://huggingface.co/datasets/PentesterFlow/OffsecCyber",
-          "description": "Security Vulnerability Instruction Dataset An English-language dataset of security-focused assistant conversations about software vulnerabilities. Examples cover vulnerability explanations, CVE analysis, severity and impact, CWE references, remediation guidance, and offensive/web-appsec reasoning. It combines CVE-oriented examples with NVD records, HackerOne report conversations, PortSwigger lab material, and offensive-security instruction data, and can support instruction… See the full description on the dataset page: https://huggingface.co/datasets/PentesterFlow/OffsecCyber.",
+          "title": "nvidia/Granary-v2",
+          "url": "https://huggingface.co/datasets/nvidia/Granary-v2",
+          "description": "Granary-v2: Multilingual Speech Recognition, Translation and Instruction Data Granary-v2 is NVIDIA's second release of generated labels and instruction pairs for multilingual speech. It re-processes a broad set of source corpora through an entirely new labelling pipeline that produces not just transcripts and translations, but inverse text normalization, captioning, code-switching and speech-QA targets, plus… See the full description on the dataset page: https://huggingface.co/datasets/nvidia/Granary-v2.",
           "metrics": {
-            "likes": 51,
-            "downloads": 2756
+            "likes": 46,
+            "downloads": 5838
           }
         }
       ]
     },
     "hf-spaces": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "a-test-user-in-the-wrold/qwen-image-21-uncensored",
           "url": "https://huggingface.co/spaces/a-test-user-in-the-wrold/qwen-image-21-uncensored",
           "description": "",
           "metrics": {
-            "likes": 264
+            "likes": 267
           },
           "sdk": "gradio"
         },
@@ -7290,9 +7296,36 @@
           "url": "https://huggingface.co/spaces/kulkas2pintu/wan777",
           "description": "",
           "metrics": {
-            "likes": 1270
+            "likes": 1284
           },
           "sdk": "gradio"
+        },
+        {
+          "title": "speridlabs/idol",
+          "url": "https://huggingface.co/spaces/speridlabs/idol",
+          "description": "",
+          "metrics": {
+            "likes": 121
+          },
+          "sdk": "gradio"
+        },
+        {
+          "title": "hugging-apps/bfs-best-face-swap",
+          "url": "https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap",
+          "description": "",
+          "metrics": {
+            "likes": 739
+          },
+          "sdk": "gradio"
+        },
+        {
+          "title": "LiquidAI/LFM3-Omni-2B-WebGPU",
+          "url": "https://huggingface.co/spaces/LiquidAI/LFM3-Omni-2B-WebGPU",
+          "description": "",
+          "metrics": {
+            "likes": 103
+          },
+          "sdk": "static"
         },
         {
           "title": "nvidia/simready-central",
@@ -7304,47 +7337,11 @@
           "sdk": "docker"
         },
         {
-          "title": "speridlabs/idol",
-          "url": "https://huggingface.co/spaces/speridlabs/idol",
-          "description": "",
-          "metrics": {
-            "likes": 115
-          },
-          "sdk": "gradio"
-        },
-        {
-          "title": "hugging-apps/bfs-best-face-swap",
-          "url": "https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap",
-          "description": "",
-          "metrics": {
-            "likes": 733
-          },
-          "sdk": "gradio"
-        },
-        {
-          "title": "LiquidAI/LFM3-Omni-2B-WebGPU",
-          "url": "https://huggingface.co/spaces/LiquidAI/LFM3-Omni-2B-WebGPU",
-          "description": "",
-          "metrics": {
-            "likes": 94
-          },
-          "sdk": "static"
-        },
-        {
           "title": "linoyts/qwen-image-2-1-realtime",
           "url": "https://huggingface.co/spaces/linoyts/qwen-image-2-1-realtime",
           "description": "",
           "metrics": {
-            "likes": 151
-          },
-          "sdk": "gradio"
-        },
-        {
-          "title": "briaai/Fibo-2.0-editing",
-          "url": "https://huggingface.co/spaces/briaai/Fibo-2.0-editing",
-          "description": "",
-          "metrics": {
-            "likes": 214
+            "likes": 158
           },
           "sdk": "gradio"
         },
@@ -7353,7 +7350,16 @@
           "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
           "description": "",
           "metrics": {
-            "likes": 196
+            "likes": 202
+          },
+          "sdk": "gradio"
+        },
+        {
+          "title": "briaai/Fibo-2.0-editing",
+          "url": "https://huggingface.co/spaces/briaai/Fibo-2.0-editing",
+          "description": "",
+          "metrics": {
+            "likes": 217
           },
           "sdk": "gradio"
         },
@@ -7362,7 +7368,7 @@
           "url": "https://huggingface.co/spaces/wank3r/minimax-h3",
           "description": "",
           "metrics": {
-            "likes": 281
+            "likes": 291
           },
           "sdk": "gradio"
         }
@@ -7374,15 +7380,15 @@
     },
     "github-trending": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "NVIDIA/auto-ontology",
           "url": "https://github.com/NVIDIA/auto-ontology",
           "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
           "metrics": {
-            "stars": 3647,
+            "stars": 4610,
             "starsToday": 2053
           }
         },
@@ -7391,7 +7397,7 @@
           "url": "https://github.com/max-sixty/worktrunk",
           "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
           "metrics": {
-            "stars": 10774,
+            "stars": 10958,
             "starsToday": 524
           }
         },
@@ -7400,7 +7406,7 @@
           "url": "https://github.com/mattpocock/skills",
           "description": "Skills for Real Engineers. Straight from my .agents directory.",
           "metrics": {
-            "stars": 312166,
+            "stars": 313053,
             "starsToday": 1376
           }
         },
@@ -7409,7 +7415,7 @@
           "url": "https://github.com/floci-io/floci",
           "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
           "metrics": {
-            "stars": 29222,
+            "stars": 29501,
             "starsToday": 1082
           }
         },
@@ -7418,7 +7424,7 @@
           "url": "https://github.com/thedotmack/claude-mem",
           "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
           "metrics": {
-            "stars": 112421,
+            "stars": 112701,
             "starsToday": 1165
           }
         },
@@ -7427,7 +7433,7 @@
           "url": "https://github.com/vercel-labs/agent-desktop",
           "description": "Computer use CLI for AI agents",
           "metrics": {
-            "stars": 13994,
+            "stars": 14777,
             "starsToday": 2463
           }
         },
@@ -7436,7 +7442,7 @@
           "url": "https://github.com/github/spec-kit",
           "description": "💫 Toolkit to help you get started with SDD or any other process!",
           "metrics": {
-            "stars": 146914,
+            "stars": 147201,
             "starsToday": 810
           }
         },
@@ -7445,7 +7451,7 @@
           "url": "https://github.com/The-PR-Agent/pr-agent",
           "description": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
           "metrics": {
-            "stars": 14504,
+            "stars": 14668,
             "starsToday": 279
           }
         },
@@ -7454,7 +7460,7 @@
           "url": "https://github.com/harry0703/MoneyPrinterTurbo",
           "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
           "metrics": {
-            "stars": 138539,
+            "stars": 138846,
             "starsToday": 615
           }
         },
@@ -7463,7 +7469,7 @@
           "url": "https://github.com/garrytan/gstack",
           "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
           "metrics": {
-            "stars": 139034,
+            "stars": 139250,
             "starsToday": 285
           }
         }
@@ -7471,8 +7477,8 @@
     },
     "aa-leaderboard": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T20:26:17Z",
+      "lastSuccessAt": "2026-11-04T20:26:17Z",
       "items": [
         {
           "title": "Gemini 4 Carbon (high)",
