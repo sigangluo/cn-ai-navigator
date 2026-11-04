@@ -25,17 +25,20 @@ const link = (text, href, className = '') => {
 };
 const resultFor = (source) => state.snapshot?.results?.[source.id] || { status: source.mode === 'link' ? 'directory' : 'pending', items: [] };
 const isRanking = (source) => ['github_trending', 'hf_trending', 'papers_trending', 'aa_leaderboard'].includes(source.mode);
+const recentlySynced = (result) => Boolean(result.lastSuccessAt && Date.now() - Date.parse(result.lastSuccessAt) <= 36 * 60 * 60 * 1000);
 const updatedToday = (source) => !isRanking(source) && resultFor(source).status === 'ok' && resultFor(source).items.some((item) => dateKey(item.publishedAt) === today);
 const cadenceLabel = { daily: '通常每天', weekly: '通常每周', monthly: '不定期' };
 
 function sourceCard(source) {
   const result = resultFor(source);
   const fresh = updatedToday(source);
+  const stale = result.status === 'ok' && !recentlySynced(result);
   const card = el('article', `source-card ${fresh ? 'is-fresh' : ''}`);
+  card.id = `source-${source.id}`;
   const top = el('div', 'card-top');
   top.append(el('span', 'org', source.org));
-  const status = el('span', `status ${result.status === 'error' ? 'error' : fresh ? 'fresh' : result.status === 'ok' ? 'recent' : 'manual'}`,
-    result.status === 'error' ? '同步异常' : fresh ? '今日有更新' : result.status === 'ok' ? (isRanking(source) ? '榜单快照' : '有最新条目') : source.mode === 'link' ? '官网入口' : '等待同步');
+  const status = el('span', `status ${result.status === 'error' ? 'error' : stale ? 'stale' : fresh ? 'fresh' : result.status === 'ok' ? 'recent' : 'manual'}`,
+    result.status === 'error' ? '同步异常' : fresh ? '今日有更新' : result.status === 'ok' ? (isRanking(source) ? (recentlySynced(result) ? '当前榜单' : '旧榜单快照') : '有最新条目') : source.mode === 'link' ? '官网入口' : '等待同步');
   top.append(status); card.append(top);
   const title = el('h4'); title.append(link(source.name, source.url)); card.append(title);
   card.append(el('p', 'note', source.note));
@@ -48,7 +51,7 @@ function sourceCard(source) {
     card.append(tags);
   }
   if (result.items?.length) {
-    const heading = el('div', 'item-heading'); heading.append(el('span', '', isRanking(source) ? '当前排名' : '最新线索'));
+    const heading = el('div', 'item-heading'); heading.append(el('span', '', isRanking(source) ? (recentlySynced(result) ? '当前排名' : '上次排名') : '最新线索'));
     if (result.lastSuccessAt) heading.append(el('span', 'item-time', `同步 ${shortDate(result.lastSuccessAt)}`));
     card.append(heading);
     const makeItem = (item, index) => {
@@ -85,7 +88,7 @@ function matches(source) {
   if (state.activeGroup !== 'all' && source.group !== state.activeGroup) return false;
   if (state.todayOnly && !updatedToday(source)) return false;
   if (!state.query) return true;
-  const text = [source.name, source.org, source.note, ...(source.sections || []), ...resultFor(source).items.map((x) => x.title)].join(' ').toLocaleLowerCase();
+  const text = [source.name, source.org, source.note, ...(source.sections || [])].join(' ').toLocaleLowerCase();
   return text.includes(state.query);
 }
 
@@ -101,6 +104,24 @@ function renderNav() {
   });
 }
 
+function renderTodayStrip(sources) {
+  const wrap = $('#todayLinks'); wrap.replaceChildren();
+  const fresh = sources.filter(updatedToday);
+  if (!fresh.length) { wrap.append(el('span', 'today-empty', '今天尚未在已同步来源中发现新条目，所有官网入口仍可访问。')); return; }
+  fresh.forEach((source) => {
+    const button = el('button', 'today-link', source.name);
+    button.type = 'button';
+    button.title = resultFor(source).items.find((item) => dateKey(item.publishedAt) === today)?.title || source.name;
+    button.addEventListener('click', () => {
+      state.activeGroup = 'all'; state.todayOnly = false; state.query = '';
+      $('#todayOnly').checked = false; $('#search').value = '';
+      render();
+      document.getElementById(`source-${source.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    wrap.append(button);
+  });
+}
+
 function render() {
   if (!state.catalog) return;
   renderNav();
@@ -109,6 +130,10 @@ function render() {
   $('#trackedCount').textContent = sources.filter((x) => x.mode !== 'link').length;
   $('#rankingCount').textContent = sources.filter(isRanking).length;
   $('#updatedCount').textContent = sources.filter(updatedToday).length;
+  renderTodayStrip(sources);
+  const unhealthy = sources.filter((source) => source.mode !== 'link' && (resultFor(source).status !== 'ok' || !recentlySynced(resultFor(source))));
+  const notice = $('#syncNotice'); notice.hidden = unhealthy.length === 0;
+  if (unhealthy.length) notice.textContent = `${unhealthy.length} 个自动来源近期未成功同步。页面保留上次结果及官网入口，最新内容请以官网为准。`;
   const visible = sources.filter(matches); $('#visibleCount').textContent = `${visible.length} / ${sources.length}`;
   $('#syncTime').textContent = state.snapshot?.generatedAt ? `快照生成 · ${new Intl.DateTimeFormat('zh-CN', { timeZone: tz, month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(state.snapshot.generatedAt))}（新加坡时间）` : '等候首次自动同步';
   const container = $('#sections'); container.replaceChildren();
@@ -121,7 +146,7 @@ function render() {
     section.append(heading);
     const grid = el('div', 'card-grid'); entries.forEach((source) => grid.append(sourceCard(source))); section.append(grid); container.append(section);
   }
-  if (!visible.length) container.append(el('div', 'empty', '没有匹配的来源。清除搜索或关闭“只看今日更新”即可浏览全部入口。'));
+  if (!visible.length) container.append(el('div', 'empty', '没有匹配的来源。清除搜索或关闭“只看今日发布”即可浏览全部入口。'));
 }
 
 async function init() {

@@ -28,13 +28,16 @@
       <div class="summary-lead"><span class="section-kicker">TODAY'S SIGNAL</span><h2>今日概览</h2><p>“今日”按新加坡时间计算。抓取失败时会保留上次成功的结果，并标出状态。</p></div>
       <div class="metric"><strong id="updatedCount">—</strong><span>今天有新条目的来源</span></div>
       <div class="metric"><strong id="trackedCount">—</strong><span>自动同步的来源</span></div>
-      <div class="metric"><strong id="rankingCount">—</strong><span>当前榜单</span></div>
+      <div class="metric"><strong id="rankingCount">—</strong><span>榜单快照</span></div>
     </section>
+
+    <section class="today-strip" aria-label="今日更新来源"><div class="today-strip-head"><span class="section-kicker">UPDATED TODAY</span><strong>今天更新的来源</strong><span>点名称定位来源卡片</span></div><div class="today-links" id="todayLinks"></div></section>
+    <div class="sync-notice" id="syncNotice" role="status" hidden></div>
 
     <div class="workspace">
       <aside class="sidebar" aria-label="分类导航"><div class="sidebar-title">浏览分类 <span>INDEX</span></div><nav id="groupNav"></nav><div class="sidebar-note"><span class="tiny-dot"></span> 没有新内容也能访问每个官网。<br>只收录标题、日期、分类与原文链接。</div></aside>
       <div class="main-panel">
-        <div class="toolbar"><div class="toolbar-title"><span class="section-kicker">THE SOURCES</span><h2>来源目录 <span id="visibleCount"></span></h2></div><div class="controls"><label class="search-wrap"><span class="sr-only">搜索来源</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="搜索来源、机构、栏目、标题…"></label><label class="today-switch"><input id="todayOnly" type="checkbox"><span class="switch-track"></span>只看今日更新</label></div></div>
+        <div class="toolbar"><div class="toolbar-title"><span class="section-kicker">THE SOURCES</span><h2>来源目录 <span id="visibleCount"></span></h2></div><div class="controls"><label class="search-wrap"><span class="sr-only">搜索来源</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="搜索来源、机构、官网栏目…"></label><label class="today-switch"><input id="todayOnly" type="checkbox"><span class="switch-track"></span>只看今日发布</label></div></div>
         <div class="legend"><span><i class="dot fresh"></i> 今日更新</span><span><i class="dot recent"></i> 有历史条目</span><span><i class="dot manual"></i> 官网入口</span><span><i class="dot error"></i> 同步异常</span></div>
         <div id="sections" aria-live="polite"><div class="loading">正在整理数据源…</div></div>
       </div>
