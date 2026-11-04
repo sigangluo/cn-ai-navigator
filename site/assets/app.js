@@ -31,7 +31,6 @@ const resultFor = (source) => state.snapshot?.results?.[source.id] || { status: 
 const isRanking = (source) => ['github_trending', 'hf_trending', 'papers_trending', 'aa_leaderboard'].includes(source.mode);
 const recentlySynced = (result) => Boolean(result.lastSuccessAt && Date.now() - Date.parse(result.lastSuccessAt) <= 36 * 60 * 60 * 1000);
 const updatedToday = (source) => !isRanking(source) && resultFor(source).status === 'ok' && resultFor(source).items.some((item) => dateKey(item.publishedAt) === today);
-const cadenceLabel = { daily: '通常每天', weekly: '通常每周', monthly: '不定期' };
 const PAGE_SIZE = 3;
 
 function itemRow(item, index, ranking) {
@@ -41,7 +40,10 @@ function itemRow(item, index, ranking) {
   const body = el('div', 'item-body');
   const heading = el('div', 'item-heading');
   heading.append(link(item.title, item.url, 'item-link'));
-  if (!ranking) heading.append(el('span', `item-detail ${fresh ? 'today-date' : ''}`, [displayDate(item.publishedAt), ...(item.categories || []).slice(0, 2)].join(' · ')));
+  if (!ranking) {
+    const detail = [...(fresh ? [] : [displayDate(item.publishedAt)]), ...(item.categories || []).slice(0, 2)].join(' · ');
+    if (detail) heading.append(el('span', 'item-detail', detail));
+  }
   body.append(heading);
   if (item.description && item.description.trim() !== item.title.trim()) body.append(el('p', 'item-description', item.description));
   row.append(body);
@@ -63,10 +65,6 @@ function sourceCard(source) {
   identity.append(top);
   const title = el('h3', 'source-name'); title.append(link(source.name, source.url)); identity.append(title);
   identity.append(el('p', 'source-note', source.note));
-  const meta = el('div', 'source-meta');
-  meta.append(el('span', '', cadenceLabel[source.cadence] || '不定期'));
-  if (result.lastSuccessAt) meta.append(el('span', '', `同步 ${displayDate(result.lastSuccessAt)}`));
-  identity.append(meta);
   const links = el('div', 'source-links');
   links.append(link('打开官网 ↗', source.url, 'official-link'));
   if (source.feed) links.append(link('RSS ↗', source.feed, 'feed-link'));
@@ -112,11 +110,11 @@ function sourceCard(source) {
         addButton('下一页', page + 1, page === totalPages - 1);
         pager.append(buttons); content.append(pager);
       }
-      if (result.status === 'error') content.append(el('p', 'error-note', `最近一次同步失败${result.lastSuccessAt ? '，已保留上次结果' : ''}`));
+      if (result.status === 'error') content.append(el('p', 'error-note', `最近一次同步失败${result.lastSuccessAt ? `，上次成功 ${displayDate(result.lastSuccessAt)}` : ''}`));
     };
     renderPage();
   } else {
-    content.append(el('p', 'no-items', source.mode === 'link' ? '前往官网查看内容。' : '尚未取得条目，可直接打开官网。'));
+    content.append(el('p', 'no-items', '尚未取得条目，可直接打开官网。'));
     if (result.status === 'error') content.append(el('p', 'error-note', '最近一次同步失败'));
   }
   card.append(content);
