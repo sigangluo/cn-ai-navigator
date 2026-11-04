@@ -5,7 +5,7 @@ This repository is an index of original AI information sources. The source regis
 ## Product rules
 
 - Show all registered source channels by default, even when a channel is quiet or its fetch fails.
-- Link to the publisher's official index and original item. Store only title, date, publisher categories, link, and a short publisher-provided teaser when available. Rankings may store current order and a short public description. Never generate a teaser or copy full articles.
+- Link to the publisher's official index and original item. Store only title, date, publisher categories, link, and the publisher-provided teaser or paper abstract when available. Rankings may store current order and a public description. Never generate a teaser or copy full articles.
 - Preserve a publisher's native sections and item labels. The site's broad groups only organize the directory.
 - Rankings are current snapshots. Never call a trending repository “published today.”
 - Distinguish `directory`, `pending`, `ok`, and `error`. On errors, retain the last successful items and never claim they were freshly checked.

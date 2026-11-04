@@ -21,9 +21,10 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(result[0]["url"], "https://example.org/good")
 
     def test_daily_papers_api(self):
-        raw = b'[{"publishedAt":"2026-11-04T01:00:00Z","paper":{"id":"2611.00001","title":"A Paper"}}]'
+        raw = ('[{"publishedAt":"2026-11-04T01:00:00Z","paper":{"id":"2611.00001","title":"A Paper","summary":"' + 'A long abstract. ' * 50 + '"}}]').encode()
         result = parse_papers(raw)
         self.assertEqual(result[0]["url"], "https://huggingface.co/papers/2611.00001")
+        self.assertGreater(len(result[0]["description"]), 500)
 
     def test_hugging_face_ranked_dataset_link(self):
         raw = b'[{"id":"org/dataset","trendingScore":88,"description":"A public dataset for evaluation."}]'

@@ -21,6 +21,8 @@ OUTPUT = ROOT / "site" / "data" / "latest.json"
 USER_AGENT = "AI-Source-Desk/1.0 (+https://github.com/sigangluo/ai-source-desk; public-link-index)"
 MAX_BYTES = 5_000_000
 MAX_ITEMS = 12
+MAX_PREVIEW = 1_800
+MAX_ABSTRACT = 5_000
 
 
 def now():
@@ -39,9 +41,9 @@ def clean(value, limit=240):
     return trimmed.rstrip(" ,.;:") + "…"
 
 
-def publisher_description(value, title=""):
-    value = re.sub(r"^arXiv:\S+\s+Announce Type:\s*\w+\s+Abstract:\s*", "", clean(value, 1200), flags=re.I)
-    value = clean(value, 220)
+def publisher_description(value, title="", limit=MAX_PREVIEW):
+    value = re.sub(r"^arXiv:\S+\s+Announce Type:\s*\w+\s+Abstract:\s*", "", clean(value, MAX_ABSTRACT + 500), flags=re.I)
+    value = clean(value, limit)
     if value == title or re.match(r"^(Animated carousel|Image of |Photo of |Figure \d+:)", value, re.I):
         return ""
     return value
@@ -58,7 +60,8 @@ def feed_description(entry, title):
             candidates.append(meta.group(2))
         candidates.append(raw)
     for candidate in candidates:
-        description = publisher_description(candidate, title)
+        limit = MAX_ABSTRACT if candidate.lstrip().startswith("arXiv:") else MAX_PREVIEW
+        description = publisher_description(candidate, title, limit)
         if description:
             return description
     return ""
@@ -171,7 +174,7 @@ def parse_papers(raw):
         if title and url:
             items.append({"title": title, "url": url,
                           "publishedAt": date_iso(item.get("publishedAt") or paper.get("publishedAt")),
-                          "categories": [], "description": clean(paper.get("summary"), 220)})
+                          "categories": [], "description": clean(paper.get("summary"), MAX_ABSTRACT)})
     if not items:
         raise ValueError("daily papers API has no usable links")
     return items
@@ -189,7 +192,7 @@ def parse_hf_trending(raw, resource):
             continue
         url = safe_url(f"https://huggingface.co/{prefix}{name}")
         if url:
-            description = clean(record.get("description"), 180) if resource == "datasets" else ""
+            description = clean(record.get("description"), MAX_PREVIEW) if resource == "datasets" else ""
             if not description:
                 labels = [clean(record.get("pipeline_tag") or record.get("sdk"), 60)]
                 if isinstance(record.get("likes"), int):
@@ -217,7 +220,7 @@ def parse_trending(raw):
             continue
         description = re.search(r"<p\b[^>]*>(.*?)</p>", row, re.S)
         items.append({"title": title, "url": href,
-                      "description": clean(description.group(1), 180) if description else ""})
+                      "description": clean(description.group(1), MAX_PREVIEW) if description else ""})
     if not items:
         raise ValueError("GitHub Trending page has no repository rows")
     return items[:10]
@@ -322,7 +325,7 @@ def parse_publisher_page(raw, source_id, base):
         category = html_part(row, patterns["category"], 48)
         items.append({"title": title, "url": url, "publishedAt": published,
                       "categories": [category] if category else [],
-                      "description": html_part(row, patterns["description"], 220)})
+                      "description": html_part(row, patterns["description"], MAX_PREVIEW)})
         if len(items) == MAX_ITEMS:
             break
     if not items:
