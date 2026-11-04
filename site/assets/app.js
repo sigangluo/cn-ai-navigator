@@ -41,8 +41,10 @@ function itemRow(item, index, ranking) {
   const heading = el('div', 'item-heading');
   heading.append(link(item.title, item.url, 'item-link'));
   if (!ranking) {
-    const detail = [...(fresh ? [] : [displayDate(item.publishedAt)]), ...(item.categories || []).slice(0, 2)].join(' · ');
-    if (detail) heading.append(el('span', 'item-detail', detail));
+    const published = dateKey(item.publishedAt);
+    const date = el('time', 'item-detail', published || '日期未提供');
+    if (published) date.dateTime = published;
+    heading.append(date);
   }
   body.append(heading);
   if (item.description && item.description.trim() !== item.title.trim()) body.append(el('p', 'item-description', item.description));
