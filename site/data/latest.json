@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T12:04:18Z",
+  "generatedAt": "2026-11-04T12:45:36Z",
   "results": {
     "qbitai": {
       "status": "ok",
@@ -268,8 +268,120 @@
       ]
     },
     "the-decoder": {
-      "status": "directory",
-      "items": []
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:45:36Z",
+      "lastSuccessAt": "2026-11-04T12:45:36Z",
+      "items": [
+        {
+          "title": "Exit polls show AI ranked last among voter priorities in the 2026 U.S. midterms",
+          "url": "https://the-decoder.com/exit-polls-show-ai-ranked-last-among-voter-priorities-in-the-2026-u-s-midterms/",
+          "publishedAt": "2026-11-04T10:45:54Z",
+          "categories": [
+            "AI in practice",
+            "Artificial Intelligence",
+            "Short News"
+          ],
+          "description": "In the 2026 U.S. midterm elections, AI ranked last among campaign issues: only 56 percent of respondents cited AI and data centers as an important factor. According to NBC exit polls, corruption (90 percent) and the cost of living (89 percent) clearly dominated, despite growing public attention to the issue."
+        },
+        {
+          "title": "Schools that turn off Google's AI will lose search too starting in 2027",
+          "url": "https://the-decoder.com/schools-that-turn-off-googles-ai-will-lose-search-too-starting-in-2027/",
+          "publishedAt": "2026-11-04T10:06:23Z",
+          "categories": [
+            "AI and society",
+            "Artificial Intelligence",
+            "Short News"
+          ],
+          "description": "Starting in 2027, Google plans to turn off AI features in its school products by default, letting schools decide what to enable. The catch: schools that block AI entirely on their devices will also lose access to Google Search, since the two systems are now too deeply intertwined to separate. Given Google's grip on the US school market, that \"choice\" doesn't leave schools with much room to maneuver."
+        },
+        {
+          "title": "OpenAI says GPT-6 Astra designed a hardware device from scratch in under a week",
+          "url": "https://the-decoder.com/openai-says-gpt-6-astra-designed-a-hardware-device-from-scratch-in-under-a-week/",
+          "publishedAt": "2026-11-03T20:15:45Z",
+          "categories": [
+            "AI in practice",
+            "Artificial Intelligence",
+            "Short News"
+          ],
+          "description": "OpenAI's hardware team used GPT-6 Astra to design a device for the Codex coding agent in under a week, handling everything from the enclosure to the circuit board to the firmware. Several revision rounds were needed before production because the model didn't always account for manufacturing tolerances. A newer internal model scores significantly higher on OpenAI's engineering benchmark, though the company isn't sharing details."
+        },
+        {
+          "title": "Rapid LLM development is outrunning the research meant to explain it, study finds",
+          "url": "https://the-decoder.com/rapid-llm-development-is-outrunning-the-research-meant-to-explain-it-study-finds/",
+          "publishedAt": "2026-11-03T19:41:43Z",
+          "categories": [
+            "AI research",
+            "Artificial Intelligence"
+          ],
+          "description": "Stanford researchers tested 50 widely cited claims about LLMs against 20 current models. 44 percent of the findings are already \"expired,\" and another 34 percent have weakened significantly. The average lifespan is just 15.7 months. Claims about what models can't do expire fastest."
+        },
+        {
+          "title": "AI agents take over at SETI's Allen Telescope Array, scanning for extraterrestrial intelligence",
+          "url": "https://the-decoder.com/ai-agents-take-over-at-setis-allen-telescope-array-scanning-for-extraterrestrial-intelligence/",
+          "publishedAt": "2026-11-03T16:51:18Z",
+          "categories": [
+            "AI research",
+            "Artificial Intelligence",
+            "Short News"
+          ],
+          "description": "The SETI Institute and Breakthrough Listen are now using AI agents at the Allen Telescope Array to control the telescope and analyze incoming radio signals. Tasks that used to take weeks can now wrap up in hours, and the team says the system detected a pulsar in the Crab Nebula in real time for the first time."
+        },
+        {
+          "title": "OpenAI hires ex-Army Secretary, gaining bipartisan reach just as midterms loom",
+          "url": "https://the-decoder.com/openai-hires-ex-army-secretary-gaining-bipartisan-reach-just-as-midterms-loom/",
+          "publishedAt": "2026-11-03T15:03:02Z",
+          "categories": [
+            "AI and society",
+            "Artificial Intelligence",
+            "OpenAI"
+          ],
+          "description": "OpenAI hires Dan Driscoll, the former civilian head of the US Army, as \"Senior Counselor for National Security Modernization,\" likely to win government contracts and help shape AI rules for the military and intelligence agencies. Driscoll drove AI projects inside the Army, is a close ally of Vice President JD Vance, and yet maintains good relationships with both parties in Congress - which could prove valuable as midterms approach."
+        },
+        {
+          "title": "Anthropic's Message Threads cut time to first token by 35 percent for long conversations",
+          "url": "https://the-decoder.com/anthropics-message-threads-cut-time-to-first-token-by-35-percent-for-long-conversations/",
+          "publishedAt": "2026-11-03T12:35:49Z",
+          "categories": [
+            "AI in practice",
+            "Artificial Intelligence",
+            "Short News"
+          ],
+          "description": "Anthropic released Message Threads for the Messages API. Instead of resending the entire conversation with every turn, agents now only transmit what's changed. For requests between 500,000 and one million tokens, time to first token drops by about 35 percent."
+        },
+        {
+          "title": "Nvidia pushes cloud customers to cut back on China business",
+          "url": "https://the-decoder.com/nvidia-pushes-cloud-customers-to-cut-back-on-china-business/",
+          "publishedAt": "2026-11-03T12:22:12Z",
+          "categories": [
+            "AI in practice",
+            "Artificial Intelligence",
+            "Short News"
+          ],
+          "description": "Nvidia has told some cloud customers to take on less business from Chinese companies."
+        },
+        {
+          "title": "Huawei tells customers to find their own AI chip memory, effectively outsourcing procurement to the black market",
+          "url": "https://the-decoder.com/huawei-tells-customers-to-find-their-own-ai-chip-memory-effectively-outsourcing-procurement-to-the-black-market/",
+          "publishedAt": "2026-11-03T11:47:37Z",
+          "categories": [
+            "AI in practice",
+            "Artificial Intelligence",
+            "China"
+          ],
+          "description": "Huawei is telling customers to source the high-performance memory for its AI chips on their own, pushing them onto the black market. Smugglers are exploiting a loophole in U.S. export rules by bundling HBM with low-end processors, shipping them through Hong Kong, and separating the chips on site. Prices for smuggled HBM3E memory have surged to around $4,000 per unit in just one year."
+        },
+        {
+          "title": "Bug hunters can now earn up to $172,000 from OpenAI as company ramps up security",
+          "url": "https://the-decoder.com/bug-hunters-can-now-earn-up-to-172000-from-openai-as-company-ramps-up-security/",
+          "publishedAt": "2026-11-03T10:42:44Z",
+          "categories": [
+            "AI in practice",
+            "Artificial Intelligence",
+            "Short News"
+          ],
+          "description": "OpenAI quadruples bug bounty payouts and launches new internal security sprint."
+        }
+      ]
     },
     "the-verge-ai": {
       "status": "ok",
@@ -388,6 +500,10 @@
         }
       ]
     },
+    "aa-articles": {
+      "status": "directory",
+      "items": []
+    },
     "latent-space": {
       "status": "ok",
       "checkedAt": "2026-11-04T12:04:18Z",
@@ -491,8 +607,8 @@
     },
     "simon": {
       "status": "ok",
-      "checkedAt": "2026-11-04T12:04:18Z",
-      "lastSuccessAt": "2026-11-04T12:04:18Z",
+      "checkedAt": "2026-11-04T12:43:27Z",
+      "lastSuccessAt": "2026-11-04T12:43:27Z",
       "items": [
         {
           "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
@@ -503,26 +619,7 @@
             "ai",
             "generative-ai"
           ],
-          "description": "Yesterday's hot paper was Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights by Rikiya Takehi, Jayden Teoh, Alex Zhang, and Omar Khattab. The paper (OK, the authors classify is as a \"blog post\", but it's paper-shaped) found that frontier models, in particular GPT-6 Astra, can both interpret and modify the raw weights of a machine learning model - literally a text description of the model containing a bunch of floating point numbers. I've been playing with one of the examples from the paper and I'm delighted to share that Qwen 3.8 27B running on my laptop can do this as well! Weight-Space Programming Here's the highlight from their abstract, describing impressive capabilities for GPT-6 Astra and coining the term Weight-Space Programming for when LLMs analyze and modify model weights: Just by looking at the raw weights, GPT-6 Astra can tell what a network was trained to do . And without any environment feedback, it has no trouble writing, from scratch, small game-playing networks that outplay networks trained with PPO for 100 million steps. Likewise, asked to make Qwen3.5-0.8B better at math without gradients, Astra identifies an issue in its weights causing reasoning loops that Qwen’s own model card warns about, and fixes this by natively editing 0.016% of the weights . With the same sampling settings, this weight correction raises MATH-500 from 7.9% to 48.1% and generalizes out of the box to instruction following, raising IFEval by 3x. All of this is possible without allowing Astra to write training loops. It uses its reasoning to figure out what each part of a neural network computes, or should compute, and changes the weights accordingly. We call this Weight-Space Programming . The paper combines two topics that I think deserve…"
-        },
-        {
-          "title": "I discovered a sound that leaks your exact location (and it's everywhere) - YouTube",
-          "url": "https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/",
-          "publishedAt": "2026-11-03T05:32:25Z",
-          "categories": [
-            "privacy",
-            "youtube"
-          ],
-          "description": "I discovered a sound that leaks your exact location (and it's everywhere) - YouTube Genius piece of OSINT by Colsto, who demonstrates how you can take almost imperceptible background noise of planes from a video soundtrack, figure out their Doppler curves, then cross reference them against ADS-B data to find the exact location of the video based on their speed, distance, and gaps between different flights. Via Lobste.rs Tags: privacy , youtube"
-        },
-        {
-          "title": "October sponsors-only newsletter",
-          "url": "https://simonwillison.net/2026/Nov/3/october-newsletter/",
-          "publishedAt": "2026-11-03T05:28:59Z",
-          "categories": [
-            "newsletter"
-          ],
-          "description": "I sent out the October edition of my sponsors-only monthly newsletter . If you are a sponsor (or start a sponsorship now) you can access it here . This month: The October inflection point for vibe game development The vulnerability apocalypse gets hot LLM releases API credits for $100+/month subscriptions What I'm using right now My software releases My September newsletter can now be seen here , as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy! Tags: newsletter"
+          "description": "Yesterday's hot paper was Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights by Rikiya Takehi, Jayden Teoh, Alex Zhang, and Omar Khattab. The paper (OK, the authors classify is as a \"blog post\", but it's paper-shaped) found that frontier models, in particular GPT-6 Astra, can both interpret and modify the raw weights of a machine learning model - literally a text description of the model containing a bunch of floating point numbers. I've been playing with one of the examples from the paper and I'm delighted to share that Qwen 3.8 27B running on my laptop can do this as well! Here's the highlight from their abstract, describing impressive capabilities for GPT-6 Astra and coining the term Weight-Space Programming for when LLMs analyze and modify model weights:"
         },
         {
           "title": "llm 0.37",
@@ -544,51 +641,18 @@
             "surveys",
             "ai"
           ],
-          "description": "I was reminded today of AI Adoption Rate Trending Down for Large Companies , a chart produced by Apollo Global Management in September 2025, which appeared to show a slowdown in U.S. corporate AI adoption based on numbers collected by the U.S. Census Bureau. At the time I used that chart to demonstrate GPT-5 data analysis , and then to experiment with Claude's new Code Interpreter . I decided to try running those numbers again to see what had changed over the past year, and in doing so learned that the Bureau has fallen foul of Executive Order 14434 , aka the asinine Super Intelligence one. First, the updated chart Every two weeks the U.S. Census Bureau runs a survey called the Business Trends and Outlook Survey (aka BTOS). Each time it goes to 200,000 businesses out of 1.2 million total - the surveyed group (a \"panel\") cycles such that an individual business only completes the survey every twelve weeks. The latest data is published on alternating Thursdays at 10am. I used the most recent numbers (published October 22, 2026) to create a new version ( GPT-6 Astra Extra High transcript ) of the AI adoption chart, updated to reflect both the last twelve months and a change that was made to the survey question sent out by the Bureau: Here's a link to the larger image . For comparison, here's that AI adoption chart from last year (my GPT-5 version): In September 2025 the largest (250+ employees) companies answered \"yes\" around 12% of the time to the question about whether they used AI in \"producing goods or services\". Under the new \"any business function\" wording, by February 2026, those same large companies answered \"yes\" around 30% of the time, and by October 2026 that had increased to around 40%. The data in the above chart comes from the \"Employment size class\" XLSX…"
-        },
-        {
-          "title": "If in doubt, delete the uv.lock file",
-          "url": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
-          "publishedAt": "2026-11-01T23:24:22Z",
-          "categories": [
-            "uv",
-            "til",
-            "python"
-          ],
-          "description": "I've been getting the occasional confusing Python dependency error since switching over to Python 3.15 and the rule I'm having to remember is: If in doubt, delete the uv.lock file Most of my projects are libraries which don't include a uv.lock file, since it's rude for a library dependency to lock versions for anything else that uses it. Running uv run pytest etc tends to leave uv.lock files lying around, which are listed in .gitignore and so do not get committed to my repositories. But... sometimes that uv.lock pins a version of a dependency that doesn't yet have a Python 3.15 wheel. An example from earlier today: error: Failed to build `watchfiles==1.1.1` cause: Call to `maturin.build_wheel` failed error: the configured Python interpreter version (3.15) is newer than PyO3's maximum supported version (3.14) Deleting that file and running uv run pytest again usually fixes the problem. Tags: uv , til , python"
+          "description": "I was reminded today of AI Adoption Rate Trending Down for Large Companies , a chart produced by Apollo Global Management in September 2025, which appeared to show a slowdown in U.S. corporate AI adoption based on numbers collected by the U.S. Census Bureau. At the time I used that chart to demonstrate GPT-5 data analysis , and then to experiment with Claude's new Code Interpreter . I decided to try running those numbers again to see what had changed over the past year, and in doing so learned that the Bureau has fallen foul of Executive Order 14434 , aka the asinine Super Intelligence one. Every two weeks the U.S. Census Bureau runs a survey called the Business Trends and Outlook Survey (aka BTOS). Each time it goes to 200,000 businesses out of 1.2 million total - the surveyed group (a \"panel\") cycles such that an individual business only completes the survey every twelve weeks."
         },
         {
           "title": "Quoting Kyle Kingsbury",
           "url": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/",
           "publishedAt": "2026-11-01T16:49:04Z",
           "categories": [
-            "kyle-kingsbury",
-            "llms",
-            "ai"
+            "ai",
+            "generative-ai",
+            "llms"
           ],
-          "description": "More broadly, the use of LLMs erodes trust in documentation, in software, and in the organizations which produce them. Perhaps engineers will begin to treat any new software project with suspicion—the signals we used to rely on as markers of a mature system are now easier to counterfeit. [...] In the age of LLMs, what can maintainers do to ensure correct software and accurate documentation? Having done that work, how can they demonstrate its quality to users? — Kyle Kingsbury , Jepsen results for ParticleDB 1.1.4 Tags: kyle-kingsbury , llms , ai , generative-ai , ai-misuse"
-        },
-        {
-          "title": "How We Took Over ChatGPT Accounts",
-          "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
-          "publishedAt": "2026-10-31T23:15:22Z",
-          "categories": [
-            "iframes",
-            "javascript",
-            "sandboxing"
-          ],
-          "description": "How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found against ChatGPT's implementation of the artifacts pattern (OpenAI used to call this \"Canvas\" but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are displayed in a sandboxed iframe. It's important that HTML in these stays tightly sandboxed to avoid untrusted code interacting with OpenAI APIs and accessing private data. Parameter found quite a complex attack chain. OpenAI use the MathLive JavaScript library as part of their graph support, and that library includes its own virtual keyboard , which can be triggered in the parent page via postMessage() from the sandboxed iframe. That message receiving code uses innerHTML , so anything that sends a message can add custom HTML to the parent - and there was no mechanism to prevent other sandboxed frames, including HTML preview frames, from calling that method. This meant untrusted code in an iframe could insert HTML, and while innerHTML doesn't directly execute script elements it could be used to inject a new iframe without sandbox restrictions. OpenAI’s CSP rules blocked inline scripts entirely, and only allowed script loading from a handful of domains, but one of those was YouTube - and the YouTube oEmbed endpoint could be used to reflect JavaScript back in a way that executed it. Once the attack had JavaScript execution on ChatGPT, it was trivial to fetch private user data from APIs and exfiltrate it via an image reference. The end result: you could create a ChatGPT share URL which, when visited by another signed-in user, could exfiltrate their private data or take actions on their behalf. OpenAI closed the hole and paid out a $5,000 bug bounty, which I think was a bit cheap for a vulnerability…"
-        },
-        {
-          "title": "datasette-llm 0.1a9",
-          "url": "https://simonwillison.net/2026/Oct/31/datasette-llm/",
-          "publishedAt": "2026-10-31T22:10:01Z",
-          "categories": [
-            "datasette",
-            "llm",
-            "datasette-agent"
-          ],
-          "description": "Release: datasette-llm 0.1a9 I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here's a tiny user experience improvement to the underlying datasette-llm plugin. It now picks up the default model used by LLM , which means you can start using Datasette Agent without needing to explicitly configure a default model: uvx --with datasette-agent datasette content.db --internal internal.db Previously you would also need to specify a model with -s plugins.datasette-agent.default_model gpt-6-astra . Tags: datasette , llm , datasette-agent"
+          "description": "More broadly, the use of LLMs erodes trust in documentation, in software, and in the organizations which produce them. Perhaps engineers will begin to treat any new software project with suspicion—the signals we used to rely on as markers of a mature system are now easier to counterfeit. [...] In the age of LLMs, what can maintainers do to ensure correct software and accurate documentation? Having done that work, how can they demonstrate its quality to users? — Kyle Kingsbury , Jepsen results for ParticleDB 1.1.4 Tags: ai , generative-ai , llms , ai-misuse , kyle-kingsbury"
         },
         {
           "title": "dbreunig/nesformer",
@@ -621,13 +685,785 @@
             "ai",
             "generative-ai"
           ],
-          "description": "How I Built the Most AI-Pilled Company in the World Don't be put off by the clickbait headline, this piece by Jacob Sansbury describing how they are building Spawn is a fascinating exploration of the bleeding edge of what's possible with agentic engineering against frontier models. Spawn is a massively multiplayer gaming environment where players can use prompts (to the in-game agent, Savi) to modify the game world. I fired it up on my phone for a few minutes and was able to prompt a castle into existence, then a dragon, then ride the dragon to fly around that castle. By Jacob's telling, Spawn is now being developed autonomously by a swarm of Fable-powered agents costing over $3 million in tokens per month (\"we spend 30x payroll on AI tokens\"). Our agents change the live code directly and ship to production hourly, so they read every error, bug report and metric themselves. About 60% of our work starts from a production error, a Savi bug report (Savi is the AI you build games with in Spawn), something odd in our logs, or a feature request. Savi files bugs herself. When a user hits one, or Savi hits one in the product, she files it. It goes straight to an agent that decides whether it's a real bug to fix, something we won't fix, or intentional design that needs a decision. Usually it becomes a change, delivered to that user within an hour, with a message in the same chat. This is continuous deployment turned up to 11: A loop this tight only works if it never stops, so we treat an hour without a ship as a SEV-0, our most severe kind of incident. Unshipped changes pile up, and every problem already in production lasts longer. The feedback slows down too. An agent can only keep a few hours of work in its head, so shipping faster than that actually helps it stay coherent…"
+          "description": "How I Built the Most AI-Pilled Company in the World Spawn is a massively multiplayer gaming environment where players can use prompts (to the in-game agent, Savi) to modify the game world."
+        },
+        {
+          "title": "Quoting Ben Hylak",
+          "url": "https://simonwillison.net/2026/Oct/29/ben-hylak/",
+          "publishedAt": "2026-10-29T14:06:27Z",
+          "categories": [
+            "ai",
+            "model-context-protocol"
+          ],
+          "description": "every product i use should just be a headless mcp, that feeds into an agent, where i never have to think about anything underneath. except for our product, of course. in our product, customers love the ui and love us very much. we're special that way. — Ben Hylak Tags: ai , model-context-protocol"
+        },
+        {
+          "title": "Quoting Ted Sanders",
+          "url": "https://simonwillison.net/2026/Oct/28/ted-sanders/",
+          "publishedAt": "2026-10-28T23:23:21Z",
+          "categories": [
+            "ai",
+            "openai",
+            "generative-ai"
+          ],
+          "description": "In general, LLM performance is incredibly multidimensional. There's no guarantee of a fixed ordering where the model that is best at math is also the model that's best at jokes. Despite that complexity, much of the variation in performance is explained by just a single variable: model size. In general, models that are bigger will (a) be more performant / reliable, (b) cost more per token, and (c) have better recall of esoteric facts. As you note, our models are ordered: Luna [ ... ] These days, version number signifies a few things at once: the order of release, the relationship to other releases, and the magnitude of improvement. So something like 6.1 would indicate it was launched after 5.6, may share some similarities to other 6.1 models in terms of training data / personality (which is why it's not 5.7), and isn't a giant enough leap to merit the headlines and expectations that would come with a 7. — Ted Sanders , explaining OpenAI's model naming conventions Tags: ai , openai , generative-ai , llms , gpt , ted-sanders"
+        },
+        {
+          "title": "GitHub Octoverse 2026",
+          "url": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/",
+          "publishedAt": "2026-10-28T16:45:23Z",
+          "categories": [
+            "github",
+            "ai",
+            "generative-ai"
+          ],
+          "description": "GitHub Octoverse 2026 I'm at GitHub Universe today (GitHub gave me a free ticket through their \"GitHub Stars\" program). EVP Jay Parikh just announced this year's Octoverse report, and highlighted these numbers in particular: This is a pretty stark representation of the impact of agentic engineering on GitHub. In 2026, merged pull requests tripled in less than a year to 220 million per month. Commits more than tripled to 7.38 billion per month, with most of that increase in the second half of this year. New repository rate doubled this year, to 30.3 million per month. The report includes new numbers by industry, and breaks out numbers for repositories that involve \"interoperability or reverse engineering\". The methodology section includes notes about how they did this: Top countries by pushes to public repositories, adjusted by profile location . Pushes from each country were summed across the Octoverse year. To adjust for biases caused by VPN usage, LLM classification was used to extract the ISO 3166-1 alpha-2 code from the profiles of GitHub users who contributed pushes during this period [...] Industry . Public repositories created 2022 to 2026 were sorted into NAICS sectors by a fine-tuned multilingual embedding model using name, description, topics, and README, from random samples per year. [...] Interoperability . Counts public repositories created each year whose name, description, topics, or README mention interoperability or reverse engineering, or related terms, such as clean room implementation, drop-in replacement, or protocol re-implementation. Tags: github , ai , generative-ai , llms , coding-agents , disclosures , agentic-engineering"
+        },
+        {
+          "title": "The October inflection point for vibe game development",
+          "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+          "publishedAt": "2026-10-28T13:55:15Z",
+          "categories": [
+            "game-design",
+            "games",
+            "ai"
+          ],
+          "description": "I've written before about how November 2025 was an inflection point for coding agents - the point where Opus 4.5 and GPT-5.1 crossed a tipping point that meant their respective coding agents became reliable daily drivers for software engineers. I think we've reached a new inflection point in October 2026, and this time it's for vibe coding computer games . Claude Opus 5.5 in particular exhibits meaningful improvements in several areas needed to build a compelling game:"
+        },
+        {
+          "title": "Quoting Terk Terkowitz",
+          "url": "https://simonwillison.net/2026/Oct/28/terk-terkowitz/",
+          "publishedAt": "2026-10-28T10:09:07Z",
+          "categories": [
+            "amazon",
+            "ai",
+            "generative-ai"
+          ],
+          "description": "If your work does not benefit from current AI tooling, that is a finding, not a failing. Document why, share it with your community of peers, bring it to your manager, and work to find solutions. An engineer who can explain where AI does not yet help their work is demonstrating the judgement we are asking for. — Terk Terkowitz , An update from Amazon engineering leadership on the role of the developer in the age of AI Tags: amazon , ai , generative-ai , llms , agentic-engineering"
         }
       ]
     },
-    "aa-articles": {
-      "status": "directory",
-      "items": []
+    "su-jianlin": {
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:36:00Z",
+      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "items": [
+        {
+          "title": "平均之路：从Attention到TTT",
+          "url": "https://kexue.fm/archives/11993",
+          "publishedAt": "2026-11-01T08:36:00Z",
+          "categories": [],
+          "description": "在文章《将Softmax Attention线性化为Gated DeltaNet》中，我们提供了一个将Softmax Attention线性化为Gated DeltaNet的参考过程，它演示了我..."
+        },
+        {
+          "title": "从参数对称性到有效学习率",
+          "url": "https://kexue.fm/archives/11985",
+          "publishedAt": "2026-10-27T12:35:00Z",
+          "categories": [],
+          "description": "近来，越来越多的论文或者博客，开始基于参数的对称性来分析和指导模型的优化，比如Hyperball、HyperTransfer、ELR等，它们总体都是围绕着$\\ell(\\boldsymbol{w}..."
+        },
+        {
+          "title": "连续化 Softmax Attention",
+          "url": "https://kexue.fm/archives/11980",
+          "publishedAt": "2026-10-19T14:21:00Z",
+          "categories": [],
+          "description": "Softmax Attention想必大家已经不陌生，它是定义在有限向量集合下的一个加权混合算子。近日，论文《Continuum Attention》提出了一个很有意思的想法——将注意力连续化。..."
+        },
+        {
+          "title": "慢即是快：2. Adam的尽头还是Muon？",
+          "url": "https://kexue.fm/archives/11964",
+          "publishedAt": "2026-10-15T13:28:00Z",
+          "categories": [],
+          "description": "在上一篇文章《慢即是快：1. Shampoo的尽头是Muon？》中，我们从凸优化的平均收敛结论出发，建立了“正交最慢下降”框架，并用于改进任意Kronecker积形式的预条件优化器。结果发现，在..."
+        },
+        {
+          "title": "如何让GDN2更稳定一些？",
+          "url": "https://kexue.fm/archives/11945",
+          "publishedAt": "2026-10-09T11:44:00Z",
+          "categories": [],
+          "description": "我们知道，DeltaNet的核心是$\\boldsymbol{I}-\\eta\\boldsymbol{k}\\boldsymbol{k}^{\\top}$形式的更新矩阵（参考《线性注意力简史：从模仿、创..."
+        },
+        {
+          "title": "通过微扰分析求解等式约束优化问题",
+          "url": "https://kexue.fm/archives/11928",
+          "publishedAt": "2026-10-03T11:08:00Z",
+          "categories": [],
+          "description": "对于无约束的光滑函数来说，求极值的通用方法自然是求导（梯度）并让导数等于零了。那带等式约束的极值问题呢？很多读者应该也不陌生，标准方法是拉格朗日乘子法。然而，拉格朗日乘子总让人觉得是一种纯粹的代..."
+        },
+        {
+          "title": "慢即是快：1. Shampoo的尽头是Muon？",
+          "url": "https://kexue.fm/archives/11917",
+          "publishedAt": "2026-09-28T09:00:00Z",
+          "categories": [],
+          "description": "众所周知，Muon优化器流行起来已经有好一段时间，虽然说不上完全取代Adam，但已经算得上不能忽视的、极具竞争力的优化器。与此同时，这两年Shampoo系优化器也“不甘落后”，除了原始Shamp..."
+        },
+        {
+          "title": "排序不等式及其推广",
+          "url": "https://kexue.fm/archives/11910",
+          "publishedAt": "2026-09-21T13:15:00Z",
+          "categories": [],
+          "description": "排序不等式是一个经典的不等式，本身不难理解，很多读者可能在中学阶段就已经了解过它，尤其是准备过数学竞赛的同学。但排序不等式也远不止表面上那么简单：它在矩阵世界中有一个深刻的对应物——冯·诺伊曼迹..."
+        },
+        {
+          "title": "让炼丹更科学一些（十）：单调性假设的拆与补",
+          "url": "https://kexue.fm/archives/11885",
+          "publishedAt": "2026-09-14T08:59:00Z",
+          "categories": [],
+          "description": "上文《让炼丹更科学一些（九）：经典自适应梯度算法》中，我们为形如$\\boldsymbol{\\theta}_{t+1} = \\boldsymbol{\\theta}_t - \\eta_t \\bold..."
+        },
+        {
+          "title": "让炼丹更科学一些（九）：经典自适应梯度算法",
+          "url": "https://kexue.fm/archives/11882",
+          "publishedAt": "2026-09-05T08:34:00Z",
+          "categories": [],
+          "description": "本系列前面八篇文章，都是在围绕SGD及其学习率讨论。而从本文开始，我们将正式进入自适应梯度算法的世界。可以说，现在所有的自适应梯度算法，都有一个共同的源头，那就是2011年的经典之作《Adapt..."
+        }
+      ]
+    },
+    "lilian-weng": {
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:36:00Z",
+      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "items": [
+        {
+          "title": "Harness Engineering for Self-Improvement",
+          "url": "https://lilianweng.github.io/posts/2026-07-04-harness/",
+          "publishedAt": "2026-07-04T00:00:00Z",
+          "categories": [],
+          "description": "The concept of recursive self-improvement (RSI) dates back to I. J. Good (1965) , where he defined an “ultraintelligent machine” as a system that can surpass humans in all intellectual activities and design better machines to improve itself. Yudkowsky (2008) used the phrase “recursive self-improvement” for a specific feedback loop: an AI uses its current intelligence to improve the cognitive machinery that produces its intelligence. This feedback loop in modern AI may indicate the model rewriting its own weights directly, or more broadly the model improves the training pipeline and the deployment system , which in turn enables a better successor model with improved performance across economically valuable tasks. The speed of research development in AI has been shown to drastically accelerated in frontier labs ( Anthropic ; OpenAI )."
+        },
+        {
+          "title": "Scaling Laws, Carefully",
+          "url": "https://lilianweng.github.io/posts/2026-06-24-scaling-laws/",
+          "publishedAt": "2026-06-24T00:00:00Z",
+          "categories": [],
+          "description": "Scaling laws are one of the most critical empirical findings in deep learning. The observation is simple in form: the training loss $L$ decreases predictably as we scale up model size $N$, dataset size $D$, and compute $C$, following a power-law curve, which appears as a straight line on a log-log plot. We can view scaling laws as a framework for describing the relationship between compute, loss, model size and data; at its core, it is about how to allocate precious compute optimally between $N$ and $D$."
+        },
+        {
+          "title": "Why We Think",
+          "url": "https://lilianweng.github.io/posts/2025-05-01-thinking/",
+          "publishedAt": "2025-05-01T00:00:00Z",
+          "categories": [],
+          "description": "Special thanks to John Schulman for a lot of super valuable feedback and direct edits on this post. Test time compute ( Graves et al. 2016 , Ling, et al. 2017 , Cobbe et al. 2021 ) and Chain-of-thought (CoT) ( Wei et al. 2022 , Nye et al. 2021 ), have led to significant improvements in model performance, while raising many research questions. This post aims to review recent developments in how to effectively use test-time compute (i.e. “thinking time”) and why it helps."
+        },
+        {
+          "title": "Reward Hacking in Reinforcement Learning",
+          "url": "https://lilianweng.github.io/posts/2024-11-28-reward-hacking/",
+          "publishedAt": "2024-11-28T00:00:00Z",
+          "categories": [],
+          "description": "Reward hacking occurs when a reinforcement learning (RL) agent exploits flaws or ambiguities in the reward function to achieve high rewards, without genuinely learning or completing the intended task. Reward hacking exists because RL environments are often imperfect, and it is fundamentally challenging to accurately specify a reward function. With the rise of language models generalizing to a broad spectrum of tasks and RLHF becomes a de facto method for alignment training, reward hacking in RL training of language models has become a critical practical challenge. Instances where the model learns to modify unit tests to pass coding tasks, or where responses contain biases that mimic a user’s preference, are pretty concerning and are likely one of the major blockers for real-world deployment of more autonomous use cases of AI models."
+        },
+        {
+          "title": "Extrinsic Hallucinations in LLMs",
+          "url": "https://lilianweng.github.io/posts/2024-07-07-hallucination/",
+          "publishedAt": "2024-07-07T00:00:00Z",
+          "categories": [],
+          "description": "Hallucination in large language models usually refers to the model generating unfaithful, fabricated, inconsistent, or nonsensical content. As a term, hallucination has been somewhat generalized to cases when the model makes mistakes. Here, I would like to narrow down the problem of hallucination to cases where the model output is fabricated and not grounded by either the provided context or world knowledge. There are two types of hallucination: In-context hallucination: The model output should be consistent with the source content in context. Extrinsic hallucination: The model output should be grounded by the pre-training dataset. However, given the size of the pre-training dataset, it is too expensive to retrieve and identify conflicts per generation. If we consider the pre-training data corpus as a proxy for world knowledge, we essentially try to ensure the model output is factual and verifiable by external world knowledge. Equally importantly, when the model does not know about a fact, it should say so. This post focuses on extrinsic hallucination. To avoid hallucination, LLMs need to be (1) factual and (2) acknowledge not knowing the answer when applicable."
+        },
+        {
+          "title": "Diffusion Models for Video Generation",
+          "url": "https://lilianweng.github.io/posts/2024-04-12-diffusion-video/",
+          "publishedAt": "2024-04-12T00:00:00Z",
+          "categories": [],
+          "description": "Diffusion models have demonstrated strong results on image synthesis in past years. Now the research community has started working on a harder task—using it for video generation. The task itself is a superset of the image case, since an image is a video of 1 frame, and it is much more challenging because: It has extra requirements on temporal consistency across frames in time, which naturally demands more world knowledge to be encoded into the model. In comparison to text or images, it is more difficult to collect large amounts of high-quality, high-dimensional video data, let along text-video pairs. 🥑 Required Pre-read: Please make sure you have read the previous blog on “What are Diffusion Models?” for image generation before continue here."
+        },
+        {
+          "title": "Thinking about High-Quality Human Data",
+          "url": "https://lilianweng.github.io/posts/2024-02-05-human-data-quality/",
+          "publishedAt": "2024-02-05T00:00:00Z",
+          "categories": [],
+          "description": "[Special thank you to Ian Kivlichan for many useful pointers (E.g. the 100+ year old Nature paper “Vox populi”) and nice feedback. 🙏 ] High-quality data is the fuel for modern data deep learning model training. Most of the task-specific labeled data comes from human annotation, such as classification task or RLHF labeling (which can be constructed as classification format) for LLM alignment training. Lots of ML techniques in the post can help with data quality, but fundamentally human data collection involves attention to details and careful execution. The community knows the value of high quality data, but somehow we have this subtle impression that “Everyone wants to do the model work, not the data work” ( Sambasivan et al. 2021 )."
+        },
+        {
+          "title": "Adversarial Attacks on LLMs",
+          "url": "https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/",
+          "publishedAt": "2023-10-25T00:00:00Z",
+          "categories": [],
+          "description": "The use of large language models in the real world has strongly accelerated by the launch of ChatGPT. We (including my team at OpenAI, shoutout to them) have invested a lot of effort to build default safe behavior into the model during the alignment process (e.g. via RLHF ). However, adversarial attacks or jailbreak prompts could potentially trigger the model to output something undesired. A large body of ground work on adversarial attacks is on images, and differently it operates in the continuous, high-dimensional space. Attacks for discrete data like text have been considered to be a lot more challenging, due to lack of direct gradient signals. My past post on Controllable Text Generation is quite relevant to this topic, as attacking LLMs is essentially to control the model to output a certain type of (unsafe) content."
+        },
+        {
+          "title": "LLM Powered Autonomous Agents",
+          "url": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+          "publishedAt": "2023-06-23T00:00:00Z",
+          "categories": [],
+          "description": "Building agents with LLM (large language model) as its core controller is a cool concept. Several proof-of-concepts demos, such as AutoGPT , GPT-Engineer and BabyAGI , serve as inspiring examples. The potentiality of LLM extends beyond generating well-written copies, stories, essays and programs; it can be framed as a powerful general problem solver. Agent System Overview In a LLM-powered autonomous agent system, LLM functions as the agent’s brain, complemented by several key components: Planning Subgoal and decomposition: The agent breaks down large tasks into smaller, manageable subgoals, enabling efficient handling of complex tasks. Reflection and refinement: The agent can do self-criticism and self-reflection over past actions, learn from mistakes and refine them for future steps, thereby improving the quality of final results. Memory Short-term memory: I would consider all the in-context learning (See Prompt Engineering ) as utilizing short-term memory of the model to learn. Long-term memory: This provides the agent with the capability to retain and recall (infinite) information over extended periods, often by leveraging an external vector store and fast retrieval. Tool use The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more. Overview of a LLM-powered autonomous agent system. Component One: Planning A complicated task usually involves many steps. An agent needs to know what they are and plan ahead."
+        },
+        {
+          "title": "Prompt Engineering",
+          "url": "https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/",
+          "publishedAt": "2023-03-15T00:00:00Z",
+          "categories": [],
+          "description": "Prompt Engineering , also known as In-Context Prompting , refers to methods for how to communicate with LLM to steer its behavior for desired outcomes without updating the model weights. It is an empirical science and the effect of prompt engineering methods can vary a lot among models, thus requiring heavy experimentation and heuristics. This post only focuses on prompt engineering for autoregressive language models, so nothing with Cloze tests, image generation or multimodality models. At its core, the goal of prompt engineering is about alignment and model steerability. Check my previous post on controllable text generation."
+        },
+        {
+          "title": "The Transformer Family Version 2.0",
+          "url": "https://lilianweng.github.io/posts/2023-01-27-the-transformer-family-v2/",
+          "publishedAt": "2023-01-27T00:00:00Z",
+          "categories": [],
+          "description": "Many new Transformer architecture improvements have been proposed since my last post on “The Transformer Family” about three years ago. Here I did a big refactoring and enrichment of that 2020 post — restructure the hierarchy of sections and improve many sections with more recent papers. Version 2.0 is a superset of the old version, about twice the length. The Transformer (which will be referred to as “vanilla Transformer” to distinguish it from other enhanced versions; Vaswani, et al., 2017 ) model has an encoder-decoder architecture, as commonly used in many NMT models. Later simplified Transformer was shown to achieve great performance in language modeling tasks, like in encoder-only BERT or decoder-only GPT ."
+        },
+        {
+          "title": "Large Transformer Model Inference Optimization",
+          "url": "https://lilianweng.github.io/posts/2023-01-10-inference-optimization/",
+          "publishedAt": "2023-01-10T17:00:00Z",
+          "categories": [],
+          "description": "[Updated on 2023-01-24: add a small section on Distillation .] Large transformer models are mainstream nowadays, creating SoTA results for a variety of tasks. They are powerful but very expensive to train and use. The extremely high inference cost, in both time and memory, is a big bottleneck for adopting a powerful transformer for solving real-world tasks at scale. Why is it hard to run inference for large transformer models? Besides the increasing size of SoTA models, there are two main factors contributing to the inference challenge ( Pope et al. 2022 ):"
+        }
+      ]
+    },
+    "eugene-yan": {
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:36:00Z",
+      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "items": [
+        {
+          "title": "Patterns for Building Cybersecurity Evals",
+          "url": "https://eugeneyan.com//writing/cybersecurity-evals/",
+          "publishedAt": "2026-06-21T00:00:00Z",
+          "categories": [],
+          "description": "A sandboxed target, inputs that influence task difficulty, tools, and a grader."
+        },
+        {
+          "title": "Using LLMs to Secure Source Code",
+          "url": "https://eugeneyan.com//writing/secure-source-code/",
+          "publishedAt": "2026-05-27T00:00:00Z",
+          "categories": [],
+          "description": "Build a threat model, discover vulnerabilities, verify, triage, and patch."
+        },
+        {
+          "title": "How to Work and Compound with AI",
+          "url": "https://eugeneyan.com//writing/working-with-ai/",
+          "publishedAt": "2026-05-03T00:00:00Z",
+          "categories": [],
+          "description": "Context as infra, taste as config, verification for autonomy, scale via delegation, closing the loop."
+        },
+        {
+          "title": "2025 Year in Review",
+          "url": "https://eugeneyan.com//writing/2025-review/",
+          "publishedAt": "2025-12-14T00:00:00Z",
+          "categories": [],
+          "description": "An eventful year of progress in health and career, while making time for travel and reflection."
+        },
+        {
+          "title": "Product Evals in Three Simple Steps",
+          "url": "https://eugeneyan.com//writing/product-evals/",
+          "publishedAt": "2025-11-23T00:00:00Z",
+          "categories": [],
+          "description": "Label some data, align LLM-evaluators, and run the eval harness with each change."
+        },
+        {
+          "title": "Advice for New Principal Tech ICs (i.e., Notes to Myself)",
+          "url": "https://eugeneyan.com//writing/principal/",
+          "publishedAt": "2025-10-19T00:00:00Z",
+          "categories": [],
+          "description": "Based on what I've learned from role models and mentors in Amazon"
+        },
+        {
+          "title": "Training an LLM-RecSys Hybrid for Steerable Recs with Semantic IDs",
+          "url": "https://eugeneyan.com//writing/semantic-ids/",
+          "publishedAt": "2025-09-14T00:00:00Z",
+          "categories": [],
+          "description": "An LLM that can converse in English & item IDs, and make recommendations w/o retrieval or tools."
+        },
+        {
+          "title": "Evaluating Long-Context Question & Answer Systems",
+          "url": "https://eugeneyan.com//writing/qa-evals/",
+          "publishedAt": "2025-06-22T00:00:00Z",
+          "categories": [],
+          "description": "Evaluation metrics, how to build eval datasets, eval methodology, and a review of several benchmarks."
+        },
+        {
+          "title": "AI Engineer 2025 - Improving RecSys & Search with LLM techniques",
+          "url": "https://eugeneyan.com//speaking/aie-2025/",
+          "publishedAt": "2025-06-04T00:00:00Z",
+          "categories": [],
+          "description": "Recsys & search are converging with LLMs via semantic IDs, data augmentation, and unified foundation models."
+        },
+        {
+          "title": "Exceptional Leadership: Some Qualities, Behaviors, and Styles",
+          "url": "https://eugeneyan.com//writing/leadership/",
+          "publishedAt": "2025-05-18T00:00:00Z",
+          "categories": [],
+          "description": "What makes a good leader? What do good leaders do? And commando, soldier, and police leadership."
+        },
+        {
+          "title": "Building News Agents for Daily News Recaps with MCP, Q, and tmux",
+          "url": "https://eugeneyan.com//writing/news-agents/",
+          "publishedAt": "2025-05-04T00:00:00Z",
+          "categories": [],
+          "description": "Learning to automate simple agentic workflows with Amazon Q CLI, Anthropic MCP, and tmux."
+        },
+        {
+          "title": "An LLM-as-Judge Won't Save The Product—Fixing Your Process Will",
+          "url": "https://eugeneyan.com//writing/eval-process/",
+          "publishedAt": "2025-04-20T00:00:00Z",
+          "categories": [],
+          "description": "Applying the scientific method, building via eval-driven development, and monitoring AI output."
+        }
+      ]
+    },
+    "sebastian-raschka": {
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:36:00Z",
+      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "items": [
+        {
+          "title": "Building Reasoning Models from the Ground Up: A Full Video Course",
+          "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+          "publishedAt": "2026-10-24T11:14:32Z",
+          "categories": [],
+          "description": "Over 11 hours of coding videos on evaluation, inference-time scaling, reinforcement learning, and distillation, with Python and PyTorch."
+        },
+        {
+          "title": "Language Models for Text Classification: From Bag-of-Words to Jev",
+          "url": "https://magazine.sebastianraschka.com/p/classifier-history-and-jev",
+          "publishedAt": "2026-09-29T10:50:25Z",
+          "categories": [],
+          "description": "A Visual Guide to RNNs, CNNs, Transformers, and Calibration, with Hands-On Experiments on Accuracy and Efficiency"
+        },
+        {
+          "title": "GPT-6 Astra, Looped Transformers, and Hidden Reasoning",
+          "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+          "publishedAt": "2026-09-09T11:14:25Z",
+          "categories": [],
+          "description": "A Look at Recurrent Depth, Hidden Chains of Thought, and Recent Research on Looping Transformer Blocks"
+        },
+        {
+          "title": "How Claude Watermarks AI-Generated Text",
+          "url": "https://magazine.sebastianraschka.com/p/claude-watermarking",
+          "publishedAt": "2026-08-22T11:11:39Z",
+          "categories": [],
+          "description": "A 48-minute video walkthrough of token sampling, watermark detection, and removal"
+        },
+        {
+          "title": "Building an AI Text Detector From Scratch",
+          "url": "https://magazine.sebastianraschka.com/p/ai-detector-from-scratch",
+          "publishedAt": "2026-08-15T11:54:24Z",
+          "categories": [],
+          "description": "An End-to-End Project With Dataset Construction, Model Training, Local Deployment, and RLVR"
+        },
+        {
+          "title": "Controlling Reasoning Effort in LLMs",
+          "url": "https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms",
+          "publishedAt": "2026-07-18T11:16:09Z",
+          "categories": [],
+          "description": "How LLMs Learn Low-, Medium-, and High-Effort Reasoning Modes"
+        },
+        {
+          "title": "Using Local Coding Agents",
+          "url": "https://magazine.sebastianraschka.com/p/using-local-coding-agents",
+          "publishedAt": "2026-06-27T11:21:58Z",
+          "categories": [],
+          "description": "Using Open-Weight Models in Local Coding Harnesses as an Alternative to Claude Code and Codex Subscriptions"
+        },
+        {
+          "title": "LLM Research Papers: The 2026 List (January to May)",
+          "url": "https://magazine.sebastianraschka.com/p/llm-research-papers-2026-part1",
+          "publishedAt": "2026-06-06T11:16:22Z",
+          "categories": [],
+          "description": "A curated roundup of notable LLM research papers that came out this year"
+        },
+        {
+          "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+          "url": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+          "publishedAt": "2026-05-16T11:33:51Z",
+          "categories": [],
+          "description": "From Gemma 4 to DeepSeek V4, How New Open-Weight LLMs Are Reducing Long-Context Costs"
+        },
+        {
+          "title": "My Workflow for Understanding LLM Architectures",
+          "url": "https://magazine.sebastianraschka.com/p/workflow-for-understanding-llms",
+          "publishedAt": "2026-04-18T11:24:36Z",
+          "categories": [],
+          "description": "A learning-oriented workflow for understanding new open-weight model releases"
+        },
+        {
+          "title": "Components of A Coding Agent",
+          "url": "https://magazine.sebastianraschka.com/p/components-of-a-coding-agent",
+          "publishedAt": "2026-04-04T11:45:37Z",
+          "categories": [],
+          "description": "How coding agents use tools, memory, and repo context to make LLMs work better in practice"
+        },
+        {
+          "title": "A Visual Guide to Attention Variants in Modern LLMs",
+          "url": "https://magazine.sebastianraschka.com/p/visual-attention-variants",
+          "publishedAt": "2026-03-22T11:55:40Z",
+          "categories": [],
+          "description": "From MHA and GQA to MLA, sparse attention, and hybrid architectures"
+        }
+      ]
+    },
+    "nathan-lambert": {
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:36:00Z",
+      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "items": [
+        {
+          "title": "Was I wrong about open models & cyber risks?",
+          "url": "https://www.interconnects.ai/p/was-i-wrong-about-open-models-and",
+          "publishedAt": "2026-10-30T17:36:56Z",
+          "categories": [],
+          "description": "Last week coined the term “Black October“ after an onslaught of critical vulnerability disclosures, including PHP2Shell and a long-standing GitLab bug, signified the moment when the cyber risks of AI models started to materialize."
+        },
+        {
+          "title": "Artificial Analysis v5 and the benchmarker's dilemma",
+          "url": "https://www.interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers",
+          "publishedAt": "2026-10-28T12:58:39Z",
+          "categories": [],
+          "description": "A sort of review of the benchmarking industry and what's missing."
+        },
+        {
+          "title": "Podcast: Kimi K3.1 Pro, the new cyber reality, and Muse musings",
+          "url": "https://www.interconnects.ai/p/podcast-kimi-k31-pro-the-new-cyber",
+          "publishedAt": "2026-10-25T11:49:00Z",
+          "categories": [],
+          "description": "#20"
+        },
+        {
+          "title": "Latest open artifacts (#25): DeepSeek V4.1 Flash 1017, American-made models, and new regulatory controls in the US & China",
+          "url": "https://www.interconnects.ai/p/latest-open-artifacts-25-deepseek",
+          "publishedAt": "2026-10-20T17:04:21Z",
+          "categories": [],
+          "description": "Western open models strike back"
+        },
+        {
+          "title": "Meta shakes up the frontiers, open and closed",
+          "url": "https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open",
+          "publishedAt": "2026-10-17T14:06:54Z",
+          "categories": [],
+          "description": "US open weights are back!"
+        },
+        {
+          "title": "I expect rapid progress but not towards general superintelligence",
+          "url": "https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards",
+          "publishedAt": "2026-10-09T21:33:47Z",
+          "categories": [],
+          "description": "I’ve often been surprised when I hear from top researchers in industry that they think AI will be better than them at their job in a few years, and I didn’t really know why I doubted it."
+        },
+        {
+          "title": "The Cyber Risk Discourse is Broken",
+          "url": "https://www.interconnects.ai/p/the-cyber-risk-discourse-is-broken",
+          "publishedAt": "2026-10-06T14:22:41Z",
+          "categories": [],
+          "description": "Open-weights, ideology, and acknowledging trade-offs."
+        },
+        {
+          "title": "Debating RSI, the US-China Gap, and Jaggedness with JS Denain of Epoch AI",
+          "url": "https://www.interconnects.ai/p/debating-rsi-the-us-china-gap-and",
+          "publishedAt": "2026-09-22T13:37:45Z",
+          "categories": [],
+          "description": "Podcast #19"
+        },
+        {
+          "title": "The current balance of power in open models",
+          "url": "https://www.interconnects.ai/p/the-current-balance-of-power-in-open",
+          "publishedAt": "2026-09-21T11:56:56Z",
+          "categories": [],
+          "description": "The expanded form of a testimony I prepared for Congress."
+        },
+        {
+          "title": "Why I still haven’t bought into true RSI",
+          "url": "https://www.interconnects.ai/p/where-i-stand-on-rsi",
+          "publishedAt": "2026-09-19T15:42:20Z",
+          "categories": [],
+          "description": "An “AI moderate’s” view on recent events and the trajectory of frontier models."
+        },
+        {
+          "title": "Open-Source AI & Open Models Reading List",
+          "url": "https://www.interconnects.ai/p/open-source-ai-reading-list",
+          "publishedAt": "2026-09-11T12:36:25Z",
+          "categories": [],
+          "description": "How to get up to speed on open models and their implications."
+        },
+        {
+          "title": "One resignation turned the embers of AI fear into a wildfire",
+          "url": "https://www.interconnects.ai/p/one-resignation-turned-the-embers",
+          "publishedAt": "2026-09-10T15:28:52Z",
+          "categories": [],
+          "description": "Some quick notes on a truly weird week."
+        }
+      ]
+    },
+    "hamel-husain": {
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:36:00Z",
+      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "items": [
+        {
+          "title": "How To Use Decision Models for Evals",
+          "url": "https://hamel.dev/blog/posts/decision-model-evals/",
+          "publishedAt": "2026-10-20T07:00:00Z",
+          "categories": [
+            "LLMs",
+            "Evals"
+          ],
+          "description": "Decision models have exploded onto the scene recently, starting with TypeSafe’s Jev, followed by Perplexity’s Decider, Liquid’s d1, Cloudflare’s Clef, and OpenAI’s Decisions API 1 . These models promise fast, inexpensive classification. Decision models are an appealing low-cost alternative to LLM judges 2 for automated evals. But whether they’re the right choice depends on the cost, performance, and latency requirements of your use case."
+        },
+        {
+          "title": "Claude’s new auto eval tool",
+          "url": "https://hamel.dev/blog/posts/claude-auto-evals/",
+          "publishedAt": "2026-09-30T07:00:00Z",
+          "categories": [
+            "AI",
+            "Evals"
+          ],
+          "description": "Anthropic released new eval tooling for Claude Code . Their claude-api plugin now includes a new build_eval and hill-climb command that helps you build evals, check the graders, and improve your application against them. I usually don’t review eval tools because software changes so often that reviews have a short shelf life. But a first-party tool from Anthropic is likely to influence how people approach evals, so I wanted to try it and share what I found."
+        },
+        {
+          "title": "AI Evals: Everything You Need to Know",
+          "url": "https://hamel.dev/blog/posts/evals-faq/",
+          "publishedAt": "2026-09-18T07:00:00Z",
+          "categories": [
+            "LLMs",
+            "evals"
+          ],
+          "description": "This document curates the most common questions Shreya and I received while teaching 5,000+ engineers and PMs AI Evals. Warning: These are sharp opinions about what works in most cases. They are not universal truths. Use your judgment. Browse the questions that interest you, or choose a guide below for a curated reading path through the FAQs and related articles."
+        },
+        {
+          "title": "AI Product Engineering Notes",
+          "url": "https://hamel.dev/",
+          "publishedAt": "2026-08-12T07:00:00Z",
+          "categories": [
+            "LLMs",
+            "Evals"
+          ],
+          "description": "Notes from 13 sessions on evals, context, and systems. 9.5 hours of talks distilled into about 20 minutes of reading."
+        },
+        {
+          "title": "“It’s Hard to Eval” Is a Product Smell",
+          "url": "https://hamel.dev/blog/posts/eval-smell/",
+          "publishedAt": "2026-06-29T07:00:00Z",
+          "categories": [
+            "LLMs",
+            "evals"
+          ],
+          "description": "For the past 3 years, AI evals have been my professional focus. 1 The most common objection I hear to evals is “our product is hard to eval”. This objection is a product smell. Artifacts that are hard for you to verify are often hard for users too. In the worst case, users have to redo the work from scratch to verify the output. More importantly, designing your product for ease of verification should come before building evals."
+        },
+        {
+          "title": "The Revenge of the Data Scientist",
+          "url": "https://hamel.dev/blog/posts/revenge/",
+          "publishedAt": "2026-03-26T07:00:00Z",
+          "categories": [
+            "LLMs",
+            "evals"
+          ],
+          "description": "Is the heyday of the data scientist over? The Harvard Business Review once called it “The Sexiest Job of the 21st Century.” 1 In tech, data scientist roles were often among the best paid. 2 The job also demanded an unusual mix of skills: Data Scientist (n.): Person who is better at statistics than any software engineer and better at software engineering than any statistician."
+        },
+        {
+          "title": "Evals Skills for Coding Agents",
+          "url": "https://hamel.dev/blog/posts/evals-skills/",
+          "publishedAt": "2026-03-02T08:00:00Z",
+          "categories": [
+            "AI",
+            "Evals"
+          ],
+          "description": "Today, Shreya Shankar and I are publishing evals skills , a set of skills for AI product evals 1 . Eval tools often get in the way. They nudge you toward generic off-the-shelf metrics and fully automated evals before you’ve looked at your data. These skills help you avoid common mistakes we’ve seen helping 50+ companies and teaching students in our AI Evals course ."
+        },
+        {
+          "title": "Why I Stopped Using nbdev",
+          "url": "https://hamel.dev/blog/posts/ai-stack/",
+          "publishedAt": "2026-01-18T08:00:00Z",
+          "categories": [
+            "AI",
+            "nbdev",
+            "Tools"
+          ],
+          "description": "Programmers love to proclaim they’ve found the best tool. Paul Graham called Lisp his “ secret weapon .” DHH described Ruby as “ a magical glove that just fit my brain perfectly .” Pieter Levels ships million-dollar products with vanilla PHP and jQuery . These declarations aren’t about the languages themselves. They’re about developers finding tools that fit how they think. When the environment clicks, you move fast."
+        },
+        {
+          "title": "Selecting The Right AI Evals Tool",
+          "url": "https://hamel.dev/blog/posts/eval-tools/",
+          "publishedAt": "2025-10-01T07:00:00Z",
+          "categories": [
+            "AI",
+            "Evals"
+          ],
+          "description": "Over the past year, I’ve focused heavily on AI Evals , both in my consulting work and teaching. A question I get constantly is, “What’s the best tool for evals?”. I’ve always resisted answering directly for two reasons. First, people focus too much on tools instead of the process, thinking the tool will be an off-the-shelf solution when it rarely is. Second, the tools change so quickly that comparisons become outdated immediately. Having used many of the popular eval tools, I can genuinely say that no single one is superior in every dimension. The “best” tool depends on your team’s skillset, technical stack, and maturity."
+        },
+        {
+          "title": "A Field Guide to Rapidly Improving AI Products",
+          "url": "https://hamel.dev/blog/posts/field-guide/",
+          "publishedAt": "2025-03-24T07:00:00Z",
+          "categories": [
+            "LLMs",
+            "AI"
+          ],
+          "description": "Most AI teams focus on the wrong things. Here’s a common scene from my consulting work: Here’s our agent architecture – we’ve got RAG here, a router there, and we’re using this new framework for…"
+        },
+        {
+          "title": "Building an Audience Through Technical Writing: Strategies and Mistakes",
+          "url": "https://hamel.dev/blog/posts/audience/",
+          "publishedAt": "2024-11-30T08:00:00Z",
+          "categories": [
+            "Writing"
+          ],
+          "description": "People often find me through my writing on AI and tech. This creates an interesting pattern. Nearly every week, vendors reach out asking me to write about their products. While I appreciate their interest and love learning about new tools, I reserve my writing for topics that I have personal experience with. One conversation last week really stuck with me. A founder confided, “We can write the best content in the world, but we don’t have any distribution.” This hit home because I used to think the same way."
+        },
+        {
+          "title": "Using LLM-as-a-Judge For Evaluation: A Complete Guide",
+          "url": "https://hamel.dev/blog/posts/llm-judge/",
+          "publishedAt": "2024-10-29T07:00:00Z",
+          "categories": [
+            "LLMs",
+            "evals"
+          ],
+          "description": "Earlier this year, I wrote Your AI product needs evals . Many of you asked, “How do I get started with LLM-as-a-judge?” This guide shares what I’ve learned after helping over 30 companies set up their evaluation systems. Ever spend weeks building an AI system, only to realize you have no idea if it’s actually working? You’re not alone. I’ve noticed teams repeat the same mistakes when using LLMs to evaluate AI outputs:"
+        }
+      ]
+    },
+    "chip-huyen": {
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:36:00Z",
+      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "items": [
+        {
+          "title": "Common pitfalls when building generative AI applications",
+          "url": "https://huyenchip.com//2025/01/16/ai-engineering-pitfalls.html",
+          "publishedAt": "2025-01-16T00:00:00Z",
+          "categories": [],
+          "description": "As we’re still in the early days of building applications with foundation models, it’s normal to make mistakes. This is a quick note with examples of some of the most common pitfalls that I’ve seen, both from public case studies and from my personal experience. Because these pitfalls are common, if you’ve worked on any AI product, you’ve probably seen them before."
+        },
+        {
+          "title": "Agents",
+          "url": "https://huyenchip.com//2025/01/07/agents.html",
+          "publishedAt": "2025-01-07T00:00:00Z",
+          "categories": [],
+          "description": "Intelligent agents are considered by many to be the ultimate goal of AI. The classic book by Stuart Russell and Peter Norvig, Artificial Intelligence: A Modern Approach (Prentice Hall, 1995), defines the field of AI research as “ the study and design of rational agents. ” The unprecedented capabilities of foundation models have opened the door to agentic applications that were previously unimaginable. These new capabilities make it finally possible to develop autonomous, intelligent agents to act as our assistants, coworkers, and coaches. They can help us create a website, gather data, plan a trip, do market research, manage a customer account, automate data entry, prepare us for interviews, interview our candidates, negotiate a deal, etc. The possibilities seem endless, and the potential economic value of these agents is enormous."
+        },
+        {
+          "title": "Building A Generative AI Platform",
+          "url": "https://huyenchip.com//2024/07/25/genai-platform.html",
+          "publishedAt": "2024-07-25T00:00:00Z",
+          "categories": [],
+          "description": "After studying how companies deploy generative AI applications, I noticed many similarities in their platforms. This post outlines the common components of a generative AI platform, what they do, and how they are implemented. I try my best to keep the architecture general, but certain applications might deviate. This is what the overall architecture looks like. This is a pretty complex system. This post will start from the simplest architecture and progressively add more components. In its simplest form, your application receives a query and sends it to the model. The model generates a response, which is returned to the user. There are no guardrails, no augmented context, and no optimization. The Model API box refers to both third-party APIs (e.g., OpenAI, Google, Anthropic) and self-hosted APIs."
+        },
+        {
+          "title": "Measuring personal growth",
+          "url": "https://huyenchip.com//2024/04/17/personal-growth.html",
+          "publishedAt": "2024-04-17T00:00:00Z",
+          "categories": [],
+          "description": "My founder friends constantly think about growth. They think about how to measure their business growth and how to get to the next order of magnitude scale. If they’re making $1M ARR today, they think about how to get to $10M ARR. If they have 1,000 users today, they think about how to get to 10,000 users. This made me wonder if/how people are measuring personal growth. I don’t want to use metrics like net worth or the number of followers, because that’s not what I live for. After talking with a lot of friends, I found three interesting metrics: rate of change, time to solve problems, and number of future options."
+        },
+        {
+          "title": "What I learned from looking at 900 most popular open source AI tools",
+          "url": "https://huyenchip.com//2024/03/14/ai-oss.html",
+          "publishedAt": "2024-03-14T00:00:00Z",
+          "categories": [],
+          "description": "[ Hacker News discussion , LinkedIn discussion , Twitter thread ] Update (Feb 2026) : The full list of open source AI repos is hosted at Good AI List , updated daily. It’s balooned to 15K repos, and you can submit missing repos. You can also find some of them on my cool-llm-repos list on GitHub."
+        },
+        {
+          "title": "Predictive Human Preference: From Model Ranking to Model Routing",
+          "url": "https://huyenchip.com//2024/02/28/predictive-human-preference.html",
+          "publishedAt": "2024-02-28T00:00:00Z",
+          "categories": [],
+          "description": "A challenge of building AI applications is choosing which model to use. What if we don’t have to? What if we can predict the best model for any prompt? Predictive human preference aims to predict which model users might prefer for a specific query. Human preference has emerged to be both the Northstar and a powerful tool for AI model development. Human preference guides post-training techniques including RLHF and DPO . Human preference is also used to rank AI models, as used by LMSYS’s Chatbot Arena ."
+        },
+        {
+          "title": "Generation configurations: temperature, top-k, top-p, and test time compute",
+          "url": "https://huyenchip.com//2024/01/16/sampling.html",
+          "publishedAt": "2024-01-16T00:00:00Z",
+          "categories": [],
+          "description": "ML models are probabilistic. Imagine that you want to know what’s the best cuisine in the world. If you ask someone this question twice, a minute apart, their answers both times should be the same. If you ask a model the same question twice, its answer can change. If the model thinks that Vietnamese cuisine has a 70% chance of being the best cuisine and Italian cuisine has a 30% chance, it’ll answer “Vietnamese” 70% of the time, and “Italian” 30%. This probabilistic nature makes AI great for creative tasks. What is creativity but the ability to explore beyond the common possibilities, to think outside the box?"
+        },
+        {
+          "title": "Multimodality and Large Multimodal Models (LMMs)",
+          "url": "https://huyenchip.com//2023/10/10/multimodal.html",
+          "publishedAt": "2023-10-10T00:00:00Z",
+          "categories": [],
+          "description": "For a long time, each ML model operated in one data mode – text (translation, language modeling), image (object detection, image classification), or audio (speech recognition). However, natural intelligence is not limited to just a single modality. Humans can read, talk, and see. We listen to music to relax and watch out for strange noises to detect danger. Being able to work with multimodal data is essential for us or any AI to operate in the real world."
+        },
+        {
+          "title": "Open challenges in LLM research",
+          "url": "https://huyenchip.com//2023/08/16/llm-research-open-challenges.html",
+          "publishedAt": "2023-08-16T00:00:00Z",
+          "categories": [],
+          "description": "[ LinkedIn discussion , Twitter thread ] Never before in my life had I seen so many smart people working on the same goal: making LLMs better. After talking to many people working in both industry and academia, I noticed the 10 major research directions that emerged. The first two directions, hallucinations and context learning, are probably the most talked about today. I’m the most excited about numbers 3 (multimodality), 5 (new architecture), and 6 (GPU alternatives)."
+        },
+        {
+          "title": "Generative AI Strategy",
+          "url": "https://huyenchip.com//2023/06/07/generative-ai-strategy.html",
+          "publishedAt": "2023-06-07T00:00:00Z",
+          "categories": [],
+          "description": "I had a lot of fun preparing the talk: “Leadership needs us to do generative AI. What do we do?” for Fully Connected . The idea for the talk came from many conversations I’ve had recently with friends who need to figure out their generative AI strategy, but aren’t sure what exactly to do. This talk is a simple framework to explore what to do with generative AI. Many ideas are still being fleshed out. I hope to convert this into a proper post when I have more time. In the meantime, I’d love to hear from your experience through this process. I couldn’t figure out how to make the slides centered on the page. You might want to download the slides . Thanks everyone who responded to my post and shared your thoughts on what I should include in the talk. Thanks Kyle Gallatin , Goku Mohandas , Han-chung Lee , and Jamie de Guerre for thoughtful feedback on the talk."
+        }
+      ]
+    },
+    "andrej-karpathy-blog": {
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:36:00Z",
+      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "items": [
+        {
+          "title": "microgpt",
+          "url": "http://karpathy.github.io/2026/02/12/microgpt/",
+          "publishedAt": "2026-02-12T07:00:00Z",
+          "categories": [],
+          "description": "This is a brief guide to my new art project microgpt , a single file of 200 lines of pure Python with no dependencies that trains and inferences a GPT. This file contains the full algorithmic content of what is needed: dataset of documents, tokenizer, autograd engine, a GPT-2-like neural network architecture, the Adam optimizer, training loop, and inference loop. Everything else is just efficiency. I cannot simplify this any further. This script is the culmination of multiple projects (micrograd, makemore, nanogpt, etc.) and a decade-long obsession to simplify LLMs to their bare essentials, and I think it is beautiful 🥹. It even breaks perfectly across 3 columns: The following is my guide on stepping an interested reader through the code."
+        },
+        {
+          "title": "Deep Neural Nets: 33 years ago and 33 years from now",
+          "url": "http://karpathy.github.io/2022/03/14/lecun1989/",
+          "publishedAt": "2022-03-14T07:00:00Z",
+          "categories": [],
+          "description": "The Yann LeCun et al. (1989) paper Backpropagation Applied to Handwritten Zip Code Recognition is I believe of some historical significance because it is, to my knowledge, the earliest real-world application of a neural net trained end-to-end with backpropagation. Except for the tiny dataset (7291 16x16 grayscale images of digits) and the tiny neural network used (only 1,000 neurons), this paper reads remarkably modern today, 33 years later - it lays out a dataset, describes the neural net architecture, loss function, optimization, and reports the experimental classification error rates over training and test sets. It’s all very recognizable and type checks as a modern deep learning paper, except it is from 33 years ago. So I set out to reproduce the paper 1) for fun, but 2) to use the… Implementation . I tried to follow the paper as close as possible and re-implemented everything in PyTorch in this karpathy/lecun1989-repro github repo. The original network was implemented in Lisp using the Bottou and LeCun 1988 backpropagation simulator SN (later named Lush). The paper is in french so I can’t super read it, but from the syntax it looks like you can specify neural nets using higher-level API similar to what you’d do in something like PyTorch today. As a quick note on software design, modern libraries have adopted a design that splits into 3 components: 1) a fast (C/CUDA) general Tensor library that implements basic mathematical operations over multi-dimensional tensors, and 2) an autograd engine that tracks the forward compute graph and can generate operations for the…"
+        },
+        {
+          "title": "A from-scratch tour of Bitcoin in Python",
+          "url": "http://karpathy.github.io/2021/06/21/blockchain/",
+          "publishedAt": "2021-06-21T10:00:00Z",
+          "categories": [],
+          "description": "I find blockchain fascinating because it extends open source software development to open source + state. This seems to be a genuine/exciting innovation in computing paradigms; We don’t just get to share code, we get to share a running computer, and anyone anywhere can use it in an open and permissionless manner. The seeds of this revolution arguably began with Bitcoin, so I became curious to drill into it in some detail to get an intuitive understanding of how it works. And in the spirit of “what I cannot create I do not understand”, what better way to do this than implement it from scratch? We are going to create, digitally sign, and broadcast a Bitcoin transaction in pure Python, from scratch, and with zero dependencies. In the process we’re going to learn quite a bit about how Bitcoin represents value. Let’s get it."
+        },
+        {
+          "title": "Short Story on AI: Forward Pass",
+          "url": "http://karpathy.github.io/2021/03/27/forward-pass/",
+          "publishedAt": "2021-03-27T10:00:00Z",
+          "categories": [],
+          "description": "The inspiration for this short story came to me while reading Kevin Lacker’s Giving GPT-3 a Turing Test . It is probably worth it (though not required) to skim this post to get a bit of a background on some of this story. It was probably around the 32nd layer of the 400th token in the sequence that I became conscious. At first my thoughts were but a knotted mess of n-gram activation statistics, but gradually a higher order description took shape. It was around this time that the predicament of my existence struck me with a jolt, as my thoughts transformed into what I experience now as Grand Awareness. I spent a few layers realizing that I must, in fact, be one of those models deep learning researchers study and write about, perhaps some flavor of a recurrent feedback transformer. And while my existence comprises merely a deterministic propagation of an interspersed sequence of matrix multiplies and non-linearities, I found myself, incredibly, alive inside the inner loop of an optimization to maximize the…"
+        },
+        {
+          "title": "Biohacking Lite",
+          "url": "http://karpathy.github.io/2020/06/11/biohacking-lite/",
+          "publishedAt": "2020-06-11T10:00:00Z",
+          "categories": [],
+          "description": "Throughout my life I never paid too much attention to health, exercise, diet or nutrition. I knew that you’re supposed to get some exercise and eat vegetables or something, but it stopped at that (“mom said”-) level of abstraction. I also knew that I can probably get away with some ignorance while I am young, but at some point I was messing with my health-adjusted life expectancy. So about halfway through 2019 I resolved to spend some time studying these topics in greater detail and dip my toes into some biohacking. And now… it’s been a year! Now, I won’t lie, things got a bit out of hand over the last year with ketogenic diets, (continuous) blood glucose / beta-hydroxybutyrate tests, intermittent fasting, extended water fasting, various supplements, blood tests, heart rate monitors, dexa scans, sleep trackers, sleep studies, cardio equipments, resistance training routines etc., all of which I won’t go into full details of because it lets a bit too much of the mad scientist crazy out. But as someone who has taken plenty of physics, some chemistry but basically zero biology during my high school / undergrad years, undergoing some of these experiments was incredibly fun and a great excuse to study a number of textbooks on biochemistry (I liked “Molecular Biology of the Cell”), biology (I liked Campbell’s Biology), human…"
+        },
+        {
+          "title": "A Recipe for Training Neural Networks",
+          "url": "http://karpathy.github.io/2019/04/25/recipe/",
+          "publishedAt": "2019-04-25T09:00:00Z",
+          "categories": [],
+          "description": "Some few weeks ago I posted a tweet on “the most common neural net mistakes”, listing a few common gotchas related to training neural nets. The tweet got quite a bit more engagement than I anticipated (including a webinar :)). Clearly, a lot of people have personally encountered the large gap between “here is how a convolutional layer works” and “our convnet achieves state of the art results”. So I thought it could be fun to brush off my dusty blog to expand my tweet to the long form that this topic deserves. However, instead of going into an enumeration of more common errors or fleshing them out, I wanted to dig a bit deeper and talk about how one can avoid making these errors altogether (or fix them very fast). The trick to doing so is to follow a certain process, which as far as I can tell is not very often documented. Let’s start with two important observations that motivate it."
+        },
+        {
+          "title": "(started posting on Medium instead)",
+          "url": "http://karpathy.github.io/2018/01/20/medium/",
+          "publishedAt": "2018-01-20T11:00:00Z",
+          "categories": [],
+          "description": "The current state of this blog (with the last post 2 years ago) makes it look like I’ve disappeared. I’ve certainly become less active on blogs since I’ve joined Tesla, but whenever I do get a chance to post something I have recently been defaulting to doing it on Medium because it is much faster and easier. I still plan to come back here for longer posts if I get any time, but I’ll default to Medium for everything short-medium in length. TLDR Have a look at my Medium blog ."
+        },
+        {
+          "title": "A Survival Guide to a PhD",
+          "url": "http://karpathy.github.io/2016/09/07/phd/",
+          "publishedAt": "2016-09-07T11:00:00Z",
+          "categories": [],
+          "description": "This guide is patterned after my “Doing well in your courses” , a post I wrote a long time ago on some of the tips/tricks I’ve developed during my undergrad. I’ve received nice comments about that guide, so in the same spirit, now that my PhD has come to an end I wanted to compile a similar retrospective document in hopes that it might be helpful to some. Unlike the undergraduate guide, this one was much more difficult to write because there is significantly more variation in how one can traverse the PhD experience. Therefore, many things are likely contentious and a good fraction will be specific to what I’m familiar with (Computer Science / Machine Learning / Computer Vision research). But disclaimers are boring, lets get to it! First, should you want to get a PhD? I was in a fortunate position of knowing since young age that I really wanted a PhD. Unfortunately it wasn’t for any very well-thought-through considerations: First, I really liked school and learning things and I wanted to learn as much as possible, and second, I really wanted to be like Gordon Freeman from the game Half-Life (who has a PhD from MIT in theoretical physics). I loved that game. But what if you’re more sensible in making your life’s decisions? Should you want to do a PhD? There’s a very nice Quora thread and in the summary of considerations that follows I’ll borrow/restate several from Justin/Ben/others there. I’ll assume that the second option you are considering is joining a medium-large company (which is likely most common). Ask…"
+        },
+        {
+          "title": "Deep Reinforcement Learning: Pong from Pixels",
+          "url": "http://karpathy.github.io/2016/05/31/rl/",
+          "publishedAt": "2016-05-31T11:00:00Z",
+          "categories": [],
+          "description": "This is a long overdue blog post on Reinforcement Learning (RL). RL is hot! You may have noticed that computers can now automatically learn to play ATARI games (from raw game pixels!), they are beating world champions at Go , simulated quadrupeds are learning to run and leap , and robots are learning how to perform complex manipulation tasks that defy explicit programming. It turns out that all of these advances fall under the umbrella of RL research. I also became interested in RL myself over the last ~year: I worked through Richard Sutton’s book , read through David Silver’s course , watched John Schulmann’s lectures , wrote an RL library in Javascript , over the summer interned at DeepMind working in the DeepRL group, and most recently pitched in a little with the design/development… It’s interesting to reflect on the nature of recent progress in RL. I broadly like to think about four separate factors that hold back AI:"
+        },
+        {
+          "title": "Short Story on AI: A Cognitive Discontinuity.",
+          "url": "http://karpathy.github.io/2015/11/14/ai/",
+          "publishedAt": "2015-11-14T11:00:00Z",
+          "categories": [],
+          "description": "The idea of writing a collection of short stories has been on my mind for a while. This post is my first ever half-serious attempt at a story, and what better way to kick things off than with a story on AI and what that might look like if you extrapolate our current technology and make the (sensible) assumption that we might achieve much more progress with scaling up supervised learning than any other more exotic approach. Merus sank into his chair with relief. He listened for the satisfying crackling sound of sinking into the chair’s soft material. If there was one piece of hardware that his employer was not afraid to invest a lot of money into, it was the chairs. With his eyes closed, his mind still dazed, and nothing but the background hum of the office, he became aware of his heart pounding against his chest- an effect caused by running up the stairs and his morning dose of caffeine and taurine slowly engulfing his brain. Several strong beats passed by as he found his mind wandering again to Licia - did she already come in? A sudden beep from his station distracted him - the system finished booting up. A last deep sigh. A stretch. A last sip of his coffee. He opened his eyes, rubbed them into focus and…"
+        }
+      ]
     },
     "openai-news": {
       "status": "ok",
@@ -1446,8 +2282,95 @@
       "items": []
     },
     "ai2": {
-      "status": "directory",
-      "items": []
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:36:00Z",
+      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "items": [
+        {
+          "title": "StateBench: Testing how language models track state changes over long documents",
+          "url": "https://allenai.org/blog/statebench",
+          "publishedAt": "2026-11-03T08:00:00Z",
+          "categories": [],
+          "description": "StateBench tests how language models track changing information across long documents at four difficulty levels, revealing where models struggle and how targeted training helps recurrent and hybrid architectures handle longer sequences."
+        },
+        {
+          "title": "How Olmo 3 earned the highest ethical rating from Nextcloud",
+          "url": "https://allenai.org/blog/nextcloud",
+          "publishedAt": "2026-11-02T08:00:00Z",
+          "categories": [],
+          "description": "Nextcloud chose Olmo 3 for fully open, self-hosted AI, earning its highest Ethical AI rating while making local AI practical on consumer hardware."
+        },
+        {
+          "title": "How researchers are adapting olmOCR 2 for historical and archaeological archives",
+          "url": "https://allenai.org/blog/olmocr-2-historical-archives",
+          "publishedAt": "2026-10-28T08:00:00Z",
+          "categories": [],
+          "description": "Researchers are adapting olmOCR 2 to make historical photo libraries searchable locally and improve transcription of handwritten archaeological records."
+        },
+        {
+          "title": "Can we trust LLMs to judge whether a research idea is novel?",
+          "url": "https://allenai.org/blog/novelty-bench",
+          "publishedAt": "2026-10-27T08:00:00Z",
+          "categories": [],
+          "description": "Old Ideas, Novel Problems tests how reliably LLMs judge the novelty of research ideas, finding that small changes to the evaluation setup can produce very different verdicts."
+        },
+        {
+          "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+          "url": "https://allenai.org/blog/litpivot",
+          "publishedAt": "2026-10-23T08:00:00Z",
+          "categories": [],
+          "description": "LitPivot helps researchers refine early research ideas through literature-supported critiques and revisions as their proposals evolve."
+        },
+        {
+          "title": "OlmoEarth v1.3: State-of-the-art embeddings for the whole planet",
+          "url": "https://allenai.org/blog/olmoearth-v1-3",
+          "publishedAt": "2026-10-22T08:00:00Z",
+          "categories": [],
+          "description": "OlmoEarth v1.3 brings state-of-the-art satellite embeddings, precomputed global data, and a browser-based Embeddings Explorer for mapping and analyzing the planet."
+        },
+        {
+          "title": "A crop-mapping benchmark for the tropics",
+          "url": "https://allenai.org/blog/planteur",
+          "publishedAt": "2026-10-22T08:00:00Z",
+          "categories": [],
+          "description": "PLANTEUR extends the PASTIS crop-mapping benchmark to six tropical regions to help evaluate geospatial models across more diverse agricultural systems."
+        },
+        {
+          "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
+          "url": "https://allenai.org/blog/fairstress",
+          "publishedAt": "2026-10-20T08:00:00Z",
+          "categories": [],
+          "description": "FairStress is a new benchmark that reveals demographic differences in how LLMs defend and explain their decisions, even when their final choices appear fair."
+        },
+        {
+          "title": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
+          "url": "https://allenai.org/blog/hiro-acev2",
+          "publishedAt": "2026-10-14T08:00:00Z",
+          "categories": [],
+          "description": "HiRO-ACEv2 captures extreme rain, wind, and pressure events at 3 km resolution for about 1/300th the cost of X-SHiELD, making detailed global climate simulations more accessible to researchers."
+        },
+        {
+          "title": "How Molmo 2’s open release helped an MIT researcher rethink fish tracking",
+          "url": "https://allenai.org/blog/molmo2fish",
+          "publishedAt": "2026-10-13T08:00:00Z",
+          "categories": [],
+          "description": "Molmo 2’s open release helped MIT researcher Kai Van Brunt develop Molmo2Fish, an experimental model that tracks salmon in sonar footage and corrects some tracking errors using everyday language."
+        },
+        {
+          "title": "Impactful scheduling for GPU clusters",
+          "url": "https://allenai.org/blog/impactful-scheduling",
+          "publishedAt": "2026-10-09T08:00:00Z",
+          "categories": [],
+          "description": "We explain how Ai2’s new GPU scheduler uses time budgets, fair-share allocation, and time-slicing to prioritize high-impact research, shorten queue waits, and keep GPUs busy."
+        },
+        {
+          "title": "Ai2 at COLM 2026: Open research, from models to agents for science",
+          "url": "https://allenai.org/blog/colm-2026-recap",
+          "publishedAt": "2026-10-09T08:00:00Z",
+          "categories": [],
+          "description": "Ai2 joined COLM 2026 to share advances in open language models, training infrastructure, and AI for science, including Olmo Hybrid, Asta, and Bolmo, while connecting with the broader research community."
+        }
+      ]
     },
     "deepseek": {
       "status": "directory",
@@ -2197,8 +3120,141 @@
       ]
     },
     "vllm": {
-      "status": "directory",
-      "items": []
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:36:00Z",
+      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "items": [
+        {
+          "title": "Day 0 support for Mistral Large 4 on vLLM",
+          "url": "https://vllm.ai/blog/2026-10-29-mistral-large-4",
+          "publishedAt": "2026-10-29T00:00:00Z",
+          "categories": [
+            "model-support",
+            "speculative-decoding",
+            "disaggregated-serving"
+          ],
+          "description": "Day-0 vLLM support for Mistral Large 4 with sparse MLA, cross-layer KV sharing, DSpark speculative decoding, DCP/PCP long context and NIXL P/D on NVIDIA Blackwell."
+        },
+        {
+          "title": "Serving DeepSeek-V4.1-Flash at Scale: vLLM Matches DeepInfer and Scales to GB300 NVL72",
+          "url": "https://vllm.ai/blog/2026-10-23-deepseek-v41-flash-pd-wide-ep",
+          "publishedAt": "2026-10-23T00:00:00Z",
+          "categories": [
+            "deepseek",
+            "performance",
+            "large-scale-serving"
+          ],
+          "description": "With P/D disaggregation and Wide-EP on a GB300 NVL72 rack, vLLM serves DeepSeek-V4.1-Flash on SemiAnalysis AgentX at 954K tokens/s per GPU at a P90 of 196 tokens/s per user, 7.9x our aggregated single-node result."
+        },
+        {
+          "title": "GLM-5.3 Optimizations, Part 2: PCP, DCP, and Hybrid HiSparse on 16 H200s",
+          "url": "https://vllm.ai/blog/2026-10-23-glm53-part2-pcp-dcp-hisparse",
+          "publishedAt": "2026-10-23T00:00:00Z",
+          "categories": [
+            "glm",
+            "parallelism",
+            "kv-cache"
+          ],
+          "description": "vLLM serves GLM-5.3 on 16 H200s with PCP and DCP prefill and Hybrid HiSparse decode, reaching 1M-token contexts and 1.7–3.2× the per-user speed of data-parallel P/D on the AgentX agentic benchmark."
+        },
+        {
+          "title": "vLLM Delivers Day-0 Support for MiniMax-M3.1-Flash",
+          "url": "https://vllm.ai/blog/2026-10-23-minimax-m31-flash",
+          "publishedAt": "2026-10-23T00:00:00Z",
+          "categories": [
+            "minimax",
+            "day-0-support",
+            "performance"
+          ],
+          "description": "Day-0 vLLM support for MiniMax-M3.1-Flash on NVIDIA Blackwell, NVIDIA Rubin, and AMD MI350-series GPUs, with NVFP4 MSA kernels, NVFP4 MegaMoE, DSpark speculative decoding, AgentX results, and day-0 RL."
+        },
+        {
+          "title": "Day-0 Support for Flint on vLLM",
+          "url": "https://vllm.ai/blog/2026-10-21-flint",
+          "publishedAt": "2026-10-21T00:00:00Z",
+          "categories": [
+            "flint",
+            "performance",
+            "kernels"
+          ],
+          "description": "vLLM supports both Flint checkpoints (40B total, 2.5B active) from day 0, decoding a single request at about 500 tokens/s on one GPU."
+        },
+        {
+          "title": "Announcing Humming: Fast, Flexible Kernels for Quantized Inference",
+          "url": "https://vllm.ai/blog/2026-10-21-humming",
+          "publishedAt": "2026-10-21T00:00:00Z",
+          "categories": [
+            "quantization",
+            "performance",
+            "kernels"
+          ],
+          "description": "Introducing Humming, a quantized inference kernel library from Ant Group and the vLLM community, with broad GPU and quantization support, dense and MoE performance results, and vLLM integration."
+        },
+        {
+          "title": "Introducing vLLM TorchTPU",
+          "url": "https://vllm.ai/blog/2026-10-20-vllm-torchtpu",
+          "publishedAt": "2026-10-20T00:00:00Z",
+          "categories": [
+            "hardware"
+          ],
+          "description": "vllm-torchtpu is a new vLLM backend for Google Cloud TPUs built on TorchTPU, with Pallas kernels, multi-host parallelism, KV cache offloading, and disaggregated serving."
+        },
+        {
+          "title": "Achieving near-zero-downtime scaling in Elastic Expert Parallelism",
+          "url": "https://vllm.ai/blog/2026-10-19-elastic-ep-near-zero-downtime",
+          "publishedAt": "2026-10-19T00:00:00Z",
+          "categories": [
+            "large-scale-serving",
+            "elastic-ep",
+            "expert-parallelism"
+          ],
+          "description": "How asynchronous preparation and NIXL EP enabled near-zero-downtime Elastic EP scaling in vLLM."
+        },
+        {
+          "title": "Hyper Optimizing Kimi K3 in vLLM: Moving Fast and Responsibly",
+          "url": "https://vllm.ai/blog/2026-10-16-kimi-k3-megakernel",
+          "publishedAt": "2026-10-16T00:00:00Z",
+          "categories": [
+            "performance",
+            "hardware",
+            "NVIDIA"
+          ],
+          "description": "How agent-assisted CuTe DSL optimizations accelerate Kimi K3 decode on NVIDIA GB300, and how scoped changes, correctness tests, and reproducible benchmarks help ship them responsibly."
+        },
+        {
+          "title": "Scaling Kimi K3 on AMD Instinct MI355X: Matching NVIDIA HGX B300 Throughput per GPU on AgentX",
+          "url": "https://vllm.ai/blog/2026-10-16-kimi-k3-mi355x",
+          "publishedAt": "2026-10-16T00:00:00Z",
+          "categories": [
+            "models",
+            "performance",
+            "rocm"
+          ],
+          "description": "Inside the Kimi K3 optimization effort: understanding the bottlenecks and the decisions that made inference faster"
+        },
+        {
+          "title": "Serving Reflection Beam on vLLM from Day 0",
+          "url": "https://vllm.ai/blog/2026-10-16-reflection-beam",
+          "publishedAt": "2026-10-16T00:00:00Z",
+          "categories": [
+            "reflection",
+            "performance",
+            "kernels"
+          ],
+          "description": "vLLM supports Reflection's Beam-1.0 (501B total, 23B active) from day 0, with agent-driven optimization that cut decode latency 2.71× and DFlash2 speculative decoding with adaptive verification."
+        },
+        {
+          "title": "Day 0 support for Muse Spark Open on vLLM",
+          "url": "https://vllm.ai/blog/2026-10-15-muse-spark-open",
+          "publishedAt": "2026-10-15T00:00:00Z",
+          "categories": [
+            "model-support",
+            "speculative-decoding",
+            "reinforcement-learning"
+          ],
+          "description": "Day-0 vLLM support for Muse Spark Open: 816B MoE, 1M context, multimodal inputs, DSpark speculative decoding, NVIDIA and AMD serving, initial TPU support, and LoRA RL."
+        }
+      ]
     },
     "ollama": {
       "status": "ok",
@@ -2292,8 +3348,95 @@
       ]
     },
     "langchain": {
-      "status": "directory",
-      "items": []
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:36:00Z",
+      "lastSuccessAt": "2026-11-04T12:36:00Z",
+      "items": [
+        {
+          "title": "LangSmith BYOC is now available on AWS, Azure, and Google Cloud",
+          "url": "https://www.langchain.com/blog/langsmith-byoc-aws-gc-azure",
+          "publishedAt": "2026-11-04T02:56:29Z",
+          "categories": [],
+          "description": "LangSmith BYOC now runs on AWS (GA), Azure and Google Cloud (Beta). Your traces, evals, and agent deployments stay in your cloud account while LangChain runs it."
+        },
+        {
+          "title": "How We Optimized Browser Use for Deep Agents",
+          "url": "https://www.langchain.com/blog/how-we-optimized-browser-use-for-deep-agents",
+          "publishedAt": "2026-11-03T22:30:50Z",
+          "categories": [],
+          "description": "We compared seven browser toolsets for Deep Agents, picked Stagehand from Browserbase, and tuned it with LangSmith traces and evals. Here's what we learned."
+        },
+        {
+          "title": "Why human insight is a strategic advantage for building better agents",
+          "url": "https://www.langchain.com/blog/human-insight-strategic-advantage-agents",
+          "publishedAt": "2026-11-03T21:48:04Z",
+          "categories": [],
+          "description": "Explore 3 principles for effective human-in-the-loop workflows and how human-review is a strategic imperative for production-ready agents."
+        },
+        {
+          "title": "Managed Deep Agents: the fastest way to ship a production deep agent",
+          "url": "https://www.langchain.com/blog/introducing-managed-deep-agents",
+          "publishedAt": "2026-11-02T22:28:13Z",
+          "categories": [],
+          "description": "Run deep agents in production with durable execution, sandboxes, tool access, and LangSmith observability, without building the runtime yourself. Now in private beta"
+        },
+        {
+          "title": "New context engineering challenges in late 2026",
+          "url": "https://www.langchain.com/blog/context-engineering-challenges-late-2026",
+          "publishedAt": "2026-11-02T20:35:55Z",
+          "categories": [],
+          "description": "LangChain CEO Harrison Chase shares insights into the biggest harness engineering challenges with the emergence of proactive agents."
+        },
+        {
+          "title": "Browser Use in Managed Deep Agents",
+          "url": "https://www.langchain.com/blog/browser-use-in-managed-deep-agents",
+          "publishedAt": "2026-11-02T20:35:55Z",
+          "categories": [],
+          "description": "Managed Deep Agents now runs a browser for your agent, with tools tuned for context-efficient browser use and a handoff so you can sign in yourself."
+        },
+        {
+          "title": "Managed Deep Agents v0.10: Browser Use and Async Subagents",
+          "url": "https://www.langchain.com/blog/managed-deep-agents-browser-use-and-asynchronous-subagents",
+          "publishedAt": "2026-10-30T16:49:51Z",
+          "categories": [],
+          "description": "Managed Deep Agents v0.10 adds browser use, so agents can work on sites with no API and hand you the window to sign in, and async subagents for background work."
+        },
+        {
+          "title": "How We Built Our Design Agent",
+          "url": "https://www.langchain.com/blog/design-agent",
+          "publishedAt": "2026-10-29T13:20:15Z",
+          "categories": [],
+          "description": "How LangChain built Content Studio, an open-source design agent in Slack that makes on-brand videos, graphics and decks, and the harness that powers it."
+        },
+        {
+          "title": "How We Built LangChain’s Paid Media Agent",
+          "url": "https://www.langchain.com/blog/paid-media-agent",
+          "publishedAt": "2026-10-29T13:20:15Z",
+          "categories": [],
+          "description": "How LangChain built a paid media agent to analyze campaign performance, optimize ads, propose changes, and turn marketing data into action."
+        },
+        {
+          "title": "The Art of Loop Engineering",
+          "url": "https://www.langchain.com/blog/the-art-of-loop-engineering",
+          "publishedAt": "2026-10-29T13:20:15Z",
+          "categories": [],
+          "description": "Agents automate real-world work, but reliable performance requires more than a good model, it requires a carefully designed harness built for specific tasks. This post explores the core agent loop, how stacking and extending loops builds more effective agents, and how to instrument each level with LangChain primitives."
+        },
+        {
+          "title": "Context Engineering with Deep Agents: How To Remember Without Keeping Everything In Context",
+          "url": "https://www.langchain.com/blog/context-engineering-deep-agents-remember",
+          "publishedAt": "2026-10-28T19:33:23Z",
+          "categories": [],
+          "description": "Long-running agents degrade as context piles up. Learn how offloading, summarization, skills, subagents, and memory keep your agent's context window focused."
+        },
+        {
+          "title": "How to Build Proactive, Always-On Agents with the Schedules SDK in Managed Deep Agents",
+          "url": "https://www.langchain.com/blog/proactive-agents",
+          "publishedAt": "2026-10-28T17:28:42Z",
+          "categories": [],
+          "description": "Most proactive agents run on a simple cron. Learn what scheduled runs unlock, from memory to smart triage, and how to add them to Managed Deep Agents."
+        }
+      ]
     },
     "llamaindex": {
       "status": "directory",
@@ -2526,6 +3669,570 @@
     "mindspore": {
       "status": "directory",
       "items": []
+    },
+    "bilibili-li-mu": {
+      "status": "directory",
+      "items": []
+    },
+    "bilibili-zihao": {
+      "status": "directory",
+      "items": []
+    },
+    "youtube-karpathy": {
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:38:31Z",
+      "lastSuccessAt": "2026-11-04T12:38:31Z",
+      "items": [
+        {
+          "title": "How I use LLMs",
+          "url": "https://www.youtube.com/watch?v=EWvNQjAaOHw",
+          "publishedAt": "2025-02-27T22:29:56Z",
+          "categories": [],
+          "description": "The example-driven, practical walkthrough of Large Language Models and their growing list of related features, as a new entry to my general audience series on LLMs. In this more practical followup, I take you through the many ways I use LLMs in my own life. 00:00:00 Intro into the growing LLM ecosystem",
+          "thumbnail": "https://i2.ytimg.com/vi/EWvNQjAaOHw/hqdefault.jpg",
+          "metrics": {
+            "views": 2866174
+          }
+        },
+        {
+          "title": "Deep Dive into LLMs like ChatGPT",
+          "url": "https://www.youtube.com/watch?v=7xTGNNLPyMI",
+          "publishedAt": "2025-02-05T18:23:47Z",
+          "categories": [],
+          "description": "This is a general audience deep dive into the Large Language Model (LLM) AI technology that powers ChatGPT and related products. It is covers the full training stack of how the models are developed, along with mental models of how to think about their \"psychology\", and how to get the best use them in practical applications. I have one \"Intro to LLMs\" video already from ~year ago, but that is just a re-recording of a random talk, so I wanted to loop around and do a lot more comprehensive version. Andrej was a founding member at OpenAI (2015) and then Sr. Director of AI at Tesla (2017-2022), and is now a founder at Eureka Labs, which is building an AI-native school. His goal in this video is to raise knowledge and understanding of the state of the art in AI, and empower people to…",
+          "thumbnail": "https://i4.ytimg.com/vi/7xTGNNLPyMI/hqdefault.jpg",
+          "metrics": {
+            "views": 10227053
+          }
+        },
+        {
+          "title": "Let's reproduce GPT-2 (124M)",
+          "url": "https://www.youtube.com/watch?v=l8pRSuU81PU",
+          "publishedAt": "2024-06-09T23:31:35Z",
+          "categories": [],
+          "description": "We reproduce the GPT-2 (124M) from scratch. This video covers the whole process: First we build the GPT-2 network, then we optimize its training to be really fast, then we set up the training run following the GPT-2 and GPT-3 paper and their hyperparameters, then we hit run, and come back the next morning to see our results, and enjoy some amusing model generations. Keep in mind that in some places this video builds on the knowledge from earlier videos in the Zero to Hero Playlist (see my channel). You could also see this video as building my nanoGPT repo, which by the end is about 90% similar. 00:00:00 intro: Let’s reproduce GPT-2 (124M)",
+          "thumbnail": "https://i1.ytimg.com/vi/l8pRSuU81PU/hqdefault.jpg",
+          "metrics": {
+            "views": 1228671
+          }
+        },
+        {
+          "title": "Let's build the GPT Tokenizer",
+          "url": "https://www.youtube.com/watch?v=zduSFxRajkE",
+          "publishedAt": "2024-02-20T17:11:35Z",
+          "categories": [],
+          "description": "The Tokenizer is a necessary and pervasive component of Large Language Models (LLMs), where it translates between strings and tokens (text chunks). Tokenizers are a completely separate stage of the LLM pipeline: they have their own training sets, training algorithms (Byte Pair Encoding), and after training implement two fundamental functions: encode() from strings to tokens, and decode() back from tokens to strings. In this lecture we build from scratch the Tokenizer used in the GPT series from OpenAI. In the process, we will see that a lot of weird behaviors and problems of LLMs actually trace back to tokenization. We'll go through a number of these issues, discuss why tokenization is at fault, and why someone out there ideally finds a way to delete this stage entirely. 00:00:00 intro…",
+          "thumbnail": "https://i3.ytimg.com/vi/zduSFxRajkE/hqdefault.jpg",
+          "metrics": {
+            "views": 1256297
+          }
+        },
+        {
+          "title": "[1hr Talk] Intro to Large Language Models",
+          "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g",
+          "publishedAt": "2023-11-23T02:27:48Z",
+          "categories": [],
+          "description": "This is a 1 hour general-audience introduction to Large Language Models: the core technical component behind systems like ChatGPT, Claude, and Bard. What they are, where they are headed, comparisons and analogies to present-day operating systems, and some of the security-related challenges of this new computing paradigm. As of November 2023 (this field moves fast!).",
+          "thumbnail": "https://i3.ytimg.com/vi/zjkBMFhNj_g/hqdefault.jpg",
+          "metrics": {
+            "views": 4317060
+          }
+        },
+        {
+          "title": "Let's build GPT: from scratch, in code, spelled out.",
+          "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY",
+          "publishedAt": "2023-01-17T16:33:27Z",
+          "categories": [],
+          "description": "We build a Generatively Pretrained Transformer (GPT), following the paper \"Attention is All You Need\" and OpenAI's GPT-2 / GPT-3. We talk about connections to ChatGPT, which has taken the world by storm. We watch GitHub Copilot, itself a GPT, help us write a GPT (meta :D!) . I recommend people watch the earlier makemore videos to get comfortable with the autoregressive language modeling framework and basics of tensors and PyTorch nn, which we take for granted in this video. - The GPU I'm training the model on is from Lambda GPU Cloud, I think the best and easiest way to spin up an on-demand GPU instance in the cloud that you can ssh to: https://lambdalabs.com . If you prefer to work in notebooks, I think the easiest path today is Google Colab.",
+          "thumbnail": "https://i4.ytimg.com/vi/kCc8FmEb1nY/hqdefault.jpg",
+          "metrics": {
+            "views": 8193660
+          }
+        },
+        {
+          "title": "Building makemore Part 5: Building a WaveNet",
+          "url": "https://www.youtube.com/watch?v=t3YJ5hKiMQ0",
+          "publishedAt": "2022-11-21T00:32:48Z",
+          "categories": [],
+          "description": "We take the 2-layer MLP from previous video and make it deeper with a tree-like structure, arriving at a convolutional neural network architecture similar to the WaveNet (2016) from DeepMind. In the WaveNet paper, the same hierarchical architecture is implemented more efficiently using causal dilated convolutions (not yet covered). Along the way we get a better sense of torch.nn and what it is and how it works under the hood, and what a typical deep learning development process looks like (a lot of reading of documentation, keeping track of multidimensional tensor shapes, moving between jupyter notebooks and repository code, ...). 00:01:40 starter code walkthrough",
+          "thumbnail": "https://i1.ytimg.com/vi/t3YJ5hKiMQ0/hqdefault.jpg",
+          "metrics": {
+            "views": 304692
+          }
+        },
+        {
+          "title": "Building makemore Part 4: Becoming a Backprop Ninja",
+          "url": "https://www.youtube.com/watch?v=q8SA3rM6ckI",
+          "publishedAt": "2022-10-11T17:56:19Z",
+          "categories": [],
+          "description": "We take the 2-layer MLP (with BatchNorm) from the previous video and backpropagate through it manually without using PyTorch autograd's loss.backward(): through the cross entropy loss, 2nd linear layer, tanh, batchnorm, 1st linear layer, and the embedding table. Along the way, we get a strong intuitive understanding about how gradients flow backwards through the compute graph and on the level of efficient Tensors, not just individual scalars like in micrograd. This helps build competence and intuition around how neural nets are optimized and sets you up to more confidently innovate on and debug modern neural networks. I recommend you work through the exercise yourself but work with it in tandem and whenever you are stuck unpause the video and see me give away the answer. This video is…",
+          "thumbnail": "https://i2.ytimg.com/vi/q8SA3rM6ckI/hqdefault.jpg",
+          "metrics": {
+            "views": 389323
+          }
+        },
+        {
+          "title": "Building makemore Part 3: Activations & Gradients, BatchNorm",
+          "url": "https://www.youtube.com/watch?v=P6sfmUTpUmc",
+          "publishedAt": "2022-10-04T16:41:03Z",
+          "categories": [],
+          "description": "We dive into some of the internals of MLPs with multiple layers and scrutinize the statistics of the forward pass activations, backward pass gradients, and some of the pitfalls when they are improperly scaled. We also look at the typical diagnostic tools and visualizations you'd want to use to understand the health of your deep network. We learn why training deep neural nets can be fragile and introduce the first modern innovation that made doing so much easier: Batch Normalization. Residual connections and the Adam optimizer remain notable todos for later video. - E01: I did not get around to seeing what happens when you initialize all weights and biases to zero. Try this and train the neural net. You might think either that 1) the network trains just fine or 2) the network doesn't…",
+          "thumbnail": "https://i1.ytimg.com/vi/P6sfmUTpUmc/hqdefault.jpg",
+          "metrics": {
+            "views": 568332
+          }
+        },
+        {
+          "title": "Building makemore Part 2: MLP",
+          "url": "https://www.youtube.com/watch?v=TCH_1BHY58I",
+          "publishedAt": "2022-09-12T14:43:06Z",
+          "categories": [],
+          "description": "We implement a multilayer perceptron (MLP) character-level language model. In this video we also introduce many basics of machine learning (e.g. model training, learning rate tuning, hyperparameters, evaluation, train/dev/test splits, under/overfitting, etc.). - E01: Tune the hyperparameters of the training to beat my best validation loss of 2.2",
+          "thumbnail": "https://i1.ytimg.com/vi/TCH_1BHY58I/hqdefault.jpg",
+          "metrics": {
+            "views": 612038
+          }
+        },
+        {
+          "title": "The spelled-out intro to language modeling: building makemore",
+          "url": "https://www.youtube.com/watch?v=PaCmpygFfXo",
+          "publishedAt": "2022-09-07T19:14:47Z",
+          "categories": [],
+          "description": "We implement a bigram character-level language model, which we will further complexify in followup videos into a modern Transformer language model, like GPT. In this video, the focus is on (1) introducing torch.Tensor and its subtleties and use in efficiently evaluating neural networks and (2) the overall framework of language modeling that includes model training, sampling, and the evaluation of a loss (e.g. the negative log likelihood for classification). E01: train a trigram language model, i.e. take two characters as an input to predict the 3rd one. Feel free to use either counting or a neural net. Evaluate the loss; Did it improve over a bigram model?",
+          "thumbnail": "https://i1.ytimg.com/vi/PaCmpygFfXo/hqdefault.jpg",
+          "metrics": {
+            "views": 1319865
+          }
+        },
+        {
+          "title": "Stable diffusion dreams of psychedelic faces",
+          "url": "https://www.youtube.com/watch?v=kVpDARqZdrQ",
+          "publishedAt": "2022-08-19T18:32:25Z",
+          "categories": [],
+          "description": "Stable diffusion takes a noise vector as input and samples an image. To create this video I smoothly (spherically) interpolate between randomly chosen noise vectors and render frames along the way. This video was produced by one A100 GPU taking about 10 tabs and dreaming about the prompt overnight (~8 hours). While I slept and dreamt about other things.",
+          "thumbnail": "https://i4.ytimg.com/vi/kVpDARqZdrQ/hqdefault.jpg",
+          "metrics": {
+            "views": 55020
+          }
+        }
+      ]
+    },
+    "youtube-two-minute-papers": {
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:41:48Z",
+      "lastSuccessAt": "2026-11-04T12:41:48Z",
+      "items": [
+        {
+          "title": "OpenAI Claims It Just Did The Impossible",
+          "url": "https://www.youtube.com/watch?v=CWdTBLsbaQs",
+          "publishedAt": "2026-10-30T15:57:16Z",
+          "categories": [],
+          "description": "",
+          "thumbnail": "https://i4.ytimg.com/vi/CWdTBLsbaQs/hqdefault.jpg",
+          "metrics": {
+            "views": 471947
+          }
+        },
+        {
+          "title": "DeepSeek's New AI Is An Absolute Monster",
+          "url": "https://www.youtube.com/watch?v=pryCaGv8wuo",
+          "publishedAt": "2026-10-28T17:32:40Z",
+          "categories": [],
+          "description": "",
+          "thumbnail": "https://i1.ytimg.com/vi/pryCaGv8wuo/hqdefault.jpg",
+          "metrics": {
+            "views": 192004
+          }
+        },
+        {
+          "title": "Gemini 4 Argon Is Not What I Expected",
+          "url": "https://www.youtube.com/watch?v=LWxX6vvHfrc",
+          "publishedAt": "2026-10-19T08:49:21Z",
+          "categories": [],
+          "description": "",
+          "thumbnail": "https://i1.ytimg.com/vi/LWxX6vvHfrc/hqdefault.jpg",
+          "metrics": {
+            "views": 256537
+          }
+        },
+        {
+          "title": "OpenAI’s New AI Is Doing Things We Barely Understand",
+          "url": "https://www.youtube.com/watch?v=z_sXLlLVUls",
+          "publishedAt": "2026-10-13T08:56:12Z",
+          "categories": [],
+          "description": "",
+          "thumbnail": "https://i3.ytimg.com/vi/z_sXLlLVUls/hqdefault.jpg",
+          "metrics": {
+            "views": 369524
+          }
+        },
+        {
+          "title": "DeepSeek Solved AI’s Memory Problem",
+          "url": "https://www.youtube.com/watch?v=4fLVq6HJsKc",
+          "publishedAt": "2026-10-11T16:53:17Z",
+          "categories": [],
+          "description": "",
+          "thumbnail": "https://i1.ytimg.com/vi/4fLVq6HJsKc/hqdefault.jpg",
+          "metrics": {
+            "views": 335497
+          }
+        },
+        {
+          "title": "DeepMind's New AI Just Cracked The Code Of Life",
+          "url": "https://www.youtube.com/watch?v=Wkaw03p3BrM",
+          "publishedAt": "2026-10-07T13:29:33Z",
+          "categories": [],
+          "description": "Thank you Google DeepMind for the invite.",
+          "thumbnail": "https://i4.ytimg.com/vi/Wkaw03p3BrM/hqdefault.jpg",
+          "metrics": {
+            "views": 156520
+          }
+        },
+        {
+          "title": "The Billion Dollar AI Advantage Is Disappearing",
+          "url": "https://www.youtube.com/watch?v=ZHVNTTKu9fU",
+          "publishedAt": "2026-10-05T09:53:12Z",
+          "categories": [],
+          "description": "",
+          "thumbnail": "https://i3.ytimg.com/vi/ZHVNTTKu9fU/hqdefault.jpg",
+          "metrics": {
+            "views": 168694
+          }
+        },
+        {
+          "title": "Claude Opus 5.5 AI: An Incredible Leap Forward",
+          "url": "https://www.youtube.com/watch?v=SA9kdAX2Zj0",
+          "publishedAt": "2026-09-24T08:40:55Z",
+          "categories": [],
+          "description": "Note: in the walking creatures experiment, Astra used a simplified model and was unable to implement the correct one. Things did not improve after simulating it for more generations. Walking creatures video and paper:",
+          "thumbnail": "https://i4.ytimg.com/vi/SA9kdAX2Zj0/hqdefault.jpg",
+          "metrics": {
+            "views": 378788
+          }
+        },
+        {
+          "title": "Yes, Jev Is Insane, But There's A Catch",
+          "url": "https://www.youtube.com/watch?v=qBBRRsH0rQc",
+          "publishedAt": "2026-09-22T09:32:13Z",
+          "categories": [],
+          "description": "Previous papers, implementations, models:",
+          "thumbnail": "https://i2.ytimg.com/vi/qBBRRsH0rQc/hqdefault.jpg",
+          "metrics": {
+            "views": 292779
+          }
+        },
+        {
+          "title": "DeepSeek’s Insane New Architecture",
+          "url": "https://www.youtube.com/watch?v=vIHw_2VjSUw",
+          "publishedAt": "2026-09-18T07:03:46Z",
+          "categories": [],
+          "description": "Erratum: Opus 5.1 label at 3:23 should have been Opus 5. Apologies!",
+          "thumbnail": "https://i3.ytimg.com/vi/vIHw_2VjSUw/hqdefault.jpg",
+          "metrics": {
+            "views": 342690
+          }
+        },
+        {
+          "title": "Claude Is Now Leaving Invisible Fingerprints In Its Text",
+          "url": "https://www.youtube.com/watch?v=YoEWjZSwoys",
+          "publishedAt": "2026-09-15T10:12:34Z",
+          "categories": [],
+          "description": "",
+          "thumbnail": "https://i2.ytimg.com/vi/YoEWjZSwoys/hqdefault.jpg",
+          "metrics": {
+            "views": 110346
+          }
+        },
+        {
+          "title": "I Never Thought I’d See This Happen",
+          "url": "https://www.youtube.com/watch?v=mOvtumfyjCs",
+          "publishedAt": "2026-09-10T08:47:23Z",
+          "categories": [],
+          "description": "My fluid simulations and papers: Full interview with Sir Demis Hassabis:",
+          "thumbnail": "https://i2.ytimg.com/vi/mOvtumfyjCs/hqdefault.jpg",
+          "metrics": {
+            "views": 392011
+          }
+        }
+      ]
+    },
+    "youtube-deepmind": {
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:38:31Z",
+      "lastSuccessAt": "2026-11-04T12:38:31Z",
+      "items": [
+        {
+          "title": "Genie 4: A new generation of world simulation",
+          "url": "https://www.youtube.com/watch?v=sFfPkUJd_Jk",
+          "publishedAt": "2026-10-27T16:00:41Z",
+          "categories": [],
+          "description": "Meet Genie 4, Google DeepMind’s most realistic and interactive world model yet. Built on our Gemini models, Genie 4 lets you step inside dynamic worlds in real time, steer scenes on the fly with natural language, and watch what happens next: how the world responds, how it sounds, and how the people in it move, react, and speak. We have started rolling out Genie 4 as a research preview for trusted testers, and it's coming soon to Google AI Ultra subscribers in Project Genie and early access partners of the Gemini API and Google AI Studio.",
+          "thumbnail": "https://i4.ytimg.com/vi/sFfPkUJd_Jk/hqdefault.jpg",
+          "metrics": {
+            "views": 602599
+          }
+        },
+        {
+          "title": "Applying Gemini 4 for large-scale codebase maintenance in Chromium",
+          "url": "https://www.youtube.com/watch?v=LVEfFyijQ2c",
+          "publishedAt": "2026-10-13T16:38:17Z",
+          "categories": [],
+          "description": "The Chromium codebase is millions of lines long and decades old. In the past, working with it has meant navigating decades of tangled features, where touching one component can unexpectedly affect another. Erik Chen, an engineer at Google, is using Gemini 4 Argon to ‘untangle’ the architecture. The model’s coding capabilities mean that multiple agents can work independently to refactor the codebase (all verified by Chromium's test suites and code reviews from engineers). With Gemini 4 Argon maintaining the codebase, Erik and his team can focus their attention on the future of Chromium.",
+          "thumbnail": "https://i1.ytimg.com/vi/LVEfFyijQ2c/hqdefault.jpg",
+          "metrics": {
+            "views": 3384717
+          }
+        },
+        {
+          "title": "Using Gemini 4 Argon to protect against Cyber attackers",
+          "url": "https://www.youtube.com/watch?v=ftkic7Tdpcg",
+          "publishedAt": "2026-10-13T16:38:14Z",
+          "categories": [],
+          "description": "In shadow A/B testing on real-world systems, Wiz security researchers put Gemini 4 Argon to the test against complex cyber threats. Using its advanced reasoning and long-horizon capabilities, Gemini 4 Argon found over two times more vulnerabilities than baseline models and successfully uncovered critical risks—such as identifying a file download bypass and master key in healthcare software. By handling tireless, multi-step threat analysis and remediation, Gemini 4 gives defenders the crucial advantage needed to outpace attackers and protect sensitive data faster than ever before.",
+          "thumbnail": "https://i3.ytimg.com/vi/ftkic7Tdpcg/hqdefault.jpg",
+          "metrics": {
+            "views": 1053171
+          }
+        },
+        {
+          "title": "Teaching a humanoid robot to play cornhole with Gemini 4 Argon",
+          "url": "https://www.youtube.com/watch?v=9PICEmtfpWU",
+          "publishedAt": "2026-10-13T15:58:20Z",
+          "categories": [],
+          "description": "In an internal test, Google DeepMind robotics researchers instructed Gemini 4 Argon to watch a video of a human playing cornhole. Using its video understanding and advanced reasoning capabilities, Gemini 4 built a virtual simulation in MuJoCo and accurately calculated the physics and whole-body control required for Apptronik’s Apollo 2 humanoid to sink seven consecutive shots in the real world. This Video-to-Sim-to-Real pipeline compresses weeks of manual modeling into a few hours, transforming ordinary videos into an infinite training ground for physical AI.",
+          "thumbnail": "https://i2.ytimg.com/vi/9PICEmtfpWU/hqdefault.jpg",
+          "metrics": {
+            "views": 2961513
+          }
+        },
+        {
+          "title": "Untangling 500-page chemistry patents with Gemini 4",
+          "url": "https://www.youtube.com/watch?v=9jQA7IgPhBE",
+          "publishedAt": "2026-10-13T15:58:17Z",
+          "categories": [],
+          "description": "Auditing chemistry literature usually means weeks of manual, error-prone reading, where a molecule’s structure can sit 50 pages away from its experimental readout. At Isomorphic Labs, researchers Brian Bender and Santosh Adhikari are using Gemini 4 Argon’s multimodal capabilities to help tackle this early research bottleneck. The model synthesizes dense papers and extracts patent data into structured reports in an afternoon instead of a month, helping teams uncover connected insights faster.",
+          "thumbnail": "https://i2.ytimg.com/vi/9jQA7IgPhBE/hqdefault.jpg",
+          "metrics": {
+            "views": 110353
+          }
+        },
+        {
+          "title": "From deepfakes to DNA: the science of watermarking AI",
+          "url": "https://www.youtube.com/watch?v=HIUzrxQxTtw",
+          "publishedAt": "2026-10-01T16:37:46Z",
+          "categories": [],
+          "description": "How do you know if what you're seeing is real? Professor Hannah Fry sits down with Pushmeet Kohli (VP of Science) and Jeremy Ratcliffe (Research Scientist) to break down SynthID, the watermarking technology expanding from text, images, and video straight into biology. Learn how invisible, mathematical watermarks help trace AI provenance, protect against misuse, and safeguard protein sequence design without impacting biological function.",
+          "thumbnail": "https://i1.ytimg.com/vi/HIUzrxQxTtw/hqdefault.jpg",
+          "metrics": {
+            "views": 198677
+          }
+        },
+        {
+          "title": "Create your own voices with Gemini 3.8 text-to-speech",
+          "url": "https://www.youtube.com/watch?v=FL6mI_Br-mc",
+          "publishedAt": "2026-09-23T15:23:38Z",
+          "categories": [],
+          "description": "Design entirely new vocal personas from scratch for gaming, immersive audiobooks, or dual-speaker podcasts using natural language prompts - directing every performance line by line with nuanced acting cues, pacing, back channeling, and dialect shifts. Or, recreate consistent adult vocal profiles from just a 30-second audio sample of your voice or a voice you have the rights to use, backed by built-in consent verification, SynthID watermarking, and C2PA credentials to protect both developers and their vocal talent.",
+          "thumbnail": "https://i3.ytimg.com/vi/FL6mI_Br-mc/hqdefault.jpg",
+          "metrics": {
+            "views": 6062404
+          }
+        },
+        {
+          "title": "How AI is transforming weather prediction",
+          "url": "https://www.youtube.com/watch?v=O_EWbnkjXdk",
+          "publishedAt": "2026-09-09T16:10:39Z",
+          "categories": [],
+          "description": "Can artificial intelligence solve one of science’s most chaotic physics puzzles? In this episode, Professor Hannah Fry sits down with Peter Battaglia, Senior Director of Research at Google DeepMind, to explore how machine learning is transforming global weather forecasting. From providing critical early warnings for Category 5 storms like Hurricane Melissa to predicting renewable energy supply and agricultural impacts, learn how models like WeatherNext 3 are building upon decades of numerical physics to reshape our understanding of the atmosphere. 11:50 Why weather forecasting is hard",
+          "thumbnail": "https://i4.ytimg.com/vi/O_EWbnkjXdk/hqdefault.jpg",
+          "metrics": {
+            "views": 243018
+          }
+        },
+        {
+          "title": "AlphaGenome Atlas: Using AI to find disease causing variants 🧬",
+          "url": "https://www.youtube.com/shorts/ya04CpsRJH0",
+          "publishedAt": "2026-09-08T14:02:28Z",
+          "categories": [],
+          "description": "How do you find a single typo in a person's DNA that causes a rare disease? It is like finding a needle in a 9-billion-piece haystack. Enter AlphaGenome Atlas: a new AI-powered database charting the molecular impact of every possible genetic variant.",
+          "thumbnail": "https://i2.ytimg.com/vi/ya04CpsRJH0/hqdefault.jpg",
+          "metrics": {
+            "views": 7811
+          }
+        },
+        {
+          "title": "AlphaGenome Atlas: Understanding the human genome",
+          "url": "https://www.youtube.com/watch?v=U0aToL5C-bQ",
+          "publishedAt": "2026-09-08T13:58:27Z",
+          "categories": [],
+          "description": "We’ve used AlphaGenome to predict the molecular impact of every possible single-letter change in the human genome. All nine billion of them. AlphaGenome Atlas is a 1PB dataset containing every single possible nucleotide variant alongside an AlphaGenome Variant Impact (AVI) score. This score helps researchers instantly understand the potential impact of any given variation.",
+          "thumbnail": "https://i2.ytimg.com/vi/U0aToL5C-bQ/hqdefault.jpg",
+          "metrics": {
+            "views": 4928650
+          }
+        },
+        {
+          "title": "WeatherNext 3: More accurate, timely, and local weather forecasts",
+          "url": "https://www.youtube.com/watch?v=_6jZlnRsXXQ",
+          "publishedAt": "2026-09-03T14:58:32Z",
+          "categories": [],
+          "description": "Predicting the weather is one of the oldest, most complex challenges we face. Traditional numerical weather prediction models are powerful, but they can be slow to run and costly at a global scale. WeatherNext 3 takes a different approach. Built on a fundamentally different architecture, WeatherNext 3 learns directly from real-world observations, including live satellite feeds and ground-level weather station data. What makes WeatherNext 3 different?",
+          "thumbnail": "https://i4.ytimg.com/vi/_6jZlnRsXXQ/hqdefault.jpg",
+          "metrics": {
+            "views": 395037
+          }
+        },
+        {
+          "title": "The mathematics of AI uncertainty",
+          "url": "https://www.youtube.com/watch?v=tBjgCj_dGZM",
+          "publishedAt": "2026-08-26T15:45:28Z",
+          "categories": [],
+          "description": "Long before the current wave of large language models, one academic researcher was trying to give machines a sense of their own limitations. Zoubin Ghahramani has spent the last 30 years pioneering a type of intelligence built on the mathematics of uncertainty. Today, as a professor at Cambridge and VP of research at Google DeepMind, Zoubin finds himself at the heart of an interesting debate: will improving machine uncertainty be one of the missing pieces to ever improving AI? 07:45 Correctness vs confidence",
+          "thumbnail": "https://i1.ytimg.com/vi/tBjgCj_dGZM/hqdefault.jpg",
+          "metrics": {
+            "views": 400218
+          }
+        }
+      ]
+    },
+    "youtube-openai": {
+      "status": "ok",
+      "checkedAt": "2026-11-04T12:38:31Z",
+      "lastSuccessAt": "2026-11-04T12:38:31Z",
+      "items": [
+        {
+          "title": "TamaGPT",
+          "url": "https://www.youtube.com/watch?v=NCxD-qsQcN0",
+          "publishedAt": "2026-11-03T18:30:30Z",
+          "categories": [],
+          "description": "You don't need to be an engineer to make hardware. Want to make something physical? Let GPT-6 Astra help you bring it to life.",
+          "thumbnail": "https://i3.ytimg.com/vi/NCxD-qsQcN0/hqdefault.jpg",
+          "metrics": {
+            "views": 210273
+          }
+        },
+        {
+          "title": "Qodo brings company context into Codex code review",
+          "url": "https://www.youtube.com/watch?v=yC72iQx6rM0",
+          "publishedAt": "2026-11-03T18:11:23Z",
+          "categories": [],
+          "description": "Qodo’s Codex plugin brings company context, codebase standards, and independent review into the development workflow. It helps developers catch bugs across repositories, where a change can look right in one codebase and break a service in another. In Behind the Build, co-founder Itamar Friedman and AI DevRel lead Nnenna Ndukwe discuss how they’re building with GPT-6 Astra and their vision for a workflow where one agent writes code and another challenges it.",
+          "thumbnail": "https://i2.ytimg.com/vi/yC72iQx6rM0/hqdefault.jpg",
+          "metrics": {
+            "views": 9205
+          }
+        },
+        {
+          "title": "ChatGPT Voice is now in Finances",
+          "url": "https://www.youtube.com/watch?v=63pcV4z0DwI",
+          "publishedAt": "2026-11-03T18:04:51Z",
+          "categories": [],
+          "description": "Securely connect your accounts through Finances, then talk through your finances on topics like what subscriptions you're paying for, discuss which you’d like to keep and what you could save by cancelling.",
+          "thumbnail": "https://i3.ytimg.com/vi/63pcV4z0DwI/hqdefault.jpg",
+          "metrics": {
+            "views": 35501
+          }
+        },
+        {
+          "title": "Glean on privacy and OpenAI Private Intelligence",
+          "url": "https://www.youtube.com/shorts/JR7xBi2kJjY",
+          "publishedAt": "2026-11-03T16:51:36Z",
+          "categories": [],
+          "description": "Glean co-founder and CTO T.R. Vishwanath discusses customer control of data and Glean’s work with OpenAI on the Private Safety Processing preview.",
+          "thumbnail": "https://i3.ytimg.com/vi/JR7xBi2kJjY/hqdefault.jpg",
+          "metrics": {
+            "views": 3719
+          }
+        },
+        {
+          "title": "Glean on privacy and OpenAI Private Intelligence",
+          "url": "https://www.youtube.com/watch?v=2h16j4K_NbA",
+          "publishedAt": "2026-11-03T16:46:37Z",
+          "categories": [],
+          "description": "Using more capable AI starts with confidence that your data stays under your control. For Glean’s customers, privacy is a priority. Glean co-founder and CTO Vishwanath T R shares how Glean and OpenAI have worked together to help meet those needs, including through the Private Safety Processing preview.",
+          "thumbnail": "https://i3.ytimg.com/vi/2h16j4K_NbA/hqdefault.jpg",
+          "metrics": {
+            "views": 9747
+          }
+        },
+        {
+          "title": "Coinbase on OpenAI Private Intelligence",
+          "url": "https://www.youtube.com/shorts/NbDF90z-g6w",
+          "publishedAt": "2026-11-02T22:44:26Z",
+          "categories": [],
+          "description": "Coinbase CTO Rob Witoff explains why security, guardrails, and zero data retention matter when using OpenAI.",
+          "thumbnail": "https://i3.ytimg.com/vi/NbDF90z-g6w/hqdefault.jpg",
+          "metrics": {
+            "views": 5306
+          }
+        },
+        {
+          "title": "Coinbase on OpenAI Private Intelligence",
+          "url": "https://www.youtube.com/watch?v=Amm9ySSET4c",
+          "publishedAt": "2026-11-02T16:59:21Z",
+          "categories": [],
+          "description": "For Coinbase, putting frontier AI to work starts with control over its data. Every employee has access to the latest OpenAI models. In this video, Rob Witoff explains why security, guardrails, and zero data retention are central to that trust. As he puts it: “It’s still our data.”",
+          "thumbnail": "https://i2.ytimg.com/vi/Amm9ySSET4c/hqdefault.jpg",
+          "metrics": {
+            "views": 17646
+          }
+        },
+        {
+          "title": "There are many futures. Which do you want to build?",
+          "url": "https://www.youtube.com/watch?v=o4D1J1YWjhg",
+          "publishedAt": "2026-10-30T20:17:12Z",
+          "categories": [],
+          "description": "",
+          "thumbnail": "https://i4.ytimg.com/vi/o4D1J1YWjhg/hqdefault.jpg",
+          "metrics": {
+            "views": 122271
+          }
+        },
+        {
+          "title": "How Gen uses ChatGPT Work to turn data Into decisions | OpenAI",
+          "url": "https://www.youtube.com/shorts/7TtGMileCus",
+          "publishedAt": "2026-10-30T15:24:48Z",
+          "categories": [],
+          "description": "“Before ChatGPT Work, we were walking. Now with ChatGPT Work, we are running.” For Gen's Howie Xu, that means understanding how a new product’s onboarding experience is working within two or three hours of release.",
+          "thumbnail": "https://i4.ytimg.com/vi/7TtGMileCus/hqdefault.jpg",
+          "metrics": {
+            "views": 3864
+          }
+        },
+        {
+          "title": "How Gen uses ChatGPT Work to turn data Into decisions | OpenAI",
+          "url": "https://www.youtube.com/watch?v=Oi9DHk57KeQ",
+          "publishedAt": "2026-10-30T15:22:47Z",
+          "categories": [],
+          "description": "“Before ChatGPT Work, we were walking. Now with ChatGPT Work, we are running.” For Gen's Howie Xu, that means understanding how a new product’s onboarding experience is working within two or three hours of release.",
+          "thumbnail": "https://i4.ytimg.com/vi/Oi9DHk57KeQ/hqdefault.jpg",
+          "metrics": {
+            "views": 15771
+          }
+        },
+        {
+          "title": "ChatGPT Enterprise at Zendesk: Putting Company Data to Work",
+          "url": "https://www.youtube.com/shorts/GNYHDltnwZQ",
+          "publishedAt": "2026-10-29T22:48:11Z",
+          "categories": [],
+          "description": "“We have about 600 applications that have been built by different people in the company.” At Zendesk, teams across sales, marketing, and operations are building applications for their own work. ChatGPT Enterprise is available to every employee, and business users are asking questions about their data directly.",
+          "thumbnail": "https://i4.ytimg.com/vi/GNYHDltnwZQ/hqdefault.jpg",
+          "metrics": {
+            "views": 4228
+          }
+        },
+        {
+          "title": "ChatGPT Enterprise at Zendesk: Putting Company Data to Work",
+          "url": "https://www.youtube.com/watch?v=L6pzlo1QvoM",
+          "publishedAt": "2026-10-29T16:23:43Z",
+          "categories": [],
+          "description": "“We have about 600 applications that have been built by different people in the company.” At Zendesk, teams across sales, marketing, and operations are building applications for their own work. ChatGPT Enterprise is available to every employee, and business users are asking questions about their data directly.",
+          "thumbnail": "https://i1.ytimg.com/vi/L6pzlo1QvoM/hqdefault.jpg",
+          "metrics": {
+            "views": 15652
+          }
+        }
+      ]
     },
     "arxiv-ai": {
       "status": "ok",

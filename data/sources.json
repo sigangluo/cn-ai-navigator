@@ -1,8 +1,10 @@
 {
   "groups": [
-    {"id":"news","name":"资讯与解读","description":"媒体报道、行业观察与独立评论"},
+    {"id":"news","name":"资讯与解读","description":"媒体报道与行业观察"},
+    {"id":"blogs","name":"独立作者与博客","description":"研究者、工程师与独立作者的文章"},
     {"id":"labs","name":"模型机构与研究动态","description":"实验室、模型公司与研究机构的官方发布"},
     {"id":"engineering","name":"工程与开发实践","description":"技术博客、开发文档与产品更新"},
+    {"id":"video","name":"视频与课程","description":"研究讲解、模型演示与技术课程"},
     {"id":"papers","name":"论文与学术","description":"预印本、论文库与社区论文榜"},
     {"id":"open","name":"项目、模型与数据","description":"代码仓库、模型、数据集、应用与相关榜单"}
   ],
@@ -13,11 +15,20 @@
     {"id":"infoq-ai","name":"InfoQ · AI","org":"InfoQ","group":"news","language":"zh","url":"https://www.infoq.cn/topic/AI","note":"技术新闻与实战文章","cadence":"daily","mode":"link"},
     {"id":"ai-frontline","name":"AI 前线","org":"InfoQ","group":"news","language":"zh","url":"https://www.infoq.cn/topic/AI","note":"从 InfoQ AI 频道进入；公众号独立列表待核实","cadence":"weekly","mode":"link"},
     {"id":"techcrunch-ai","name":"TechCrunch · AI","org":"TechCrunch","group":"news","language":"non_zh","url":"https://techcrunch.com/category/artificial-intelligence/","note":"AI 产业与创业新闻","cadence":"daily","mode":"feed","feed":"https://techcrunch.com/category/artificial-intelligence/feed/"},
-    {"id":"the-decoder","name":"The Decoder","org":"The Decoder","group":"news","language":"non_zh","url":"https://the-decoder.com/","note":"AI 研究与产品报道","cadence":"daily","mode":"link"},
+    {"id":"the-decoder","name":"The Decoder","org":"The Decoder","group":"news","language":"non_zh","url":"https://the-decoder.com/","note":"AI 研究与产品报道","cadence":"daily","mode":"feed","feed":"https://the-decoder.com/feed/"},
     {"id":"the-verge-ai","name":"The Verge · AI","org":"The Verge","group":"news","language":"non_zh","url":"https://www.theverge.com/ai-artificial-intelligence","note":"AI 产品与行业新闻","cadence":"daily","mode":"feed","feed":"https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"},
-    {"id":"latent-space","name":"Latent Space","org":"Latent Space","group":"news","language":"non_zh","url":"https://www.latent.space/","note":"AI 工程访谈与深度文章","cadence":"weekly","mode":"feed","feed":"https://latent.space/feed"},
-    {"id":"simon","name":"Simon Willison","org":"Simon Willison","group":"news","language":"non_zh","url":"https://simonwillison.net/","note":"LLM 工具与开发观察","cadence":"daily","mode":"feed","feed":"https://simonwillison.net/atom/everything/"},
     {"id":"aa-articles","name":"Artificial Analysis · Articles","org":"Artificial Analysis","group":"news","language":"non_zh","url":"https://artificialanalysis.ai/articles","note":"模型性能、成本与市场分析","cadence":"weekly","mode":"link"},
+
+    {"id":"latent-space","name":"Latent Space","org":"Latent Space","group":"blogs","language":"non_zh","url":"https://www.latent.space/","note":"AI 工程访谈与深度文章","cadence":"weekly","mode":"feed","feed":"https://latent.space/feed"},
+    {"id":"simon","name":"Simon Willison · AI","org":"Simon Willison","group":"blogs","language":"non_zh","url":"https://simonwillison.net/tags/ai/","note":"AI 与 LLM 工具、开发观察","cadence":"daily","mode":"feed","feed":"https://simonwillison.net/tags/ai.atom"},
+    {"id":"su-jianlin","name":"苏剑林 · 科学空间","org":"苏剑林","group":"blogs","language":"zh","url":"https://kexue.fm/","note":"模型架构、优化与数学推导","cadence":"monthly","mode":"feed","feed":"https://kexue.fm/feed"},
+    {"id":"lilian-weng","name":"Lilian Weng · Lil’Log","org":"Lilian Weng","group":"blogs","language":"non_zh","url":"https://lilianweng.github.io/","note":"深度学习、智能体与前沿研究长文","cadence":"monthly","mode":"feed","feed":"https://lilianweng.github.io/index.xml"},
+    {"id":"eugene-yan","name":"Eugene Yan","org":"Eugene Yan","group":"blogs","language":"non_zh","url":"https://eugeneyan.com/","note":"应用机器学习、推荐系统与 AI 评测","cadence":"monthly","mode":"feed","feed":"https://eugeneyan.com/rss/"},
+    {"id":"sebastian-raschka","name":"Sebastian Raschka · Ahead of AI","org":"Sebastian Raschka","group":"blogs","language":"non_zh","url":"https://magazine.sebastianraschka.com/","note":"LLM 论文解读与模型实现","cadence":"weekly","mode":"feed","feed":"https://magazine.sebastianraschka.com/feed"},
+    {"id":"nathan-lambert","name":"Nathan Lambert · Interconnects","org":"Nathan Lambert","group":"blogs","language":"non_zh","url":"https://www.interconnects.ai/","note":"前沿模型、开放权重与 AI 研究观察","cadence":"weekly","mode":"feed","feed":"https://www.interconnects.ai/feed"},
+    {"id":"hamel-husain","name":"Hamel Husain","org":"Hamel Husain","group":"blogs","language":"non_zh","url":"https://hamel.dev/blog/","note":"AI 产品工程与评测实践","cadence":"monthly","mode":"feed","feed":"https://hamel.dev/index.xml"},
+    {"id":"chip-huyen","name":"Chip Huyen","org":"Chip Huyen","group":"blogs","language":"non_zh","url":"https://huyenchip.com/blog/","note":"机器学习系统与生成式 AI 应用","cadence":"monthly","mode":"feed","feed":"https://huyenchip.com/feed.xml"},
+    {"id":"andrej-karpathy-blog","name":"Andrej Karpathy · Blog","org":"Andrej Karpathy","group":"blogs","language":"non_zh","url":"https://karpathy.github.io/","note":"神经网络、LLM 与教学笔记","cadence":"monthly","mode":"feed","feed":"https://karpathy.github.io/feed.xml"},
 
     {"id":"openai-news","name":"OpenAI · News","org":"OpenAI","group":"labs","language":"non_zh","url":"https://openai.com/news/","note":"官方新闻；保留官网文章分类","cadence":"weekly","mode":"feed","feed":"https://openai.com/news/rss.xml","sections":["Company","Research","Product","Safety","Engineering","Security","Intelligence Age","Global Affairs","AI Adoption","Applied AI"]},
     {"id":"openai-research","name":"OpenAI · Research Index","org":"OpenAI","group":"labs","language":"non_zh","url":"https://openai.com/research/index/","note":"研究索引","cadence":"weekly","mode":"link","sections":["Publication","Conclusion","Milestone","Release"]},
@@ -29,7 +40,7 @@
     {"id":"meta-ai","name":"Meta AI · Blog","org":"Meta AI","group":"labs","language":"non_zh","url":"https://ai.meta.com/blog/","note":"Meta 模型与研究发布","cadence":"weekly","mode":"link"},
     {"id":"mistral","name":"Mistral AI · News","org":"Mistral AI","group":"labs","language":"non_zh","url":"https://mistral.ai/news/","note":"产品与研究发布","cadence":"weekly","mode":"publisher_page","sections":["Company","Solutions","Engineering","Research","Product"]},
     {"id":"cohere","name":"Cohere · Blog","org":"Cohere","group":"labs","language":"non_zh","url":"https://cohere.com/blog","note":"企业 AI 与开发者文章","cadence":"weekly","mode":"link","sections":["Enterprise AI","Research","AI for Developers","Product Launch","Company News"]},
-    {"id":"ai2","name":"Ai2 · Research","org":"Ai2","group":"labs","language":"non_zh","url":"https://allenai.org/research","note":"开放研究、模型与数据","cadence":"monthly","mode":"link","sections":["Olmo","Molmo","Asta","OlmoEarth","Climate Modeling"]},
+    {"id":"ai2","name":"Ai2 · Research","org":"Ai2","group":"labs","language":"non_zh","url":"https://allenai.org/research","note":"开放研究、模型与数据","cadence":"monthly","mode":"feed","sections":["Olmo","Molmo","Asta","OlmoEarth","Climate Modeling"],"feed":"https://allenai.org/rss.xml"},
     {"id":"deepseek","name":"DeepSeek · 更新日志","org":"DeepSeek","group":"labs","language":"zh","url":"https://api-docs.deepseek.com/zh-cn/updates/","note":"模型与 API 官方更新","cadence":"monthly","mode":"link"},
     {"id":"kimi","name":"Kimi · Blog","org":"Kimi","group":"labs","language":"zh","url":"https://www.kimi.ai/zh-hans/blog/","note":"Kimi 模型与研究动态","cadence":"monthly","mode":"link"},
     {"id":"qwen","name":"Qwen · Blog","org":"Qwen","group":"labs","language":"non_zh","url":"https://qwen.ai/blog","note":"官网博客默认英文；模型发布列表待验证","cadence":"monthly","mode":"link"},
@@ -50,15 +61,22 @@
     {"id":"hf-blog","name":"Hugging Face · Blog","org":"Hugging Face","group":"engineering","language":"non_zh","url":"https://huggingface.co/blog","note":"模型、数据与社区技术文章","cadence":"weekly","mode":"feed","feed":"https://huggingface.co/blog/feed.xml"},
     {"id":"pytorch","name":"PyTorch · Blog","org":"PyTorch","group":"engineering","language":"non_zh","url":"https://pytorch.org/blog/","note":"框架更新与开发实践","cadence":"weekly","mode":"feed","feed":"https://pytorch.org/blog/feed/"},
     {"id":"nvidia","name":"NVIDIA · Blog","org":"NVIDIA","group":"engineering","language":"non_zh","url":"https://blogs.nvidia.com/","note":"AI 硬件、软件与开发文章","cadence":"weekly","mode":"feed","feed":"https://blogs.nvidia.com/feed/"},
-    {"id":"vllm","name":"vLLM · Blog","org":"vLLM","group":"engineering","language":"non_zh","url":"https://blog.vllm.ai/","note":"推理系统开发与发布","cadence":"weekly","mode":"link"},
+    {"id":"vllm","name":"vLLM · Blog","org":"vLLM","group":"engineering","language":"non_zh","url":"https://vllm.ai/blog","note":"推理系统开发与发布","cadence":"weekly","mode":"feed","feed":"https://vllm.ai/blog/atom.xml"},
     {"id":"ollama","name":"Ollama · Blog","org":"Ollama","group":"engineering","language":"non_zh","url":"https://ollama.com/blog","note":"本地模型运行更新","cadence":"weekly","mode":"feed","feed":"https://ollama.com/blog/rss.xml"},
-    {"id":"langchain","name":"LangChain · Blog","org":"LangChain","group":"engineering","language":"non_zh","url":"https://blog.langchain.com/","note":"Agent 与应用开发","cadence":"weekly","mode":"link"},
+    {"id":"langchain","name":"LangChain · Blog","org":"LangChain","group":"engineering","language":"non_zh","url":"https://www.langchain.com/blog","note":"Agent 与应用开发","cadence":"weekly","mode":"feed","feed":"https://www.langchain.com/blog/rss.xml"},
     {"id":"llamaindex","name":"LlamaIndex · Blog","org":"LlamaIndex","group":"engineering","language":"non_zh","url":"https://www.llamaindex.ai/blog","note":"数据连接与 Agent 实践","cadence":"weekly","mode":"link"},
     {"id":"modal","name":"Modal · Blog","org":"Modal","group":"engineering","language":"non_zh","url":"https://modal.com/blog","note":"模型部署与基础设施实践","cadence":"weekly","mode":"link"},
     {"id":"cloudflare-ai","name":"Cloudflare · AI","org":"Cloudflare","group":"engineering","language":"non_zh","url":"https://blog.cloudflare.com/tag/ai/","note":"AI 平台与边缘工程","cadence":"weekly","mode":"feed","feed":"https://blog.cloudflare.com/tag/ai/rss/"},
     {"id":"meituan-tech","name":"美团技术团队","org":"美团","group":"engineering","language":"zh","url":"https://tech.meituan.com/","note":"工程实践与 AI 相关技术文章","cadence":"weekly","mode":"feed","feed":"https://tech.meituan.com/rss.xml"},
     {"id":"meituan-wechat","name":"美团技术团队 · 公众号","org":"美团","group":"engineering","language":"zh","url":"https://tech.meituan.com/about.html","note":"公众号 ID：meituantech；官网同步技术文章","cadence":"weekly","mode":"link"},
     {"id":"mindspore","name":"MindSpore · 新闻与博客","org":"MindSpore","group":"engineering","language":"zh","url":"https://www.mindspore.cn/news","note":"版本更新、新闻与技术博客","cadence":"weekly","mode":"link","sections":["版本更新","新闻","技术博客"]},
+
+    {"id":"bilibili-li-mu","name":"跟李沐学AI · Bilibili","org":"跟李沐学AI","group":"video","language":"zh","url":"https://space.bilibili.com/1567748478","note":"论文精读、模型讲解与动手实践","cadence":"monthly","mode":"link"},
+    {"id":"bilibili-zihao","name":"同济子豪兄 · Bilibili","org":"同济子豪兄","group":"video","language":"zh","url":"https://space.bilibili.com/1900783","note":"计算机视觉、论文精读与 AI 公开课","cadence":"weekly","mode":"link"},
+    {"id":"youtube-karpathy","name":"Andrej Karpathy · YouTube","org":"Andrej Karpathy","group":"video","language":"non_zh","url":"https://www.youtube.com/@AndrejKarpathy/videos","note":"LLM 与深度学习系统教学","cadence":"monthly","mode":"youtube","feed":"https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ"},
+    {"id":"youtube-two-minute-papers","name":"Two Minute Papers · YouTube","org":"Two Minute Papers","group":"video","language":"non_zh","url":"https://www.youtube.com/@TwoMinutePapers/videos","note":"AI 与计算机图形学论文视频解读","cadence":"weekly","mode":"youtube","feed":"https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg"},
+    {"id":"youtube-deepmind","name":"Google DeepMind · YouTube","org":"Google DeepMind","group":"video","language":"non_zh","url":"https://www.youtube.com/@GoogleDeepMind/videos","note":"研究展示、模型演示与科学应用","cadence":"weekly","mode":"youtube","feed":"https://www.youtube.com/feeds/videos.xml?channel_id=UCP7jMXSY2xbc3KCAE0MHQ-A"},
+    {"id":"youtube-openai","name":"OpenAI · YouTube","org":"OpenAI","group":"video","language":"non_zh","url":"https://www.youtube.com/@OpenAI/videos","note":"产品演示、研究介绍与活动录像","cadence":"weekly","mode":"youtube","feed":"https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A"},
 
     {"id":"arxiv-ai","name":"arXiv · cs.AI","org":"arXiv","group":"papers","language":"non_zh","url":"https://arxiv.org/list/cs.AI/new","note":"人工智能预印本；含交叉收录与更新","cadence":"daily","mode":"feed","feed":"https://rss.arxiv.org/rss/cs.AI"},
     {"id":"arxiv-cl","name":"arXiv · cs.CL","org":"arXiv","group":"papers","language":"non_zh","url":"https://arxiv.org/list/cs.CL/new","note":"计算语言学预印本","cadence":"daily","mode":"feed","feed":"https://rss.arxiv.org/rss/cs.CL"},
@@ -79,7 +97,5 @@
     {"id":"modelscope","name":"ModelScope · 模型","org":"ModelScope","group":"open","language":"zh","url":"https://www.modelscope.cn/models","note":"魔搭模型目录；自动列表待验证","cadence":"daily","mode":"link"},
     {"id":"github-trending","name":"GitHub · Trending","org":"GitHub","group":"open","language":"non_zh","url":"https://github.com/trending","note":"当前热门仓库，非今日创建仓库","cadence":"daily","mode":"github_trending"},
     {"id":"aa-leaderboard","name":"Artificial Analysis · Leaderboards","org":"Artificial Analysis","group":"open","language":"non_zh","url":"https://artificialanalysis.ai/leaderboards/models","note":"按官网 Intelligence Index 排序；还可比较速度与价格","cadence":"daily","mode":"aa_leaderboard"}
-
-
   ]
 }

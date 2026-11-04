@@ -31,6 +31,8 @@ def now():
 
 def clean(value, limit=240):
     value = unescape(str(value or ""))
+    value = re.sub(r"<(?:style|script)\b[^>]*>.*?</(?:style|script)\s*>", " ", value, flags=re.I | re.S)
+    value = re.sub(r"<!--.*?-->", " ", value, flags=re.S)
     value = re.sub(r"<[^>]+>", " ", value)
     value = re.sub(r"\s+", " ", unescape(value)).strip()
     if len(value) <= limit:
@@ -42,7 +44,15 @@ def clean(value, limit=240):
 
 
 def publisher_description(value, title="", limit=MAX_PREVIEW):
+    if len(value) > 4_000 and re.search(r"<p\b", value, re.I):
+        paragraphs = re.findall(r"<p\b[^>]*>(.*?)</p>", value, flags=re.I | re.S)
+        excerpts = [clean(paragraph, 800) for paragraph in paragraphs]
+        excerpts = [paragraph for paragraph in excerpts if len(paragraph) >= 40 and paragraph != title]
+        if excerpts:
+            value = " ".join(excerpts[:2])
     value = re.sub(r"^arXiv:\S+\s+Announce Type:\s*\w+\s+Abstract:\s*", "", clean(value, MAX_ABSTRACT + 500), flags=re.I)
+    if title:
+        value = re.sub(r"\s+The (?:article|post) " + re.escape(title) + r" appeared first on .+?\s*\.?$", "", value, flags=re.I)
     value = clean(value, limit)
     if value == title or re.match(r"^(Animated carousel|Image of |Photo of |Figure \d+:)", value, re.I):
         return ""
@@ -158,6 +168,50 @@ def parse_feed(raw, base):
             break
     if not items:
         raise ValueError("feed has no usable links")
+    return items
+
+
+def parse_youtube_feed(raw, base):
+    """Use the channel's public Atom feed, including its own video description and views."""
+    root = ET.fromstring(raw)
+    entries = [node for node in root if node.tag.rsplit("}", 1)[-1] == "entry"]
+    if not entries:
+        raise ValueError("YouTube channel feed contains no videos")
+    items, seen = [], set()
+    for entry in entries:
+        title = clean(child_text(entry, {"title"}))
+        href = next((node.attrib.get("href", "") for node in entry
+                     if node.tag.rsplit("}", 1)[-1] == "link"
+                     and node.attrib.get("rel", "alternate") == "alternate"), "")
+        url = safe_url(href, base)
+        published = date_iso(child_text(entry, {"published"}))
+        if not title or not url or not published or url in seen:
+            continue
+        seen.add(url)
+        description = next((node.text or "" for node in entry.iter()
+                            if node.tag.rsplit("}", 1)[-1] == "description"), "")
+        description_lines = [clean(line, 800) for line in description.splitlines()]
+        description_lines = [line for line in description_lines
+                             if len(line) >= 30 and not re.search(r"https?://", line[:120])
+                             and line.count(",") < 5
+                             and not re.search(r"\b(?:patreon|sponsor|subscribe|sign up|discount|use code|would like to thank|available here)\b", line[:160], re.I)]
+        item = {"title": title, "url": url, "publishedAt": published,
+                "categories": [], "description": publisher_description(" ".join(description_lines[:2]), title, 800)}
+        thumbnail = next((node.attrib.get("url", "") for node in entry.iter()
+                          if node.tag.rsplit("}", 1)[-1] == "thumbnail"), "")
+        thumbnail = safe_url(thumbnail)
+        if thumbnail:
+            item["thumbnail"] = thumbnail
+        statistics = next((node for node in entry.iter()
+                           if node.tag.rsplit("}", 1)[-1] == "statistics"), None)
+        views = statistics.attrib.get("views", "") if statistics is not None else ""
+        if views.isdigit():
+            item["metrics"] = {"views": int(views)}
+        items.append(item)
+        if len(items) >= MAX_ITEMS:
+            break
+    if not items:
+        raise ValueError("YouTube channel feed has no usable videos")
     return items
 
 
@@ -392,6 +446,8 @@ def update(offline=False, only=None):
         try:
             if mode == "feed":
                 items = parse_feed(fetch(source["feed"]), source["url"])
+            elif mode == "youtube":
+                items = parse_youtube_feed(fetch(source["feed"]), source["url"])
             elif mode == "papers":
                 items = parse_papers(fetch("https://huggingface.co/api/daily_papers?limit=12"))
             elif mode == "papers_trending":
@@ -409,7 +465,7 @@ def update(offline=False, only=None):
                 raise ValueError("unknown mode")
             return source_id, {"status": "ok", "checkedAt": checked,
                                "lastSuccessAt": checked, "items": items}, f"OK   {source_id}: {len(items)}"
-        except (urllib.error.URLError, TimeoutError, ET.ParseError, ValueError, TypeError, KeyError) as exc:
+        except (OSError, ET.ParseError, ValueError, TypeError, KeyError) as exc:
             return source_id, {"status": "error", "checkedAt": checked,
                                "lastSuccessAt": old.get("lastSuccessAt", ""),
                                "items": old.get("items", []),

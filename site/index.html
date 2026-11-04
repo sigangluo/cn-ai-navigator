@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#13242a">
-  <meta name="description" content="AI 导航台：浏览资讯、研究、论文与开源项目的最新更新，直达原站阅读。">
-  <title>AI 导航台 · 资讯、研究与项目导航</title>
+  <meta name="description" content="AI 导航台：浏览资讯、独立博客、研究、技术视频、论文与开源项目的最新更新，直达原站。">
+  <title>AI 导航台 · 资讯、博客、视频与项目导航</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -22,11 +22,11 @@
     <aside class="sidebar" aria-label="分类导航">
       <div class="sidebar-title">浏览分类 <span>INDEX</span></div>
       <nav id="groupNav"></nav>
-      <p class="sidebar-note">先按内容分类，再按页面的主要语言分为中文、非中文。每个条目都能直达官网。</p>
+      <p class="sidebar-note">先按内容分类，再按页面的主要语言分为中文、非中文。每个条目都能直达原站。</p>
     </aside>
     <div class="main-panel">
       <div class="toolbar">
-        <div class="toolbar-title"><span class="section-kicker">EXPLORE</span><h1>信息目录 <span id="visibleCount"></span></h1><p class="project-intro">汇集 AI 资讯、研究、技术文章、论文、开源项目与榜单的最新线索。可获取的栏目定时更新；每个入口都能直达官网，原文留在原站阅读。</p></div>
+        <div class="toolbar-title"><span class="section-kicker">EXPLORE</span><h1>信息目录 <span id="visibleCount"></span></h1><p class="project-intro">汇集 AI 资讯、独立博客、研究、技术视频、论文、开源项目与榜单。可获取的栏目定时更新；每个入口都能直达原站。</p></div>
         <div class="controls">
           <label class="search-wrap"><span class="sr-only">搜索入口</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="搜索站点、机构、官网栏目…"></label>
           <div class="language-filter"><button id="languageFilter" class="language-filter-trigger" type="button" aria-expanded="false" aria-controls="languagePanel"><span id="languageFilterLabel">全部语言</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg></button><div id="languagePanel" class="language-panel" role="group" aria-label="筛选语言" hidden><button class="language-option" type="button" data-language="all" aria-pressed="true">全部语言</button><button class="language-option" type="button" data-language="zh" aria-pressed="false">中文</button><button class="language-option" type="button" data-language="non_zh" aria-pressed="false">非中文</button></div></div>
@@ -35,7 +35,7 @@
           <button id="resetFilters" class="reset-filters" type="button" hidden>清除筛选</button>
         </div>
       </div>
-      <div class="legend" aria-label="颜色说明"><span><i class="dot fresh"></i> 今天发布</span><span><i class="dot recent"></i> 此前发布</span><span><i class="dot manual"></i> 官网入口</span><span><i class="dot error"></i> 同步异常</span><span class="timezone">日期按新加坡时间</span></div>
+      <div class="legend" aria-label="颜色说明"><span><i class="dot fresh"></i> 今天发布</span><span><i class="dot recent"></i> 此前发布</span><span><i class="dot manual"></i> 原站入口</span><span><i class="dot error"></i> 同步异常</span><span class="timezone">日期按新加坡时间</span></div>
       <div class="sync-notice" id="syncNotice" role="status" hidden></div>
       <div id="sections" aria-live="polite"><div class="loading">正在整理目录…</div></div>
     </div>

@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from update import parse_feed, parse_papers, parse_hf_trending, parse_trending, parse_aa_leaderboard, parse_publisher_page  # noqa: E402
+from update import parse_feed, parse_youtube_feed, parse_papers, parse_hf_trending, parse_trending, parse_aa_leaderboard, parse_publisher_page  # noqa: E402
 
 
 class ParserTests(unittest.TestCase):
@@ -60,6 +60,30 @@ class ParserTests(unittest.TestCase):
     def test_feed_skips_image_caption_and_uses_publisher_description(self):
         raw = b'<rss><channel><item><title>Update</title><link>https://example.org/update</link><description>Animated carousel of images</description><description>&lt;img src="x"&gt;A useful publisher introduction.</description></item></channel></rss>'
         self.assertEqual(parse_feed(raw, "https://example.org")[0]["description"], "A useful publisher introduction.")
+
+    def test_feed_omits_repeated_publisher_footer(self):
+        raw = b'<rss><channel><item><title>Model update</title><link>https://example.org/model</link><description>What the model can do. The article Model update appeared first on Example Site.</description></item></channel></rss>'
+        self.assertEqual(parse_feed(raw, "https://example.org")[0]["description"], "What the model can do.")
+
+    def test_full_article_feed_uses_publisher_paragraph_instead_of_styles(self):
+        article = "<style>h1 { color: red; }</style><p>First paragraph with a useful explanation of the author's experiment.</p><p>Second paragraph with enough detail to judge whether to read.</p>" + '<p>More text.</p>' * 100
+        raw = f'<rss><channel><item><title>Experiment</title><link>https://example.org/post</link><description><![CDATA[{article}]]></description></item></channel></rss>'.encode()
+        description = parse_feed(raw, "https://example.org")[0]["description"]
+        self.assertTrue(description.startswith("First paragraph"))
+        self.assertIn("Second paragraph", description)
+        self.assertNotIn("color: red", description)
+
+    def test_youtube_feed_uses_published_date_video_description_and_views(self):
+        raw = b'<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/"><entry><title>Model walkthrough</title><link rel="alternate" href="https://www.youtube.com/watch?v=abc"/><published>2026-11-03T01:00:00Z</published><updated>2026-11-04T01:00:00Z</updated><media:group><media:description>A practical explanation of the model.</media:description><media:thumbnail url="https://i.ytimg.com/vi/abc/hqdefault.jpg"/><media:community><media:statistics views="12345"/></media:community></media:group></entry></feed>'
+        item = parse_youtube_feed(raw, "https://www.youtube.com/")[0]
+        self.assertEqual(item["publishedAt"], "2026-11-03T01:00:00Z")
+        self.assertEqual(item["description"], "A practical explanation of the model.")
+        self.assertEqual(item["metrics"], {"views": 12345})
+        self.assertEqual(item["thumbnail"], "https://i.ytimg.com/vi/abc/hqdefault.jpg")
+
+    def test_youtube_feed_omits_promotion_only_description(self):
+        raw = b'<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/"><entry><title>Paper</title><link href="https://www.youtube.com/watch?v=abc"/><published>2026-11-03T01:00:00Z</published><media:group><media:description>Check out our sponsor: https://example.org\nPaper available here:\nhttps://example.org/paper\nThanks to our Patreon supporters:\nA, B, C, D, E, F</media:description></media:group></entry></feed>'
+        self.assertEqual(parse_youtube_feed(raw, "https://www.youtube.com/")[0]["description"], "")
 
     def test_publisher_page_requires_dates_and_original_links(self):
         raw = b'<article class="nUeDbq_article"><header><p><a href="/research/team/safety">Safety</a></p><time>Nov 2, 2026</time></header><h3><a class="nUeDbq_metaTitleLink" href="/research/a">Research A</a></h3><p class="nUeDbq_metaDescription">Publisher summary.</p></article>'

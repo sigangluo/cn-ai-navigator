@@ -54,6 +54,8 @@ function itemFacts(source, item) {
   } else if (source.mode === 'aa_leaderboard') {
     if (Number.isFinite(metrics.intelligenceIndex)) add(`Intelligence Index ${numberText(metrics.intelligenceIndex)}`);
     if (item.provider) add(`机构 ${item.provider}`, 'category');
+  } else if (source.mode === 'youtube') {
+    if (Number.isFinite(metrics.views)) add(`播放 ${numberText(metrics.views)}`);
   }
   const primaryArxivCategory = source.id.startsWith('arxiv-') ? { 'arxiv-ai': 'cs.AI', 'arxiv-lg': 'cs.LG', 'arxiv-cl': 'cs.CL', 'arxiv-cv': 'cs.CV', 'arxiv-ro': 'cs.RO' }[source.id] : null;
   (item.categories || []).filter((category) => category && !genericCategories.has(category.trim().toLocaleLowerCase()) && category !== primaryArxivCategory).slice(0, 2).forEach((category) => add(category, 'category'));
@@ -64,8 +66,13 @@ function itemFacts(source, item) {
 
 function itemRow(source, item, index, ranking) {
   const fresh = !ranking && dateKey(item.publishedAt) === today;
-  const row = el('li', `item-row ${fresh ? 'published-today' : 'published-earlier'}`);
+  const row = el('li', `item-row ${source.mode === 'youtube' ? 'video-row' : ''} ${fresh ? 'published-today' : 'published-earlier'}`);
   if (ranking) row.append(el('span', 'rank-number', String(index + 1).padStart(2, '0')));
+  if (source.mode === 'youtube' && item.thumbnail) {
+    const preview = link('', item.url, 'video-thumb');
+    const image = el('img'); image.src = safeHref(item.thumbnail); image.alt = ''; image.loading = 'lazy'; image.decoding = 'async';
+    preview.append(image); row.append(preview);
+  }
   const body = el('div', 'item-body');
   const heading = el('div', 'item-heading');
   heading.append(link(item.title, item.url, 'item-link'));
@@ -94,12 +101,12 @@ function sourceCard(source) {
   const top = el('div', 'card-top');
   if (source.org !== source.name) top.append(el('span', 'org', source.org));
   top.append(el('span', `status ${result.status === 'error' ? 'error' : stale ? 'stale' : fresh ? 'fresh' : result.status === 'ok' ? 'recent' : 'manual'}`,
-    result.status === 'error' ? '同步异常' : fresh ? '今天有更新' : result.status === 'ok' ? (ranking ? (recentlySynced(result) ? '当前榜单' : '旧榜单快照') : '此前有发布') : source.mode === 'link' ? '官网入口' : '等待同步'));
+    result.status === 'error' ? '同步异常' : fresh ? '今天有更新' : result.status === 'ok' ? (ranking ? (recentlySynced(result) ? '当前榜单' : '旧榜单快照') : '此前有发布') : source.mode === 'link' ? '原站入口' : '等待同步'));
   identity.append(top);
   const title = el('h4', 'source-name'); title.append(link(source.name, source.url)); identity.append(title);
   identity.append(el('p', 'source-note', source.note));
   const links = el('div', 'source-links');
-  links.append(link('打开官网 ↗', source.url, 'official-link'));
+  links.append(link(source.group === 'video' ? '打开频道 ↗' : '打开原站 ↗', source.url, 'official-link'));
   if (source.feed) links.append(link('RSS ↗', source.feed, 'feed-link'));
   identity.append(links);
   if (source.sections?.length) {
@@ -147,7 +154,7 @@ function sourceCard(source) {
     };
     renderPage();
   } else {
-    content.append(el('p', 'no-items', '尚未取得条目，可直接打开官网。'));
+    content.append(el('p', 'no-items', '尚未取得条目，可直接打开原站。'));
     if (result.status === 'error') content.append(el('p', 'error-note', '最近一次同步失败'));
   }
   card.append(content);
