@@ -21,13 +21,16 @@ def main():
         ids.add(source["id"])
         assert source["group"] in groups, source["id"]
         assert source.get("language") in {"zh", "non_zh"}, source["id"]
-        assert source["mode"] in {"link", "feed", "youtube", "publisher_page", "papers", "papers_trending", "hf_trending", "github_trending", "aa_leaderboard"}, source["id"]
+        assert source["mode"] in {"link", "feed", "metr_feed", "infoq_ai_feed", "youtube", "publisher_page", "kimi_page", "cohere_page", "llamaindex_page", "deepseek_updates", "aa_articles", "openai_cookbook", "papers", "papers_trending", "hf_trending", "github_trending", "github_topic", "aa_leaderboard"}, source["id"]
         assert source["cadence"] in {"daily", "weekly", "monthly"}, source["id"]
         for field in ("url", "feed"):
             if field in source:
                 parsed = urlparse(source[field])
                 assert parsed.scheme == "https" and parsed.netloc, (source["id"], field)
-        if source["mode"] in {"feed", "youtube"}:
+        for related in source.get("relatedLinks", []):
+            parsed = urlparse(related["url"])
+            assert related.get("label") and parsed.scheme == "https" and parsed.netloc, source["id"]
+        if source["mode"] in {"feed", "metr_feed", "infoq_ai_feed", "youtube"}:
             assert source.get("feed"), source["id"]
         if source["mode"] == "hf_trending":
             assert source.get("resource") in {"models", "datasets", "spaces"}, source["id"]

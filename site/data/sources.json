@@ -58,7 +58,8 @@
       "url": "https://aiera.com.cn/",
       "note": "中文 AI 新闻、访谈与评论",
       "cadence": "daily",
-      "mode": "link",
+      "mode": "feed",
+      "feed": "https://aiera.com.cn/feed/",
       "sections": [
         "ASI 爆点",
         "ASI 启示录",
@@ -84,20 +85,16 @@
       "group": "news",
       "language": "zh",
       "url": "https://www.infoq.cn/topic/AI",
-      "note": "技术新闻与实战文章",
+      "note": "AI 技术新闻与实践文章；AI 前线公众号入口见下方",
       "cadence": "daily",
-      "mode": "link"
-    },
-    {
-      "id": "ai-frontline",
-      "name": "AI 前线",
-      "org": "InfoQ",
-      "group": "news",
-      "language": "zh",
-      "url": "https://www.infoq.cn/topic/AI",
-      "note": "从 InfoQ AI 频道进入；公众号独立列表待核实",
-      "cadence": "weekly",
-      "mode": "link"
+      "mode": "infoq_ai_feed",
+      "feed": "https://www.infoq.cn/feed",
+      "relatedLinks": [
+        {
+          "label": "AI 前线公众号 ↗",
+          "url": "https://www.infoq.cn/official/account"
+        }
+      ]
     },
     {
       "id": "techcrunch-ai",
@@ -144,7 +141,7 @@
       "url": "https://artificialanalysis.ai/articles",
       "note": "模型性能、成本与市场分析",
       "cadence": "weekly",
-      "mode": "link"
+      "mode": "aa_articles"
     },
     {
       "id": "latent-space",
@@ -265,6 +262,18 @@
       "cadence": "monthly",
       "mode": "feed",
       "feed": "https://karpathy.github.io/feed.xml"
+    },
+    {
+      "id": "epoch-ai",
+      "name": "Epoch AI · Latest",
+      "org": "Epoch AI",
+      "group": "labs",
+      "language": "non_zh",
+      "url": "https://epoch.ai/blog",
+      "note": "AI 能力、算力与产业趋势的实证研究",
+      "cadence": "weekly",
+      "mode": "feed",
+      "feed": "https://epoch.ai/atom.xml"
     },
     {
       "id": "openai-news",
@@ -422,7 +431,7 @@
       "url": "https://cohere.com/blog",
       "note": "企业 AI 与开发者文章",
       "cadence": "weekly",
-      "mode": "link",
+      "mode": "cohere_page",
       "sections": [
         "Enterprise AI",
         "Research",
@@ -459,7 +468,7 @@
       "url": "https://api-docs.deepseek.com/zh-cn/updates/",
       "note": "模型与 API 官方更新",
       "cadence": "monthly",
-      "mode": "link"
+      "mode": "deepseek_updates"
     },
     {
       "id": "kimi",
@@ -470,7 +479,7 @@
       "url": "https://www.kimi.ai/zh-hans/blog/",
       "note": "Kimi 模型与研究动态",
       "cadence": "monthly",
-      "mode": "link"
+      "mode": "kimi_page"
     },
     {
       "id": "qwen",
@@ -586,6 +595,18 @@
       "mode": "link"
     },
     {
+      "id": "metr",
+      "name": "METR · Blog",
+      "org": "METR",
+      "group": "labs",
+      "language": "non_zh",
+      "url": "https://metr.org/blog/",
+      "note": "前沿 AI 能力与风险独立评测",
+      "cadence": "monthly",
+      "mode": "metr_feed",
+      "feed": "https://metr.org/blog/rss.xml"
+    },
+    {
       "id": "openai-dev-blog",
       "name": "OpenAI · Developer Blog",
       "org": "OpenAI",
@@ -613,7 +634,7 @@
       "url": "https://developers.openai.com/cookbook",
       "note": "示例与实践配方",
       "cadence": "weekly",
-      "mode": "link"
+      "mode": "openai_cookbook"
     },
     {
       "id": "openai-release-notes",
@@ -721,9 +742,9 @@
       "group": "engineering",
       "language": "non_zh",
       "url": "https://www.llamaindex.ai/blog",
-      "note": "数据连接与 Agent 实践",
+      "note": "数据连接与 Agent 实践；仅展示官网标注日期的文章",
       "cadence": "weekly",
-      "mode": "link"
+      "mode": "llamaindex_page"
     },
     {
       "id": "modal",
@@ -734,7 +755,8 @@
       "url": "https://modal.com/blog",
       "note": "模型部署与基础设施实践",
       "cadence": "weekly",
-      "mode": "link"
+      "mode": "feed",
+      "feed": "https://modal.com/blog/atom.xml"
     },
     {
       "id": "cloudflare-ai",
@@ -867,7 +889,7 @@
       "note": "人工智能预印本；含交叉收录与更新",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://rss.arxiv.org/rss/cs.AI"
+      "feed": "https://rss.arxiv.org/atom/cs.AI"
     },
     {
       "id": "arxiv-cl",
@@ -879,7 +901,7 @@
       "note": "计算语言学预印本",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://rss.arxiv.org/rss/cs.CL"
+      "feed": "https://rss.arxiv.org/atom/cs.CL"
     },
     {
       "id": "arxiv-lg",
@@ -891,7 +913,7 @@
       "note": "机器学习预印本",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://rss.arxiv.org/rss/cs.LG"
+      "feed": "https://rss.arxiv.org/atom/cs.LG"
     },
     {
       "id": "arxiv-cv",
@@ -903,7 +925,7 @@
       "note": "计算机视觉预印本",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://rss.arxiv.org/rss/cs.CV"
+      "feed": "https://rss.arxiv.org/atom/cs.CV"
     },
     {
       "id": "arxiv-ro",
@@ -915,7 +937,7 @@
       "note": "机器人预印本",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://rss.arxiv.org/rss/cs.RO"
+      "feed": "https://rss.arxiv.org/atom/cs.RO"
     },
     {
       "id": "hf-papers",
@@ -979,9 +1001,9 @@
       "group": "open",
       "language": "non_zh",
       "url": "https://github.com/topics/artificial-intelligence",
-      "note": "人工智能主题仓库",
+      "note": "人工智能主题仓库；展示当前官网列表与 Star",
       "cadence": "daily",
-      "mode": "link"
+      "mode": "github_topic"
     },
     {
       "id": "github-llm-topics",
@@ -990,9 +1012,9 @@
       "group": "open",
       "language": "non_zh",
       "url": "https://github.com/topics/llm",
-      "note": "大语言模型主题仓库",
+      "note": "大语言模型主题仓库；展示当前官网列表与 Star",
       "cadence": "daily",
-      "mode": "link"
+      "mode": "github_topic"
     },
     {
       "id": "hf-models",

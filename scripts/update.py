@@ -6,12 +6,14 @@ from concurrent.futures import ThreadPoolExecutor
 import json
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from html import unescape
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
@@ -89,10 +91,19 @@ def fetch(url):
         "Accept": "application/rss+xml, application/atom+xml, application/xml, application/json, text/html;q=0.9, */*;q=0.5",
     })
     with urllib.request.urlopen(req, timeout=22) as response:
-        data = response.read(MAX_BYTES + 1)
-        if len(data) > MAX_BYTES:
-            raise ValueError("response exceeds 5 MB")
-        return data
+        chunks, size = [], 0
+        deadline = time.monotonic() + 60
+        while True:
+            if time.monotonic() > deadline:
+                raise TimeoutError("response exceeded 60 seconds")
+            chunk = response.read(min(65536, MAX_BYTES + 1 - size))
+            if not chunk:
+                break
+            chunks.append(chunk)
+            size += len(chunk)
+            if size > MAX_BYTES:
+                raise ValueError("response exceeds 5 MB")
+        return b"".join(chunks)
 
 
 def date_iso(value):
@@ -157,13 +168,18 @@ def parse_feed(raw, base):
                 label = clean(child.attrib.get("term") or child.text, 48)
                 if label and label not in categories:
                     categories.append(label)
-        items.append({
+        item = {
             "title": title,
             "url": link,
-            "publishedAt": date_iso(child_text(entry, {"pubdate", "published", "updated", "date"})) or date_from_dated_path(link),
+            "publishedAt": date_iso(child_text(entry, {"published"}) or child_text(entry, {"pubdate", "updated", "date"})) or date_from_dated_path(link),
             "categories": categories[:3],
             "description": feed_description(entry, title),
-        })
+        }
+        if urlparse(link).netloc.endswith("arxiv.org"):
+            creators = child_text(entry, {"creator"})
+            if creators:
+                item["authors"] = [name for name in (clean(part, 100) for part in creators.split(",")) if name]
+        items.append(item)
         if len(items) >= MAX_ITEMS:
             break
     if not items:
@@ -229,6 +245,16 @@ def parse_papers(raw):
             entry = {"title": title, "url": url,
                      "publishedAt": date_iso(item.get("publishedAt") or paper.get("publishedAt")),
                      "categories": [], "description": clean(paper.get("summary"), MAX_ABSTRACT)}
+            authors = [clean(author.get("name"), 100) for author in (paper.get("authors") or [])
+                       if isinstance(author, dict) and author.get("name")]
+            if authors:
+                entry["authors"] = authors
+            # A paper's Hugging Face organization tag is not an author affiliation.
+            organization = paper.get("organization") or item.get("organization")
+            if isinstance(organization, dict):
+                organization = organization.get("fullname") or organization.get("name")
+            if isinstance(organization, str) and organization.strip():
+                entry["linkedOrganization"] = clean(organization, 100)
             metrics = {}
             if isinstance(paper.get("upvotes"), int) and paper["upvotes"] > 0:
                 metrics["upvotes"] = paper["upvotes"]
@@ -413,6 +439,253 @@ def parse_publisher_page(raw, source_id, base):
     return items
 
 
+def parse_kimi_page(raw, base):
+    html = raw.decode("utf-8", errors="replace")
+    pattern = (r'<div class="menu-card[^\"]*"[^>]*>\s*<a href="(/blog/[^\"]+)"[^>]*>'
+               r'.*?<h4 class="card-title[^\"]*"[^>]*>(.*?)</h4>\s*'
+               r'<p class="card-date[^\"]*"[^>]*>(.*?)</p>')
+    items, seen = [], set()
+    for href, heading, date in re.findall(pattern, html, re.S):
+        url = safe_url(href, base)
+        if not url or url in seen or not date_iso(clean(date)):
+            continue
+        seen.add(url)
+        items.append({"title": clean(heading), "url": url,
+                      "publishedAt": date_iso(clean(date)), "categories": [], "description": ""})
+        if len(items) == MAX_ITEMS:
+            break
+    if not items:
+        raise ValueError("Kimi blog has no dated cards")
+    return items
+
+
+def parse_cohere_page(raw, base):
+    html = raw.decode("utf-8", errors="replace")
+    rows = re.finditer(r'<a class="flex flex-1 flex-col[^>]*href="(/blog/[^"#?]+)"[^>]*>(.*?)</a>', html, re.S)
+    items, seen = [], set()
+    for match in rows:
+        url = safe_url(match.group(1), base)
+        paragraphs = [clean(p, MAX_PREVIEW) for p in re.findall(r'<p\b[^>]*>(.*?)</p>', match.group(2), re.S)]
+        date = next((date_iso(p) for p in paragraphs if re.fullmatch(r'[A-Za-z]+ \d{1,2}, 20\d{2}', p)), "")
+        if not url or url in seen or not date or not paragraphs:
+            continue
+        seen.add(url)
+        category_start = html.rfind('<div class="flex flex-wrap gap-1">', 0, match.start())
+        category_html = html[category_start:match.start()] if category_start >= 0 and match.start() - category_start < 2000 else ""
+        categories = [clean(label, 48) for label in re.findall(r'<span\b[^>]*>(.*?)</span>', category_html, re.S)]
+        teaser = next((text for text in paragraphs[1:] if text != paragraphs[0]
+                       and not re.fullmatch(r'[A-Za-z]+ \d{1,2}, 20\d{2}|\d+ min read', text)), "")
+        items.append({"title": paragraphs[0], "url": url, "publishedAt": date,
+                      "categories": categories[:3], "description": teaser})
+    if not items:
+        raise ValueError("Cohere blog has no dated cards")
+    return sorted(items, key=lambda item: item["publishedAt"], reverse=True)[:MAX_ITEMS]
+
+
+def parse_llamaindex_page(raw, base):
+    html = raw.decode("utf-8", errors="replace")
+    match = re.search(r'<script id="BlogSearchData" type="application/json">(.*?)</script>', html, re.S)
+    if not match:
+        raise ValueError("LlamaIndex blog data missing")
+    records = json.loads(unescape(match.group(1)))
+    items = []
+    for record in records:
+        published = date_iso(record.get("publishedDate") or "")
+        url = safe_url("/blog/" + str(record.get("slug") or ""), base)
+        if not published or not record.get("slug") or not record.get("title") or not url:
+            continue
+        tags = [clean(tag, 48) for tag in record.get("tags", []) if isinstance(tag, str)]
+        items.append({"title": clean(record["title"]), "url": url, "publishedAt": published,
+                      "categories": tags[:3], "description": publisher_description(record.get("excerpt") or "", record["title"])})
+        if len(items) == MAX_ITEMS:
+            break
+    if not items:
+        raise ValueError("LlamaIndex blog has no dated posts")
+    return items
+
+
+class _MetaDescription(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.description = ""
+
+    def handle_starttag(self, tag, attrs):
+        if tag != "meta" or self.description:
+            return
+        attributes = dict(attrs)
+        if attributes.get("name", "").lower() == "description" or attributes.get("property", "").lower() == "og:description":
+            self.description = clean(attributes.get("content", ""), MAX_PREVIEW)
+
+
+def enrich_descriptions(items, limit=MAX_ITEMS):
+    """Use only the publisher's own article metadata, with bounded extra requests."""
+    def description(item):
+        try:
+            parser = _MetaDescription()
+            parser.feed(fetch(item["url"]).decode("utf-8", errors="replace"))
+            return publisher_description(parser.description, item["title"])
+        except (OSError, ValueError):
+            return ""
+
+    targets = [item for item in items[:limit] if not item.get("description")]
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for item, value in zip(targets, pool.map(description, targets)):
+            if value:
+                item["description"] = value
+    return items
+
+
+INFOQ_AI_TERMS = re.compile(r'AI|大模型|智能体|机器学习|深度学习|神经网络|算力|多模态|模型|Agent|LLM|GPT|Claude|Gemini|DeepSeek|Qwen|Kimi|OpenAI|Anthropic|MCP|推理|提示词|生成式', re.I)
+
+
+def parse_infoq_ai_feed(raw, base):
+    items = [item for item in parse_feed(raw, base) if INFOQ_AI_TERMS.search(item["title"])]
+    if not items:
+        raise ValueError("InfoQ feed has no AI-related titles")
+    for item in items:
+        item["url"] = item["url"].split("?", 1)[0]
+        if item["publishedAt"]:
+            # InfoQ's RSS marks Beijing wall time as GMT; its original page shows the prior Beijing date.
+            item["publishedAt"] = date_iso((datetime.fromisoformat(item["publishedAt"].replace("Z", "+00:00")) - timedelta(hours=8)).isoformat())
+        if "点击查看原文" in item["description"]:
+            item["description"] = ""
+    return items[:MAX_ITEMS]
+
+
+def parse_metr_feed(raw, base):
+    """Keep only a short excerpt from METR's publisher-operated full-content RSS."""
+    items = parse_feed(raw, base)
+    by_url = {item["url"]: item for item in items}
+    root = ET.fromstring(raw)
+    for entry in root.iter():
+        if entry.tag.rsplit("}", 1)[-1] != "item":
+            continue
+        item = by_url.get(safe_url(child_text(entry, {"link"}), base))
+        if not item:
+            continue
+        content = child_text(entry, {"encoded"})
+        paragraph = re.search(r'<p\b[^>]*>(.*?)</p>', content, re.I | re.S)
+        if paragraph:
+            intro = re.sub(r'<sup\b[^>]*>.*?</sup>', '', paragraph.group(1), flags=re.I | re.S)
+            item["description"] = publisher_description(intro, item["title"], 320)
+    return items
+
+
+def parse_deepseek_updates(raw, base):
+    html = raw.decode("utf-8", errors="replace")
+    headings = list(re.finditer(r'<h[23]\b[^>]*class="[^"]*anchorWithStickyNavbar[^"]*"[^>]*id="([^"]+)"[^>]*>(.*?)</h[23]>', html, re.S))
+    items, published = [], ""
+    for index, match in enumerate(headings):
+        title = clean(match.group(2)).replace("\u200b", "").strip()
+        date_match = re.search(r'20\d{2}-\d{2}-\d{2}', title)
+        if html[match.start():match.start()+3] == "<h2":
+            published = date_iso(date_match.group(0)) if date_match else ""
+            continue
+        if not published or not title:
+            continue
+        section = html[match.end():headings[index + 1].start() if index + 1 < len(headings) else len(html)]
+        paragraph = re.search(r'<p\b[^>]*>(.*?)</p>', section, re.I | re.S)
+        items.append({"title": title, "url": safe_url(base.split("#", 1)[0] + "#" + match.group(1)),
+                      "publishedAt": published, "categories": [],
+                      "description": publisher_description(paragraph.group(1), title, 500) if paragraph else ""})
+        if len(items) == MAX_ITEMS:
+            break
+    if not items:
+        raise ValueError("DeepSeek changelog has no dated entries")
+    return items
+
+
+def parse_github_topic(raw):
+    html = raw.decode("utf-8", errors="replace")
+    rows = re.findall(r'<article class="border rounded color-shadow-small[^\"]*">(.*?)</article>', html, re.S)
+    items = []
+    for row in rows:
+        heading = re.search(r'<h3\b[^>]*>(.*?)</h3>', row, re.S)
+        anchors = re.findall(r'<a\b[^>]*href="(/[^"]+)"[^>]*>(.*?)</a>', heading.group(1), re.S) if heading else []
+        if len(anchors) < 2:
+            continue
+        url = safe_url(anchors[-1][0], "https://github.com")
+        title = clean(anchors[0][1], 100) + "/" + clean(anchors[-1][1], 100)
+        if not url or urlparse(url).netloc != "github.com":
+            continue
+        description = html_part(row, r'<p class="color-fg-muted mb-0"[^>]*>(.*?)</p>', MAX_PREVIEW)
+        stars = re.search(r'aria-label="([\d,]+) users? starred this repository"', row)
+        item = {"title": title, "url": url, "description": description}
+        if stars:
+            item["metrics"] = {"stars": int(stars.group(1).replace(",", ""))}
+        items.append(item)
+        if len(items) == 10:
+            break
+    if not items:
+        raise ValueError("GitHub topic page has no repository cards")
+    return items
+
+
+def parse_aa_articles(raw, base):
+    html = raw.decode("utf-8", errors="replace")
+    embedded = re.search(r'\\"articles\\":\[(.*?)\]', html, re.S)
+    if embedded:
+        records = json.loads('[' + embedded.group(1).replace('\\"', '"') + ']')
+        items = []
+        for record in records:
+            title = clean(record.get("title"))
+            published = date_iso(record.get("date"))
+            slug = record.get("slug")
+            url = safe_url("/articles/" + str(slug), base) if slug else ""
+            if not title or not published or not url:
+                continue
+            items.append({"title": title, "url": url, "publishedAt": published,
+                          "categories": [], "description": publisher_description(record.get("subtitle", ""), title)})
+            if len(items) == MAX_ITEMS:
+                return items
+        if items:
+            return items
+    rows = re.findall(r'<a class="relative flex flex-col gap-4 group" href="(/articles/[^"#?]+)"[^>]*>(.*?)</a>', html, re.S)
+    items, seen = [], set()
+    for href, row in rows:
+        url = safe_url(href, base)
+        title = html_part(row, r'<h3\b[^>]*>(.*?)</h3>')
+        published = date_iso(html_part(row, r'<p class="text-xs text-muted-foreground"[^>]*>(.*?)</p>', 48))
+        if not url or url in seen or not title or not published:
+            continue
+        seen.add(url)
+        items.append({"title": title, "url": url, "publishedAt": published,
+                      "categories": [], "description": ""})
+        if len(items) == MAX_ITEMS:
+            break
+    if not items:
+        raise ValueError("Artificial Analysis articles page has no dated cards")
+    return items
+
+
+def parse_openai_cookbook(raw, base):
+    html = raw.decode("utf-8", errors="replace")
+    match = re.search(r'<astro-island[^>]+component-url="[^"]*CookbookHomepage[^>]+props="([^"]+)"', html, re.S)
+    if not match:
+        raise ValueError("OpenAI Cookbook listing data missing")
+    payload = json.loads(unescape(match.group(1)))
+    items = []
+    for wrapper in payload.get("entries", [None, []])[1]:
+        if not isinstance(wrapper, list) or len(wrapper) < 2 or not isinstance(wrapper[1], dict):
+            continue
+        record = wrapper[1]
+        path = record.get("internal_path", [None, ""])[1]
+        title = clean(record.get("title", [None, ""])[1])
+        published = date_iso(record.get("date", [None, ""])[1])
+        url = safe_url("/cookbook/" + path, base) if path else ""
+        if not title or not published or not url:
+            continue
+        tags = [clean(tag[1], 48) for tag in record.get("tags", [None, []])[1]
+                if isinstance(tag, list) and len(tag) > 1 and isinstance(tag[1], str)]
+        items.append({"title": title, "url": url, "publishedAt": published,
+                      "categories": tags[:3], "description": ""})
+        if len(items) == MAX_ITEMS:
+            break
+    if not items:
+        raise ValueError("OpenAI Cookbook has no dated entries")
+    return items
+
+
 def load_previous():
     try:
         return json.loads(OUTPUT.read_text(encoding="utf-8"))
@@ -446,6 +719,10 @@ def update(offline=False, only=None):
         try:
             if mode == "feed":
                 items = parse_feed(fetch(source["feed"]), source["url"])
+            elif mode == "metr_feed":
+                items = parse_metr_feed(fetch(source["feed"]), source["url"])
+            elif mode == "infoq_ai_feed":
+                items = enrich_descriptions(parse_infoq_ai_feed(fetch(source["feed"]), source["url"]))
             elif mode == "youtube":
                 items = parse_youtube_feed(fetch(source["feed"]), source["url"])
             elif mode == "papers":
@@ -457,10 +734,24 @@ def update(offline=False, only=None):
                 items = parse_hf_trending(fetch(f"https://huggingface.co/api/{resource}?sort=trendingScore&direction=-1&limit=10"), resource)
             elif mode == "github_trending":
                 items = parse_trending(fetch(source["url"]))
+            elif mode == "github_topic":
+                items = parse_github_topic(fetch(source["url"]))
             elif mode == "aa_leaderboard":
                 items = parse_aa_leaderboard(fetch(source["url"]))
+            elif mode == "aa_articles":
+                items = parse_aa_articles(fetch(source["url"]), source["url"])
+            elif mode == "openai_cookbook":
+                items = enrich_descriptions(parse_openai_cookbook(fetch(source["url"]), source["url"]))
             elif mode == "publisher_page":
                 items = parse_publisher_page(fetch(source["url"]), source_id, source["url"])
+            elif mode == "kimi_page":
+                items = enrich_descriptions(parse_kimi_page(fetch(source["url"]), source["url"]))
+            elif mode == "cohere_page":
+                items = enrich_descriptions(parse_cohere_page(fetch(source["url"]), source["url"]))
+            elif mode == "llamaindex_page":
+                items = parse_llamaindex_page(fetch(source["url"]), source["url"])
+            elif mode == "deepseek_updates":
+                items = parse_deepseek_updates(fetch(source["url"]), source["url"])
             else:
                 raise ValueError("unknown mode")
             return source_id, {"status": "ok", "checkedAt": checked,

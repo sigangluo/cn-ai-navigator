@@ -28,19 +28,27 @@ const link = (label, url, className = '') => {
   return node;
 };
 const resultFor = (source) => state.snapshot?.results?.[source.id] || { status: source.mode === 'link' ? 'directory' : 'pending', items: [] };
-const isRanking = (source) => ['github_trending', 'hf_trending', 'papers_trending', 'aa_leaderboard'].includes(source.mode);
+const isRanking = (source) => ['github_trending', 'github_topic', 'hf_trending', 'papers_trending', 'aa_leaderboard'].includes(source.mode);
 const recentlySynced = (result) => Boolean(result.lastSuccessAt && Date.now() - Date.parse(result.lastSuccessAt) <= 36 * 60 * 60 * 1000);
 const updatedToday = (source) => !isRanking(source) && resultFor(source).status === 'ok' && resultFor(source).items.some((item) => dateKey(item.publishedAt) === today);
 const PAGE_SIZE = 3;
 const orgCounts = new Map();
 
-const genericCategories = new Set(['ai', 'news', 'blog', '资讯', '人工智能', 'artificial intelligence', 'research blog']);
+const genericCategories = new Set(['ai', 'news', 'blog', '资讯', '综合', '人工智能', 'artificial intelligence', 'research blog']);
 const numberText = (value) => Number(value).toLocaleString('en-US');
 function itemFacts(source, item) {
   const facts = [];
-  const add = (label, kind = 'metric') => facts.push(el('span', `item-fact ${kind}`, label));
+  const add = (label, kind = 'metric') => { const fact = el('span', `item-fact ${kind}`, label); facts.push(fact); return fact; };
   const metrics = item.metrics || {};
-  if (source.id === 'github-trending') {
+  if (source.group === 'papers') {
+    if (item.authors?.length) {
+      const names = item.authors.slice(0, 3).join('、');
+      const more = item.authors.length > 3 ? ` 等 ${item.authors.length} 人` : '';
+      add(`作者 ${names}${more}`, 'paper-meta').title = item.authors.join('、');
+    }
+    if (item.linkedOrganization) add(`HF 关联组织 ${item.linkedOrganization}`, 'paper-meta');
+  }
+  if (source.id === 'github-trending' || source.mode === 'github_topic') {
     if (Number.isFinite(metrics.stars)) add(`★ ${numberText(metrics.stars)} Stars`);
     if (Number.isFinite(metrics.starsToday)) add(`今日新增 +${numberText(metrics.starsToday)}`);
   } else if (source.mode === 'hf_trending') {
@@ -107,7 +115,8 @@ function sourceCard(source) {
   identity.append(el('p', 'source-note', source.note));
   const links = el('div', 'source-links');
   links.append(link(source.group === 'video' ? '打开频道 ↗' : '打开原站 ↗', source.url, 'official-link'));
-  if (source.feed) links.append(link('RSS ↗', source.feed, 'feed-link'));
+  if (source.feed) links.append(link(source.feed.includes('/atom/') ? 'Atom ↗' : 'RSS ↗', source.feed, 'feed-link'));
+  (source.relatedLinks || []).forEach((related) => links.append(link(related.label, related.url, 'official-link')));
   identity.append(links);
   if (source.sections?.length) {
     const sections = el('details', 'source-sections');
