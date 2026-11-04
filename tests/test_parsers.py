@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from update import parse_feed, parse_papers, parse_hf_trending, parse_trending, parse_aa_leaderboard  # noqa: E402
+from update import parse_feed, parse_papers, parse_hf_trending, parse_trending, parse_aa_leaderboard, parse_publisher_page  # noqa: E402
 
 
 class ParserTests(unittest.TestCase):
@@ -26,9 +26,10 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(result[0]["url"], "https://huggingface.co/papers/2611.00001")
 
     def test_hugging_face_ranked_dataset_link(self):
-        raw = b'[{"id":"org/dataset","trendingScore":88}]'
+        raw = b'[{"id":"org/dataset","trendingScore":88,"description":"A public dataset for evaluation."}]'
         result = parse_hf_trending(raw, "datasets")
         self.assertEqual(result[0]["url"], "https://huggingface.co/datasets/org/dataset")
+        self.assertEqual(result[0]["description"], "A public dataset for evaluation.")
 
     def test_trending_rows_and_void_tags(self):
         raw = b'<article class="Box-row"><h2><a href="/org/repo"> org / repo </a></h2><p>A useful repo<img src="x"></p></article>'
@@ -46,6 +47,28 @@ class ParserTests(unittest.TestCase):
         raw = b'<rss><channel><item><title>Post</title><link>https://tech.meituan.com/2026/11/02/post.html</link></item></channel></rss>'
         result = parse_feed(raw, "https://tech.meituan.com")
         self.assertEqual(result[0]["publishedAt"], "2026-11-01T16:00:00Z")
+
+    def test_feed_uses_publisher_summary_without_html_or_arxiv_metadata(self):
+        raw = b'<rss><channel><item><title>Paper</title><link>https://arxiv.org/abs/1234</link><description>arXiv:1234v1 Announce Type: new Abstract: &lt;p&gt;A useful research result.&lt;/p&gt;</description></item></channel></rss>'
+        self.assertEqual(parse_feed(raw, "https://arxiv.org")[0]["description"], "A useful research result.")
+
+    def test_feed_skips_image_caption_and_uses_publisher_description(self):
+        raw = b'<rss><channel><item><title>Update</title><link>https://example.org/update</link><description>Animated carousel of images</description><description>&lt;img src="x"&gt;A useful publisher introduction.</description></item></channel></rss>'
+        self.assertEqual(parse_feed(raw, "https://example.org")[0]["description"], "A useful publisher introduction.")
+
+    def test_publisher_page_requires_dates_and_original_links(self):
+        raw = b'<article class="nUeDbq_article"><header><p><a href="/research/team/safety">Safety</a></p><time>Nov 2, 2026</time></header><h3><a class="nUeDbq_metaTitleLink" href="/research/a">Research A</a></h3><p class="nUeDbq_metaDescription">Publisher summary.</p></article>'
+        result = parse_publisher_page(raw, "anthropic-research", "https://www.anthropic.com/research")
+        self.assertEqual(result[0]["description"], "Publisher summary.")
+        self.assertEqual(result[0]["categories"], ["Safety"])
+        self.assertEqual(result[0]["url"], "https://www.anthropic.com/research/a")
+
+    def test_openai_developer_blog_uses_native_topic_and_teaser(self):
+        raw = b'<a class="resource-item not-prose" href="/blog/example"><div class="px-4 pt-4 text-secondary">Oct 14</div><div class="flex-1 line-clamp-2">Example</div><p class="px-4 text-default line-clamp-3">Publisher teaser.</p><div class="px-4 pt-2 text-sm text-secondary">Codex</div></a>'
+        result = parse_publisher_page(raw, "openai-dev-blog", "https://developers.openai.com/blog")
+        self.assertEqual(result[0]["categories"], ["Codex"])
+        self.assertEqual(result[0]["description"], "Publisher teaser.")
+        self.assertTrue(result[0]["publishedAt"])
 
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ import sys
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from html import unescape
 from pathlib import Path
@@ -28,7 +28,40 @@ def now():
 
 
 def clean(value, limit=240):
-    return re.sub(r"\s+", " ", unescape(re.sub(r"<[^>]+>", " ", str(value or "")))).strip()[:limit]
+    value = unescape(str(value or ""))
+    value = re.sub(r"<[^>]+>", " ", value)
+    value = re.sub(r"\s+", " ", unescape(value)).strip()
+    if len(value) <= limit:
+        return value
+    trimmed = value[:limit - 1]
+    if " " in trimmed and trimmed.rfind(" ") > limit * .7:
+        trimmed = trimmed.rsplit(" ", 1)[0]
+    return trimmed.rstrip(" ,.;:") + "…"
+
+
+def publisher_description(value, title=""):
+    value = re.sub(r"^arXiv:\S+\s+Announce Type:\s*\w+\s+Abstract:\s*", "", clean(value, 1200), flags=re.I)
+    value = clean(value, 220)
+    if value == title or re.match(r"^(Animated carousel|Image of |Photo of |Figure \d+:)", value, re.I):
+        return ""
+    return value
+
+
+def feed_description(entry, title):
+    candidates = []
+    for child in entry:
+        if child.tag.rsplit("}", 1)[-1].lower() not in {"description", "summary"}:
+            continue
+        raw = "".join(child.itertext()).strip()
+        meta = re.search(r'<meta\s+name=["\']description["\'][^>]*content=(["\'])(.*?)\1', raw, re.I | re.S)
+        if meta:
+            candidates.append(meta.group(2))
+        candidates.append(raw)
+    for candidate in candidates:
+        description = publisher_description(candidate, title)
+        if description:
+            return description
+    return ""
 
 
 def safe_url(value, base=""):
@@ -58,7 +91,13 @@ def date_iso(value):
         try:
             dt = parsedate_to_datetime(value.strip())
         except (TypeError, ValueError):
-            return ""
+            try:
+                dt = datetime.strptime(value.strip(), "%b %d, %Y")
+            except ValueError:
+                try:
+                    dt = datetime.strptime(value.strip(), "%B %d, %Y")
+                except ValueError:
+                    return ""
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
     return dt.astimezone(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
@@ -72,8 +111,10 @@ def date_from_dated_path(url):
 
 def child_text(node, names):
     for child in node:
-        if child.tag.rsplit("}", 1)[-1].lower() in names and child.text:
-            return child.text.strip()
+        if child.tag.rsplit("}", 1)[-1].lower() in names:
+            value = "".join(child.itertext()).strip()
+            if value:
+                return value
     return ""
 
 
@@ -108,6 +149,7 @@ def parse_feed(raw, base):
             "url": link,
             "publishedAt": date_iso(child_text(entry, {"pubdate", "published", "updated", "date"})) or date_from_dated_path(link),
             "categories": categories[:3],
+            "description": feed_description(entry, title),
         })
         if len(items) >= MAX_ITEMS:
             break
@@ -129,7 +171,7 @@ def parse_papers(raw):
         if title and url:
             items.append({"title": title, "url": url,
                           "publishedAt": date_iso(item.get("publishedAt") or paper.get("publishedAt")),
-                          "categories": []})
+                          "categories": [], "description": clean(paper.get("summary"), 220)})
     if not items:
         raise ValueError("daily papers API has no usable links")
     return items
@@ -147,8 +189,14 @@ def parse_hf_trending(raw, resource):
             continue
         url = safe_url(f"https://huggingface.co/{prefix}{name}")
         if url:
+            description = clean(record.get("description"), 180) if resource == "datasets" else ""
+            if not description:
+                labels = [clean(record.get("pipeline_tag") or record.get("sdk"), 60)]
+                if isinstance(record.get("likes"), int):
+                    labels.append(f'{record["likes"]} 赞')
+                description = " · ".join(label for label in labels if label)
             items.append({"title": name, "url": url,
-                          "description": clean(record.get("pipeline_tag") or record.get("sdk"), 80)})
+                          "description": description})
     if not items:
         raise ValueError("Hugging Face API has no usable ranked links")
     return items
@@ -203,6 +251,85 @@ def parse_aa_leaderboard(raw):
     raise ValueError("Artificial Analysis intelligence ranking table changed")
 
 
+def html_part(row, pattern, limit=220):
+    match = re.search(pattern, row, re.S | re.I)
+    return clean(match.group(1), limit) if match else ""
+
+
+def month_day_iso(value):
+    try:
+        day = datetime.strptime(value.strip(), "%b %d")
+        current = datetime.now(timezone.utc)
+        day = day.replace(year=current.year, tzinfo=timezone.utc)
+        if day > current + timedelta(days=1):
+            day = day.replace(year=current.year - 1)
+        return date_iso(day.isoformat())
+    except ValueError:
+        return ""
+
+
+def parse_publisher_page(raw, source_id, base):
+    """Read only public listing cards with original links and publisher teasers."""
+    html = raw.decode("utf-8", errors="replace")
+    if source_id == "anthropic-news":
+        rows = re.findall(r'<li class="[^"]*\bbxgyUW_row\b[^"]*"[^>]*>(.*?)</li>', html, re.S)
+        patterns = {
+            "url": r'<a class="bxgyUW_title-link" href="([^"]+)"',
+            "title": r'<div class="bxgyUW_title">.*?<h3[^>]*>(.*?)</h3>',
+            "description": r'<div class="bxgyUW_description">.*?<p[^>]*>(.*?)</p>',
+            "category": r'<div class="bxgyUW_category">.*?<a[^>]*>(.*?)</a>',
+            "date": r'<div class="bxgyUW_date"><time[^>]*>(.*?)</time>',
+        }
+    elif source_id == "anthropic-research":
+        rows = re.findall(r'<article class="[^"]*\bnUeDbq_article\b[^"]*"[^>]*>(.*?)</article>', html, re.S)
+        patterns = {
+            "url": r'<a class="nUeDbq_metaTitleLink" href="([^"]+)"',
+            "title": r'<a class="nUeDbq_metaTitleLink"[^>]*>(.*?)</a>',
+            "description": r'<p class="nUeDbq_metaDescription"[^>]*>(.*?)</p>',
+            "category": r'<header[^>]*>.*?<p><a[^>]*>(.*?)</a></p>',
+            "date": r'<header[^>]*>.*?<time[^>]*>(.*?)</time>',
+        }
+    elif source_id == "mistral":
+        rows = re.findall(r'<article class="[^"]*\bjs-post\b[^"]*"[^>]*>(.*?)</article>', html, re.S)
+        patterns = {
+            "url": r'<a href="([^"]+)"',
+            "title": r'<h2 class="[^"]*\bjs-post-title\b[^"]*"[^>]*>(.*?)</h2>',
+            "description": r'<p class="[^"]*\btext-body-large\b[^"]*"[^>]*>(.*?)</p>',
+            "category": r'<span data-category-slug="[^"]+"[^>]*>.*?<p[^>]*>(.*?)</p>',
+            "date": r'<p class="[^"]*\btext-text-tertiary\b[^"]*"[^>]*>(.*?)</p>',
+        }
+    elif source_id == "openai-dev-blog":
+        rows = re.findall(r'<a class="[^"]*\bresource-item\b[^"]*"[^>]*>.*?</a>', html, re.S)
+        patterns = {
+            "url": r'<a class="[^"]*\bresource-item\b[^"]*" href="([^"]+)"',
+            "title": r'<div class="flex-1 line-clamp-2">(.*?)</div>',
+            "description": r'<p class="[^"]*\bline-clamp-3\b[^"]*"[^>]*>(.*?)</p>',
+            "category": r'<div class="px-4 pt-2 text-sm text-secondary[^>]*>(.*?)</div>',
+            "date": r'<div class="px-4 pt-4 text-secondary[^>]*>(.*?)</div>',
+        }
+    else:
+        raise ValueError("unsupported publisher page")
+    items, seen = [], set()
+    for row in rows:
+        href = html_part(row, patterns["url"], 500)
+        url = safe_url(href, base)
+        title = html_part(row, patterns["title"], 240)
+        date_text = html_part(row, patterns["date"], 48)
+        published = month_day_iso(date_text) if source_id == "openai-dev-blog" else date_iso(date_text)
+        if not url or url in seen or not title or not published:
+            continue
+        seen.add(url)
+        category = html_part(row, patterns["category"], 48)
+        items.append({"title": title, "url": url, "publishedAt": published,
+                      "categories": [category] if category else [],
+                      "description": html_part(row, patterns["description"], 220)})
+        if len(items) == MAX_ITEMS:
+            break
+    if not items:
+        raise ValueError("publisher page has no usable listing cards")
+    return items
+
+
 def load_previous():
     try:
         return json.loads(OUTPUT.read_text(encoding="utf-8"))
@@ -247,6 +374,8 @@ def update(offline=False, only=None):
                 items = parse_trending(fetch(source["url"]))
             elif mode == "aa_leaderboard":
                 items = parse_aa_leaderboard(fetch(source["url"]))
+            elif mode == "publisher_page":
+                items = parse_publisher_page(fetch(source["url"]), source_id, source["url"])
             else:
                 raise ValueError("unknown mode")
             return source_id, {"status": "ok", "checkedAt": checked,

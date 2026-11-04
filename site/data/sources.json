@@ -195,7 +195,7 @@
       "url": "https://www.anthropic.com/news",
       "note": "产品、公司与政策公告",
       "cadence": "weekly",
-      "mode": "link",
+      "mode": "publisher_page",
       "sections": [
         "Product",
         "Company"
@@ -209,7 +209,7 @@
       "url": "https://www.anthropic.com/research",
       "note": "研究成果与团队文章",
       "cadence": "weekly",
-      "mode": "link",
+      "mode": "publisher_page",
       "sections": [
         "Alignment",
         "Economics",
@@ -277,7 +277,7 @@
       "url": "https://mistral.ai/news/",
       "note": "产品与研究发布",
       "cadence": "weekly",
-      "mode": "link",
+      "mode": "publisher_page",
       "sections": [
         "Company",
         "Solutions",
@@ -389,7 +389,8 @@
       "url": "https://machinelearning.apple.com/",
       "note": "Apple ML 研究",
       "cadence": "monthly",
-      "mode": "link"
+      "mode": "feed",
+      "feed": "https://machinelearning.apple.com/rss.xml"
     },
     {
       "id": "amazon-science",
@@ -440,7 +441,7 @@
       "url": "https://developers.openai.com/blog",
       "note": "API 与开发实践",
       "cadence": "weekly",
-      "mode": "link",
+      "mode": "publisher_page",
       "sections": [
         "General",
         "API",

@@ -29,58 +29,65 @@ const recentlySynced = (result) => Boolean(result.lastSuccessAt && Date.now() - 
 const updatedToday = (source) => !isRanking(source) && resultFor(source).status === 'ok' && resultFor(source).items.some((item) => dateKey(item.publishedAt) === today);
 const cadenceLabel = { daily: '通常每天', weekly: '通常每周', monthly: '不定期' };
 
+function itemRow(item, index, ranking = false) {
+  const li = el('li', 'item-row');
+  if (ranking) li.append(el('span', 'rank-number', String(index + 1).padStart(2, '0')));
+  const body = el('div', 'item-body');
+  const head = el('div', 'item-head');
+  head.append(link(item.title, item.url, 'item-link'));
+  if (!ranking) head.append(el('span', 'item-detail', [shortDate(item.publishedAt), ...(item.categories || []).slice(0, 2)].join(' · ')));
+  body.append(head);
+  if (item.description && item.description.trim() !== item.title.trim()) body.append(el('p', 'item-description', item.description));
+  li.append(body);
+  return li;
+}
+
 function sourceCard(source) {
   const result = resultFor(source);
   const fresh = updatedToday(source);
   const stale = result.status === 'ok' && !recentlySynced(result);
-  const card = el('article', `source-card ${fresh ? 'is-fresh' : ''}`);
+  const ranking = isRanking(source);
+  const card = el('article', `source-card source-row ${fresh ? 'is-fresh' : ''}`);
   card.id = `source-${source.id}`;
+  const identity = el('div', 'source-identity');
   const top = el('div', 'card-top');
-  top.append(el('span', 'org', source.org));
-  const status = el('span', `status ${result.status === 'error' ? 'error' : stale ? 'stale' : fresh ? 'fresh' : result.status === 'ok' ? 'recent' : 'manual'}`,
-    result.status === 'error' ? '同步异常' : fresh ? '今日有更新' : result.status === 'ok' ? (isRanking(source) ? (recentlySynced(result) ? '当前榜单' : '旧榜单快照') : '有最新条目') : source.mode === 'link' ? '官网入口' : '等待同步');
-  top.append(status); card.append(top);
-  const title = el('h4'); title.append(link(source.name, source.url)); card.append(title);
-  card.append(el('p', 'note', source.note));
+  if (source.org !== source.name) top.append(el('span', 'org', source.org));
+  top.append(el('span', `status ${result.status === 'error' ? 'error' : stale ? 'stale' : fresh ? 'fresh' : result.status === 'ok' ? 'recent' : 'manual'}`,
+    result.status === 'error' ? '同步异常' : fresh ? '今日有更新' : result.status === 'ok' ? (ranking ? (recentlySynced(result) ? '当前榜单' : '旧榜单快照') : '有最新条目') : source.mode === 'link' ? '官网入口' : '等待同步'));
+  identity.append(top);
+  const title = el('h4'); title.append(link(source.name, source.url)); identity.append(title);
+  identity.append(el('p', 'note', source.note));
   const meta = el('div', 'card-meta'); meta.append(el('span', '', cadenceLabel[source.cadence] || '不定期'));
-  if (source.mode !== 'link') meta.append(el('span', '', source.mode === 'feed' ? 'RSS / Atom' : source.mode === 'papers' ? '官方 API' : ['github_trending', 'aa_leaderboard'].includes(source.mode) ? '官网榜单' : '官方 API'));
-  card.append(meta);
+  if (result.lastSuccessAt) meta.append(el('span', '', `同步 ${shortDate(result.lastSuccessAt)}`));
+  identity.append(meta);
+  const links = el('div', 'card-bottom'); links.append(link('打开官网', source.url, 'official-link'));
+  if (source.feed) links.append(link('RSS ↗', source.feed, 'feed-link'));
+  identity.append(links);
   if (source.sections?.length) {
-    const tags = el('div', 'native-tags'); tags.append(el('span', 'tag-label', '官网栏目'));
+    const sections = el('details', 'source-sections'); sections.append(el('summary', '', '官网栏目'));
+    const tags = el('div', 'native-tags');
     source.sections.forEach((name) => tags.append(el('span', 'native-tag', name)));
-    card.append(tags);
+    sections.append(tags); identity.append(sections);
   }
+  card.append(identity);
+  const content = el('div', 'source-content');
   if (result.items?.length) {
-    const heading = el('div', 'item-heading'); heading.append(el('span', '', isRanking(source) ? (recentlySynced(result) ? '当前排名' : '上次排名') : '最新线索'));
-    if (result.lastSuccessAt) heading.append(el('span', 'item-time', `同步 ${shortDate(result.lastSuccessAt)}`));
-    card.append(heading);
-    const makeItem = (item, index) => {
-      const li = el('li');
-      if (isRanking(source)) li.append(el('span', 'rank-number', String(index + 1).padStart(2, '0')));
-      const body = el('div', 'item-body'); body.append(link(item.title, item.url, 'item-link'));
-      if (!isRanking(source)) {
-        const detail = [shortDate(item.publishedAt), ...(item.categories || []).slice(0, 2)].join(' · ');
-        body.append(el('span', 'item-detail', detail));
-      } else if (item.description) body.append(el('span', 'item-detail', item.description));
-      li.append(body); return li;
-    };
-    const list = el(isRanking(source) ? 'ol' : 'ul', `item-list ${isRanking(source) ? 'ranking-list' : ''}`);
-    result.items.slice(0, isRanking(source) ? 5 : 3).forEach((item, index) => list.append(makeItem(item, index)));
-    card.append(list);
-    if (isRanking(source) && result.items.length > 5) {
-      const more = el('details', 'more-ranks');
-      more.append(el('summary', '', `展开第 6–${Math.min(result.items.length, 10)} 名`));
-      const rest = el('ol', 'item-list ranking-list');
-      result.items.slice(5, 10).forEach((item, index) => rest.append(makeItem(item, index + 5)));
-      more.append(rest); card.append(more);
+    const list = el(ranking ? 'ol' : 'ul', `item-list ${ranking ? 'ranking-list' : ''}`);
+    const initial = ranking ? 5 : 1;
+    result.items.slice(0, initial).forEach((item, index) => list.append(itemRow(item, index, ranking)));
+    content.append(list);
+    if (result.items.length > initial) {
+      const more = el('details', 'more-items');
+      more.append(el('summary', '', ranking ? `查看第 6–${Math.min(result.items.length, 10)} 名` : `再看 ${Math.min(result.items.length - 1, 4)} 条官网内容`));
+      const rest = el(ranking ? 'ol' : 'ul', `item-list ${ranking ? 'ranking-list' : ''}`);
+      result.items.slice(initial, ranking ? 10 : 5).forEach((item, index) => rest.append(itemRow(item, index + initial, ranking)));
+      more.append(rest); content.append(more);
     }
   } else {
-    card.append(el('div', 'no-items', source.mode === 'link' ? '前往官网浏览最新内容 ↗' : '尚未取得条目，仍可访问官网 ↗'));
+    content.append(el('p', 'no-items', source.mode === 'link' ? '此来源保留官网入口，查看最新内容请打开官网。' : '尚未取得最新条目，可直接打开官网。'));
   }
-  if (result.status === 'error') card.append(el('div', 'error-note', `最近一次同步失败${result.lastSuccessAt ? ' · 已保留上次结果' : ''}`));
-  const bottom = el('div', 'card-bottom'); bottom.append(link('打开官网', source.url, 'official-link'));
-  if (source.feed) bottom.append(link('订阅源 ↗', source.feed, 'feed-link'));
-  card.append(bottom);
+  if (result.status === 'error') content.append(el('div', 'error-note', `最近一次同步失败${result.lastSuccessAt ? ' · 已保留上次结果' : ''}`));
+  card.append(content);
   return card;
 }
 
@@ -106,19 +113,27 @@ function renderNav() {
 
 function renderTodayStrip(sources) {
   const wrap = $('#todayLinks'); wrap.replaceChildren();
-  const fresh = sources.filter(updatedToday);
-  if (!fresh.length) { wrap.append(el('span', 'today-empty', '今天尚未在已同步来源中发现新条目，所有官网入口仍可访问。')); return; }
-  fresh.forEach((source) => {
-    const button = el('button', 'today-link', source.name);
-    button.type = 'button';
-    button.title = resultFor(source).items.find((item) => dateKey(item.publishedAt) === today)?.title || source.name;
-    button.addEventListener('click', () => {
-      state.activeGroup = 'all'; state.todayOnly = false; state.query = '';
-      $('#todayOnly').checked = false; $('#search').value = '';
-      render();
-      document.getElementById(`source-${source.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
-    wrap.append(button);
+  const fresh = sources.filter(updatedToday).map((source) => ({
+    source,
+    items: resultFor(source).items.filter((item) => dateKey(item.publishedAt) === today),
+  }));
+  if (!fresh.length) { wrap.append(el('span', 'today-empty', '今天尚未在已同步来源中发现新条目。下方所有官网入口仍可访问。')); return; }
+  fresh.forEach(({ source, items }) => {
+    const card = el('article', 'today-card');
+    const heading = el('div', 'today-card-head');
+    heading.append(link(source.name, source.url, 'today-source'));
+    heading.append(el('span', 'today-count', `${items.length} 条 · ${shortDate(items[0].publishedAt)}`));
+    card.append(heading);
+    card.append(link(items[0].title, items[0].url, 'today-title'));
+    if (items[0].description) card.append(el('p', 'today-description', items[0].description));
+    if (items[0].categories?.length) card.append(el('span', 'today-category', items[0].categories.slice(0, 2).join(' · ')));
+    if (items.length > 1) {
+      const more = el('details', 'today-more'); more.append(el('summary', '', `另有 ${items.length - 1} 条今日内容`));
+      const list = el('ul'); items.slice(1).forEach((item) => {
+        const li = el('li'); li.append(link(item.title, item.url)); list.append(li);
+      }); more.append(list); card.append(more);
+    }
+    wrap.append(card);
   });
 }
 
