@@ -172,9 +172,17 @@ def parse_papers(raw):
         url = safe_url("https://huggingface.co/papers/" + str(paper_id)) if paper_id else ""
         title = clean(paper.get("title") or item.get("title"))
         if title and url:
-            items.append({"title": title, "url": url,
-                          "publishedAt": date_iso(item.get("publishedAt") or paper.get("publishedAt")),
-                          "categories": [], "description": clean(paper.get("summary"), MAX_ABSTRACT)})
+            entry = {"title": title, "url": url,
+                     "publishedAt": date_iso(item.get("publishedAt") or paper.get("publishedAt")),
+                     "categories": [], "description": clean(paper.get("summary"), MAX_ABSTRACT)}
+            metrics = {}
+            if isinstance(paper.get("upvotes"), int) and paper["upvotes"] > 0:
+                metrics["upvotes"] = paper["upvotes"]
+            if isinstance(item.get("numComments"), int) and item["numComments"] > 0:
+                metrics["comments"] = item["numComments"]
+            if metrics:
+                entry["metrics"] = metrics
+            items.append(entry)
     if not items:
         raise ValueError("daily papers API has no usable links")
     return items
@@ -192,14 +200,19 @@ def parse_hf_trending(raw, resource):
             continue
         url = safe_url(f"https://huggingface.co/{prefix}{name}")
         if url:
-            description = clean(record.get("description"), MAX_PREVIEW) if resource == "datasets" else ""
-            if not description:
-                labels = [clean(record.get("pipeline_tag") or record.get("sdk"), 60)]
-                if isinstance(record.get("likes"), int):
-                    labels.append(f'{record["likes"]} 赞')
-                description = " · ".join(label for label in labels if label)
-            items.append({"title": name, "url": url,
-                          "description": description})
+            entry = {"title": name, "url": url,
+                     "description": clean(record.get("description"), MAX_PREVIEW)}
+            metrics = {key: record[key] for key in ("likes", "downloads")
+                       if isinstance(record.get(key), int) and record[key] >= 0}
+            if metrics:
+                entry["metrics"] = metrics
+            task = clean(record.get("pipeline_tag"), 60)
+            sdk = clean(record.get("sdk"), 60)
+            if task:
+                entry["task"] = task
+            if sdk:
+                entry["sdk"] = sdk
+            items.append(entry)
     if not items:
         raise ValueError("Hugging Face API has no usable ranked links")
     return items
@@ -219,8 +232,20 @@ def parse_trending(raw):
         if not href or urlparse(href).netloc != "github.com" or not title:
             continue
         description = re.search(r"<p\b[^>]*>(.*?)</p>", row, re.S)
-        items.append({"title": title, "url": href,
-                      "description": clean(description.group(1), MAX_PREVIEW) if description else ""})
+        entry = {"title": title, "url": href,
+                 "description": clean(description.group(1), MAX_PREVIEW) if description else ""}
+        stars_link = re.search(r'<a\b[^>]*href="[^"]+/stargazers"[^>]*>(.*?)</a>', row, re.S)
+        stars_today = re.search(r'([\d,]+)\s+stars today', row, re.I)
+        metrics = {}
+        if stars_link:
+            total = re.sub(r"[,\s]", "", clean(stars_link.group(1), 40))
+            if total.isdigit():
+                metrics["stars"] = int(total)
+        if stars_today:
+            metrics["starsToday"] = int(stars_today.group(1).replace(",", ""))
+        if metrics:
+            entry["metrics"] = metrics
+        items.append(entry)
     if not items:
         raise ValueError("GitHub Trending page has no repository rows")
     return items[:10]
@@ -246,7 +271,8 @@ def parse_aa_leaderboard(raw):
             scores.append(score)
             items.append({"title": name,
                           "url": safe_url(detail.group(1), "https://artificialanalysis.ai"),
-                          "description": f"Intelligence Index {score} · {clean(cells[2], 45)}"})
+                          "provider": clean(cells[2], 45),
+                          "metrics": {"intelligenceIndex": score}})
             if len(items) == 10:
                 break
         if len(items) >= 5 and scores == sorted(scores, reverse=True):

@@ -21,28 +21,32 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(result[0]["url"], "https://example.org/good")
 
     def test_daily_papers_api(self):
-        raw = ('[{"publishedAt":"2026-11-04T01:00:00Z","paper":{"id":"2611.00001","title":"A Paper","summary":"' + 'A long abstract. ' * 50 + '"}}]').encode()
+        raw = ('[{"publishedAt":"2026-11-04T01:00:00Z","paper":{"id":"2611.00001","title":"A Paper","upvotes":28,"summary":"' + 'A long abstract. ' * 50 + '"}}]').encode()
         result = parse_papers(raw)
         self.assertEqual(result[0]["url"], "https://huggingface.co/papers/2611.00001")
         self.assertGreater(len(result[0]["description"]), 500)
+        self.assertEqual(result[0]["metrics"]["upvotes"], 28)
 
     def test_hugging_face_ranked_dataset_link(self):
-        raw = b'[{"id":"org/dataset","trendingScore":88,"description":"A public dataset for evaluation."}]'
+        raw = b'[{"id":"org/dataset","trendingScore":88,"likes":32,"downloads":1200,"description":"A public dataset for evaluation."}]'
         result = parse_hf_trending(raw, "datasets")
         self.assertEqual(result[0]["url"], "https://huggingface.co/datasets/org/dataset")
         self.assertEqual(result[0]["description"], "A public dataset for evaluation.")
+        self.assertEqual(result[0]["metrics"], {"likes": 32, "downloads": 1200})
 
     def test_trending_rows_and_void_tags(self):
-        raw = b'<article class="Box-row"><h2><a href="/org/repo"> org / repo </a></h2><p>A useful repo<img src="x"></p></article>'
+        raw = b'<article class="Box-row"><h2><a href="/org/repo"> org / repo </a></h2><p>A useful repo<img src="x"></p><a href="/org/repo/stargazers"><svg></svg>12,345</a><span>678 stars today</span></article>'
         result = parse_trending(raw)
         self.assertEqual(result[0]["title"], "org/repo")
         self.assertEqual(result[0]["description"], "A useful repo")
+        self.assertEqual(result[0]["metrics"], {"stars": 12345, "starsToday": 678})
 
     def test_aa_leaderboard_requires_sorted_intelligence_scores(self):
         rows = ''.join(f'<tr><td><div>Model {i}</div></td><td>1M</td><td>Lab</td><td><div>{10-i}</div></td><td><a href="/models/model-{i}">Model</a></td></tr>' for i in range(6))
         result = parse_aa_leaderboard(f'<table><tbody>{rows}</tbody></table>'.encode())
         self.assertEqual(result[0]["title"], "Model 0")
-        self.assertEqual(result[0]["description"], "Intelligence Index 10 · Lab")
+        self.assertEqual(result[0]["metrics"], {"intelligenceIndex": 10})
+        self.assertEqual(result[0]["provider"], "Lab")
 
     def test_missing_feed_date_uses_publishers_dated_link(self):
         raw = b'<rss><channel><item><title>Post</title><link>https://tech.meituan.com/2026/11/02/post.html</link></item></channel></rss>'

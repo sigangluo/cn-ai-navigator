@@ -29,7 +29,10 @@
         <div class="toolbar-title"><span class="section-kicker">SOURCE INDEX</span><h1>数据源 <span id="visibleCount"></span></h1></div>
         <div class="controls">
           <label class="search-wrap"><span class="sr-only">搜索来源</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="搜索来源、机构、官网栏目…"></label>
+          <label class="select-wrap"><span class="sr-only">筛选语言</span><select id="languageFilter"><option value="all">全部语言</option><option value="zh">中文</option><option value="non_zh">非中文</option></select></label>
+          <label class="select-wrap org-select"><span class="sr-only">筛选机构</span><select id="orgFilter"><option value="all">全部机构</option></select></label>
           <label class="today-switch"><input id="todayOnly" type="checkbox"><span class="switch-track"></span>只看今天更新</label>
+          <button id="resetFilters" class="reset-filters" type="button" hidden>清除筛选</button>
         </div>
       </div>
       <div class="legend" aria-label="颜色说明"><span><i class="dot fresh"></i> 今天发布</span><span><i class="dot recent"></i> 此前发布</span><span><i class="dot manual"></i> 官网入口</span><span><i class="dot error"></i> 同步异常</span><span class="timezone">日期按新加坡时间</span></div>

@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const state = { catalog: null, snapshot: null, query: '', todayOnly: false, activeGroup: 'all', pages: new Map() };
+const state = { catalog: null, snapshot: null, query: '', language: 'all', org: 'all', todayOnly: false, activeGroup: 'all', pages: new Map() };
 const tz = 'Asia/Singapore';
 const dateKey = (value) => {
   if (!value || Number.isNaN(Date.parse(value))) return '';
@@ -33,7 +33,35 @@ const recentlySynced = (result) => Boolean(result.lastSuccessAt && Date.now() - 
 const updatedToday = (source) => !isRanking(source) && resultFor(source).status === 'ok' && resultFor(source).items.some((item) => dateKey(item.publishedAt) === today);
 const PAGE_SIZE = 3;
 
-function itemRow(item, index, ranking) {
+const genericCategories = new Set(['ai', 'news', 'blog', '资讯', '人工智能', 'artificial intelligence', 'research blog']);
+const numberText = (value) => Number(value).toLocaleString('en-US');
+function itemFacts(source, item) {
+  const facts = [];
+  const add = (label, kind = 'metric') => facts.push(el('span', `item-fact ${kind}`, label));
+  const metrics = item.metrics || {};
+  if (source.id === 'github-trending') {
+    if (Number.isFinite(metrics.stars)) add(`★ ${numberText(metrics.stars)} Stars`);
+    if (Number.isFinite(metrics.starsToday)) add(`今日新增 +${numberText(metrics.starsToday)}`);
+  } else if (source.mode === 'hf_trending') {
+    if (Number.isFinite(metrics.likes)) add(`赞 ${numberText(metrics.likes)}`);
+    if (Number.isFinite(metrics.downloads)) add(`下载 ${numberText(metrics.downloads)}`);
+    if (item.task) add(`任务 ${item.task}`, 'category');
+    if (item.sdk) add(`框架 ${item.sdk}`, 'category');
+  } else if (source.mode === 'papers_trending' || source.mode === 'papers') {
+    if (Number.isFinite(metrics.upvotes)) add(`投票 ${numberText(metrics.upvotes)}`);
+    if (Number.isFinite(metrics.comments)) add(`讨论 ${numberText(metrics.comments)}`);
+  } else if (source.mode === 'aa_leaderboard') {
+    if (Number.isFinite(metrics.intelligenceIndex)) add(`Intelligence Index ${numberText(metrics.intelligenceIndex)}`);
+    if (item.provider) add(`机构 ${item.provider}`, 'category');
+  }
+  const primaryArxivCategory = source.id.startsWith('arxiv-') ? { 'arxiv-ai': 'cs.AI', 'arxiv-lg': 'cs.LG', 'arxiv-cl': 'cs.CL', 'arxiv-cv': 'cs.CV', 'arxiv-ro': 'cs.RO' }[source.id] : null;
+  (item.categories || []).filter((category) => category && !genericCategories.has(category.trim().toLocaleLowerCase()) && category !== primaryArxivCategory).slice(0, 2).forEach((category) => add(category, 'category'));
+  if (!facts.length) return null;
+  const line = el('div', 'item-facts'); line.append(...facts);
+  return line;
+}
+
+function itemRow(source, item, index, ranking) {
   const fresh = !ranking && dateKey(item.publishedAt) === today;
   const row = el('li', `item-row ${fresh ? 'published-today' : 'published-earlier'}`);
   if (ranking) row.append(el('span', 'rank-number', String(index + 1).padStart(2, '0')));
@@ -47,6 +75,8 @@ function itemRow(item, index, ranking) {
     heading.append(date);
   }
   body.append(heading);
+  const facts = itemFacts(source, item);
+  if (facts) body.append(facts);
   if (item.description && item.description.trim() !== item.title.trim()) body.append(el('p', 'item-description', item.description));
   row.append(body);
   return row;
@@ -89,7 +119,7 @@ function sourceCard(source) {
       const page = Math.min(state.pages.get(source.id) || 0, totalPages - 1);
       content.replaceChildren();
       const list = el(ranking ? 'ol' : 'ul', `item-list ${ranking ? 'ranking-list' : ''}`);
-      result.items.slice(page * pageSize, (page + 1) * pageSize).forEach((item, offset) => list.append(itemRow(item, page * pageSize + offset, ranking)));
+      result.items.slice(page * pageSize, (page + 1) * pageSize).forEach((item, offset) => list.append(itemRow(source, item, page * pageSize + offset, ranking)));
       content.append(list);
       if (totalPages > 1) {
         const pager = el('nav', 'pager');
@@ -125,6 +155,8 @@ function sourceCard(source) {
 
 function matches(source) {
   if (state.activeGroup !== 'all' && source.group !== state.activeGroup) return false;
+  if (state.language !== 'all' && source.language !== state.language) return false;
+  if (state.org !== 'all' && source.org !== state.org) return false;
   if (state.todayOnly && !updatedToday(source)) return false;
   if (!state.query) return true;
   if (state.query === '中文') return source.language === 'zh';
@@ -158,6 +190,7 @@ function render() {
   if (unhealthy.length) notice.textContent = `${unhealthy.length} 个自动来源近期未成功同步；旧结果和官网入口仍可访问。`;
   $('#syncTime').textContent = state.snapshot?.generatedAt ? `快照 ${new Intl.DateTimeFormat('zh-CN', { timeZone: tz, month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(state.snapshot.generatedAt))} · 新加坡时间` : '等候首次同步';
   const visible = sources.filter(matches);
+  $('#resetFilters').hidden = state.activeGroup === 'all' && state.language === 'all' && state.org === 'all' && !state.todayOnly && !state.query;
   $('#visibleCount').textContent = `${visible.length} / ${sources.length}`;
   const container = $('#sections'); container.replaceChildren();
   for (const group of state.catalog.groups) {
@@ -181,7 +214,7 @@ function render() {
     }
     container.append(section);
   }
-  if (!visible.length) container.append(el('div', 'empty', '没有匹配的来源。清除搜索或关闭“只看今天更新”即可浏览全部入口。'));
+  if (!visible.length) container.append(el('div', 'empty', '没有匹配的来源。可清除筛选后浏览全部入口。'));
 }
 
 async function init() {
@@ -190,9 +223,22 @@ async function init() {
     if (!catalogResponse.ok) throw new Error('来源目录加载失败');
     state.catalog = await catalogResponse.json();
     state.snapshot = snapshotResponse.ok ? await snapshotResponse.json() : null;
+    const counts = new Map();
+    state.catalog.sources.forEach((source) => counts.set(source.org, (counts.get(source.org) || 0) + 1));
+    [...counts.keys()].sort(new Intl.Collator('zh-CN').compare).forEach((org) => {
+      const option = el('option', '', `${org} (${counts.get(org)})`); option.value = org;
+      $('#orgFilter').append(option);
+    });
     render();
   } catch (error) { $('#sections').replaceChildren(el('div', 'empty', `${error.message}。请通过本地 HTTP 服务打开页面。`)); }
 }
 $('#search').addEventListener('input', (event) => { state.query = event.target.value.trim().toLocaleLowerCase(); render(); });
 $('#todayOnly').addEventListener('change', (event) => { state.todayOnly = event.target.checked; state.pages.clear(); render(); });
+$('#languageFilter').addEventListener('change', (event) => { state.language = event.target.value; render(); });
+$('#orgFilter').addEventListener('change', (event) => { state.org = event.target.value; render(); });
+$('#resetFilters').addEventListener('click', () => {
+  state.query = ''; state.language = 'all'; state.org = 'all'; state.todayOnly = false; state.activeGroup = 'all';
+  $('#search').value = ''; $('#languageFilter').value = 'all'; $('#orgFilter').value = 'all'; $('#todayOnly').checked = false;
+  render();
+});
 init();

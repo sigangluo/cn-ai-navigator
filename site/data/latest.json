@@ -1,11 +1,22 @@
 {
-  "generatedAt": "2026-11-04T11:00:41Z",
+  "generatedAt": "2026-11-04T11:33:16Z",
   "results": {
     "qbitai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
+        {
+          "title": "不靠堆砌数据，让机器人看懂真实物理世界 | 招商局狮子山实验室发布「驭物™ Lion-ER-35B-A3B」具身推理模型",
+          "url": "https://www.qbitai.com/2026/11/507586.html",
+          "publishedAt": "2026-11-04T10:08:38Z",
+          "categories": [
+            "资讯",
+            "具身推理模型",
+            "狮子山人工智能实验室"
+          ],
+          "description": "仅激活3B参数，十项基准全线提升！"
+        },
         {
           "title": "超维动力全栈矩阵亮相2026香港金融科技周，具身智能硬科技引爆全场",
           "url": "https://www.qbitai.com/2026/11/507574.html",
@@ -100,16 +111,6 @@
             "蚂蚁"
           ],
           "description": "11月3日上午，2026世界互联网大会在浙江乌镇开幕。"
-        },
-        {
-          "title": "小米斩获乌镇峰会双料大奖：小米集团获“杰出贡献奖”，小米具身基座模型获“领先科技奖”",
-          "url": "https://www.qbitai.com/2026/11/507396.html",
-          "publishedAt": "2026-11-03T05:16:35Z",
-          "categories": [
-            "资讯",
-            "小米"
-          ],
-          "description": "11月3日，小米方面披露，小米集团获得2026世界互联网大会“杰出贡献奖”创新突破类奖项"
         }
       ]
     },
@@ -131,8 +132,8 @@
     },
     "techcrunch-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Anthropic is working on a system to prove AI models’ identity",
@@ -272,8 +273,8 @@
     },
     "the-verge-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "The biggest modding site in PC gaming is taking a stance on AI",
@@ -389,8 +390,8 @@
     },
     "latent-space": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "[AINews] LLMs can read & write neural network weights: \"Weight Space Programming\" cuts Autoresearch out of the RSI loop",
@@ -490,8 +491,8 @@
     },
     "simon": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
@@ -630,8 +631,8 @@
     },
     "openai-news": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Accelerating engineering for the physical world",
@@ -745,8 +746,8 @@
     },
     "anthropic-news": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "AI for Science expands to foundations and research institutions",
@@ -860,8 +861,8 @@
     },
     "anthropic-research": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Progress on provable inference for large language models",
@@ -975,8 +976,8 @@
     },
     "deepmind": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:33:16Z",
+      "lastSuccessAt": "2026-11-04T11:33:16Z",
       "items": [
         {
           "title": "Agentic cheminformatics with Google Antigravity",
@@ -1066,8 +1067,8 @@
     },
     "google-research": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "The sleep framework: A new way for LLMs to retain knowledge in continual learning",
@@ -1198,8 +1199,8 @@
     },
     "google-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "The latest AI news we announced in October 2026",
@@ -1327,8 +1328,8 @@
     },
     "mistral": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Le Chonk: Built for Coders, Trusted by Defenders.",
@@ -1474,8 +1475,8 @@
     },
     "ms-research": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Learn the rules: The hacker mindset",
@@ -1571,8 +1572,8 @@
     },
     "apple-ml": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "GHARP: Real-Time Gaussian Head Animation from Large-Scale Reconstruction Prior",
@@ -1656,8 +1657,8 @@
     },
     "bair": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "From CUDA to MLX: How K-Search Brings Decades of Kernel Expertise to Apple Silicon",
@@ -1737,8 +1738,8 @@
     },
     "openai-dev-blog": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Designing failover across OpenAI model providers",
@@ -1864,8 +1865,8 @@
     },
     "hf-blog": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "StateBench: Testing how language models track state changes over long documents",
@@ -1955,8 +1956,8 @@
     },
     "pytorch": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "KVCache Meetup Korea 2026: Event Recap",
@@ -2058,8 +2059,8 @@
     },
     "nvidia": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "AI Is Changing How Semiconductor Fabs Work — and Engineers Are Moving Faster Because of It",
@@ -2201,8 +2202,8 @@
     },
     "ollama": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Speech models in Ollama",
@@ -2304,8 +2305,8 @@
     },
     "cloudflare-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "How Commerce.com and Cloudflare are getting storefronts ready for AI agents",
@@ -2443,8 +2444,8 @@
     },
     "meituan-tech": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "美团正式发布 LongCat-2.5：面向智能体任务的原生多模态模型",
@@ -2528,8 +2529,8 @@
     },
     "arxiv-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Alignment Faking Depends on the Value, Not Just the Model",
@@ -2652,8 +2653,8 @@
     },
     "arxiv-cl": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Rethinking Next-Visit Diagnosis Prediction Beyond Aggregate Metrics: Retrieval--Memory Multi-Agent Adjudication",
@@ -2779,8 +2780,8 @@
     },
     "arxiv-lg": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Latent Cluster Separation as a Regularizer for Lifelong Anomaly Detection",
@@ -2905,8 +2906,8 @@
     },
     "arxiv-cv": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Physics-Informed Functional Tucker Method with RKHS Factors for Sparse Spatiotemporal Reconstruction",
@@ -3027,8 +3028,8 @@
     },
     "arxiv-ro": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Robot-Matched Soft Fingers for UMI Data Collection: Lessons from 100 Hours of Pick and Place",
@@ -3149,183 +3150,275 @@
     },
     "hf-papers": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Kierston & KierstonBench: Simulation of Allentown, PA and Evaluation of Language Models in Crime Investigation and Surveillance Tasks",
           "url": "https://huggingface.co/papers/2611.04785",
           "publishedAt": "2026-11-02T19:00:00Z",
           "categories": [],
-          "description": "Large language models are candidates for collecting and analyzing records in criminal investigations and mass surveillance. Their capability and accuracy in this work cannot currently be measured. Real deployments lack the ground truth needed to score a model's conclusions, and no benchmark evaluates these capabilities in a simulated environment. We present Kierston, a city-scale simulation engine, and KierstonBench, a benchmark that tests these capabilities against known simulated events. Kierston models approximately 125,000 residents of Allentown, Pennsylvania, generating their daily activities and the telecommunications, financial, administrative and license-plate records that surveillance and investigative systems collect about them. These records derive from a common behavioral timeline and are distributed across sources representing separate providers. Models investigate through a restricted records interface, linking observations across sources without access to the underlying simulation. The benchmark comprises 32 task families covering record linkage, routine reconstruction, incident investigation and assessment of deceptive accounts. In an evaluation of sixteen language models, most could not perform records investigation and submitted identifications the records did not support. A small number of frontier models solved most of the tasks and abstained when evidence was insufficient. In some cases these models still fell for common deceptions and assumptions, and none replaced an investigator."
+          "description": "Large language models are candidates for collecting and analyzing records in criminal investigations and mass surveillance. Their capability and accuracy in this work cannot currently be measured. Real deployments lack the ground truth needed to score a model's conclusions, and no benchmark evaluates these capabilities in a simulated environment. We present Kierston, a city-scale simulation engine, and KierstonBench, a benchmark that tests these capabilities against known simulated events. Kierston models approximately 125,000 residents of Allentown, Pennsylvania, generating their daily activities and the telecommunications, financial, administrative and license-plate records that surveillance and investigative systems collect about them. These records derive from a common behavioral timeline and are distributed across sources representing separate providers. Models investigate through a restricted records interface, linking observations across sources without access to the underlying simulation. The benchmark comprises 32 task families covering record linkage, routine reconstruction, incident investigation and assessment of deceptive accounts. In an evaluation of sixteen language models, most could not perform records investigation and submitted identifications the records did not support. A small number of frontier models solved most of the tasks and abstained when evidence was insufficient. In some cases these models still fell for common deceptions and assumptions, and none replaced an investigator.",
+          "metrics": {
+            "comments": 2
+          }
         },
         {
           "title": "Factorized MLLM Embeddings for Composed Image Retrieval",
           "url": "https://huggingface.co/papers/2611.05193",
           "publishedAt": "2026-11-02T19:00:00Z",
           "categories": [],
-          "description": "Composed Image Retrieval (CIR) aims to retrieve a target image given a reference image and a modification text. Although recent approaches leveraging Multimodal Large Language Models (MLLMs) have shown significant progress, we argue that the MLLM's compositional understanding remains underutilized. This stems from directly mapping composed queries into a retrieval embedding via contrastive supervision alone, without explicitly resolving the intended visual modifications. In this work, we introduce Factorized MLLM Embeddings (FactEmbed), which decouples compositional query comprehension from building discriminative embeddings. Rather than directly projecting the composed query into a single embedding without internal reasoning, FactEmbed employs a set of factorized latents that simulate the intended visual modifications via an intermediate target imagination objective. This process encourages the latents to ground into target semantics before forming discriminative representations for retrieval. Subsequently, to propagate these factorized representations throughout the model for retrieval, we optimize a factor-level contrastive loss while distilling the decomposed representations into a deeper attention layer of the MLLM. Finally, for efficient inference, we retain the [EOS] token to establish a global-level embedding on top of these factorized latents, while we exploit the mean-pooled factorized latents to rerank a short candidate list at negligible cost, as both are produced by the same forward pass. Extensive evaluations demonstrate that FactEmbed outperforms prior works across CIR benchmarks."
+          "description": "Composed Image Retrieval (CIR) aims to retrieve a target image given a reference image and a modification text. Although recent approaches leveraging Multimodal Large Language Models (MLLMs) have shown significant progress, we argue that the MLLM's compositional understanding remains underutilized. This stems from directly mapping composed queries into a retrieval embedding via contrastive supervision alone, without explicitly resolving the intended visual modifications. In this work, we introduce Factorized MLLM Embeddings (FactEmbed), which decouples compositional query comprehension from building discriminative embeddings. Rather than directly projecting the composed query into a single embedding without internal reasoning, FactEmbed employs a set of factorized latents that simulate the intended visual modifications via an intermediate target imagination objective. This process encourages the latents to ground into target semantics before forming discriminative representations for retrieval. Subsequently, to propagate these factorized representations throughout the model for retrieval, we optimize a factor-level contrastive loss while distilling the decomposed representations into a deeper attention layer of the MLLM. Finally, for efficient inference, we retain the [EOS] token to establish a global-level embedding on top of these factorized latents, while we exploit the mean-pooled factorized latents to rerank a short candidate list at negligible cost, as both are produced by the same forward pass. Extensive evaluations demonstrate that FactEmbed outperforms prior works across CIR benchmarks.",
+          "metrics": {
+            "upvotes": 28,
+            "comments": 1
+          }
         },
         {
           "title": "Think Less, Locally: Local Preference Learning for Reasoning Compression",
           "url": "https://huggingface.co/papers/2611.04814",
           "publishedAt": "2026-11-02T19:00:00Z",
           "categories": [],
-          "description": "Large reasoning models achieve strong performance on challenging tasks, but their long chain-of-thought often incurs substantial inference costs by continuing to deliberate after sufficient information has been obtained. Existing reasoning compression methods primarily operate on reasoning trajectories, paying less attention to the local decision of whether further reasoning is necessary given the current state. We propose LoCo, a local preference learning method for reasoning compression. LoCo detects candidate overthinking states from the model's own traces, freezes the corresponding reasoning prefixes, regenerates shorter verified continuations from the same states, and trains on the resulting state-conditioned preference pairs with DPO. This formulation teaches the model when to continue reasoning and when to conclude, rather than simply encouraging shorter trajectories overall. We construct training data entirely from self-generated mathematical traces and evaluate LoCo on five mathematical and three code generation benchmarks. LoCo reduces completion length by 41.7\\%--45.4\\% on mathematics and 23.4\\%--36.3\\% on code, while maintaining or improving accuracy and achieving the best AUC across all code benchmarks. LoCo consistently improves the accuracy-efficiency trade-off on mathematics and transfers effectively to code generation despite math-only training, demonstrating the cross-domain generality of local preference learning for reasoning compression. The code and model will be publicly released at https://github.com/MuyaoYuan/LoCo."
+          "description": "Large reasoning models achieve strong performance on challenging tasks, but their long chain-of-thought often incurs substantial inference costs by continuing to deliberate after sufficient information has been obtained. Existing reasoning compression methods primarily operate on reasoning trajectories, paying less attention to the local decision of whether further reasoning is necessary given the current state. We propose LoCo, a local preference learning method for reasoning compression. LoCo detects candidate overthinking states from the model's own traces, freezes the corresponding reasoning prefixes, regenerates shorter verified continuations from the same states, and trains on the resulting state-conditioned preference pairs with DPO. This formulation teaches the model when to continue reasoning and when to conclude, rather than simply encouraging shorter trajectories overall. We construct training data entirely from self-generated mathematical traces and evaluate LoCo on five mathematical and three code generation benchmarks. LoCo reduces completion length by 41.7\\%--45.4\\% on mathematics and 23.4\\%--36.3\\% on code, while maintaining or improving accuracy and achieving the best AUC across all code benchmarks. LoCo consistently improves the accuracy-efficiency trade-off on mathematics and transfers effectively to code generation despite math-only training, demonstrating the cross-domain generality of local preference learning for reasoning compression. The code and model will be publicly released at https://github.com/MuyaoYuan/LoCo.",
+          "metrics": {
+            "upvotes": 3,
+            "comments": 3
+          }
         },
         {
           "title": "You don't need long context",
           "url": "https://huggingface.co/papers/2611.05306",
           "publishedAt": "2026-11-02T19:00:00Z",
           "categories": [],
-          "description": "Later tokens are costlier to generate than earlier tokens. On frontier open weight models, the disparity in cost may rise to as much as 7x. Through frequent compaction, we show across a broad range of long-horizon and long-input tasks that frontier language models sacrifice little to no task accuracy when maintaining short contexts. We further demonstrate that LLM performance does not collapse on long-horizon software engineering tasks even when taking at most one action per context, and based on that we outline the concept of semantic state space models (SSSMs). Our findings question the need for long-context language models."
+          "description": "Later tokens are costlier to generate than earlier tokens. On frontier open weight models, the disparity in cost may rise to as much as 7x. Through frequent compaction, we show across a broad range of long-horizon and long-input tasks that frontier language models sacrifice little to no task accuracy when maintaining short contexts. We further demonstrate that LLM performance does not collapse on long-horizon software engineering tasks even when taking at most one action per context, and based on that we outline the concept of semantic state space models (SSSMs). Our findings question the need for long-context language models.",
+          "metrics": {
+            "upvotes": 1,
+            "comments": 2
+          }
         },
         {
           "title": "GigaSpeech 3: Scaling Multi-Dialect Arabic Speech Recognition with Weakly Labeled Data",
           "url": "https://huggingface.co/papers/2611.02476",
           "publishedAt": "2026-11-02T19:00:00Z",
           "categories": [],
-          "description": "Dialectal Arabic speech recognition remains constrained by the scarcity of dialect-resolved transcribed speech despite the abundance of web audio. We introduce GigaSpeech 3, a corpus of 39,000 hours and 10 million weakly transcribed speech segments covering Algerian, Egyptian, Iraqi, Saudi, and Syrian Arabic. Starting from 60 hours of manual transcription per dialect, we train labeling models using speech-recognition-biased self-supervised learning and apply them to dialect-matched web audio. Data selection and four rounds of noisy-student refinement for Saudi and Syrian Arabic yield the final corpus. We validate its utility through dialect-specific and multi-dialect speech recognition training and cross-domain evaluation. On GigaSpeechBench, the final dialect-specific models outperform their labeling models across all five dialects and achieve a macro-average word error rate of 23.86%, a 16.6% relative reduction from the strongest third-party system covering all five dialects, while outperforming the best third-party result on three dialects. A multi-dialect model using self-predicted dialect identities achieves a macro-average word error rate of 25.51% while also supporting Modern Standard Arabic. Across eight conditions from three external corpora, a GigaSpeech 3-trained Zipformer achieves the lowest word error rate among six evaluated models in every condition, while adapting the Qwen3 speech recognizer on GigaSpeech 3 improves performance across all eight conditions. We release the corpus and recipes as a foundation for dialect-aware Arabic speech processing."
+          "description": "Dialectal Arabic speech recognition remains constrained by the scarcity of dialect-resolved transcribed speech despite the abundance of web audio. We introduce GigaSpeech 3, a corpus of 39,000 hours and 10 million weakly transcribed speech segments covering Algerian, Egyptian, Iraqi, Saudi, and Syrian Arabic. Starting from 60 hours of manual transcription per dialect, we train labeling models using speech-recognition-biased self-supervised learning and apply them to dialect-matched web audio. Data selection and four rounds of noisy-student refinement for Saudi and Syrian Arabic yield the final corpus. We validate its utility through dialect-specific and multi-dialect speech recognition training and cross-domain evaluation. On GigaSpeechBench, the final dialect-specific models outperform their labeling models across all five dialects and achieve a macro-average word error rate of 23.86%, a 16.6% relative reduction from the strongest third-party system covering all five dialects, while outperforming the best third-party result on three dialects. A multi-dialect model using self-predicted dialect identities achieves a macro-average word error rate of 25.51% while also supporting Modern Standard Arabic. Across eight conditions from three external corpora, a GigaSpeech 3-trained Zipformer achieves the lowest word error rate among six evaluated models in every condition, while adapting the Qwen3 speech recognizer on GigaSpeech 3 improves performance across all eight conditions. We release the corpus and recipes as a foundation for dialect-aware Arabic speech processing.",
+          "metrics": {
+            "upvotes": 1,
+            "comments": 1
+          }
         },
         {
           "title": "Muon Makes the First Mixture-of-Experts Layer Harder to Balance",
           "url": "https://huggingface.co/papers/2610.37914",
           "publishedAt": "2026-10-26T20:00:00Z",
           "categories": [],
-          "description": "Many open mixture-of-experts (MoE) language models train with Muon instead of AdamW. Most balance the load with a bias on each expert's routing score, adjusted after every step. Their recipes disagree on whether Muon should also train the router. In models with 55M and 108M active parameters, we measure how the optimizer changes the span of these biases, the largest minus the smallest in a layer. The span grows when all tokens favor the same experts, so it shows how hard a layer is to balance. At learning rates tuned on shorter runs, Muon raised the span of the first MoE layer at every seed, roughly doubling it on average, while the other layers changed much less. The rise came from Muon on the rest of the network, whichever optimizer trained the router. In those runs, the inputs to the first router shared a direction, and soon after the warmup its busiest expert averaged four to seven times its fair share. Over the first 3,000 steps, subtracting the batch mean from these inputs removed this overload while barely changing the loss. On the smaller model, halving Muon's learning rate removed most of the rise and slightly improved the loss. Moving only the router to AdamW made the loads shift more during the warmup and slightly raised the loss, so at this scale the results favor keeping the router on Muon."
+          "description": "Many open mixture-of-experts (MoE) language models train with Muon instead of AdamW. Most balance the load with a bias on each expert's routing score, adjusted after every step. Their recipes disagree on whether Muon should also train the router. In models with 55M and 108M active parameters, we measure how the optimizer changes the span of these biases, the largest minus the smallest in a layer. The span grows when all tokens favor the same experts, so it shows how hard a layer is to balance. At learning rates tuned on shorter runs, Muon raised the span of the first MoE layer at every seed, roughly doubling it on average, while the other layers changed much less. The rise came from Muon on the rest of the network, whichever optimizer trained the router. In those runs, the inputs to the first router shared a direction, and soon after the warmup its busiest expert averaged four to seven times its fair share. Over the first 3,000 steps, subtracting the batch mean from these inputs removed this overload while barely changing the loss. On the smaller model, halving Muon's learning rate removed most of the rise and slightly improved the loss. Moving only the router to AdamW made the loads shift more during the warmup and slightly raised the loss, so at this scale the results favor keeping the router on Muon.",
+          "metrics": {
+            "upvotes": 1,
+            "comments": 1
+          }
         },
         {
           "title": "Auto-Research Agent on MSA Organization to Improve Protein-Protein Complex Structure Prediction",
           "url": "https://huggingface.co/papers/2611.03183",
           "publishedAt": "2026-11-02T09:17:43Z",
           "categories": [],
-          "description": "Protein-complex structure prediction with AlphaFold 3 depends on MSA content, depth, and cross-chain pairing. Current pipelines apply uniform recipes, typically maximizing depth and pairing by species, yet even whether cross-chain pairing helps AF3 remains contested. We show that the value of both depth and pairing is strongly target-dependent, so no single recipe is optimal across interfaces. We introduce an autonomous agent that treats a frozen AF3 as a black-box experimental instrument. For each target, the agent formulates biological hypotheses, analyzes and reorganizes the MSA, and iteratively refines sequence selection and pairing using predictor label-free signals alone. On 1{,}015 protein--protein interfaces from three benchmarks released after AF3's training cutoff, the agent improves overall interface DockQ over AF3's default pipeline and fixed MSA recipes on every benchmark, while using on average 60\\% fewer MSA sequences than the default. Gains are largest for inter-species heteromers, where species-based pairing is unreliable: mean DockQ increases from 0.465 to 0.612 on FoldBench and from 0.482 to 0.562 on HD439. The improvements arise from both sequence construction and pairing policy, including deliberate non-pairing.These results recast MSA design as a target-specific problem and show that an autonomous agent can adapt it at test time through biological reasoning and self-directed, confidence-guided experimentation."
+          "description": "Protein-complex structure prediction with AlphaFold 3 depends on MSA content, depth, and cross-chain pairing. Current pipelines apply uniform recipes, typically maximizing depth and pairing by species, yet even whether cross-chain pairing helps AF3 remains contested. We show that the value of both depth and pairing is strongly target-dependent, so no single recipe is optimal across interfaces. We introduce an autonomous agent that treats a frozen AF3 as a black-box experimental instrument. For each target, the agent formulates biological hypotheses, analyzes and reorganizes the MSA, and iteratively refines sequence selection and pairing using predictor label-free signals alone. On 1{,}015 protein--protein interfaces from three benchmarks released after AF3's training cutoff, the agent improves overall interface DockQ over AF3's default pipeline and fixed MSA recipes on every benchmark, while using on average 60\\% fewer MSA sequences than the default. Gains are largest for inter-species heteromers, where species-based pairing is unreliable: mean DockQ increases from 0.465 to 0.612 on FoldBench and from 0.482 to 0.562 on HD439. The improvements arise from both sequence construction and pairing policy, including deliberate non-pairing.These results recast MSA design as a target-specific problem and show that an autonomous agent can adapt it at test time through biological reasoning and self-directed, confidence-guided experimentation.",
+          "metrics": {
+            "comments": 1
+          }
         },
         {
           "title": "Every Pixel Is an Option: A System One Model for Medical Ultrasound Biometry",
           "url": "https://huggingface.co/papers/2611.03360",
           "publishedAt": "2026-11-01T19:00:00Z",
           "categories": [],
-          "description": "**Purpose:** Ultrasound biometry is widely used across various clinical applications, including prenatal and cardiac examinations, to obtain quantitative measurements by placing calipers at anatomical landmarks. However, these measurements remain subject to interoperator variability as they rely largely on manual caliper placement. Conventional methods often use specialized prediction heads for different ultrasound tasks, whereas vision-language models offer flexibility through text instructions. However, direct coordinate prediction does not explicitly model spatial likelihood distributions, limiting the representation of localization ambiguity. **Methods:** We propose Kev-Bio, a vision-language model that uses clinical measurement questions to guide ultrasound landmark detection. Inspired by System One decision models, Kev-Bio uses decision representations of the language model to generate queries for each caliper endpoint. These queries are matched against shared dense ultrasound features to produce spatial probability maps, from which landmark coordinates and clinical measurements are derived. The model is trained end-to-end using both landmark localization and clinical measurement losses. **Results:** On the nine-view FU/GU Biometry 2026 dataset, Kev-Bio achieves a mean radial error (MRE) of 22.50 pixels and a clinical measurement mean absolute error (MAE) of 15.38, outperforming the compared baselines in overall performance. **Conclusion:** These results demonstrate the effectiveness of Kev-Bio for ultrasound landmark detection and clinical measurement across different anatomical views. Our code and models are available at https://github.com/moeinheidari7829/Kev-Bio."
+          "description": "**Purpose:** Ultrasound biometry is widely used across various clinical applications, including prenatal and cardiac examinations, to obtain quantitative measurements by placing calipers at anatomical landmarks. However, these measurements remain subject to interoperator variability as they rely largely on manual caliper placement. Conventional methods often use specialized prediction heads for different ultrasound tasks, whereas vision-language models offer flexibility through text instructions. However, direct coordinate prediction does not explicitly model spatial likelihood distributions, limiting the representation of localization ambiguity. **Methods:** We propose Kev-Bio, a vision-language model that uses clinical measurement questions to guide ultrasound landmark detection. Inspired by System One decision models, Kev-Bio uses decision representations of the language model to generate queries for each caliper endpoint. These queries are matched against shared dense ultrasound features to produce spatial probability maps, from which landmark coordinates and clinical measurements are derived. The model is trained end-to-end using both landmark localization and clinical measurement losses. **Results:** On the nine-view FU/GU Biometry 2026 dataset, Kev-Bio achieves a mean radial error (MRE) of 22.50 pixels and a clinical measurement mean absolute error (MAE) of 15.38, outperforming the compared baselines in overall performance. **Conclusion:** These results demonstrate the effectiveness of Kev-Bio for ultrasound landmark detection and clinical measurement across different anatomical views. Our code and models are available at https://github.com/moeinheidari7829/Kev-Bio.",
+          "metrics": {
+            "upvotes": 2,
+            "comments": 1
+          }
         },
         {
           "title": "DreamX: Video Diffusion Model is a Universal Latent Action Learner",
           "url": "https://huggingface.co/papers/2611.05377",
           "publishedAt": "2026-11-02T19:00:00Z",
           "categories": [],
-          "description": "Learning a universal action representation from video requires modeling dynamics that are consistent across different executions of the same action yet invariant to changes in embodiment and appearance. Existing latent action models infer actions from visual transitions, but their representations often entangle the underlying action with irrelevant visual variations, limiting transfer across embodiments. We introduce DreamX, which repurposes a pretrained video diffusion model as a universal latent action learner. Our approach extracts compact latent actions from the video model's rich spatiotemporal features, compressing each latent video frame by 300times (1{,200 rightarrow 4} tokens). In addition, by leveraging the video model's generative prior, these latent actions capture action-relevant dynamics disentangled from visual appearance. The resulting latent space serves as a shared action interface across embodiments (human and robot), environments, and action parameterizations. On LARY-Bench, DreamX achieves state-of-the-art performance among latent action models. Moreover, actions encoded in one setting remain effective in another: the latent space supports any-to-any video transfer and zero-shot action transfer across diverse embodiments and environments. Furthermore, this shared interface also enables policy learning in a compact latent action space, reducing the computational cost of video-diffusion-based policies."
+          "description": "Learning a universal action representation from video requires modeling dynamics that are consistent across different executions of the same action yet invariant to changes in embodiment and appearance. Existing latent action models infer actions from visual transitions, but their representations often entangle the underlying action with irrelevant visual variations, limiting transfer across embodiments. We introduce DreamX, which repurposes a pretrained video diffusion model as a universal latent action learner. Our approach extracts compact latent actions from the video model's rich spatiotemporal features, compressing each latent video frame by 300times (1{,200 rightarrow 4} tokens). In addition, by leveraging the video model's generative prior, these latent actions capture action-relevant dynamics disentangled from visual appearance. The resulting latent space serves as a shared action interface across embodiments (human and robot), environments, and action parameterizations. On LARY-Bench, DreamX achieves state-of-the-art performance among latent action models. Moreover, actions encoded in one setting remain effective in another: the latent space supports any-to-any video transfer and zero-shot action transfer across diverse embodiments and environments. Furthermore, this shared interface also enables policy learning in a compact latent action space, reducing the computational cost of video-diffusion-based policies.",
+          "metrics": {
+            "upvotes": 43,
+            "comments": 1
+          }
         },
         {
           "title": "VidUEU-Agent: A Data-Curation Agent for Multimodal Understanding, Editing, and Unified Tasks",
           "url": "https://huggingface.co/papers/2611.04418",
           "publishedAt": "2026-11-02T19:00:00Z",
           "categories": [],
-          "description": "The advancement of multimodal learning is heavily constrained by the scarcity and high annotation cost of high-quality instruction data. While raw videos offer an abundant and dynamic source of visual knowledge, transforming them into precise instruction data remains highly challenging. To bridge this gap, we present VidUEU-Agent, an automated pipeline that synthesizes instruction data from raw videos for multimodal understanding, editing, and unified tasks. VidUEU-Agent follows a four-stage pipeline: it performs global perception to filter low-quality shots, mines keyframes and multimodal signals, constructs metadata and routes the metadata to synthesize instruction samples. More importantly, our agent framework can autonomously iterate the data distribution based on downstream training results, thereby optimizing data quality, balance, and training effectiveness. Scaling this pipeline, we construct VidUEU-100K, a large-scale dataset of 100K training samples spanning multiple domains and tasks, providing a robust foundation for developing comprehensive multimodal capabilities. Extensive experiments demonstrate that fine-tuning baseline models on VidUEU-100K yields significant and consistent performance gains across diverse representative benchmarks, validating the effectiveness of our proposed agent framework and dataset."
+          "description": "The advancement of multimodal learning is heavily constrained by the scarcity and high annotation cost of high-quality instruction data. While raw videos offer an abundant and dynamic source of visual knowledge, transforming them into precise instruction data remains highly challenging. To bridge this gap, we present VidUEU-Agent, an automated pipeline that synthesizes instruction data from raw videos for multimodal understanding, editing, and unified tasks. VidUEU-Agent follows a four-stage pipeline: it performs global perception to filter low-quality shots, mines keyframes and multimodal signals, constructs metadata and routes the metadata to synthesize instruction samples. More importantly, our agent framework can autonomously iterate the data distribution based on downstream training results, thereby optimizing data quality, balance, and training effectiveness. Scaling this pipeline, we construct VidUEU-100K, a large-scale dataset of 100K training samples spanning multiple domains and tasks, providing a robust foundation for developing comprehensive multimodal capabilities. Extensive experiments demonstrate that fine-tuning baseline models on VidUEU-100K yields significant and consistent performance gains across diverse representative benchmarks, validating the effectiveness of our proposed agent framework and dataset.",
+          "metrics": {
+            "upvotes": 21,
+            "comments": 1
+          }
         },
         {
           "title": "Going Deeper With Memories",
           "url": "https://huggingface.co/papers/2611.05255",
           "publishedAt": "2026-11-02T19:00:00Z",
           "categories": [],
-          "description": "Byte level language models avoid tokenizer dependence and provide universal coverage, but processing every byte at full resolution is expensive. We introduce DeepMem, a causal multiscale architecture that separates semantic compression from exact byte preservation. A learned invertible subband transform constructs a hierarchy of shorter sequences, while a lossless carrier and explicit detail sidebands preserve byte identity. Fast weight memory blocks operate along the encoder, with iterative shared state computation at the compressed bottleneck, while an attention based super resolution decoder restores byte resolution representations. DeepMem achieves stronger language modeling performance than a matched byte level Transformer on FineWeb-Edu and PG19, and obtains the best macro average performance across the evaluated FLORES languages. It also improves PIQA accuracy while remaining competitive on code modeling, multiple choice reasoning, and byte level corruption robustness. Bottleneck refinement requires approximately 7{,}600times fewer counted FLOPs than equivalent full resolution reasoning, while maintaining competitive evaluation throughput."
+          "description": "Byte level language models avoid tokenizer dependence and provide universal coverage, but processing every byte at full resolution is expensive. We introduce DeepMem, a causal multiscale architecture that separates semantic compression from exact byte preservation. A learned invertible subband transform constructs a hierarchy of shorter sequences, while a lossless carrier and explicit detail sidebands preserve byte identity. Fast weight memory blocks operate along the encoder, with iterative shared state computation at the compressed bottleneck, while an attention based super resolution decoder restores byte resolution representations. DeepMem achieves stronger language modeling performance than a matched byte level Transformer on FineWeb-Edu and PG19, and obtains the best macro average performance across the evaluated FLORES languages. It also improves PIQA accuracy while remaining competitive on code modeling, multiple choice reasoning, and byte level corruption robustness. Bottleneck refinement requires approximately 7{,}600times fewer counted FLOPs than equivalent full resolution reasoning, while maintaining competitive evaluation throughput.",
+          "metrics": {
+            "upvotes": 1,
+            "comments": 1
+          }
         },
         {
           "title": "RoboTryOn: Synthesizing Dexterous Robot Demonstrations from Human Videos via Virtual Try-On",
           "url": "https://huggingface.co/papers/2611.05163",
           "publishedAt": "2026-11-02T19:00:00Z",
           "categories": [],
-          "description": "Robot foundation models have shown remarkable performance in robot control, yet adapting them to a new task still relies heavily on teleoperated demonstrations. Egocentric human videos offer a scalable substitute, but overlaying rendered robots on human videos or retargeting human poses into robot actions leaves significant visual or action gaps for high-DoF robot embodiments. To address this limitation, we propose RoboTryOn, which treats human-to-robot translation as virtual try-on: try-on keeps the person and swaps the garment, RoboTryOn keeps the demonstrated motion and swaps the human for the robot. Specifically, RoboTryOn converts a human video into a video of the target robot specified by a reference image, while preserving the original task, objects, and background. To maintain visual consistency, we translate selected keyframes autoregressively and use them to guide video synthesis with motion conditioned on the human hand skeleton. Additionally, we use an inverse dynamics model (IDM) that incorporates depth features to infer action labels from synthesized videos for policy learning. Our experiments across multiple humanoid embodiments show that policies trained with our synthetic data improve the average success rate on novel tasks, including challenging bimanual manipulation, from 2% to 60%, without any real robot demonstration of those tasks. Moreover, training with our synthetic data matches the performance of policies trained solely on teleoperated demonstrations at approximately a third of the collection cost, demonstrating the cost efficiency of our approach."
+          "description": "Robot foundation models have shown remarkable performance in robot control, yet adapting them to a new task still relies heavily on teleoperated demonstrations. Egocentric human videos offer a scalable substitute, but overlaying rendered robots on human videos or retargeting human poses into robot actions leaves significant visual or action gaps for high-DoF robot embodiments. To address this limitation, we propose RoboTryOn, which treats human-to-robot translation as virtual try-on: try-on keeps the person and swaps the garment, RoboTryOn keeps the demonstrated motion and swaps the human for the robot. Specifically, RoboTryOn converts a human video into a video of the target robot specified by a reference image, while preserving the original task, objects, and background. To maintain visual consistency, we translate selected keyframes autoregressively and use them to guide video synthesis with motion conditioned on the human hand skeleton. Additionally, we use an inverse dynamics model (IDM) that incorporates depth features to infer action labels from synthesized videos for policy learning. Our experiments across multiple humanoid embodiments show that policies trained with our synthetic data improve the average success rate on novel tasks, including challenging bimanual manipulation, from 2% to 60%, without any real robot demonstration of those tasks. Moreover, training with our synthetic data matches the performance of policies trained solely on teleoperated demonstrations at approximately a third of the collection cost, demonstrating the cost efficiency of our approach.",
+          "metrics": {
+            "upvotes": 3,
+            "comments": 1
+          }
         }
       ]
     },
     "hf-trending-papers": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "TokenEconomizer: Experience-Driven Black-Box Cost Control for Coding Agents",
           "url": "https://huggingface.co/papers/2610.22732",
           "publishedAt": "2026-10-14T20:00:00Z",
           "categories": [],
-          "description": "Advances in frontier coding agents have sharply increased the token costs of AI-assisted software engineering. Their token efficiency is typically evaluated on isolated tasks, whereas real-world developers use them to continuously build, update, and maintain large-scale projects. This mismatch motivates us to evaluate agents over sequences of realistic coding tasks, where we find that agents exhibit recurring environment-dependent token costs that existing methods struggle to reduce. To minimize these costs, we introduce TokenEconomizer, an external controller that cuts environment-specific token costs over a sequence of tasks. These cuts come from determining (i) which operational micro-skills to inject, (ii) which persistently irrelevant tools to prune, and (iii) when to intervene in unproductive failure loops. Across Claude Code, Codex, and GitHub Copilot CLI paired with frontier models, TokenEconomizer reduces the average token cost by 18.4-30.9% with comparable task success. Savings hold in every repository under every tested agent-model setting and generalize to diverse domains such as sequential web development and security auditing, where costs fall by 6.4-21.2% depending on task structure. Our work establishes adaptive black-box cost control as a promising direction for reducing token costs of coding agents in realistic settings."
+          "description": "Advances in frontier coding agents have sharply increased the token costs of AI-assisted software engineering. Their token efficiency is typically evaluated on isolated tasks, whereas real-world developers use them to continuously build, update, and maintain large-scale projects. This mismatch motivates us to evaluate agents over sequences of realistic coding tasks, where we find that agents exhibit recurring environment-dependent token costs that existing methods struggle to reduce. To minimize these costs, we introduce TokenEconomizer, an external controller that cuts environment-specific token costs over a sequence of tasks. These cuts come from determining (i) which operational micro-skills to inject, (ii) which persistently irrelevant tools to prune, and (iii) when to intervene in unproductive failure loops. Across Claude Code, Codex, and GitHub Copilot CLI paired with frontier models, TokenEconomizer reduces the average token cost by 18.4-30.9% with comparable task success. Savings hold in every repository under every tested agent-model setting and generalize to diverse domains such as sequential web development and security auditing, where costs fall by 6.4-21.2% depending on task structure. Our work establishes adaptive black-box cost control as a promising direction for reducing token costs of coding agents in realistic settings.",
+          "metrics": {
+            "upvotes": 12,
+            "comments": 2
+          }
         },
         {
           "title": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
           "url": "https://huggingface.co/papers/2412.20138",
           "publishedAt": "2024-12-28T07:54:06Z",
           "categories": [],
-          "description": "Significant progress has been made in automated problem-solving using societies of agents powered by large language models (LLMs). In finance, efforts have largely focused on single-agent systems handling specific tasks or multi-agent frameworks independently gathering data. However, the multi-agent systems' potential to replicate real-world trading firms' collaborative dynamics remains underexplored. TradingAgents proposes a novel stock trading framework inspired by trading firms, featuring LLM-powered agents in specialized roles such as fundamental analysts, sentiment analysts, technical analysts, and traders with varied risk profiles. The framework includes Bull and Bear researcher agents assessing market conditions, a risk management team monitoring exposure, and traders synthesizing insights from debates and historical data to make informed decisions. By simulating a dynamic, collaborative trading environment, this framework aims to improve trading performance. Detailed architecture and extensive experiments reveal its superiority over baseline models, with notable improvements in cumulative returns, Sharpe ratio, and maximum drawdown, highlighting the potential of multi-agent LLM frameworks in financial trading. TradingAgents is available at https://github.com/TauricResearch/TradingAgents."
+          "description": "Significant progress has been made in automated problem-solving using societies of agents powered by large language models (LLMs). In finance, efforts have largely focused on single-agent systems handling specific tasks or multi-agent frameworks independently gathering data. However, the multi-agent systems' potential to replicate real-world trading firms' collaborative dynamics remains underexplored. TradingAgents proposes a novel stock trading framework inspired by trading firms, featuring LLM-powered agents in specialized roles such as fundamental analysts, sentiment analysts, technical analysts, and traders with varied risk profiles. The framework includes Bull and Bear researcher agents assessing market conditions, a risk management team monitoring exposure, and traders synthesizing insights from debates and historical data to make informed decisions. By simulating a dynamic, collaborative trading environment, this framework aims to improve trading performance. Detailed architecture and extensive experiments reveal its superiority over baseline models, with notable improvements in cumulative returns, Sharpe ratio, and maximum drawdown, highlighting the potential of multi-agent LLM frameworks in financial trading. TradingAgents is available at https://github.com/TauricResearch/TradingAgents.",
+          "metrics": {
+            "upvotes": 161,
+            "comments": 6
+          }
         },
         {
           "title": "Kronos: A Foundation Model for the Language of Financial Markets",
           "url": "https://huggingface.co/papers/2508.02739",
           "publishedAt": "2025-08-02T09:15:59Z",
           "categories": [],
-          "description": "The success of large-scale pre-training paradigm, exemplified by Large Language Models (LLMs), has inspired the development of Time Series Foundation Models (TSFMs). However, their application to financial candlestick (K-line) data remains limited, often underperforming non-pre-trained architectures. Moreover, existing TSFMs often overlook crucial downstream tasks such as volatility prediction and synthetic data generation. To address these limitations, we propose Kronos, a unified, scalable pre-training framework tailored to financial K-line modeling. Kronos introduces a specialized tokenizer that discretizes continuous market information into token sequences, preserving both price dynamics and trade activity patterns. We pre-train Kronos using an autoregressive objective on a massive, multi-market corpus of over 12 billion K-line records from 45 global exchanges, enabling it to learn nuanced temporal and cross-asset representations. Kronos excels in a zero-shot setting across a diverse set of financial tasks. On benchmark datasets, Kronos boosts price series forecasting RankIC by 93% over the leading TSFM and 87% over the best non-pre-trained baseline. It also achieves a 9% lower MAE in volatility forecasting and a 22% improvement in generative fidelity for synthetic K-line sequences. These results establish Kronos as a robust, versatile foundation model for end-to-end financial time series analysis. Our pre-trained model is publicly available at https://github.com/shiyu-coder/Kronos."
+          "description": "The success of large-scale pre-training paradigm, exemplified by Large Language Models (LLMs), has inspired the development of Time Series Foundation Models (TSFMs). However, their application to financial candlestick (K-line) data remains limited, often underperforming non-pre-trained architectures. Moreover, existing TSFMs often overlook crucial downstream tasks such as volatility prediction and synthetic data generation. To address these limitations, we propose Kronos, a unified, scalable pre-training framework tailored to financial K-line modeling. Kronos introduces a specialized tokenizer that discretizes continuous market information into token sequences, preserving both price dynamics and trade activity patterns. We pre-train Kronos using an autoregressive objective on a massive, multi-market corpus of over 12 billion K-line records from 45 global exchanges, enabling it to learn nuanced temporal and cross-asset representations. Kronos excels in a zero-shot setting across a diverse set of financial tasks. On benchmark datasets, Kronos boosts price series forecasting RankIC by 93% over the leading TSFM and 87% over the best non-pre-trained baseline. It also achieves a 9% lower MAE in volatility forecasting and a 22% improvement in generative fidelity for synthetic K-line sequences. These results establish Kronos as a robust, versatile foundation model for end-to-end financial time series analysis. Our pre-trained model is publicly available at https://github.com/shiyu-coder/Kronos.",
+          "metrics": {
+            "upvotes": 63,
+            "comments": 4
+          }
         },
         {
           "title": "FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution",
           "url": "https://huggingface.co/papers/2608.16157",
           "publishedAt": "2026-08-16T20:00:00Z",
           "categories": [],
-          "description": "Frontier open-weight models are increasingly available, but serving them still largely assumes datacenter infrastructure. We present FreeToken, an edge-native MoE serving system that treats a personal machine not as a small GPU, but as a unified, elastic inference platform. FreeToken co-designs the full serving stack, including model layout and loading, expert residency, CPU--GPU execution, agentic state reuse, and runtime memory management, around two realities of local AI: agent workloads continuously change their execution pattern, and edge hardware exposes heterogeneous resources whose balance differs from machine to machine. Rather than committing to a fixed offloading strategy, FreeToken continuously maps computation and model state onto the resources actually available. FreeToken supports more than 20 MoE models and real coding and tool-using agents across hardware ranging from an 8GB laptop GPU to a single workstation GPU. More importantly, it changes what these machines can practically serve, from a 35B model on a laptop to a 284B model on a gaming desktop and the 753B GLM-5.2 on a single workstation GPU. FreeToken turns open weights into deployable local software, making the machines users already own a practical platform for frontier-scale intelligence. We release the system at flashml.ai."
+          "description": "Frontier open-weight models are increasingly available, but serving them still largely assumes datacenter infrastructure. We present FreeToken, an edge-native MoE serving system that treats a personal machine not as a small GPU, but as a unified, elastic inference platform. FreeToken co-designs the full serving stack, including model layout and loading, expert residency, CPU--GPU execution, agentic state reuse, and runtime memory management, around two realities of local AI: agent workloads continuously change their execution pattern, and edge hardware exposes heterogeneous resources whose balance differs from machine to machine. Rather than committing to a fixed offloading strategy, FreeToken continuously maps computation and model state onto the resources actually available. FreeToken supports more than 20 MoE models and real coding and tool-using agents across hardware ranging from an 8GB laptop GPU to a single workstation GPU. More importantly, it changes what these machines can practically serve, from a 35B model on a laptop to a 284B model on a gaming desktop and the 753B GLM-5.2 on a single workstation GPU. FreeToken turns open weights into deployable local software, making the machines users already own a practical platform for frontier-scale intelligence. We release the system at flashml.ai.",
+          "metrics": {
+            "upvotes": 111,
+            "comments": 2
+          }
         },
         {
           "title": "Harness^2: Recursive Agent Harnessing for an Open World",
           "url": "https://huggingface.co/papers/2610.14224",
           "publishedAt": "2026-10-08T20:00:00Z",
           "categories": [],
-          "description": "LLM agents' capabilities depend not only on their underlying models but also on their execution harnesses. Recursive self-improvement (RSI) offers a promising approach to automatically evolve these harnesses. However, deploying RSI in open-world settings still faces two critical challenges. First, open-world tasks are typically unseen during the harness design phase and novel at test time, leaving no ground-truth verifiers to reliably guide online harness edits. Second, the RSI process remains highly task-specific and fails to generalize to novel scenarios. We introduce Harness^2, a plug-and-play, recursive agent harnessing framework that addresses these challenges through two connected levels of recursion. Task-level recursion refines the current task's harness using a contrastive Propose-Probe-Compose step that reliably guides edits without ground-truth verifiers, and can be scaled further via parallel or sequential recursion. Harnessing-level recursion then extracts experience from these edits to update a continual improvement harness, enabling the agent to better adapt to future tasks. Across three professional benchmarks and four model-harness configurations, a single step consistently improves GLM-5 and Gemini 3.5 Flash over their base harnesses, yielding gains of up to 11.5 points on WorkBuddy-Bench, 4.5 points on JobBench, and 11.8 percentage points on LAB, with further gains as the task-level recursion budget increases."
+          "description": "LLM agents' capabilities depend not only on their underlying models but also on their execution harnesses. Recursive self-improvement (RSI) offers a promising approach to automatically evolve these harnesses. However, deploying RSI in open-world settings still faces two critical challenges. First, open-world tasks are typically unseen during the harness design phase and novel at test time, leaving no ground-truth verifiers to reliably guide online harness edits. Second, the RSI process remains highly task-specific and fails to generalize to novel scenarios. We introduce Harness^2, a plug-and-play, recursive agent harnessing framework that addresses these challenges through two connected levels of recursion. Task-level recursion refines the current task's harness using a contrastive Propose-Probe-Compose step that reliably guides edits without ground-truth verifiers, and can be scaled further via parallel or sequential recursion. Harnessing-level recursion then extracts experience from these edits to update a continual improvement harness, enabling the agent to better adapt to future tasks. Across three professional benchmarks and four model-harness configurations, a single step consistently improves GLM-5 and Gemini 3.5 Flash over their base harnesses, yielding gains of up to 11.5 points on WorkBuddy-Bench, 4.5 points on JobBench, and 11.8 percentage points on LAB, with further gains as the task-level recursion budget increases.",
+          "metrics": {
+            "upvotes": 68,
+            "comments": 4
+          }
         },
         {
           "title": "Democratizing Robot-Use Agents: A Unified Harness with Open Models",
           "url": "https://huggingface.co/papers/2611.01560",
           "publishedAt": "2026-10-31T20:00:00Z",
           "categories": [],
-          "description": "Robot-use Agents (RUAs) have shown promising zero-shot manipulation capabilities, but reliance on frontier, proprietary models limits research into further training. To democratize RUA research, we introduce uni-robot-agent, a unified harness for competitive open-weight robot use that supports further training. Without privileged inputs, an out-of-the-box Qwen3.8-Flash-Next achieves a RoboDojo Score of 31.39, surpassing the published GPT-6 Astra-RoboProbe result of 28.97 and many VLA/WAM baselines, and performs competitively on 19 real-world tasks. Our analysis across model generations, families, and sizes links effective robot use to four general capabilities, suggesting that future RUA training should develop them jointly."
+          "description": "Robot-use Agents (RUAs) have shown promising zero-shot manipulation capabilities, but reliance on frontier, proprietary models limits research into further training. To democratize RUA research, we introduce uni-robot-agent, a unified harness for competitive open-weight robot use that supports further training. Without privileged inputs, an out-of-the-box Qwen3.8-Flash-Next achieves a RoboDojo Score of 31.39, surpassing the published GPT-6 Astra-RoboProbe result of 28.97 and many VLA/WAM baselines, and performs competitively on 19 real-world tasks. Our analysis across model generations, families, and sizes links effective robot use to four general capabilities, suggesting that future RUA training should develop them jointly.",
+          "metrics": {
+            "upvotes": 43,
+            "comments": 1
+          }
         },
         {
           "title": "Differentiable Data Augmentation with Kornia",
           "url": "https://huggingface.co/papers/2011.09832",
           "publishedAt": "2020-11-19T09:15:21Z",
           "categories": [],
-          "description": "In this paper we present a review of the Kornia differentiable data augmentation (DDA) module for both for spatial (2D) and volumetric (3D) tensors. This module leverages differentiable computer vision solutions from Kornia, with an aim of integrating data augmentation (DA) pipelines and strategies to existing PyTorch components (e.g. autograd for differentiability, optim for optimization). In addition, we provide a benchmark comparing different DA frameworks and a short review for a number of approaches that make use of Kornia DDA."
+          "description": "In this paper we present a review of the Kornia differentiable data augmentation (DDA) module for both for spatial (2D) and volumetric (3D) tensors. This module leverages differentiable computer vision solutions from Kornia, with an aim of integrating data augmentation (DA) pipelines and strategies to existing PyTorch components (e.g. autograd for differentiability, optim for optimization). In addition, we provide a benchmark comparing different DA frameworks and a short review for a number of approaches that make use of Kornia DDA.",
+          "metrics": {
+            "upvotes": 1
+          }
         },
         {
           "title": "Unlimited OCR Works",
           "url": "https://huggingface.co/papers/2606.23050",
           "publishedAt": "2026-06-21T20:00:00Z",
           "categories": [],
-          "description": "Recently, end-to-end OCR models, exemplified by DeepSeek OCR, have once again thrust OCR into the spotlight. A widely held view is that employing a large language model (LLM) as the decoder allows the model to leverage the prior distribution of language, leading to improved OCR performance. However, the downside is equally evident: as the output sequence lengthens, the accumulated KV cache drives up memory consumption and progressively slows down generation. This stands in stark contrast to humans, who exhibit no such decline in efficiency during long-horizon copying tasks. In this technical report, we propose Unlimited OCR, a model designed to emulate human parsing working memory. Taking DeepSeek OCR as the baseline, we replace all attention layers in the decoder with our proposed Reference Sliding Window Attention (R-SWA), which reduces attention computation costs while maintaining a constant KV cache throughout the entire decoding process. By combining the high compression rate of DeepSeek OCR's encoder with our constant KV cache design, Unlimited OCR can transcribe dozens of pages of documents in a single forward pass under a standard maximum length of 32K. More importantly, R-SWA is a general-purpose parsing attention mechanism - beyond OCR, it is equally applicable to tasks such as ASR, translation, etc. Codes and model weights are publicly available at http://github.com/baidu/Unlimited-OCR."
+          "description": "Recently, end-to-end OCR models, exemplified by DeepSeek OCR, have once again thrust OCR into the spotlight. A widely held view is that employing a large language model (LLM) as the decoder allows the model to leverage the prior distribution of language, leading to improved OCR performance. However, the downside is equally evident: as the output sequence lengthens, the accumulated KV cache drives up memory consumption and progressively slows down generation. This stands in stark contrast to humans, who exhibit no such decline in efficiency during long-horizon copying tasks. In this technical report, we propose Unlimited OCR, a model designed to emulate human parsing working memory. Taking DeepSeek OCR as the baseline, we replace all attention layers in the decoder with our proposed Reference Sliding Window Attention (R-SWA), which reduces attention computation costs while maintaining a constant KV cache throughout the entire decoding process. By combining the high compression rate of DeepSeek OCR's encoder with our constant KV cache design, Unlimited OCR can transcribe dozens of pages of documents in a single forward pass under a standard maximum length of 32K. More importantly, R-SWA is a general-purpose parsing attention mechanism - beyond OCR, it is equally applicable to tasks such as ASR, translation, etc. Codes and model weights are publicly available at http://github.com/baidu/Unlimited-OCR.",
+          "metrics": {
+            "upvotes": 103,
+            "comments": 7
+          }
         },
         {
           "title": "The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction",
           "url": "https://huggingface.co/papers/2609.18063",
           "publishedAt": "2026-09-15T20:00:00Z",
           "categories": [],
-          "description": "Mixture-of-experts (MoE) inference on consumer hardware is bounded by weight memory: a 35B-class model is 19.5GB at 4-bit, and sparsity shrinks the compute per token, not the bytes that must be held. Naive offloading to SSD does not help on its own, because layer N+1's experts must be chosen before layer N's output exists, so the reads cannot start early enough to hide behind compute. We present Edge0, a streaming MoE inference engine that closes the gap with a prerouter: a per-layer head predicts the next layer's routing one token ahead, and the prediction is consumed as the routing itself, so the staged expert set equals the routed set and nothing is dropped. An unmerged recovery LoRA, trained on the student path, pays back the quality lost to int4 quantization and routing replacement. On a single 24GB machine, Edge0 serves a 35B MoE at 20tok/s inside 3GiB of peak active memory, within a few points of its fp16 teacher on average across five public benchmarks. An 8B tier runs on the same framework, and the framework, checkpoints, and adapters are open source."
+          "description": "Mixture-of-experts (MoE) inference on consumer hardware is bounded by weight memory: a 35B-class model is 19.5GB at 4-bit, and sparsity shrinks the compute per token, not the bytes that must be held. Naive offloading to SSD does not help on its own, because layer N+1's experts must be chosen before layer N's output exists, so the reads cannot start early enough to hide behind compute. We present Edge0, a streaming MoE inference engine that closes the gap with a prerouter: a per-layer head predicts the next layer's routing one token ahead, and the prediction is consumed as the routing itself, so the staged expert set equals the routed set and nothing is dropped. An unmerged recovery LoRA, trained on the student path, pays back the quality lost to int4 quantization and routing replacement. On a single 24GB machine, Edge0 serves a 35B MoE at 20tok/s inside 3GiB of peak active memory, within a few points of its fp16 teacher on average across five public benchmarks. An 8B tier runs on the same framework, and the framework, checkpoints, and adapters are open source.",
+          "metrics": {
+            "upvotes": 30,
+            "comments": 9
+          }
         },
         {
           "title": "HairDeck: Animation-Ready Stylized Hair Cards from a Single Image",
           "url": "https://huggingface.co/papers/2610.40599",
           "publishedAt": "2026-10-28T20:00:00Z",
           "categories": [],
-          "description": "The hair of stylized characters in games and avatars is built from hair cards: artist-placed ribbons whose geometry is the visible hair, animated by spring bones. Existing image-based methods produce realistic hair or a single fused mesh, while CHARM, the only generator of stylized hair cards, decodes a hairstyle autoregressively as a long sequence of control points. Observing that a card hairstyle is an unordered set of artist-defined primitives, we propose HairDeck, which generates it as one: each card is a single token, and a set diffusion transformer denoises all cards together. From a single image, HairDeck generates the cards and the spring-bone chains that drive them, yielding an animatable asset that exports to ready-to-use downstream formats. On CHARM's own test set, it lowers Chamfer distance by 44% and card-orientation error by more than half while running 33 times faster, and from single images it outperforms CHARM, image-to-3D pipelines and strand-based methods. Project page: https://hyzcluster.github.io/HairDeck"
+          "description": "The hair of stylized characters in games and avatars is built from hair cards: artist-placed ribbons whose geometry is the visible hair, animated by spring bones. Existing image-based methods produce realistic hair or a single fused mesh, while CHARM, the only generator of stylized hair cards, decodes a hairstyle autoregressively as a long sequence of control points. Observing that a card hairstyle is an unordered set of artist-defined primitives, we propose HairDeck, which generates it as one: each card is a single token, and a set diffusion transformer denoises all cards together. From a single image, HairDeck generates the cards and the spring-bone chains that drive them, yielding an animatable asset that exports to ready-to-use downstream formats. On CHARM's own test set, it lowers Chamfer distance by 44% and card-orientation error by more than half while running 33 times faster, and from single images it outperforms CHARM, image-to-3D pipelines and strand-based methods. Project page: https://hyzcluster.github.io/HairDeck",
+          "metrics": {
+            "upvotes": 31,
+            "comments": 2
+          }
         },
         {
           "title": "Xiaomi-OCR-0 Technical Report",
           "url": "https://huggingface.co/papers/2609.36136",
           "publishedAt": "2026-09-27T20:00:00Z",
           "categories": [],
-          "description": "Compact OCR-specific vision-language models achieve strong document parsing performance, but often rely on costly supervision and focus primarily on visual-text reconstruction. We introduce Xiaomi-OCR-0, a unified 0.8B model for document parsing and OCR-centric understanding. We build an approximately 170M-sample OCR-centric corpus using an automated data engine that combines expert consensus, render-based verification, and targeted synthesis. Starting from Qwen3.5-0.8B, our progressive training recipe combines Q-Mask-based text anchoring, continued pretraining, and mixed-task reinforcement learning (Mix-RL). Xiaomi-OCR-0 achieves 95.24 on Real5-OmniDocBench, 96.83 on OmniDocBench v1.6, and 87.94 on Wild-OmniDocBench, while reaching an average score of 83.2 across five OCR-oriented VQA benchmarks. Ablations further show that, with sufficient parsing training, OCR-centric understanding supervision provides additional gains for document parsing. Homepage: https://huggingface.co/spaces/SeerRay-Lab/Xiaomi-OCR-0."
+          "description": "Compact OCR-specific vision-language models achieve strong document parsing performance, but often rely on costly supervision and focus primarily on visual-text reconstruction. We introduce Xiaomi-OCR-0, a unified 0.8B model for document parsing and OCR-centric understanding. We build an approximately 170M-sample OCR-centric corpus using an automated data engine that combines expert consensus, render-based verification, and targeted synthesis. Starting from Qwen3.5-0.8B, our progressive training recipe combines Q-Mask-based text anchoring, continued pretraining, and mixed-task reinforcement learning (Mix-RL). Xiaomi-OCR-0 achieves 95.24 on Real5-OmniDocBench, 96.83 on OmniDocBench v1.6, and 87.94 on Wild-OmniDocBench, while reaching an average score of 83.2 across five OCR-oriented VQA benchmarks. Ablations further show that, with sufficient parsing training, OCR-centric understanding supervision provides additional gains for document parsing. Homepage: https://huggingface.co/spaces/SeerRay-Lab/Xiaomi-OCR-0.",
+          "metrics": {
+            "upvotes": 13
+          }
         },
         {
           "title": "WeVisOne-VL: Unified Visual Perception from Objects to Pixels",
           "url": "https://huggingface.co/papers/2610.31329",
           "publishedAt": "2026-10-21T20:00:00Z",
           "categories": [],
-          "description": "Existing vision-language models (VLMs) remain unreliable for fine-grained visual perception. In this report, we present WeVisOne-VL (WeChat Vision All-in-One), a powerful VLM that unifies object-level and pixel-level perception through structured next-token prediction. It supports multiple visual tasks including object detection, referring localization, counting, OCR, segmentation, and matting, enabling localization at any user-specific granularity, from points and boxes to masks and alpha mattes. Architecturally, we integrate a lightweight pixel decoder into the VLM via a special token to generate instance-level pixel outputs. We train the model with a three-stage curriculum SFT followed by mixed-task RL. Across over 30 benchmarks, WeVisOne-VL demonstrates leading performance on both object-level and pixel-level tasks, while maintaining robust rejection for object-absent queries. By releasing WeVisOne-VL to the open-source community, we hope to advance VLMs from broad visual understanding toward truly reliable perception systems for real-world deployment."
+          "description": "Existing vision-language models (VLMs) remain unreliable for fine-grained visual perception. In this report, we present WeVisOne-VL (WeChat Vision All-in-One), a powerful VLM that unifies object-level and pixel-level perception through structured next-token prediction. It supports multiple visual tasks including object detection, referring localization, counting, OCR, segmentation, and matting, enabling localization at any user-specific granularity, from points and boxes to masks and alpha mattes. Architecturally, we integrate a lightweight pixel decoder into the VLM via a special token to generate instance-level pixel outputs. We train the model with a three-stage curriculum SFT followed by mixed-task RL. Across over 30 benchmarks, WeVisOne-VL demonstrates leading performance on both object-level and pixel-level tasks, while maintaining robust rejection for object-absent queries. By releasing WeVisOne-VL to the open-source community, we hope to advance VLMs from broad visual understanding toward truly reliable perception systems for real-world deployment.",
+          "metrics": {
+            "upvotes": 44,
+            "comments": 4
+          }
         }
       ]
     },
@@ -3351,172 +3444,300 @@
     },
     "hf-models": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
           "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
-          "description": "automatic-speech-recognition · 887 赞"
+          "description": "",
+          "metrics": {
+            "likes": 993,
+            "downloads": 44939
+          },
+          "task": "automatic-speech-recognition"
         },
         {
           "title": "LiquidAI/LFM3-1.7B",
           "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
-          "description": "text-generation · 1445 赞"
+          "description": "",
+          "metrics": {
+            "likes": 1446,
+            "downloads": 54959
+          },
+          "task": "text-generation"
         },
         {
           "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
           "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-          "description": "image-text-to-text · 5217 赞"
+          "description": "",
+          "metrics": {
+            "likes": 5219,
+            "downloads": 221621
+          },
+          "task": "image-text-to-text"
         },
         {
           "title": "mistralai/Mistral-Large-4-1T-A52B",
           "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
-          "description": "image-text-to-text · 1566 赞"
+          "description": "",
+          "metrics": {
+            "likes": 1567,
+            "downloads": 8200
+          },
+          "task": "image-text-to-text"
         },
         {
           "title": "speridlabs/idol",
           "url": "https://huggingface.co/speridlabs/idol",
-          "description": "image-to-3d · 551 赞"
+          "description": "",
+          "metrics": {
+            "likes": 553,
+            "downloads": 14613
+          },
+          "task": "image-to-3d"
         },
         {
           "title": "Pika-Labs/Pika-H3-Flex",
           "url": "https://huggingface.co/Pika-Labs/Pika-H3-Flex",
-          "description": "image-to-video · 407 赞"
+          "description": "",
+          "metrics": {
+            "likes": 410,
+            "downloads": 749
+          },
+          "task": "image-to-video"
         },
         {
           "title": "Lightricks/LTX-2.5",
           "url": "https://huggingface.co/Lightricks/LTX-2.5",
-          "description": "image-to-video · 10543 赞"
+          "description": "",
+          "metrics": {
+            "likes": 10545,
+            "downloads": 2493402
+          },
+          "task": "image-to-video"
         },
         {
           "title": "ccore/Qwen3.5-4B-3D-Coder",
           "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder",
-          "description": "625 赞"
+          "description": "",
+          "metrics": {
+            "likes": 627,
+            "downloads": 123321
+          }
         },
         {
           "title": "burner22/numbat",
           "url": "https://huggingface.co/burner22/numbat",
-          "description": "328 赞"
+          "description": "",
+          "metrics": {
+            "likes": 329,
+            "downloads": 8118
+          }
         },
         {
           "title": "Qwen/Qwen3.8-27B",
           "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-          "description": "image-text-to-text · 19109 赞"
+          "description": "",
+          "metrics": {
+            "likes": 19113,
+            "downloads": 8032442
+          },
+          "task": "image-text-to-text"
         }
       ]
     },
     "hf-datasets": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "nvidia/simready-assets",
           "url": "https://huggingface.co/datasets/nvidia/simready-assets",
-          "description": "Welcome to NVIDIA SimReady Assets Welcome to NVIDIA's open-source SimReady Assets dataset! SimReady Central brings together OEM-curated datasets like this one, helping you discover simulation-ready assets for your projects. Interested in contributing? Visit nvidia/simready-central-library and request contributor access through the Community tab."
+          "description": "Welcome to NVIDIA SimReady Assets Welcome to NVIDIA's open-source SimReady Assets dataset! SimReady Central brings together OEM-curated datasets like this one, helping you discover simulation-ready assets for your projects. Interested in contributing? Visit nvidia/simready-central-library and request contributor access through the Community tab.",
+          "metrics": {
+            "likes": 1365,
+            "downloads": 1267344
+          }
         },
         {
           "title": "Vyber07/cyber-security",
           "url": "https://huggingface.co/datasets/Vyber07/cyber-security",
-          "description": "Cybersecurity AI Knowledge Base — PhD-Level Dataset Overview This is the most comprehensive cybersecurity knowledge base ever assembled for AI training. It covers all domains of cybersecurity at PhD-level depth — from offensive red teaming and bug bounty exploitation to defensive SOC operations, digital forensics, and cutting-edge AI/LLM security. Size: 16 GB | Files: 507 | Domains: 30+ | Sources: 15+ platforms Purpose Train the world's most… See the full description on the dataset page: https://huggingface.co/datasets/Vyber07/cyber-security."
+          "description": "Cybersecurity AI Knowledge Base — PhD-Level Dataset Overview This is the most comprehensive cybersecurity knowledge base ever assembled for AI training. It covers all domains of cybersecurity at PhD-level depth — from offensive red teaming and bug bounty exploitation to defensive SOC operations, digital forensics, and cutting-edge AI/LLM security. Size: 16 GB | Files: 507 | Domains: 30+ | Sources: 15+ platforms Purpose Train the world's most… See the full description on the dataset page: https://huggingface.co/datasets/Vyber07/cyber-security.",
+          "metrics": {
+            "likes": 652,
+            "downloads": 10815
+          }
         },
         {
           "title": "open-index/hacker-news",
           "url": "https://huggingface.co/datasets/open-index/hacker-news",
-          "description": "Hacker News - Complete Archive Every Hacker News item since 2006, live-updated every 5 minutes What is it? This dataset contains the complete Hacker News archive: every story, comment, Ask HN, Show HN, job posting, and poll ever submitted to the site. Hacker News is one of the longest-running and most influential technology communities on the internet, operated by Y Combinator since 2007. It has become the de facto gathering place for founders, engineers… See the full description on the dataset page: https://huggingface.co/datasets/open-index/hacker-news."
+          "description": "Hacker News - Complete Archive Every Hacker News item since 2006, live-updated every 5 minutes What is it? This dataset contains the complete Hacker News archive: every story, comment, Ask HN, Show HN, job posting, and poll ever submitted to the site. Hacker News is one of the longest-running and most influential technology communities on the internet, operated by Y Combinator since 2007. It has become the de facto gathering place for founders, engineers… See the full description on the dataset page: https://huggingface.co/datasets/open-index/hacker-news.",
+          "metrics": {
+            "likes": 467,
+            "downloads": 467351
+          }
         },
         {
           "title": "scenario-labs/3d-collection",
           "url": "https://huggingface.co/datasets/scenario-labs/3d-collection",
-          "description": "Scenario 3D Collection 1,342 selected AI-generated 3D examples, with all 1,500 output files downloaded. About 39 GB including previews and available source inputs. Another 393 examples made with Tencent Hunyuan models are published separately under their own licenses: Scenario 3D Collection (Hunyuan). License CC BY 4.0. Credit \"Scenario\". All assets are AI-generated. Metadata data/train-00000-of-00001.parquet is the single metadata source, with one… See the full description on the dataset page: https://huggingface.co/datasets/scenario-labs/3d-collection."
+          "description": "Scenario 3D Collection 1,342 selected AI-generated 3D examples, with all 1,500 output files downloaded. About 39 GB including previews and available source inputs. Another 393 examples made with Tencent Hunyuan models are published separately under their own licenses: Scenario 3D Collection (Hunyuan). License CC BY 4.0. Credit \"Scenario\". All assets are AI-generated. Metadata data/train-00000-of-00001.parquet is the single metadata source, with one… See the full description on the dataset page: https://huggingface.co/datasets/scenario-labs/3d-collection.",
+          "metrics": {
+            "likes": 380,
+            "downloads": 41265
+          }
         },
         {
           "title": "codepawl/simready-glb",
           "url": "https://huggingface.co/datasets/codepawl/simready-glb",
-          "description": "SimReady GLB Open the 3D viewer to search all 2,595 models and orbit any of them in the browser. Web-ready glTF binary (.glb) copies of the 3D models in nvidia/simready-assets. Each file loads directly in three.js, Babylon.js, model-viewer or any glTF 2.0 viewer. Models by NVIDIA SimReady, licensed CC BY 4.0. This dataset converts and compresses them. It does not change what they show. If you use these files, credit NVIDIA as the original author and link the source dataset.… See the full description on the dataset page: https://huggingface.co/datasets/codepawl/simready-glb."
+          "description": "SimReady GLB Open the 3D viewer to search all 2,595 models and orbit any of them in the browser. Web-ready glTF binary (.glb) copies of the 3D models in nvidia/simready-assets. Each file loads directly in three.js, Babylon.js, model-viewer or any glTF 2.0 viewer. Models by NVIDIA SimReady, licensed CC BY 4.0. This dataset converts and compresses them. It does not change what they show. If you use these files, credit NVIDIA as the original author and link the source dataset.… See the full description on the dataset page: https://huggingface.co/datasets/codepawl/simready-glb.",
+          "metrics": {
+            "likes": 61,
+            "downloads": 20022
+          }
         },
         {
           "title": "venvoo/china-a-share-l2-level2-limit-order-book-tick-data",
           "url": "https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data",
-          "description": "China A-Share Level-2 Archive 2017–2026 · Quotes, orders and trades · Parquet A historical archive of Chinese exchange Level-2 data, supplied through a vendor export. It includes ten-level quote snapshots, individual order messages and trade-stream records. The files cover A-share stocks and non-stock instruments such as ETFs and bonds. “Full-market” describes the export's scope, not a guarantee that every instrument or message is present. 中国证券市场 Level-2… See the full description on the dataset page: https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data."
+          "description": "China A-Share Level-2 Archive 2017–2026 · Quotes, orders and trades · Parquet A historical archive of Chinese exchange Level-2 data, supplied through a vendor export. It includes ten-level quote snapshots, individual order messages and trade-stream records. The files cover A-share stocks and non-stock instruments such as ETFs and bonds. “Full-market” describes the export's scope, not a guarantee that every instrument or message is present. 中国证券市场 Level-2… See the full description on the dataset page: https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data.",
+          "metrics": {
+            "likes": 618,
+            "downloads": 203151
+          }
         },
         {
           "title": "secemp9/arxiv-complete",
           "url": "https://huggingface.co/datasets/secemp9/arxiv-complete",
-          "description": "arXiv Complete Corpus A snapshot of arXiv's metadata, version history, submission files and rendered documents. It covers 3,148,796 papers and includes file contents, paths, sizes and SHA-256 digests. Metadata comes from arXiv's OAI-PMH arXivRaw interface; files come from the GCS mirror, S3 source archives and direct PDF fetches. This release holds a PDF for 99.47% of papers and 99.54% of versions reported with a non-zero submission size. It is a one-off snapshot; coverage gaps… See the full description on the dataset page: https://huggingface.co/datasets/secemp9/arxiv-complete."
+          "description": "arXiv Complete Corpus A snapshot of arXiv's metadata, version history, submission files and rendered documents. It covers 3,148,796 papers and includes file contents, paths, sizes and SHA-256 digests. Metadata comes from arXiv's OAI-PMH arXivRaw interface; files come from the GCS mirror, S3 source archives and direct PDF fetches. This release holds a PDF for 99.47% of papers and 99.54% of versions reported with a non-zero submission size. It is a one-off snapshot; coverage gaps… See the full description on the dataset page: https://huggingface.co/datasets/secemp9/arxiv-complete.",
+          "metrics": {
+            "likes": 790,
+            "downloads": 162854
+          }
         },
         {
           "title": "ccore/ThreeJS-3D-Scenes",
           "url": "https://huggingface.co/datasets/ccore/ThreeJS-3D-Scenes",
-          "description": "CCORE Three.js 3D Scenes 4,146 high-quality 3D scene examples with prompts, full thinking traces, and complete HTML/JavaScript responses. The scene code and thinking traces were generated with MiniMax M3.1 Flash. This dataset brings together a broad range of Three.js scenes, from individual objects and detailed interiors to architecture, landscapes, animated mechanisms, and voxel environments. It is intended for training and evaluating models that generate 3D scenes from… See the full description on the dataset page: https://huggingface.co/datasets/ccore/ThreeJS-3D-Scenes."
+          "description": "CCORE Three.js 3D Scenes 4,146 high-quality 3D scene examples with prompts, full thinking traces, and complete HTML/JavaScript responses. The scene code and thinking traces were generated with MiniMax M3.1 Flash. This dataset brings together a broad range of Three.js scenes, from individual objects and detailed interiors to architecture, landscapes, animated mechanisms, and voxel environments. It is intended for training and evaluating models that generate 3D scenes from… See the full description on the dataset page: https://huggingface.co/datasets/ccore/ThreeJS-3D-Scenes.",
+          "metrics": {
+            "likes": 57,
+            "downloads": 4116
+          }
         },
         {
           "title": "HuggingFaceBio/FineDNA",
           "url": "https://huggingface.co/datasets/HuggingFaceBio/FineDNA",
-          "description": "FineDNA FineDNA is the training data of Carbon-X, the model that taught Qwen3-14B to read DNA, for all three of its training stages. Each stage is a group of configs: stage configs size starts from Mid-training mid_*, one per source (23) 514.30B tokens, of which the run read 302B Qwen/Qwen3-14B SFT sft_mix, and sft_* for each of its 8 domains 203,923 conversations, 230.3M tokens HuggingFaceBio/Carbon-X-Base RL rl_mix 98,433 prompts, 61.1M tokens… See the full description on the dataset page: https://huggingface.co/datasets/HuggingFaceBio/FineDNA."
+          "description": "FineDNA FineDNA is the training data of Carbon-X, the model that taught Qwen3-14B to read DNA, for all three of its training stages. Each stage is a group of configs: stage configs size starts from Mid-training mid_*, one per source (23) 514.30B tokens, of which the run read 302B Qwen/Qwen3-14B SFT sft_mix, and sft_* for each of its 8 domains 203,923 conversations, 230.3M tokens HuggingFaceBio/Carbon-X-Base RL rl_mix 98,433 prompts, 61.1M tokens… See the full description on the dataset page: https://huggingface.co/datasets/HuggingFaceBio/FineDNA.",
+          "metrics": {
+            "likes": 51,
+            "downloads": 8693
+          }
         },
         {
           "title": "PentesterFlow/OffsecCyber",
           "url": "https://huggingface.co/datasets/PentesterFlow/OffsecCyber",
-          "description": "Security Vulnerability Instruction Dataset An English-language dataset of security-focused assistant conversations about software vulnerabilities. Examples cover vulnerability explanations, CVE analysis, severity and impact, CWE references, remediation guidance, and offensive/web-appsec reasoning. It combines CVE-oriented examples with NVD records, HackerOne report conversations, PortSwigger lab material, and offensive-security instruction data, and can support instruction… See the full description on the dataset page: https://huggingface.co/datasets/PentesterFlow/OffsecCyber."
+          "description": "Security Vulnerability Instruction Dataset An English-language dataset of security-focused assistant conversations about software vulnerabilities. Examples cover vulnerability explanations, CVE analysis, severity and impact, CWE references, remediation guidance, and offensive/web-appsec reasoning. It combines CVE-oriented examples with NVD records, HackerOne report conversations, PortSwigger lab material, and offensive-security instruction data, and can support instruction… See the full description on the dataset page: https://huggingface.co/datasets/PentesterFlow/OffsecCyber.",
+          "metrics": {
+            "likes": 50,
+            "downloads": 2756
+          }
         }
       ]
     },
     "hf-spaces": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "a-test-user-in-the-wrold/qwen-image-21-uncensored",
           "url": "https://huggingface.co/spaces/a-test-user-in-the-wrold/qwen-image-21-uncensored",
-          "description": "gradio · 265 赞"
+          "description": "",
+          "metrics": {
+            "likes": 265
+          },
+          "sdk": "gradio"
         },
         {
           "title": "kulkas2pintu/wan777",
           "url": "https://huggingface.co/spaces/kulkas2pintu/wan777",
-          "description": "gradio · 1269 赞"
+          "description": "",
+          "metrics": {
+            "likes": 1270
+          },
+          "sdk": "gradio"
         },
         {
           "title": "nvidia/simready-central",
           "url": "https://huggingface.co/spaces/nvidia/simready-central",
-          "description": "docker · 368 赞"
+          "description": "",
+          "metrics": {
+            "likes": 368
+          },
+          "sdk": "docker"
         },
         {
           "title": "speridlabs/idol",
           "url": "https://huggingface.co/spaces/speridlabs/idol",
-          "description": "gradio · 114 赞"
+          "description": "",
+          "metrics": {
+            "likes": 114
+          },
+          "sdk": "gradio"
         },
         {
           "title": "hugging-apps/bfs-best-face-swap",
           "url": "https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap",
-          "description": "gradio · 733 赞"
+          "description": "",
+          "metrics": {
+            "likes": 733
+          },
+          "sdk": "gradio"
         },
         {
           "title": "LiquidAI/LFM3-Omni-2B-WebGPU",
           "url": "https://huggingface.co/spaces/LiquidAI/LFM3-Omni-2B-WebGPU",
-          "description": "static · 94 赞"
+          "description": "",
+          "metrics": {
+            "likes": 94
+          },
+          "sdk": "static"
         },
         {
           "title": "linoyts/qwen-image-2-1-realtime",
           "url": "https://huggingface.co/spaces/linoyts/qwen-image-2-1-realtime",
-          "description": "gradio · 150 赞"
+          "description": "",
+          "metrics": {
+            "likes": 150
+          },
+          "sdk": "gradio"
         },
         {
           "title": "briaai/Fibo-2.0-editing",
           "url": "https://huggingface.co/spaces/briaai/Fibo-2.0-editing",
-          "description": "gradio · 214 赞"
+          "description": "",
+          "metrics": {
+            "likes": 214
+          },
+          "sdk": "gradio"
         },
         {
           "title": "JCisHERE/wan2-2-i2v-v3",
           "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
-          "description": "gradio · 196 赞"
+          "description": "",
+          "metrics": {
+            "likes": 196
+          },
+          "sdk": "gradio"
         },
         {
           "title": "wank3r/minimax-h3",
           "url": "https://huggingface.co/spaces/wank3r/minimax-h3",
-          "description": "gradio · 281 赞"
+          "description": "",
+          "metrics": {
+            "likes": 281
+          },
+          "sdk": "gradio"
         }
       ]
     },
@@ -3526,115 +3747,185 @@
     },
     "github-trending": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "thedotmack/claude-mem",
           "url": "https://github.com/thedotmack/claude-mem",
-          "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More"
+          "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+          "metrics": {
+            "stars": 112408,
+            "starsToday": 1165
+          }
         },
         {
           "title": "vercel-labs/agent-desktop",
           "url": "https://github.com/vercel-labs/agent-desktop",
-          "description": "Computer use CLI for AI agents"
+          "description": "Computer use CLI for AI agents",
+          "metrics": {
+            "stars": 13945,
+            "starsToday": 2463
+          }
         },
         {
           "title": "max-sixty/worktrunk",
           "url": "https://github.com/max-sixty/worktrunk",
-          "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows"
+          "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+          "metrics": {
+            "stars": 10763,
+            "starsToday": 524
+          }
         },
         {
           "title": "JustVugg/colibri",
           "url": "https://github.com/JustVugg/colibri",
-          "description": "A hierarchical inference engine for frontier MoE models: hot experts on the GPU (CUDA, Vulkan), warm ones in RAM, cold ones streamed from NVMe. Written in C, runs on the hardware you already own."
+          "description": "A hierarchical inference engine for frontier MoE models: hot experts on the GPU (CUDA, Vulkan), warm ones in RAM, cold ones streamed from NVMe. Written in C, runs on the hardware you already own.",
+          "metrics": {
+            "stars": 47529,
+            "starsToday": 635
+          }
         },
         {
           "title": "mattpocock/skills",
           "url": "https://github.com/mattpocock/skills",
-          "description": "Skills for Real Engineers. Straight from my .agents directory."
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "metrics": {
+            "stars": 312092,
+            "starsToday": 1376
+          }
         },
         {
           "title": "p-e-w/heretic",
           "url": "https://github.com/p-e-w/heretic",
-          "description": "Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more"
+          "description": "Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more",
+          "metrics": {
+            "stars": 39154,
+            "starsToday": 726
+          }
         },
         {
           "title": "spotify/portal-ai-plugins",
           "url": "https://github.com/spotify/portal-ai-plugins",
-          "description": ""
+          "description": "",
+          "metrics": {
+            "stars": 3131,
+            "starsToday": 227
+          }
         },
         {
           "title": "floci-io/floci",
           "url": "https://github.com/floci-io/floci",
-          "description": "Light, fluffy, and always free - The AWS Local Emulator alternative"
+          "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
+          "metrics": {
+            "stars": 29208,
+            "starsToday": 1082
+          }
         },
         {
           "title": "Usagi-org/ai-goofish-monitor",
           "url": "https://github.com/Usagi-org/ai-goofish-monitor",
-          "description": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。"
+          "description": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+          "metrics": {
+            "stars": 17049,
+            "starsToday": 979
+          }
         },
         {
           "title": "anomalyco/hex",
           "url": "https://github.com/anomalyco/hex",
-          "description": "Local voice dictation for mac, windows and linux"
+          "description": "Local voice dictation for mac, windows and linux",
+          "metrics": {
+            "stars": 4890,
+            "starsToday": 682
+          }
         }
       ]
     },
     "aa-leaderboard": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:00:41Z",
-      "lastSuccessAt": "2026-11-04T11:00:41Z",
+      "checkedAt": "2026-11-04T11:31:43Z",
+      "lastSuccessAt": "2026-11-04T11:31:43Z",
       "items": [
         {
           "title": "Gemini 4 Carbon (high)",
           "url": "https://artificialanalysis.ai/models/gemini-4-carbon",
-          "description": "Intelligence Index 60 · Google"
+          "provider": "Google",
+          "metrics": {
+            "intelligenceIndex": 60
+          }
         },
         {
           "title": "Claude Opus 5.5 (max with fallback)",
           "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
-          "description": "Intelligence Index 59 · Anthropic"
+          "provider": "Anthropic",
+          "metrics": {
+            "intelligenceIndex": 59
+          }
         },
         {
           "title": "Gemini 4 Carbon (medium)",
           "url": "https://artificialanalysis.ai/models/gemini-4-carbon-medium",
-          "description": "Intelligence Index 58 · Google"
+          "provider": "Google",
+          "metrics": {
+            "intelligenceIndex": 58
+          }
         },
         {
           "title": "Claude Opus 5.5 (xhigh with fallback)",
           "url": "https://artificialanalysis.ai/models/claude-opus-5-5-xhigh",
-          "description": "Intelligence Index 57 · Anthropic"
+          "provider": "Anthropic",
+          "metrics": {
+            "intelligenceIndex": 57
+          }
         },
         {
           "title": "GPT-6 Astra (max)",
           "url": "https://artificialanalysis.ai/models/gpt-6-astra",
-          "description": "Intelligence Index 57 · OpenAI"
+          "provider": "OpenAI",
+          "metrics": {
+            "intelligenceIndex": 57
+          }
         },
         {
           "title": "GPT-6 Astra (xhigh)",
           "url": "https://artificialanalysis.ai/models/gpt-6-astra-xhigh",
-          "description": "Intelligence Index 55 · OpenAI"
+          "provider": "OpenAI",
+          "metrics": {
+            "intelligenceIndex": 55
+          }
         },
         {
           "title": "GPT-6 Astra (high)",
           "url": "https://artificialanalysis.ai/models/gpt-6-astra-high",
-          "description": "Intelligence Index 55 · OpenAI"
+          "provider": "OpenAI",
+          "metrics": {
+            "intelligenceIndex": 55
+          }
         },
         {
           "title": "GPT-6.1 Sol (max)",
           "url": "https://artificialanalysis.ai/models/gpt-6-1-sol",
-          "description": "Intelligence Index 55 · OpenAI"
+          "provider": "OpenAI",
+          "metrics": {
+            "intelligenceIndex": 55
+          }
         },
         {
           "title": "Claude Sonnet 5.5 (max with fallback)",
           "url": "https://artificialanalysis.ai/models/claude-sonnet-5-5",
-          "description": "Intelligence Index 55 · Anthropic"
+          "provider": "Anthropic",
+          "metrics": {
+            "intelligenceIndex": 55
+          }
         },
         {
           "title": "Gemini 4 Carbon (low)",
           "url": "https://artificialanalysis.ai/models/gemini-4-carbon-low",
-          "description": "Intelligence Index 54 · Google"
+          "provider": "Google",
+          "metrics": {
+            "intelligenceIndex": 54
+          }
         }
       ]
     }
