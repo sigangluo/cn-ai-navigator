@@ -1,4 +1,4 @@
-# AI Navigator maintenance
+# cn-ai-navigator maintenance
 
 This repository is an index of original AI information sources. The source registry is `data/sources.json`; the site renders every entry in it. Keep that invariant.
 

@@ -18,7 +18,7 @@ from urllib.parse import urljoin, urlparse
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "data" / "sources.json"
 OUTPUT = ROOT / "site" / "data" / "latest.json"
-USER_AGENT = "AI-Navigator/1.0 (public-link-index)"
+USER_AGENT = "cn-ai-navigator/1.0 (public-link-index)"
 MAX_BYTES = 5_000_000
 MAX_ITEMS = 12
 MAX_PREVIEW = 1_800
