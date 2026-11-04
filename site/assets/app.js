@@ -193,7 +193,7 @@ function renderOrgOptions() {
 
 function renderNav() {
   const nav = $('#groupNav'); nav.replaceChildren();
-  [{ id: 'all', name: '全部来源' }, ...state.catalog.groups].forEach((group, index) => {
+  [{ id: 'all', name: '全部入口' }, ...state.catalog.groups].forEach((group, index) => {
     const button = el('button', `nav-item ${state.activeGroup === group.id ? 'active' : ''}`);
     button.type = 'button'; button.setAttribute('aria-pressed', state.activeGroup === group.id);
     button.append(el('span', 'nav-index', String(index).padStart(2, '0')), el('span', 'nav-name', group.name));
@@ -219,7 +219,7 @@ function render() {
   $('#sourceCount').textContent = sources.length;
   const unhealthy = sources.filter((source) => source.mode !== 'link' && (resultFor(source).status !== 'ok' || !recentlySynced(resultFor(source))));
   const notice = $('#syncNotice'); notice.hidden = unhealthy.length === 0;
-  if (unhealthy.length) notice.textContent = `${unhealthy.length} 个自动来源近期未成功同步；旧结果和官网入口仍可访问。`;
+  if (unhealthy.length) notice.textContent = `${unhealthy.length} 个入口近期未成功同步；旧结果和官网链接仍可访问。`;
   $('#syncTime').textContent = state.snapshot?.generatedAt ? `快照 ${new Intl.DateTimeFormat('zh-CN', { timeZone: tz, month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(state.snapshot.generatedAt))} · 新加坡时间` : '等候首次同步';
   const visible = sources.filter(matches);
   $('#resetFilters').hidden = state.activeGroup === 'all' && state.language === 'all' && state.org === 'all' && !state.todayOnly && !state.query;
@@ -231,14 +231,14 @@ function render() {
     const section = el('section', 'group-section'); section.id = `group-${group.id}`;
     const heading = el('div', 'group-heading');
     const label = el('div'); label.append(el('span', 'section-kicker', group.id.toUpperCase()), el('h2', '', group.name));
-    heading.append(label, el('p', '', group.description), el('span', 'group-count', `${entries.length} 个来源`));
+    heading.append(label, el('p', '', group.description), el('span', 'group-count', `${entries.length} 个入口`));
     section.append(heading);
     for (const language of [{ id: 'zh', name: '中文' }, { id: 'non_zh', name: '非中文' }]) {
       const languageEntries = entries.filter((source) => source.language === language.id);
       if (!languageEntries.length) continue;
       const subsection = el('div', 'language-section');
       const subheading = el('div', 'language-heading');
-      subheading.append(el('h3', '', language.name), el('span', '', `${languageEntries.length} 个来源`));
+      subheading.append(el('h3', '', language.name), el('span', '', `${languageEntries.length} 个入口`));
       subsection.append(subheading);
       const list = el('div', 'source-list');
       languageEntries.forEach((source) => list.append(sourceCard(source)));
@@ -246,13 +246,13 @@ function render() {
     }
     container.append(section);
   }
-  if (!visible.length) container.append(el('div', 'empty', '没有匹配的来源。可清除筛选后浏览全部入口。'));
+  if (!visible.length) container.append(el('div', 'empty', '没有匹配的入口。可清除筛选后浏览完整目录。'));
 }
 
 async function init() {
   try {
     const [catalogResponse, snapshotResponse] = await Promise.all([fetch('data/sources.json'), fetch('data/latest.json')]);
-    if (!catalogResponse.ok) throw new Error('来源目录加载失败');
+    if (!catalogResponse.ok) throw new Error('目录加载失败');
     state.catalog = await catalogResponse.json();
     state.snapshot = snapshotResponse.ok ? await snapshotResponse.json() : null;
     state.catalog.sources.forEach((source) => orgCounts.set(source.org, (orgCounts.get(source.org) || 0) + 1));

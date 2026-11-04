@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#13242a">
-  <meta name="description" content="AI 信息源目录：查看各来源的最新发布，直达官网阅读。">
-  <title>AI Source Desk · AI 信息源</title>
+  <meta name="description" content="AI 导航台：浏览资讯、研究、论文与开源项目的最新更新，直达原站阅读。">
+  <title>AI 导航台 · 资讯、研究与项目导航</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <a class="skip" href="#content">跳到来源列表</a>
+  <a class="skip" href="#content">跳到入口目录</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="home" href="#content" aria-label="AI Source Desk 首页"><span class="brand-mark" aria-hidden="true">✳</span><span class="brand-copy"><strong>AI SOURCE DESK</strong><small>追踪 AI 来源更新，直达原站阅读</small></span></a>
-      <div class="header-status"><span><strong id="sourceCount">—</strong> 个来源</span><span id="syncTime">正在加载…</span></div>
+      <a class="home" href="#content" aria-label="AI 导航台首页"><span class="brand-mark" aria-hidden="true">✳</span><span class="brand-copy"><strong>AI 导航台</strong><small>发现最新更新，直达原站阅读</small></span></a>
+      <div class="header-status"><span><strong id="sourceCount">—</strong> 个入口</span><span id="syncTime">正在加载…</span></div>
     </div>
   </header>
 
@@ -22,13 +22,13 @@
     <aside class="sidebar" aria-label="分类导航">
       <div class="sidebar-title">浏览分类 <span>INDEX</span></div>
       <nav id="groupNav"></nav>
-      <p class="sidebar-note">先按内容分类，再按入口页面的主要语言分为中文、非中文。所有来源始终保留官网入口。</p>
+      <p class="sidebar-note">先按内容分类，再按页面的主要语言分为中文、非中文。每个条目都能直达官网。</p>
     </aside>
     <div class="main-panel">
       <div class="toolbar">
-        <div class="toolbar-title"><span class="section-kicker">SOURCE INDEX</span><h1>数据源 <span id="visibleCount"></span></h1><p class="project-intro">按来源浏览 AI 资讯、研究、技术文章、论文、开源项目与榜单。可获取的内容定时更新；每个来源都保留官网入口，点击条目到原站阅读。</p></div>
+        <div class="toolbar-title"><span class="section-kicker">EXPLORE</span><h1>信息目录 <span id="visibleCount"></span></h1><p class="project-intro">汇集 AI 资讯、研究、技术文章、论文、开源项目与榜单的最新线索。可获取的栏目定时更新；每个入口都能直达官网，原文留在原站阅读。</p></div>
         <div class="controls">
-          <label class="search-wrap"><span class="sr-only">搜索来源</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="搜索来源、机构、官网栏目…"></label>
+          <label class="search-wrap"><span class="sr-only">搜索入口</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="搜索站点、机构、官网栏目…"></label>
           <div class="language-filter"><button id="languageFilter" class="language-filter-trigger" type="button" aria-expanded="false" aria-controls="languagePanel"><span id="languageFilterLabel">全部语言</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg></button><div id="languagePanel" class="language-panel" role="group" aria-label="筛选语言" hidden><button class="language-option" type="button" data-language="all" aria-pressed="true">全部语言</button><button class="language-option" type="button" data-language="zh" aria-pressed="false">中文</button><button class="language-option" type="button" data-language="non_zh" aria-pressed="false">非中文</button></div></div>
           <div class="org-filter"><button id="orgFilter" class="org-filter-trigger" type="button" aria-expanded="false" aria-controls="orgPanel"><span id="orgFilterLabel">全部机构</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg></button><div id="orgPanel" class="org-panel" hidden><label class="org-search"><span class="sr-only">搜索机构</span><input id="orgSearch" type="search" placeholder="搜索机构…" autocomplete="off"></label><div id="orgOptions" class="org-options" role="group" aria-label="选择机构"></div></div></div>
           <label class="today-switch"><input id="todayOnly" type="checkbox"><span class="switch-track"></span>只看今天更新</label>
@@ -37,10 +37,10 @@
       </div>
       <div class="legend" aria-label="颜色说明"><span><i class="dot fresh"></i> 今天发布</span><span><i class="dot recent"></i> 此前发布</span><span><i class="dot manual"></i> 官网入口</span><span><i class="dot error"></i> 同步异常</span><span class="timezone">日期按新加坡时间</span></div>
       <div class="sync-notice" id="syncNotice" role="status" hidden></div>
-      <div id="sections" aria-live="polite"><div class="loading">正在整理数据源…</div></div>
+      <div id="sections" aria-live="polite"><div class="loading">正在整理目录…</div></div>
     </div>
   </main>
-  <footer><span>AI SOURCE DESK</span><span>来源索引，原文直达。内容与版权属于各发布者。</span></footer>
+  <footer><span>AI 导航台</span><span>信息导航，原文直达。内容与版权属于各发布者。</span></footer>
   <script src="assets/app.js" defer></script>
 </body>
 </html>
