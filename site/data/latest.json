@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-04T11:33:16Z",
+  "generatedAt": "2026-11-04T12:04:18Z",
   "results": {
     "qbitai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "不靠堆砌数据，让机器人看懂真实物理世界 | 招商局狮子山实验室发布「驭物™ Lion-ER-35B-A3B」具身推理模型",
@@ -132,8 +132,8 @@
     },
     "techcrunch-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Anthropic is working on a system to prove AI models’ identity",
@@ -273,9 +273,20 @@
     },
     "the-verge-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
+        {
+          "title": "Google hasn’t figured out how to make AI pay like its search engine",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1024862/google-search-ai-overviews-alphabet-earnings-q3",
+          "publishedAt": "2026-11-03T22:41:23Z",
+          "categories": [
+            "AI",
+            "Google",
+            "Tech"
+          ],
+          "description": "Search queries are growing at their fastest rate in five years, Google parent Alphabet said in its earnings report last week. However, Google's Search revenue growth slowed to 12 percent year over year in the third quarter, down from roughly 17 percent in the previous quarter. Meanwhile, growth in paid clicks - clicks on ads […]"
+        },
         {
           "title": "The biggest modding site in PC gaming is taking a stance on AI",
           "url": "https://www.theverge.com/games/1026085/nexus-mods-ai-disclosures",
@@ -374,24 +385,13 @@
             "News"
           ],
           "description": "Google is completely turning off Search in schools that reject its AI features, the company told The New York Times. The decision was also shared in a broader education-related update from Google on Tuesday, saying that access to Gemini, Gemini Notebook, Gemini in Classroom, and Google Search \"will be entirely off\" for K-12 student accounts […]"
-        },
-        {
-          "title": "Midterm elections 2026: all the news",
-          "url": "https://www.theverge.com/policy/1020640/midterm-elections-2026-all-the-news",
-          "publishedAt": "2026-11-04T05:26:47Z",
-          "categories": [
-            "AI",
-            "Policy",
-            "Politics"
-          ],
-          "description": "The 2026 midterm elections will determine the scope of President Donald Trump’s power in his final two years in office, and signal what voters care about going into the 2028 presidential election. While this year’s races are expected to be most broadly defined by affordability issues, there are several topics impacting the tech industry that […]"
         }
       ]
     },
     "latent-space": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "[AINews] LLMs can read & write neural network weights: \"Weight Space Programming\" cuts Autoresearch out of the RSI loop",
@@ -491,8 +491,8 @@
     },
     "simon": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
@@ -631,8 +631,8 @@
     },
     "openai-news": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Accelerating engineering for the physical world",
@@ -746,8 +746,8 @@
     },
     "anthropic-news": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "AI for Science expands to foundations and research institutions",
@@ -861,8 +861,8 @@
     },
     "anthropic-research": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Progress on provable inference for large language models",
@@ -976,8 +976,8 @@
     },
     "deepmind": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:33:16Z",
-      "lastSuccessAt": "2026-11-04T11:33:16Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Agentic cheminformatics with Google Antigravity",
@@ -1067,8 +1067,8 @@
     },
     "google-research": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "The sleep framework: A new way for LLMs to retain knowledge in continual learning",
@@ -1199,8 +1199,8 @@
     },
     "google-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "The latest AI news we announced in October 2026",
@@ -1328,8 +1328,8 @@
     },
     "mistral": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Le Chonk: Built for Coders, Trusted by Defenders.",
@@ -1475,8 +1475,8 @@
     },
     "ms-research": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Learn the rules: The hacker mindset",
@@ -1572,8 +1572,8 @@
     },
     "apple-ml": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "GHARP: Real-Time Gaussian Head Animation from Large-Scale Reconstruction Prior",
@@ -1657,8 +1657,8 @@
     },
     "bair": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "From CUDA to MLX: How K-Search Brings Decades of Kernel Expertise to Apple Silicon",
@@ -1738,8 +1738,8 @@
     },
     "openai-dev-blog": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Designing failover across OpenAI model providers",
@@ -1865,8 +1865,8 @@
     },
     "hf-blog": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "StateBench: Testing how language models track state changes over long documents",
@@ -1956,8 +1956,8 @@
     },
     "pytorch": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "KVCache Meetup Korea 2026: Event Recap",
@@ -2059,8 +2059,8 @@
     },
     "nvidia": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "AI Is Changing How Semiconductor Fabs Work — and Engineers Are Moving Faster Because of It",
@@ -2202,8 +2202,8 @@
     },
     "ollama": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Speech models in Ollama",
@@ -2305,8 +2305,8 @@
     },
     "cloudflare-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "How Commerce.com and Cloudflare are getting storefronts ready for AI agents",
@@ -2444,8 +2444,8 @@
     },
     "meituan-tech": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "美团正式发布 LongCat-2.5：面向智能体任务的原生多模态模型",
@@ -2529,8 +2529,8 @@
     },
     "arxiv-ai": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Alignment Faking Depends on the Value, Not Just the Model",
@@ -2653,8 +2653,8 @@
     },
     "arxiv-cl": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Rethinking Next-Visit Diagnosis Prediction Beyond Aggregate Metrics: Retrieval--Memory Multi-Agent Adjudication",
@@ -2780,8 +2780,8 @@
     },
     "arxiv-lg": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Latent Cluster Separation as a Regularizer for Lifelong Anomaly Detection",
@@ -2906,8 +2906,8 @@
     },
     "arxiv-cv": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Physics-Informed Functional Tucker Method with RKHS Factors for Sparse Spatiotemporal Reconstruction",
@@ -3028,8 +3028,8 @@
     },
     "arxiv-ro": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Robot-Matched Soft Fingers for UMI Data Collection: Lessons from 100 Hours of Pick and Place",
@@ -3150,8 +3150,8 @@
     },
     "hf-papers": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Kierston & KierstonBench: Simulation of Allentown, PA and Evaluation of Language Models in Crime Investigation and Surveillance Tasks",
@@ -3170,7 +3170,7 @@
           "categories": [],
           "description": "Composed Image Retrieval (CIR) aims to retrieve a target image given a reference image and a modification text. Although recent approaches leveraging Multimodal Large Language Models (MLLMs) have shown significant progress, we argue that the MLLM's compositional understanding remains underutilized. This stems from directly mapping composed queries into a retrieval embedding via contrastive supervision alone, without explicitly resolving the intended visual modifications. In this work, we introduce Factorized MLLM Embeddings (FactEmbed), which decouples compositional query comprehension from building discriminative embeddings. Rather than directly projecting the composed query into a single embedding without internal reasoning, FactEmbed employs a set of factorized latents that simulate the intended visual modifications via an intermediate target imagination objective. This process encourages the latents to ground into target semantics before forming discriminative representations for retrieval. Subsequently, to propagate these factorized representations throughout the model for retrieval, we optimize a factor-level contrastive loss while distilling the decomposed representations into a deeper attention layer of the MLLM. Finally, for efficient inference, we retain the [EOS] token to establish a global-level embedding on top of these factorized latents, while we exploit the mean-pooled factorized latents to rerank a short candidate list at negligible cost, as both are produced by the same forward pass. Extensive evaluations demonstrate that FactEmbed outperforms prior works across CIR benchmarks.",
           "metrics": {
-            "upvotes": 28,
+            "upvotes": 29,
             "comments": 1
           }
         },
@@ -3181,8 +3181,8 @@
           "categories": [],
           "description": "Large reasoning models achieve strong performance on challenging tasks, but their long chain-of-thought often incurs substantial inference costs by continuing to deliberate after sufficient information has been obtained. Existing reasoning compression methods primarily operate on reasoning trajectories, paying less attention to the local decision of whether further reasoning is necessary given the current state. We propose LoCo, a local preference learning method for reasoning compression. LoCo detects candidate overthinking states from the model's own traces, freezes the corresponding reasoning prefixes, regenerates shorter verified continuations from the same states, and trains on the resulting state-conditioned preference pairs with DPO. This formulation teaches the model when to continue reasoning and when to conclude, rather than simply encouraging shorter trajectories overall. We construct training data entirely from self-generated mathematical traces and evaluate LoCo on five mathematical and three code generation benchmarks. LoCo reduces completion length by 41.7\\%--45.4\\% on mathematics and 23.4\\%--36.3\\% on code, while maintaining or improving accuracy and achieving the best AUC across all code benchmarks. LoCo consistently improves the accuracy-efficiency trade-off on mathematics and transfers effectively to code generation despite math-only training, demonstrating the cross-domain generality of local preference learning for reasoning compression. The code and model will be publicly released at https://github.com/MuyaoYuan/LoCo.",
           "metrics": {
-            "upvotes": 3,
-            "comments": 3
+            "upvotes": 41,
+            "comments": 5
           }
         },
         {
@@ -3203,7 +3203,6 @@
           "categories": [],
           "description": "Dialectal Arabic speech recognition remains constrained by the scarcity of dialect-resolved transcribed speech despite the abundance of web audio. We introduce GigaSpeech 3, a corpus of 39,000 hours and 10 million weakly transcribed speech segments covering Algerian, Egyptian, Iraqi, Saudi, and Syrian Arabic. Starting from 60 hours of manual transcription per dialect, we train labeling models using speech-recognition-biased self-supervised learning and apply them to dialect-matched web audio. Data selection and four rounds of noisy-student refinement for Saudi and Syrian Arabic yield the final corpus. We validate its utility through dialect-specific and multi-dialect speech recognition training and cross-domain evaluation. On GigaSpeechBench, the final dialect-specific models outperform their labeling models across all five dialects and achieve a macro-average word error rate of 23.86%, a 16.6% relative reduction from the strongest third-party system covering all five dialects, while outperforming the best third-party result on three dialects. A multi-dialect model using self-predicted dialect identities achieves a macro-average word error rate of 25.51% while also supporting Modern Standard Arabic. Across eight conditions from three external corpora, a GigaSpeech 3-trained Zipformer achieves the lowest word error rate among six evaluated models in every condition, while adapting the Qwen3 speech recognizer on GigaSpeech 3 improves performance across all eight conditions. We release the corpus and recipes as a foundation for dialect-aware Arabic speech processing.",
           "metrics": {
-            "upvotes": 1,
             "comments": 1
           }
         },
@@ -3246,7 +3245,7 @@
           "categories": [],
           "description": "Learning a universal action representation from video requires modeling dynamics that are consistent across different executions of the same action yet invariant to changes in embodiment and appearance. Existing latent action models infer actions from visual transitions, but their representations often entangle the underlying action with irrelevant visual variations, limiting transfer across embodiments. We introduce DreamX, which repurposes a pretrained video diffusion model as a universal latent action learner. Our approach extracts compact latent actions from the video model's rich spatiotemporal features, compressing each latent video frame by 300times (1{,200 rightarrow 4} tokens). In addition, by leveraging the video model's generative prior, these latent actions capture action-relevant dynamics disentangled from visual appearance. The resulting latent space serves as a shared action interface across embodiments (human and robot), environments, and action parameterizations. On LARY-Bench, DreamX achieves state-of-the-art performance among latent action models. Moreover, actions encoded in one setting remain effective in another: the latent space supports any-to-any video transfer and zero-shot action transfer across diverse embodiments and environments. Furthermore, this shared interface also enables policy learning in a compact latent action space, reducing the computational cost of video-diffusion-based policies.",
           "metrics": {
-            "upvotes": 43,
+            "upvotes": 45,
             "comments": 1
           }
         },
@@ -3279,7 +3278,7 @@
           "categories": [],
           "description": "Robot foundation models have shown remarkable performance in robot control, yet adapting them to a new task still relies heavily on teleoperated demonstrations. Egocentric human videos offer a scalable substitute, but overlaying rendered robots on human videos or retargeting human poses into robot actions leaves significant visual or action gaps for high-DoF robot embodiments. To address this limitation, we propose RoboTryOn, which treats human-to-robot translation as virtual try-on: try-on keeps the person and swaps the garment, RoboTryOn keeps the demonstrated motion and swaps the human for the robot. Specifically, RoboTryOn converts a human video into a video of the target robot specified by a reference image, while preserving the original task, objects, and background. To maintain visual consistency, we translate selected keyframes autoregressively and use them to guide video synthesis with motion conditioned on the human hand skeleton. Additionally, we use an inverse dynamics model (IDM) that incorporates depth features to infer action labels from synthesized videos for policy learning. Our experiments across multiple humanoid embodiments show that policies trained with our synthetic data improve the average success rate on novel tasks, including challenging bimanual manipulation, from 2% to 60%, without any real robot demonstration of those tasks. Moreover, training with our synthetic data matches the performance of policies trained solely on teleoperated demonstrations at approximately a third of the collection cost, demonstrating the cost efficiency of our approach.",
           "metrics": {
-            "upvotes": 3,
+            "upvotes": 4,
             "comments": 1
           }
         }
@@ -3287,8 +3286,8 @@
     },
     "hf-trending-papers": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "TokenEconomizer: Experience-Driven Black-Box Cost Control for Coding Agents",
@@ -3444,15 +3443,15 @@
     },
     "hf-models": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
           "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
           "description": "",
           "metrics": {
-            "likes": 993,
+            "likes": 1091,
             "downloads": 44939
           },
           "task": "automatic-speech-recognition"
@@ -3462,7 +3461,7 @@
           "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
           "description": "",
           "metrics": {
-            "likes": 1446,
+            "likes": 1451,
             "downloads": 54959
           },
           "task": "text-generation"
@@ -3472,7 +3471,7 @@
           "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
           "description": "",
           "metrics": {
-            "likes": 5219,
+            "likes": 5222,
             "downloads": 221621
           },
           "task": "image-text-to-text"
@@ -3482,7 +3481,7 @@
           "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
           "description": "",
           "metrics": {
-            "likes": 1567,
+            "likes": 1569,
             "downloads": 8200
           },
           "task": "image-text-to-text"
@@ -3492,7 +3491,7 @@
           "url": "https://huggingface.co/speridlabs/idol",
           "description": "",
           "metrics": {
-            "likes": 553,
+            "likes": 555,
             "downloads": 14613
           },
           "task": "image-to-3d"
@@ -3512,7 +3511,7 @@
           "url": "https://huggingface.co/Lightricks/LTX-2.5",
           "description": "",
           "metrics": {
-            "likes": 10545,
+            "likes": 10552,
             "downloads": 2493402
           },
           "task": "image-to-video"
@@ -3531,7 +3530,7 @@
           "url": "https://huggingface.co/burner22/numbat",
           "description": "",
           "metrics": {
-            "likes": 329,
+            "likes": 333,
             "downloads": 8118
           }
         },
@@ -3540,7 +3539,7 @@
           "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
           "description": "",
           "metrics": {
-            "likes": 19113,
+            "likes": 19114,
             "downloads": 8032442
           },
           "task": "image-text-to-text"
@@ -3549,15 +3548,15 @@
     },
     "hf-datasets": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "nvidia/simready-assets",
           "url": "https://huggingface.co/datasets/nvidia/simready-assets",
           "description": "Welcome to NVIDIA SimReady Assets Welcome to NVIDIA's open-source SimReady Assets dataset! SimReady Central brings together OEM-curated datasets like this one, helping you discover simulation-ready assets for your projects. Interested in contributing? Visit nvidia/simready-central-library and request contributor access through the Community tab.",
           "metrics": {
-            "likes": 1365,
+            "likes": 1368,
             "downloads": 1267344
           }
         },
@@ -3566,7 +3565,7 @@
           "url": "https://huggingface.co/datasets/Vyber07/cyber-security",
           "description": "Cybersecurity AI Knowledge Base — PhD-Level Dataset Overview This is the most comprehensive cybersecurity knowledge base ever assembled for AI training. It covers all domains of cybersecurity at PhD-level depth — from offensive red teaming and bug bounty exploitation to defensive SOC operations, digital forensics, and cutting-edge AI/LLM security. Size: 16 GB | Files: 507 | Domains: 30+ | Sources: 15+ platforms Purpose Train the world's most… See the full description on the dataset page: https://huggingface.co/datasets/Vyber07/cyber-security.",
           "metrics": {
-            "likes": 652,
+            "likes": 653,
             "downloads": 10815
           }
         },
@@ -3575,7 +3574,7 @@
           "url": "https://huggingface.co/datasets/open-index/hacker-news",
           "description": "Hacker News - Complete Archive Every Hacker News item since 2006, live-updated every 5 minutes What is it? This dataset contains the complete Hacker News archive: every story, comment, Ask HN, Show HN, job posting, and poll ever submitted to the site. Hacker News is one of the longest-running and most influential technology communities on the internet, operated by Y Combinator since 2007. It has become the de facto gathering place for founders, engineers… See the full description on the dataset page: https://huggingface.co/datasets/open-index/hacker-news.",
           "metrics": {
-            "likes": 467,
+            "likes": 468,
             "downloads": 467351
           }
         },
@@ -3602,17 +3601,8 @@
           "url": "https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data",
           "description": "China A-Share Level-2 Archive 2017–2026 · Quotes, orders and trades · Parquet A historical archive of Chinese exchange Level-2 data, supplied through a vendor export. It includes ten-level quote snapshots, individual order messages and trade-stream records. The files cover A-share stocks and non-stock instruments such as ETFs and bonds. “Full-market” describes the export's scope, not a guarantee that every instrument or message is present. 中国证券市场 Level-2… See the full description on the dataset page: https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data.",
           "metrics": {
-            "likes": 618,
+            "likes": 619,
             "downloads": 203151
-          }
-        },
-        {
-          "title": "secemp9/arxiv-complete",
-          "url": "https://huggingface.co/datasets/secemp9/arxiv-complete",
-          "description": "arXiv Complete Corpus A snapshot of arXiv's metadata, version history, submission files and rendered documents. It covers 3,148,796 papers and includes file contents, paths, sizes and SHA-256 digests. Metadata comes from arXiv's OAI-PMH arXivRaw interface; files come from the GCS mirror, S3 source archives and direct PDF fetches. This release holds a PDF for 99.47% of papers and 99.54% of versions reported with a non-zero submission size. It is a one-off snapshot; coverage gaps… See the full description on the dataset page: https://huggingface.co/datasets/secemp9/arxiv-complete.",
-          "metrics": {
-            "likes": 790,
-            "downloads": 162854
           }
         },
         {
@@ -3622,6 +3612,15 @@
           "metrics": {
             "likes": 57,
             "downloads": 4116
+          }
+        },
+        {
+          "title": "secemp9/arxiv-complete",
+          "url": "https://huggingface.co/datasets/secemp9/arxiv-complete",
+          "description": "arXiv Complete Corpus A snapshot of arXiv's metadata, version history, submission files and rendered documents. It covers 3,148,796 papers and includes file contents, paths, sizes and SHA-256 digests. Metadata comes from arXiv's OAI-PMH arXivRaw interface; files come from the GCS mirror, S3 source archives and direct PDF fetches. This release holds a PDF for 99.47% of papers and 99.54% of versions reported with a non-zero submission size. It is a one-off snapshot; coverage gaps… See the full description on the dataset page: https://huggingface.co/datasets/secemp9/arxiv-complete.",
+          "metrics": {
+            "likes": 790,
+            "downloads": 162854
           }
         },
         {
@@ -3638,7 +3637,7 @@
           "url": "https://huggingface.co/datasets/PentesterFlow/OffsecCyber",
           "description": "Security Vulnerability Instruction Dataset An English-language dataset of security-focused assistant conversations about software vulnerabilities. Examples cover vulnerability explanations, CVE analysis, severity and impact, CWE references, remediation guidance, and offensive/web-appsec reasoning. It combines CVE-oriented examples with NVD records, HackerOne report conversations, PortSwigger lab material, and offensive-security instruction data, and can support instruction… See the full description on the dataset page: https://huggingface.co/datasets/PentesterFlow/OffsecCyber.",
           "metrics": {
-            "likes": 50,
+            "likes": 51,
             "downloads": 2756
           }
         }
@@ -3646,15 +3645,15 @@
     },
     "hf-spaces": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "a-test-user-in-the-wrold/qwen-image-21-uncensored",
           "url": "https://huggingface.co/spaces/a-test-user-in-the-wrold/qwen-image-21-uncensored",
           "description": "",
           "metrics": {
-            "likes": 265
+            "likes": 264
           },
           "sdk": "gradio"
         },
@@ -3681,7 +3680,7 @@
           "url": "https://huggingface.co/spaces/speridlabs/idol",
           "description": "",
           "metrics": {
-            "likes": 114
+            "likes": 115
           },
           "sdk": "gradio"
         },
@@ -3708,7 +3707,7 @@
           "url": "https://huggingface.co/spaces/linoyts/qwen-image-2-1-realtime",
           "description": "",
           "metrics": {
-            "likes": 150
+            "likes": 151
           },
           "sdk": "gradio"
         },
@@ -3747,15 +3746,51 @@
     },
     "github-trending": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
+        {
+          "title": "NVIDIA/auto-ontology",
+          "url": "https://github.com/NVIDIA/auto-ontology",
+          "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+          "metrics": {
+            "stars": 3647,
+            "starsToday": 2053
+          }
+        },
+        {
+          "title": "max-sixty/worktrunk",
+          "url": "https://github.com/max-sixty/worktrunk",
+          "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+          "metrics": {
+            "stars": 10774,
+            "starsToday": 524
+          }
+        },
+        {
+          "title": "mattpocock/skills",
+          "url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "metrics": {
+            "stars": 312166,
+            "starsToday": 1376
+          }
+        },
+        {
+          "title": "floci-io/floci",
+          "url": "https://github.com/floci-io/floci",
+          "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
+          "metrics": {
+            "stars": 29222,
+            "starsToday": 1082
+          }
+        },
         {
           "title": "thedotmack/claude-mem",
           "url": "https://github.com/thedotmack/claude-mem",
           "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
           "metrics": {
-            "stars": 112408,
+            "stars": 112421,
             "starsToday": 1165
           }
         },
@@ -3764,88 +3799,52 @@
           "url": "https://github.com/vercel-labs/agent-desktop",
           "description": "Computer use CLI for AI agents",
           "metrics": {
-            "stars": 13945,
+            "stars": 13994,
             "starsToday": 2463
           }
         },
         {
-          "title": "max-sixty/worktrunk",
-          "url": "https://github.com/max-sixty/worktrunk",
-          "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+          "title": "github/spec-kit",
+          "url": "https://github.com/github/spec-kit",
+          "description": "💫 Toolkit to help you get started with SDD or any other process!",
           "metrics": {
-            "stars": 10763,
-            "starsToday": 524
+            "stars": 146914,
+            "starsToday": 810
           }
         },
         {
-          "title": "JustVugg/colibri",
-          "url": "https://github.com/JustVugg/colibri",
-          "description": "A hierarchical inference engine for frontier MoE models: hot experts on the GPU (CUDA, Vulkan), warm ones in RAM, cold ones streamed from NVMe. Written in C, runs on the hardware you already own.",
+          "title": "The-PR-Agent/pr-agent",
+          "url": "https://github.com/The-PR-Agent/pr-agent",
+          "description": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
           "metrics": {
-            "stars": 47529,
-            "starsToday": 635
+            "stars": 14504,
+            "starsToday": 279
           }
         },
         {
-          "title": "mattpocock/skills",
-          "url": "https://github.com/mattpocock/skills",
-          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "title": "harry0703/MoneyPrinterTurbo",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+          "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
           "metrics": {
-            "stars": 312092,
-            "starsToday": 1376
+            "stars": 138539,
+            "starsToday": 615
           }
         },
         {
-          "title": "p-e-w/heretic",
-          "url": "https://github.com/p-e-w/heretic",
-          "description": "Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more",
+          "title": "garrytan/gstack",
+          "url": "https://github.com/garrytan/gstack",
+          "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
           "metrics": {
-            "stars": 39154,
-            "starsToday": 726
-          }
-        },
-        {
-          "title": "spotify/portal-ai-plugins",
-          "url": "https://github.com/spotify/portal-ai-plugins",
-          "description": "",
-          "metrics": {
-            "stars": 3131,
-            "starsToday": 227
-          }
-        },
-        {
-          "title": "floci-io/floci",
-          "url": "https://github.com/floci-io/floci",
-          "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
-          "metrics": {
-            "stars": 29208,
-            "starsToday": 1082
-          }
-        },
-        {
-          "title": "Usagi-org/ai-goofish-monitor",
-          "url": "https://github.com/Usagi-org/ai-goofish-monitor",
-          "description": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
-          "metrics": {
-            "stars": 17049,
-            "starsToday": 979
-          }
-        },
-        {
-          "title": "anomalyco/hex",
-          "url": "https://github.com/anomalyco/hex",
-          "description": "Local voice dictation for mac, windows and linux",
-          "metrics": {
-            "stars": 4890,
-            "starsToday": 682
+            "stars": 139034,
+            "starsToday": 285
           }
         }
       ]
     },
     "aa-leaderboard": {
       "status": "ok",
-      "checkedAt": "2026-11-04T11:31:43Z",
-      "lastSuccessAt": "2026-11-04T11:31:43Z",
+      "checkedAt": "2026-11-04T12:04:18Z",
+      "lastSuccessAt": "2026-11-04T12:04:18Z",
       "items": [
         {
           "title": "Gemini 4 Carbon (high)",
