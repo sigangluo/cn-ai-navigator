@@ -1,24 +1,26 @@
-# cn-ai-navigator maintenance
+# cn-ai-navigator 维护规则
 
-This repository is an index of original AI information sources. The source registry is `data/sources.json`; the site renders every entry in it. Keep that invariant.
+本仓库是 AI 原始信息来源的导航目录。`data/sources.json` 是来源登记表，网站必须展示其中每一个入口。
 
-## Product rules
+`README.md` 面向读者，说明项目目的、使用方法和页面状态。部署、凭证、解析器及具体来源的排查记录放在 `docs/MAINTENANCE.md`。
 
-- Show all registered source channels by default, even when a channel is quiet or its fetch fails.
-- Link to the publisher's official index or original video channel and original item. Store only title, date, publisher categories, link, the publisher-provided teaser, video description or paper abstract, and relevant public source-specific facts (such as stars, votes or video views) when available. Rankings may store current order and a public description. Never generate a teaser or copy full articles or videos.
-- Preserve a publisher's native sections and item labels. The site's broad groups only organize the directory.
-- In the upper-right corner of article rows, display only the publication date. Show useful publisher categories and source-specific public metrics below the title when available; omit generic categories and missing metrics.
-- Group sources by the content readers seek, then label each source `zh` or `non_zh` based on the linked page's primary reading language. Language is a second-level display grouping; distribution channel (including WeChat) is not a standalone content group. Place rankings with the projects or resources they rank.
-- Rankings are current snapshots. Never call a trending repository “published today.”
-- Distinguish `directory`, `pending`, `ok`, and `error`. On errors, retain the last successful items and never claim they were freshly checked.
-- A missing feed is not a reason to drop a valuable source. Keep it as a link until a stable public extraction path is verified. YouTube channels use their official Atom feeds. Bilibili channel requests returned HTTP 412 during verification; keep those as direct channel links until a reliable public path is confirmed.
-- Do not add arbitrary WeChat scraping or rely on unofficial account enumeration. Link to the publisher's public website or an official index that leads to WeChat originals.
+## 产品规则
 
-## Changing sources
+- 默认展示全部已登记来源，即使某个来源近期没有更新或抓取失败。
+- 来源入口指向发布者官网目录或原视频频道；条目指向原文。只保存标题、日期、发布者分类、链接、发布者提供的导语、视频简介或论文摘要，以及可核实的公开数据，例如星标、投票和播放量。榜单可以保存当前顺序和公开简介。不得生成导语，也不得复制文章或视频全文。
+- 保留发布者自己的栏目和条目标签。本站的内容分类只用于组织目录。
+- 文章行右上角只显示发布日期。标题下方展示有用的发布者分类和来源专属公开数据；通用分类和缺失的数据不展示。
+- 先按读者寻找的内容对来源分组，再按链接页面的主要阅读语言标记为 `zh` 或 `non_zh`。语言是第二层分组；公众号等发布渠道不单独成为内容分类。榜单归入所排名的项目或资源分类。
+- 榜单是当前快照，不得将上榜仓库称为“今天发布”。
+- 区分 `directory`、`pending`、`ok` 和 `error`。抓取失败时保留上次成功的条目，不得声称这些条目刚刚完成同步。
+- 缺少订阅源不等于来源没有价值；确认稳定的公开采集方式前保留原站链接。YouTube 使用频道官方 Atom 订阅源。Bilibili 频道请求在核查时返回 HTTP 412，找到可靠的公开方式前保留频道直达链接。
+- 不随意抓取公众号，也不依赖非官方的账号枚举。优先链接发布者官网，或能够通向公众号原文的官方目录。
 
-Verify each URL and its page title on the official site. Confirm whether it exposes dates, categories, and stable article links before changing `mode` from `link` to a fetchable mode. Add a small parser test for any new HTML/API format. Never put API keys in the registry or snapshot.
+## 修改来源
 
-## Checks
+在官网核对每个链接及页面标题。将 `mode` 从 `link` 改为自动采集模式前，核实官网是否提供日期、分类和稳定的文章直达链接。新增网页或接口解析方式时，添加小范围解析测试。不得把接口密钥写进来源登记表或快照。
+
+## 检查
 
 ```bash
 python3 -m unittest discover -s tests
@@ -27,4 +29,4 @@ python3 scripts/build.py
 node --check site/assets/app.js
 ```
 
-`python3 scripts/update.py` needs network access and may encounter publisher blocking. A failed fetch should change only that source's status. GitHub Actions refreshes twice daily. The optional weekly Codex workflow proposes fixes through a PR when `OPENAI_API_KEY` and `ENABLE_AI_MAINTENANCE=true` are configured.
+`python3 scripts/update.py` 需要联网，可能遇到发布者的访问限制。单个来源抓取失败时，只改变该来源的状态。GitHub Actions 每天刷新两次。配置 `OPENAI_API_KEY` 和 `ENABLE_AI_MAINTENANCE=true` 后，可选的每周 Codex 工作流会创建待审核的修复请求。

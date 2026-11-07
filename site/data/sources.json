@@ -11,6 +11,11 @@
       "description": "研究者、工程师与独立作者的文章"
     },
     {
+      "id": "social",
+      "name": "社媒与社区讨论",
+      "description": "AI 从业者短帖、社区交流与热门讨论"
+    },
+    {
       "id": "labs",
       "name": "模型机构与研究动态",
       "description": "实验室、模型公司与研究机构的官方发布"
@@ -264,6 +269,103 @@
       "feed": "https://karpathy.github.io/feed.xml"
     },
     {
+      "id": "hn-ai",
+      "name": "Hacker News · AI 讨论",
+      "org": "Hacker News",
+      "group": "social",
+      "language": "non_zh",
+      "url": "https://news.ycombinator.com/",
+      "note": "从首页按标题筛选 AI 相关讨论；显示原帖与投票、评论数",
+      "cadence": "daily",
+      "mode": "hn_feed",
+      "feed": "https://news.ycombinator.com/rss"
+    },
+    {
+      "id": "bsky-simon",
+      "name": "Simon Willison · Bluesky",
+      "org": "Simon Willison",
+      "group": "social",
+      "language": "non_zh",
+      "url": "https://bsky.app/profile/simonwillison.net",
+      "note": "按短帖文字筛选 AI 工程与模型话题",
+      "cadence": "daily",
+      "mode": "bluesky",
+      "actor": "simonwillison.net",
+      "aiOnly": true
+    },
+    {
+      "id": "bsky-ai2",
+      "name": "Ai2 · Bluesky",
+      "org": "Ai2",
+      "group": "social",
+      "language": "non_zh",
+      "url": "https://bsky.app/profile/ai2.bsky.social",
+      "note": "开放模型、研究与社区发布的官方短帖",
+      "cadence": "daily",
+      "mode": "bluesky",
+      "actor": "ai2.bsky.social"
+    },
+    {
+      "id": "reddit-local-llama",
+      "name": "r/LocalLLaMA · Reddit",
+      "org": "Reddit",
+      "group": "social",
+      "language": "non_zh",
+      "url": "https://www.reddit.com/r/LocalLLaMA/",
+      "note": "本地与开放权重模型讨论；显示近 48 小时热帖",
+      "cadence": "daily",
+      "mode": "reddit",
+      "subreddit": "LocalLLaMA"
+    },
+    {
+      "id": "reddit-machine-learning",
+      "name": "r/MachineLearning · Reddit",
+      "org": "Reddit",
+      "group": "social",
+      "language": "non_zh",
+      "url": "https://www.reddit.com/r/MachineLearning/",
+      "note": "机器学习论文、项目与研究讨论；显示近 48 小时热帖",
+      "cadence": "daily",
+      "mode": "reddit",
+      "subreddit": "MachineLearning"
+    },
+    {
+      "id": "reddit-claudeai",
+      "name": "r/ClaudeAI · Reddit",
+      "org": "Reddit",
+      "group": "social",
+      "language": "non_zh",
+      "url": "https://www.reddit.com/r/ClaudeAI/",
+      "note": "Claude 使用、开发与产品讨论；显示近 48 小时热帖",
+      "cadence": "daily",
+      "mode": "reddit",
+      "subreddit": "ClaudeAI"
+    },
+    {
+      "id": "x-karpathy",
+      "name": "Andrej Karpathy · X",
+      "org": "Andrej Karpathy",
+      "group": "social",
+      "language": "non_zh",
+      "url": "https://x.com/karpathy",
+      "note": "深度学习与 AI 工程动态；每次最多读取 5 条原创帖",
+      "cadence": "daily",
+      "mode": "x_api",
+      "username": "karpathy"
+    },
+    {
+      "id": "x-sama",
+      "name": "Sam Altman · X",
+      "org": "Sam Altman",
+      "group": "social",
+      "language": "non_zh",
+      "url": "https://x.com/sama",
+      "note": "AI 产品与行业动态；每次最多读取 5 条原创帖",
+      "cadence": "daily",
+      "mode": "x_api",
+      "username": "sama"
+    },
+    {
       "id": "epoch-ai",
       "name": "Epoch AI · Latest",
       "org": "Epoch AI",
@@ -306,9 +408,14 @@
       "group": "labs",
       "language": "non_zh",
       "url": "https://openai.com/research/index/",
-      "note": "研究索引",
+      "note": "近期条目取自官网 RSS 的 Research 与 Publication 分类；其他栏目从原站浏览",
       "cadence": "weekly",
-      "mode": "link",
+      "mode": "feed",
+      "feed": "https://openai.com/news/rss.xml",
+      "feedCategories": [
+        "Research",
+        "Publication"
+      ],
       "sections": [
         "Publication",
         "Conclusion",
@@ -402,7 +509,7 @@
       "url": "https://ai.meta.com/blog/",
       "note": "Meta 模型与研究发布",
       "cadence": "weekly",
-      "mode": "link"
+      "mode": "official_listing"
     },
     {
       "id": "mistral",
@@ -488,31 +595,39 @@
       "group": "labs",
       "language": "non_zh",
       "url": "https://qwen.ai/blog",
-      "note": "官网博客默认英文；模型发布列表待验证",
+      "note": "官网英文博客；展示文章日期、栏目与原站导语",
       "cadence": "monthly",
-      "mode": "link"
+      "mode": "qwen_blog"
     },
     {
       "id": "baai",
-      "name": "智源研究院 · 动态",
+      "name": "智源研究院 · 媒体报道",
       "org": "智源研究院",
       "group": "labs",
       "language": "zh",
-      "url": "https://www.baai.ac.cn/zh-cn/about-us",
-      "note": "部分官网条目直达公众号原文",
+      "url": "https://www.baai.ac.cn/zh-cn/news?formCategoryid=87",
+      "note": "智源官网收录的媒体报道；条目直达报道原文",
       "cadence": "weekly",
-      "mode": "link"
+      "mode": "baai_news",
+      "newsCategory": "media",
+      "sections": [
+        "媒体报道"
+      ]
     },
     {
       "id": "baai-wechat",
-      "name": "智源研究院 · 公众号原文",
+      "name": "智源研究院 · 最新新闻",
       "org": "智源研究院",
       "group": "labs",
       "language": "zh",
-      "url": "https://www.baai.ac.cn/zh-cn/about-us",
-      "note": "从官网动态进入公众号原文",
+      "url": "https://www.baai.ac.cn/zh-cn/news?formCategoryid=86",
+      "note": "智源官网最新新闻；条目直达公众号原文",
       "cadence": "weekly",
-      "mode": "link"
+      "mode": "baai_news",
+      "newsCategory": "news",
+      "sections": [
+        "最新新闻"
+      ]
     },
     {
       "id": "shlab",
@@ -520,10 +635,10 @@
       "org": "上海人工智能实验室",
       "group": "labs",
       "language": "zh",
-      "url": "https://www.shlab.org.cn/",
+      "url": "https://www.shlab.org.cn/info",
       "note": "研究进展与机构新闻",
       "cadence": "weekly",
-      "mode": "link"
+      "mode": "official_listing"
     },
     {
       "id": "ms-research",
@@ -555,10 +670,10 @@
       "org": "Amazon",
       "group": "labs",
       "language": "non_zh",
-      "url": "https://www.amazon.science/",
-      "note": "科学与机器学习研究",
+      "url": "https://www.amazon.science/blog/?p=1",
+      "note": "Amazon Science 官方博客的近期研究文章",
       "cadence": "weekly",
-      "mode": "link"
+      "mode": "official_listing"
     },
     {
       "id": "ibm-research",
@@ -566,10 +681,10 @@
       "org": "IBM Research",
       "group": "labs",
       "language": "non_zh",
-      "url": "https://research.ibm.com/artificial-intelligence",
-      "note": "IBM AI 研究",
+      "url": "https://research.ibm.com/blog?tag=artificial-intelligence",
+      "note": "IBM Research 官网 AI 标签下的近期文章",
       "cadence": "monthly",
-      "mode": "link"
+      "mode": "official_listing"
     },
     {
       "id": "bair",
@@ -592,7 +707,7 @@
       "url": "https://hai.stanford.edu/news",
       "note": "研究、政策与 AI Index",
       "cadence": "weekly",
-      "mode": "link"
+      "mode": "stanford_listing"
     },
     {
       "id": "metr",
@@ -992,7 +1107,8 @@
       "url": "https://aclanthology.org/",
       "note": "自然语言处理正式论文库",
       "cadence": "weekly",
-      "mode": "link"
+      "mode": "feed",
+      "feed": "https://aclanthology.org/papers/index.xml"
     },
     {
       "id": "github-ai-topics",
@@ -1054,14 +1170,14 @@
     },
     {
       "id": "modelscope",
-      "name": "ModelScope · 模型",
+      "name": "ModelScope · 模型下载榜",
       "org": "ModelScope",
       "group": "open",
       "language": "zh",
       "url": "https://www.modelscope.cn/models",
-      "note": "魔搭模型目录；自动列表待验证",
+      "note": "按官网公开累计下载量排序的模型快照",
       "cadence": "daily",
-      "mode": "link"
+      "mode": "modelscope_models"
     },
     {
       "id": "github-trending",

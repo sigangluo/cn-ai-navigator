@@ -1,18 +1,175 @@
+import gzip
+import io
+import json
 import sys
 import unittest
+import urllib.error
+import xml.etree.ElementTree as ET
+from email.message import Message
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from update import parse_feed, parse_youtube_feed, parse_papers, parse_hf_trending, parse_trending, parse_aa_leaderboard, parse_publisher_page, parse_kimi_page, parse_cohere_page, parse_llamaindex_page, parse_infoq_ai_feed, parse_metr_feed, parse_deepseek_updates, parse_github_topic, parse_aa_articles, parse_openai_cookbook, _MetaDescription  # noqa: E402
+from update import fetch_feed, parse_feed, parse_aiera_feed, enrich_deepmind_categories, parse_qwen_blog, parse_hn_feed, parse_bluesky_feed, parse_youtube_feed, parse_papers, parse_hf_trending, parse_trending, parse_aa_leaderboard, parse_publisher_page, parse_official_listing, parse_stanford_listing, parse_kimi_page, parse_cohere_page, parse_llamaindex_page, parse_infoq_ai_feed, parse_metr_feed, parse_deepseek_updates, parse_github_topic, parse_aa_articles, parse_openai_cookbook, parse_modelscope_models, parse_baai_news, _MetaDescription  # noqa: E402
 
 
 class ParserTests(unittest.TestCase):
+    def test_aiera_rss_keeps_valid_items_when_a_teaser_ends_mid_character(self):
+        raw = (b'<?xml version="1.0" encoding="UTF-8"?><rss><channel><item>'
+               b'<title>Research news</title><link>https://aiera.com.cn/post</link>'
+               b'<description><![CDATA[Official teaser \xe6\x9c\xe2\x80\xa6]]></description>'
+               b'</item></channel></rss>')
+        with self.assertRaises(ET.ParseError):
+            parse_feed(raw, "https://aiera.com.cn/")
+        item = parse_aiera_feed(raw, "https://aiera.com.cn/")[0]
+        self.assertEqual(item["url"], "https://aiera.com.cn/post")
+        self.assertEqual(item["description"], "Official teaser …")
+
+    def test_modelscope_download_ranking_keeps_public_original_links_and_metrics(self):
+        raw = json.dumps({"success": True, "data": {"models": [
+            {"id": "iic/model-a", "display_name": "模型 A", "description": "官方简介", "downloads": 123,
+             "likes": 4, "tasks": ["text-generation"], "private": False,
+             "created_at": "2026-10-01T00:00:00Z", "last_modified": "2026-11-01T00:00:00Z", "license": "Apache-2.0"},
+            {"id": "owner/private", "downloads": 200, "private": True}
+        ]}}).encode()
+        items = parse_modelscope_models(raw)
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0]["url"], "https://www.modelscope.cn/models/iic/model-a")
+        self.assertEqual(items[0]["metrics"], {"downloads": 123, "likes": 4})
+        self.assertEqual(items[0]["categories"], ["text-generation"])
+        self.assertEqual((items[0]["modelId"], items[0]["createdAt"], items[0]["updatedAt"], items[0]["license"]),
+                         ("iic/model-a", "2026-10-01T00:00:00Z", "2026-11-01T00:00:00Z", "Apache-2.0"))
+        self.assertNotIn("publishedAt", items[0])
+
+    def test_baai_news_preserves_publisher_category_and_original_destination(self):
+        raw = json.dumps({"items": [
+            {"category": "media", "title": "媒体报道", "description": "媒体简介", "source_url": "https://news.example.org/story",
+             "published_at": "2026-11-05T02:00:00Z", "is_published": True},
+            {"category": "news", "title": "智源新闻", "description": "智源简介", "source_url": "https://mp.weixin.qq.com/s/abc",
+             "published_at": "2026-11-06T02:00:00Z", "is_published": True}
+        ]}).encode()
+        media = parse_baai_news(raw, "media")
+        news = parse_baai_news(raw, "news")
+        self.assertEqual((media[0]["url"], media[0]["categories"]), ("https://news.example.org/story", ["媒体报道"]))
+        self.assertEqual((news[0]["url"], news[0]["categories"]), ("https://mp.weixin.qq.com/s/abc", ["最新新闻"]))
+        self.assertEqual(news[0]["publishedAt"], "2026-11-06T02:00:00Z")
+
+    def test_official_listings_keep_dated_original_cards(self):
+        meta = b'<div class="_8034"><p class="_8w6f _8wl0 _8w6h">Jul 27, 2026</p><h4 class="_8w6a _8w6e _8w60 _8xok _8x78">Research</h4><h4 class="_8w6a _8w6e _8w61">Model update</h4><a class="_8xc5 more" href="/blog/model-update/">Read</a></div>'
+        self.assertEqual(parse_official_listing(meta, "meta-ai", "https://ai.meta.com/blog/")[0]["categories"], ["Research"])
+        shlab = b'<a href="/news/123"><h2>Research update</h2><p class="u-time">2026-11-06</p></a>'
+        self.assertEqual(parse_official_listing(shlab, "shlab", "https://www.shlab.org.cn/info")[0]["url"], "https://www.shlab.org.cn/news/123")
+        amazon = b'<li class="SearchResultsModule-results-item"><div class="PromoF-title"><a href="https://www.amazon.science/blog/post">Post</a></div><div class="PromoF-authors"><a>Alice</a></div><div class="PromoF-date">November 5, 2026</div><div class="PromoF-description">Official teaser.</div><div class="PromoF-category"><a>Machine learning</a></div></li>'
+        item = parse_official_listing(amazon, "amazon-science", "https://www.amazon.science/blog/")[0]
+        self.assertEqual((item["authors"], item["categories"], item["description"]), (["Alice"], ["Machine learning"], "Official teaser."))
+        ibm = b'<article data-testid="blog-post-card"><h2><a href="/blog/post"><span>Post</span></a></h2><time dateTime="2026-10-27T12:00:00Z">27 Oct</time><span class="cds--tag__label">AI</span><span class="cds--tag__label">Research</span></article>'
+        self.assertEqual(parse_official_listing(ibm, "ibm-research", "https://research.ibm.com/")[0]["categories"], ["AI", "Research"])
+
+    def test_stanford_listing_confirms_year_on_original_article(self):
+        listing = b'<div class="ContentItem_root__a"><a class="ContentItem_titleLink__b" href="/news/post">Research post</a><span class="Typography_mono-small__c">Sep 25</span></div>'
+        detail = lambda url: b'children\\":\\"Sep 25, 2026\\"'
+        item = parse_stanford_listing(listing, "https://hai.stanford.edu/news", detail)[0]
+        self.assertEqual(item["publishedAt"], "2026-09-25T00:00:00Z")
+
+    def test_hn_feed_selects_ai_discussions_and_keeps_hn_permalinks(self):
+        raw = b'<rss><channel><item><title>AI model release</title><link>https://example.org/release</link><comments>https://news.ycombinator.com/item?id=123</comments><pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate><description>Comments</description></item><item><title>New spreadsheet feature</title><comments>https://news.ycombinator.com/item?id=456</comments><pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate></item></channel></rss>'
+        items = parse_hn_feed(raw)
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0]["url"], "https://news.ycombinator.com/item?id=123")
+        self.assertEqual(items[0]["publishedAt"], "2026-11-04T00:00:00Z")
+        self.assertEqual(items[0]["description"], "")
+
+    def test_hn_feed_orders_newest_posts_first(self):
+        raw = b'<rss><channel><item><title>AI discussion yesterday</title><comments>https://news.ycombinator.com/item?id=123</comments><pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate></item><item><title>LLM discussion today</title><comments>https://news.ycombinator.com/item?id=456</comments><pubDate>Thu, 05 Nov 2026 01:00:00 GMT</pubDate></item></channel></rss>'
+        self.assertEqual([item["url"] for item in parse_hn_feed(raw)], [
+            "https://news.ycombinator.com/item?id=456",
+            "https://news.ycombinator.com/item?id=123",
+        ])
+
+    def test_bluesky_feed_keeps_only_original_author_posts_and_public_metrics(self):
+        post = {"uri": "at://did:plc:abc/app.bsky.feed.post/xyz123", "author": {"handle": "example.org"}, "record": {"text": "AI research update", "createdAt": "2026-11-04T01:00:00Z"}, "likeCount": 12, "repostCount": 3, "replyCount": 4}
+        reply = {**post, "record": {**post["record"], "reply": {"parent": {}}}}
+        repost = {**post, "author": {"handle": "other.org"}}
+        raw = json.dumps({"feed": [{"post": repost, "reason": {"$type": "app.bsky.feed.defs#reasonRepost"}}, {"post": reply}, {"post": post}]}).encode()
+        items = parse_bluesky_feed(raw, "example.org")
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0]["url"], "https://bsky.app/profile/example.org/post/xyz123")
+        self.assertEqual(items[0]["metrics"], {"likes": 12, "reposts": 3, "comments": 4})
+
+    def test_bluesky_ai_filter_excludes_unrelated_author_posts(self):
+        post = {"uri": "at://did:plc:abc/app.bsky.feed.post/xyz123", "author": {"handle": "example.org"}, "record": {"text": "Weekend bike ride", "createdAt": "2026-11-04T01:00:00Z"}}
+        ai_post = {**post, "record": {**post["record"], "text": "Claude model evaluation"}}
+        raw = json.dumps({"feed": [{"post": post}, {"post": ai_post}]}).encode()
+        self.assertEqual(parse_bluesky_feed(raw, "example.org", ai_only=True)[0]["title"], "Claude model evaluation")
+
     def test_rss_keeps_publisher_category_and_original_url(self):
         raw = b'<rss><channel><item><title>Research update</title><link>https://example.org/post</link><pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate><category>Research</category></item></channel></rss>'
         result = parse_feed(raw, "https://example.org")
         self.assertEqual(result[0]["categories"], ["Research"])
         self.assertEqual(result[0]["url"], "https://example.org/post")
         self.assertEqual(result[0]["publishedAt"], "2026-11-04T00:00:00Z")
+
+    def test_feed_preserves_official_authors_and_categories_beyond_three(self):
+        raw = b'<rss xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><item><title>Research update</title><link>https://example.org/post</link><dc:creator>Alice Chen</dc:creator><dc:creator>Bob Smith</dc:creator><category>News</category><category>Research</category><category>Models</category><category>Safety</category><category>Safety</category></item></channel></rss>'
+        item = parse_feed(raw, "https://example.org")[0]
+        self.assertEqual(item["authors"], ["Alice Chen", "Bob Smith"])
+        self.assertEqual(item["categories"], ["News", "Research", "Models", "Safety"])
+        long_categories = ''.join(f'<category>Topic {index}</category>' for index in range(17))
+        long_feed = f'<rss><channel><item><title>Another post</title><link>https://example.org/another</link>{long_categories}</item></channel></rss>'.encode()
+        self.assertEqual(len(parse_feed(long_feed, "https://example.org")[0]["categories"]), 17)
+
+    def test_atom_author_names_are_read_without_email_addresses(self):
+        raw = b'<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>Paper</title><link href="https://example.org/paper"/><author><name>Alice Chen</name><email>alice@example.org</email></author><author><name>Bob Smith</name></author></entry></feed>'
+        self.assertEqual(parse_feed(raw, "https://example.org")[0]["authors"], ["Alice Chen", "Bob Smith"])
+        rss = b'<rss><channel><item><title>Post</title><link>https://example.org/post</link><author>editor@example.org</author></item></channel></rss>'
+        self.assertNotIn("authors", parse_feed(rss, "https://example.org")[0])
+
+    def test_deepmind_news_category_joins_only_matching_original_url(self):
+        items = [{"url": "https://deepmind.google/blog/matching/", "categories": []},
+                 {"url": "https://deepmind.google/blog/other/", "categories": []}]
+        html = b'<article class="card card-blog"><a href=/blog/matching/>Read</a><span class="text-caption meta__category">Science</span></article>'
+        enrich_deepmind_categories(items, html, "https://deepmind.google/blog/")
+        self.assertEqual(items[0]["categories"], ["Science"])
+        self.assertEqual(items[1]["categories"], [])
+
+    def test_feed_category_filter_applies_before_item_limit(self):
+        unrelated = ''.join(f'<item><title>Product {i}</title><link>https://openai.com/p/{i}</link><category>Product</category></item>' for i in range(15))
+        selected = '<item><title>Paper</title><link>https://openai.com/research/paper</link><category>Publication</category><pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate></item>'
+        raw = f'<rss><channel>{unrelated}{selected}</channel></rss>'.encode()
+        items = parse_feed(raw, "https://openai.com/research/index/", {"Research", "Publication"})
+        self.assertEqual([item["title"] for item in items], ["Paper"])
+
+    def test_qwen_index_uses_original_intro_and_publication_date(self):
+        articles = [
+            {"title": "Older", "path": "older", "language": "en-US", "content": "Full article must stay out", "extra": {"date": "2026-11-01T00:00:00+08:00", "introduction": "Original older introduction.", "tags": ["Research"]}},
+            {"title": "Newer", "path": "newer", "language": "en-US", "content": "Full article must stay out", "extra": {"date": "2026-11-06T00:00:00+08:00", "introduction": "Publisher's newer teaser.", "tags": ["Release"]}},
+            {"title": "Other language", "path": "other", "language": "zh-CN", "extra": {"date": "2026-11-07T00:00:00+08:00"}},
+        ]
+        items = parse_qwen_blog(json.dumps({"success": True, "data": {"articles": articles}}).encode())
+        self.assertEqual([item["title"] for item in items], ["Newer", "Older"])
+        self.assertEqual(items[0]["url"], "https://qwen.ai/blog?id=newer")
+        self.assertEqual(items[0]["publishedAt"], "2026-11-05T16:00:00Z")
+        self.assertEqual(items[0]["categories"], ["Release"])
+        self.assertEqual(items[0]["description"], "Publisher's newer teaser.")
+        self.assertNotIn("Full article", str(items))
+
+    def test_feed_revalidation_reuses_saved_items_on_304(self):
+        previous = {"items": [{"title": "Saved"}], "httpValidators": {"etag": '"abc"'}}
+        def unchanged(request, timeout):
+            self.assertEqual(request.get_header("If-none-match"), '"abc"')
+            raise urllib.error.HTTPError(request.full_url, 304, "Not Modified", Message(), None)
+        with patch("update.urllib.request.urlopen", side_effect=unchanged):
+            body, validators = fetch_feed("https://example.org/rss", previous)
+        self.assertIsNone(body)
+        self.assertEqual(validators, previous["httpValidators"])
+
+    def test_feed_request_decodes_gzip_even_without_encoding_header(self):
+        xml = b'<rss><channel><item><title>News</title><link>https://example.org/news</link></item></channel></rss>'
+        response = io.BytesIO(gzip.compress(xml))
+        response.headers = Message()
+        with patch("update.urllib.request.urlopen", return_value=response):
+            body, _ = fetch_feed("https://example.org/feed", {})
+        self.assertEqual(parse_feed(body, "https://example.org")[0]["title"], "News")
 
     def test_atom_link_and_unsafe_url(self):
         raw = b'<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>Good</title><link href="/good"/><updated>2026-11-04T01:00:00Z</updated></entry><entry><title>Bad</title><link href="javascript:alert(1)"/></entry></feed>'
@@ -47,6 +204,12 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(result[0]["description"], "A public dataset for evaluation.")
         self.assertEqual(result[0]["metrics"], {"likes": 32, "downloads": 1200})
 
+    def test_ranked_resources_keep_results_beyond_ten(self):
+        records = [{"id": f"org/model-{index}", "likes": index} for index in range(26)]
+        items = parse_hf_trending(json.dumps(records).encode(), "models")
+        self.assertEqual(len(items), 25)
+        self.assertEqual(items[-1]["title"], "org/model-24")
+
     def test_trending_rows_and_void_tags(self):
         raw = b'<article class="Box-row"><h2><a href="/org/repo"> org / repo </a></h2><p>A useful repo<img src="x"></p><a href="/org/repo/stargazers"><svg></svg>12,345</a><span>678 stars today</span></article>'
         result = parse_trending(raw)
@@ -54,12 +217,30 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(result[0]["description"], "A useful repo")
         self.assertEqual(result[0]["metrics"], {"stars": 12345, "starsToday": 678})
 
+    def test_github_trending_keeps_full_available_page(self):
+        rows = ''.join(f'<article class="Box-row"><h2><a href="/org/repo-{index}">org / repo-{index}</a></h2></article>' for index in range(17))
+        items = parse_trending(rows.encode())
+        self.assertEqual(len(items), 17)
+        self.assertEqual(items[-1]["title"], "org/repo-16")
+
     def test_aa_leaderboard_requires_sorted_intelligence_scores(self):
         rows = ''.join(f'<tr><td><div>Model {i}</div></td><td>1M</td><td>Lab</td><td><div>{10-i}</div></td><td><a href="/models/model-{i}">Model</a></td></tr>' for i in range(6))
         result = parse_aa_leaderboard(f'<table><tbody>{rows}</tbody></table>'.encode())
         self.assertEqual(result[0]["title"], "Model 0")
         self.assertEqual(result[0]["metrics"], {"intelligenceIndex": 10})
         self.assertEqual(result[0]["provider"], "Lab")
+
+    def test_aa_leaderboard_keeps_more_than_ten_ranked_models(self):
+        rows = ''.join(f'<tr><td><div>Model {index}</div></td><td>1M</td><td>Lab</td><td><div>{40-index}</div></td><td><a href="/models/model-{index}">Model</a></td></tr>' for index in range(30))
+        items = parse_aa_leaderboard(f'<table><tbody>{rows}</tbody></table>'.encode())
+        self.assertEqual(len(items), 25)
+        self.assertEqual(items[-1]["title"], "Model 24")
+
+    def test_feed_keeps_more_than_twelve_items_when_available(self):
+        entries = ''.join(f'<item><title>Post {index}</title><link>https://example.org/{index}</link></item>' for index in range(26))
+        items = parse_feed(f'<rss><channel>{entries}</channel></rss>'.encode(), "https://example.org")
+        self.assertEqual(len(items), 24)
+        self.assertEqual(items[-1]["title"], "Post 23")
 
     def test_missing_feed_date_uses_publishers_dated_link(self):
         raw = b'<rss><channel><item><title>Post</title><link>https://tech.meituan.com/2026/11/02/post.html</link></item></channel></rss>'

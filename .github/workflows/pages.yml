@@ -30,12 +30,25 @@ jobs:
           ref: main
       - name: Refresh public sources
         if: github.event_name != 'push'
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USER_AGENT: ${{ secrets.REDDIT_USER_AGENT }}
+          X_API_ENABLED: ${{ vars.X_API_ENABLED }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
         run: python3 scripts/update.py
       - name: Initialize snapshot on source pushes
         if: github.event_name == 'push'
         run: python3 scripts/update.py --offline
       - name: Validate and build static data
         run: python3 scripts/build.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Remove social post content from the committed snapshot
+        if: github.event_name != 'push'
+        run: python3 scripts/update.py --redact-social
       - name: Commit updated snapshot
         if: github.event_name != 'push'
         run: |
@@ -46,9 +59,5 @@ jobs:
             git commit -m "data: refresh source snapshot"
             git push
           fi
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
       - id: deployment
         uses: actions/deploy-pages@v4

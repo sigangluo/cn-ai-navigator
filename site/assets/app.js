@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-const state = { catalog: null, snapshot: null, query: '', language: 'all', org: 'all', todayOnly: false, activeGroup: 'all', pages: new Map() };
+const state = { catalog: null, snapshot: null, query: '', language: 'all', org: 'all', todayOnly: false, activeGroup: 'all', pages: new Map(), sectionFilters: new Map() };
 const tz = 'Asia/Singapore';
 const dateKey = (value) => {
   if (!value || Number.isNaN(Date.parse(value))) return '';
@@ -28,10 +28,10 @@ const link = (label, url, className = '') => {
   return node;
 };
 const resultFor = (source) => state.snapshot?.results?.[source.id] || { status: source.mode === 'link' ? 'directory' : 'pending', items: [] };
-const isRanking = (source) => ['github_trending', 'github_topic', 'hf_trending', 'papers_trending', 'aa_leaderboard'].includes(source.mode);
+const isRanking = (source) => ['github_trending', 'github_topic', 'hf_trending', 'papers_trending', 'aa_leaderboard', 'modelscope_models'].includes(source.mode);
 const recentlySynced = (result) => Boolean(result.lastSuccessAt && Date.now() - Date.parse(result.lastSuccessAt) <= 36 * 60 * 60 * 1000);
 const updatedToday = (source) => !isRanking(source) && resultFor(source).status === 'ok' && resultFor(source).items.some((item) => dateKey(item.publishedAt) === today);
-const PAGE_SIZE = 3;
+const PAGE_SIZE = 5;
 const orgCounts = new Map();
 
 const genericCategories = new Set(['ai', 'news', 'blog', '资讯', '综合', '人工智能', 'artificial intelligence', 'research blog']);
@@ -40,20 +40,29 @@ function itemFacts(source, item) {
   const facts = [];
   const add = (label, kind = 'metric') => { const fact = el('span', `item-fact ${kind}`, label); facts.push(fact); return fact; };
   const metrics = item.metrics || {};
-  if (source.group === 'papers') {
-    if (item.authors?.length) {
-      const names = item.authors.slice(0, 3).join('、');
-      const more = item.authors.length > 3 ? ` 等 ${item.authors.length} 人` : '';
-      add(`作者 ${names}${more}`, 'paper-meta').title = item.authors.join('、');
+  if (item.authors?.length) {
+    const authors = item.authors.filter((name) => name && name.toLocaleLowerCase() !== source.org.toLocaleLowerCase());
+    if (authors.length) {
+      const names = authors.slice(0, 3).join('、');
+      const more = authors.length > 3 ? ` 等 ${authors.length} 人` : '';
+      add(`作者 ${names}${more}`, 'paper-meta').title = authors.join('、');
     }
+  }
+  if (source.group === 'papers') {
     if (item.linkedOrganization) add(`HF 关联组织 ${item.linkedOrganization}`, 'paper-meta');
   }
   if (source.id === 'github-trending' || source.mode === 'github_topic') {
     if (Number.isFinite(metrics.stars)) add(`★ ${numberText(metrics.stars)} Stars`);
     if (Number.isFinite(metrics.starsToday)) add(`今日新增 +${numberText(metrics.starsToday)}`);
-  } else if (source.mode === 'hf_trending') {
+  } else if (source.mode === 'hf_trending' || source.mode === 'modelscope_models') {
     if (Number.isFinite(metrics.likes)) add(`赞 ${numberText(metrics.likes)}`);
     if (Number.isFinite(metrics.downloads)) add(`下载 ${numberText(metrics.downloads)}`);
+    if (source.mode === 'modelscope_models') {
+      if (item.modelId) add(`模型 ID ${item.modelId}`, 'category');
+      if (item.createdAt) add(`仓库创建 ${dateKey(item.createdAt)}`, 'category');
+      if (item.updatedAt) add(`仓库更新 ${dateKey(item.updatedAt)}`, 'category');
+      if (item.license) add(`许可 ${item.license}`, 'category');
+    }
     if (item.task) add(`任务 ${item.task}`, 'category');
     if (item.sdk) add(`框架 ${item.sdk}`, 'category');
   } else if (source.mode === 'papers_trending' || source.mode === 'papers') {
@@ -64,9 +73,23 @@ function itemFacts(source, item) {
     if (item.provider) add(`机构 ${item.provider}`, 'category');
   } else if (source.mode === 'youtube') {
     if (Number.isFinite(metrics.views)) add(`播放 ${numberText(metrics.views)}`);
+  } else if (source.mode === 'hn_feed' || source.mode === 'reddit') {
+    if (Number.isFinite(metrics.upvotes)) add(`投票 ${numberText(metrics.upvotes)}`);
+    if (Number.isFinite(metrics.comments)) add(`评论 ${numberText(metrics.comments)}`);
+  } else if (source.mode === 'bluesky' || source.mode === 'x_api') {
+    if (Number.isFinite(metrics.likes)) add(`赞 ${numberText(metrics.likes)}`);
+    if (Number.isFinite(metrics.reposts)) add(`转发 ${numberText(metrics.reposts)}`);
+    if (Number.isFinite(metrics.comments)) add(`回复 ${numberText(metrics.comments)}`);
   }
   const primaryArxivCategory = source.id.startsWith('arxiv-') ? { 'arxiv-ai': 'cs.AI', 'arxiv-lg': 'cs.LG', 'arxiv-cl': 'cs.CL', 'arxiv-cv': 'cs.CV', 'arxiv-ro': 'cs.RO' }[source.id] : null;
-  (item.categories || []).filter((category) => category && !genericCategories.has(category.trim().toLocaleLowerCase()) && category !== primaryArxivCategory).slice(0, 2).forEach((category) => add(category, 'category'));
+  const categories = (item.categories || []).filter((category) => category && !genericCategories.has(category.trim().toLocaleLowerCase()) && category !== primaryArxivCategory);
+  categories.slice(0, 2).forEach((category) => add(category, 'category'));
+  if (categories.length > 2) {
+    const extra = el('details', 'extra-categories');
+    extra.append(el('summary', '', `另有 ${categories.length - 2} 个标签`));
+    categories.slice(2).forEach((category) => extra.append(el('span', 'item-fact category', category)));
+    facts.push(extra);
+  }
   if (!facts.length) return null;
   const line = el('div', 'item-facts'); line.append(...facts);
   return line;
@@ -103,13 +126,13 @@ function sourceCard(source) {
   const ranking = isRanking(source);
   const fresh = updatedToday(source);
   const stale = result.status === 'ok' && !recentlySynced(result);
-  const card = el('article', `source-card ${fresh ? 'is-fresh' : ''} ${source.mode === 'link' ? 'is-directory' : ''}`);
+  const card = el('article', `source-card ${fresh ? 'is-fresh' : ''} ${result.status === 'directory' ? 'is-directory' : ''}`);
   card.id = `source-${source.id}`;
   const identity = el('div', 'source-identity');
   const top = el('div', 'card-top');
   if (source.org !== source.name) top.append(el('span', 'org', source.org));
   top.append(el('span', `status ${result.status === 'error' ? 'error' : stale ? 'stale' : fresh ? 'fresh' : result.status === 'ok' ? 'recent' : 'manual'}`,
-    result.status === 'error' ? '同步异常' : fresh ? '今天有更新' : result.status === 'ok' ? (ranking ? (recentlySynced(result) ? '当前榜单' : '旧榜单快照') : '此前有发布') : source.mode === 'link' ? '原站入口' : '等待同步'));
+    result.status === 'error' ? '同步异常' : fresh ? '今天有更新' : result.status === 'ok' ? (ranking ? (recentlySynced(result) ? '当前榜单' : '旧榜单快照') : '此前有发布') : result.status === 'directory' ? '原站入口' : '等待同步'));
   identity.append(top);
   const title = el('h4', 'source-name'); title.append(link(source.name, source.url)); identity.append(title);
   identity.append(el('p', 'source-note', source.note));
@@ -122,26 +145,50 @@ function sourceCard(source) {
     const sections = el('details', 'source-sections');
     sections.append(el('summary', '', '官网栏目'));
     const tags = el('div', 'native-tags');
-    source.sections.forEach((name) => tags.append(el('span', 'native-tag', name)));
+    const selected = state.sectionFilters.get(source.id);
+    if (selected) sections.open = true;
+    source.sections.forEach((name) => {
+      const count = (result.items || []).filter((item) => (item.categories || []).includes(name)).length;
+      if (count) {
+        const button = el('button', `native-tag native-tag-button ${selected === name ? 'selected' : ''}`, `${name} · ${count}`);
+        button.type = 'button'; button.setAttribute('aria-pressed', String(selected === name));
+        button.title = `筛选此来源近期条目中的 ${name} 分类`;
+        button.addEventListener('click', () => {
+          if (selected === name) state.sectionFilters.delete(source.id);
+          else state.sectionFilters.set(source.id, name);
+          state.pages.set(source.id, 0);
+          render();
+        });
+        tags.append(button);
+      } else tags.append(el('span', 'native-tag', name));
+    });
     sections.append(tags); identity.append(sections);
   }
   card.append(identity);
-  if (source.mode === 'link') return card;
+  if (result.status === 'directory') return card;
 
   const content = el('div', 'source-content');
   if (result.items?.length) {
-    const pageSize = ranking ? 5 : PAGE_SIZE;
-    const totalPages = Math.ceil(result.items.length / pageSize);
+    const matchesItemOnly = state.query && !sourceMatchesQuery(source);
+    const queryItems = matchesItemOnly ? result.items.filter((item) => item.title?.toLocaleLowerCase().includes(state.query)) : result.items;
+    const selectedSection = state.sectionFilters.get(source.id);
+    const matchingItems = selectedSection ? queryItems.filter((item) => (item.categories || []).includes(selectedSection)) : queryItems;
+    const items = ranking ? matchingItems : [...matchingItems].sort((a, b) =>
+      (Date.parse(b.publishedAt) || 0) - (Date.parse(a.publishedAt) || 0));
+    const pageSize = ranking ? 10 : PAGE_SIZE;
+    const totalPages = Math.ceil(items.length / pageSize);
     const renderPage = () => {
-      const page = Math.min(state.pages.get(source.id) || 0, totalPages - 1);
+      const page = Math.max(0, Math.min(state.pages.get(source.id) || 0, totalPages - 1));
       content.replaceChildren();
+      if (selectedSection) content.append(el('p', 'section-filter-note', `官网分类：${selectedSection} · 当前快照 ${items.length} 条`));
       const list = el(ranking ? 'ol' : 'ul', `item-list ${ranking ? 'ranking-list' : ''}`);
-      result.items.slice(page * pageSize, (page + 1) * pageSize).forEach((item, offset) => list.append(itemRow(source, item, page * pageSize + offset, ranking)));
+      items.slice(page * pageSize, (page + 1) * pageSize).forEach((item, offset) => list.append(itemRow(source, item, page * pageSize + offset, ranking)));
       content.append(list);
+      if (!items.length) content.append(el('p', 'no-items', '当前筛选下没有匹配条目。'));
       if (totalPages > 1) {
         const pager = el('nav', 'pager');
         pager.setAttribute('aria-label', `${source.name} 条目分页`);
-        pager.append(el('span', 'page-count', `${result.items.length} 条 · 第 ${page + 1} / ${totalPages} 页`));
+        pager.append(el('span', 'page-count', `${items.length} 条 · 第 ${page + 1} / ${totalPages} 页`));
         const buttons = el('div', 'page-buttons');
         const addButton = (label, target, disabled, current = false) => {
           const button = el('button', `page-button ${current ? 'current' : ''}`, label);
@@ -176,6 +223,10 @@ function matches(source) {
   if (state.org !== 'all' && source.org !== state.org) return false;
   if (state.todayOnly && !updatedToday(source)) return false;
   if (!state.query) return true;
+  return sourceMatchesQuery(source) || resultFor(source).items?.some((item) => item.title?.toLocaleLowerCase().includes(state.query));
+}
+
+function sourceMatchesQuery(source) {
   if (state.query === '中文') return source.language === 'zh';
   if (state.query === '非中文') return source.language === 'non_zh';
   return [source.name, source.org, source.note, ...(source.sections || [])].join(' ').toLocaleLowerCase().includes(state.query);
@@ -233,12 +284,12 @@ function render() {
   renderNav();
   const sources = state.catalog.sources;
   $('#sourceCount').textContent = sources.length;
-  const unhealthy = sources.filter((source) => source.mode !== 'link' && (resultFor(source).status !== 'ok' || !recentlySynced(resultFor(source))));
+  const unhealthy = sources.filter((source) => source.mode !== 'link' && resultFor(source).status !== 'directory' && (resultFor(source).status !== 'ok' || !recentlySynced(resultFor(source))));
   const notice = $('#syncNotice'); notice.hidden = unhealthy.length === 0;
   if (unhealthy.length) notice.textContent = `${unhealthy.length} 个入口近期未成功同步；旧结果和官网链接仍可访问。`;
   $('#syncTime').textContent = state.snapshot?.generatedAt ? `快照 ${new Intl.DateTimeFormat('zh-CN', { timeZone: tz, month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(state.snapshot.generatedAt))} · 新加坡时间` : '等候首次同步';
   const visible = sources.filter(matches);
-  $('#resetFilters').hidden = state.activeGroup === 'all' && state.language === 'all' && state.org === 'all' && !state.todayOnly && !state.query;
+  $('#resetFilters').hidden = state.activeGroup === 'all' && state.language === 'all' && state.org === 'all' && !state.todayOnly && !state.query && !state.sectionFilters.size;
   $('#visibleCount').textContent = `${visible.length} / ${sources.length}`;
   const container = $('#sections'); container.replaceChildren();
   for (const group of state.catalog.groups) {
@@ -275,7 +326,7 @@ async function init() {
     render();
   } catch (error) { $('#sections').replaceChildren(el('div', 'empty', `${error.message}。请通过本地 HTTP 服务打开页面。`)); }
 }
-$('#search').addEventListener('input', (event) => { state.query = event.target.value.trim().toLocaleLowerCase(); render(); });
+$('#search').addEventListener('input', (event) => { state.query = event.target.value.trim().toLocaleLowerCase(); state.pages.clear(); render(); });
 $('#todayOnly').addEventListener('change', (event) => { state.todayOnly = event.target.checked; state.pages.clear(); render(); });
 $('#languageFilter').addEventListener('click', () => {
   const opening = $('#languagePanel').hidden;
@@ -322,7 +373,7 @@ $('.language-filter').addEventListener('keydown', (event) => {
 });
 $('.language-filter').addEventListener('focusout', (event) => { if (!event.relatedTarget || !event.currentTarget.contains(event.relatedTarget)) closeLanguagePanel(); });
 $('#resetFilters').addEventListener('click', () => {
-  state.query = ''; state.language = 'all'; state.org = 'all'; state.todayOnly = false; state.activeGroup = 'all';
+  state.query = ''; state.language = 'all'; state.org = 'all'; state.todayOnly = false; state.activeGroup = 'all'; state.sectionFilters.clear(); state.pages.clear();
   $('#search').value = ''; $('#todayOnly').checked = false; closeOrgPanel(); closeLanguagePanel();
   render();
 });

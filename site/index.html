@@ -7,14 +7,17 @@
   <meta name="description" content="AI 导航台：浏览资讯、独立博客、研究、技术视频、论文与开源项目的最新更新，直达原站。">
   <title>AI 导航台 · 资讯、博客、视频与项目导航</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css?v=20261107-3">
 </head>
 <body>
   <a class="skip" href="#content">跳到入口目录</a>
   <header class="site-header">
     <div class="header-inner">
       <a class="home" href="#content" aria-label="AI 导航台首页"><span class="brand-mark" aria-hidden="true">✳</span><span class="brand-copy"><strong>AI 导航台</strong><small>发现最新更新，直达原站阅读</small></span></a>
-      <div class="header-status"><span><strong id="sourceCount">—</strong> 个入口</span><span id="syncTime">正在加载…</span></div>
+      <div class="header-actions">
+        <div class="header-status"><span><strong id="sourceCount">—</strong> 个入口</span><span id="syncTime">正在加载…</span></div>
+        <button id="agentButton" class="agent-button" type="button">✳ AI 助手</button>
+      </div>
     </div>
   </header>
 
@@ -28,7 +31,7 @@
       <div class="toolbar">
         <div class="toolbar-title"><span class="section-kicker">EXPLORE</span><h1>信息目录 <span id="visibleCount"></span></h1><p class="project-intro">汇集 AI 资讯、独立博客、研究、技术视频、论文、开源项目与榜单。可获取的栏目定时更新；每个入口都能直达原站。</p></div>
         <div class="controls">
-          <label class="search-wrap"><span class="sr-only">搜索入口</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="搜索站点、机构、官网栏目…"></label>
+          <label class="search-wrap"><span class="sr-only">搜索入口和近期标题</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="搜索站点、机构、官网栏目或近期标题…"></label>
           <div class="language-filter"><button id="languageFilter" class="language-filter-trigger" type="button" aria-expanded="false" aria-controls="languagePanel"><span id="languageFilterLabel">全部语言</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg></button><div id="languagePanel" class="language-panel" role="group" aria-label="筛选语言" hidden><button class="language-option" type="button" data-language="all" aria-pressed="true">全部语言</button><button class="language-option" type="button" data-language="zh" aria-pressed="false">中文</button><button class="language-option" type="button" data-language="non_zh" aria-pressed="false">非中文</button></div></div>
           <div class="org-filter"><button id="orgFilter" class="org-filter-trigger" type="button" aria-expanded="false" aria-controls="orgPanel"><span id="orgFilterLabel">全部机构</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg></button><div id="orgPanel" class="org-panel" hidden><label class="org-search"><span class="sr-only">搜索机构</span><input id="orgSearch" type="search" placeholder="搜索机构…" autocomplete="off"></label><div id="orgOptions" class="org-options" role="group" aria-label="选择机构"></div></div></div>
           <label class="today-switch"><input id="todayOnly" type="checkbox"><span class="switch-track"></span>只看今天更新</label>
@@ -40,7 +43,20 @@
       <div id="sections" aria-live="polite"><div class="loading">正在整理目录…</div></div>
     </div>
   </main>
+  <dialog id="agentDialog" class="agent-dialog" aria-labelledby="agentDialogTitle">
+    <form id="agentForm" method="dialog">
+      <div class="agent-dialog-heading"><h2 id="agentDialogTitle">启用 AI 助手</h2><button class="agent-close" type="button" aria-label="关闭设置">×</button></div>
+      <p>输入模型接口后，可用自然语言操作当前导航页，例如“只看中文论文”或“找到 Hugging Face 的论文榜”。</p>
+      <label>接口地址<input id="agentBaseURL" type="url" value="https://dashscope.aliyuncs.com/compatible-mode/v1" required autocomplete="off" spellcheck="false"></label>
+      <label>模型名称<input id="agentModel" type="text" value="qwen3.5-plus" required autocomplete="off" spellcheck="false"></label>
+      <label>API Key <span>本地模型可留空</span><input id="agentApiKey" type="password" autocomplete="off" spellcheck="false" placeholder="仅在当前页面使用"></label>
+      <p class="agent-hint">请求由浏览器直接发送到所填接口。服务需允许跨域访问；请勿输入敏感内容。</p>
+      <p id="agentError" class="agent-error" role="alert" hidden></p>
+      <div class="agent-dialog-actions"><button class="agent-cancel" type="button">取消</button><button id="agentStart" class="agent-start" type="submit">启动助手</button></div>
+    </form>
+  </dialog>
   <footer><span>AI 导航台</span><span>信息导航，原文直达。内容与版权属于各发布者。 <a href="https://github.com/sigangluo/cn-ai-navigator" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></footer>
-  <script src="assets/app.js" defer></script>
+  <script src="assets/app.js?v=20261107-3" defer></script>
+  <script src="assets/page-agent.js" defer></script>
 </body>
 </html>

@@ -1,69 +1,44 @@
-# cn-ai-navigator · AI 导航台
+# AI 导航台
 
-一个面向日常浏览的 AI 信息导航看板。**所有收录入口始终显示**，可以随时直达原站；能稳定自动获取的栏目还显示最近标题、发布日期、发布者导语或摘要、原文链接。YouTube 视频展示频道原始说明与播放量。条目右上角只显示发布日期；有辨识度的官网文章分类和栏目专属数据展示在标题下方。每个栏目的条目独立分页，今天发布的条目以颜色区分。榜单显示当前快照。历史内容留在原网站阅读或观看。
+一个按**信息来源**组织的 AI 阅读入口。资讯、研究机构、独立作者、论文、视频和开源项目分散在不同网站；这里把它们放到同一个目录，展示近期更新，并让每条内容直达发布者的原始页面。
 
-[在线访问 AI 导航台](https://sigangluo.github.io/cn-ai-navigator/)
+**[打开 AI 导航台](https://sigangluo.github.io/cn-ai-navigator/)**
 
-![看板预览](docs/images/overview.png)
+## 你可以怎么用
 
-收录范围按内容分为七类：资讯与解读、独立作者与博客、模型机构与研究动态、工程与开发实践、视频与课程、论文与学术、项目、模型与数据。每类再按当前入口页面的主要阅读语言分为“中文 / 非中文”，与机构所在地无关；公众号入口也放在对应内容分类中。榜单放在对应的项目与资源目录。`data/sources.json` 同时保留发布者自己的栏目。OpenAI 的 News、Research Index、Developer Blog、Cookbook、Release Notes 和 API Changelog 是六个独立入口。
+1. **找来源**：从左侧选择内容分类，再按中文或非中文、机构和关键词筛选。默认展示全部入口，包括暂时没有新内容的来源。
+2. **看近期更新**：能自动获取的来源会显示近期标题、发布日期、发布者提供的简介，以及公开的分类或互动数据。每个来源都可以单独翻页。
+3. **回到原站**：点击标题阅读文章、查看论文或观看视频。看板只保存阅读线索，完整内容和历史记录留在发布者网站。
+4. **关注今天**：打开“只看今天更新”，查看按新加坡时间计算的今日发布内容。榜单显示的是当前排名快照，上榜不代表今天发布。
 
-## 设计原则
+页面右上角的 **AI 助手**可以用自然语言操作筛选，例如“只看中文论文”。这项功能需要你填写自己的兼容接口、模型和 API Key；请求由你的浏览器直接发送到所填接口。本站代码不会保存 Key，刷新页面后需要重新填写。接口可能产生费用。
 
-- **固定目录与筛选**：低频来源、暂无可靠自动列表的官网和公众号入口都保留卡片。页面简要说明收录范围和阅读方式；默认展示全部来源。可按内容分类、中文/非中文、机构、只看今天更新及关键词组合筛选；机构菜单支持搜索，随时清除筛选回到完整目录。
-- **逐个来源浏览**：页面直接进入来源目录。每个自动来源的最近条目独立分页；每条文章使用相同版式，官网导语与论文摘要在页面中完整显示已收录的文本。
-- **真实线索**：导语与摘要来自发布者公开列表，不做 AI 摘要或主观推荐，也不复制文章全文。部分 RSS 提供的是长正文，采集器会限制预览长度并用省略号标明。
-- **论文元信息**：arXiv 和 Hugging Face 论文条目展示公开作者；Hugging Face 的组织标签标为“HF 关联组织”，不等同于论文作者单位。来源没有明确提供机构时留空。
-- **明确状态**：`原站入口` 表示仅导航；`等待同步` 表示尚未首次抓取；`同步异常` 表示本轮失败，历史抓取结果仍可见；`今天有更新` 根据条目发布日期和新加坡时间判断，今天发布的条目另有浅绿色底色。
-- **榜单快照**：GitHub Trending 展示当前仓库顺序，绝不把上榜理解为今天创建。其他榜单如无法稳定获取结构化排名，先保留官网入口。
-- **来源分类独立**：七个内容分类用于导航；每类下按入口语言分组。官网栏目作为来源标签保留，不强行映射。文章自己的官网分类只展示有辨识度的前两项；通用的 AI、News 等标签会省略。GitHub Trending 展示仓库总 Stars 和今日新增；Hugging Face 榜单展示赞与可用下载量，论文榜展示投票与讨论数；模型榜展示 Intelligence Index 和机构，YouTube 视频展示播放量。缺失字段不会用估计值补齐。
+## 如何理解页面上的状态
 
-## 自动更新
+| 标记 | 含义 |
+| --- | --- |
+| 今天有更新 / 此前有发布 | 来源已有可访问的近期条目，日期按新加坡时间显示。 |
+| 原站入口 | 保留官网或频道链接，当前没有可靠的自动条目列表。 |
+| 等待同步 | 来源已配置，尚未完成首次获取。 |
+| 同步异常 | 最近一次获取失败；已有的旧条目会保留，仍可打开原站。 |
+| 当前榜单 / 旧榜单快照 | 排名取自最近一次成功获取，刷新时间决定快照的新旧。 |
 
-`scripts/update.py` 用 Python 标准库抓取官方 RSS/Atom（包括 YouTube 频道视频）、Hugging Face 论文与模型目录 API、部分官网公开文章列表，以及 GitHub Trending、GitHub 主题页和 Artificial Analysis 官网榜单。InfoQ 的 AI 条目从其官方综合 RSS 按标题筛选，并从原文元数据补充摘要；Cohere 和 Kimi 的部分文章也用原文元数据补充简介。其余来源保留原站直达入口。Bilibili 频道的公开投稿请求在验证中返回 412，当前仅显示频道入口；不会用未经核实的第三方转存接口伪装成同步结果。`site/data/latest.json` 是小型快照，只保存每个来源最近少量条目；失败时保留上次成功条目并显示异常。官网列表结构可能变化，解析失败时会标出状态并保留入口。
+“官网栏目”是发布者自己的分类名称。栏目旁的数字表示**当前已收录条目中**有多少条带有相同分类；没有数字的栏目仍可帮助你认识原站的内容范围。
 
-[`.github/workflows/pages.yml`](.github/workflows/pages.yml) 在每天 **09:17、21:17（新加坡时间）** 自动刷新并部署 GitHub Pages，也可手动运行。定时任务由 GitHub 执行，不需要个人电脑开机。若新来源没有稳定公开接口，先放在目录中，再由 AI 维护者核查后接入。
+## 数据与维护
 
-可选的 [AI 维护工作流](.github/workflows/ai-maintenance.yml) 每周检查快照中的异常，使用 [OpenAI Codex GitHub Action](https://github.com/openai/codex-action) 提出修复 PR，**不会自动合并**。启用时在仓库设置中增加 secret `OPENAI_API_KEY`、variable `ENABLE_AI_MAINTENANCE=true`，并允许 GitHub Actions 创建 PR。AI 的维护规则见 [AGENTS.md](AGENTS.md)。即使未启用 AI 工作流，每日数据刷新仍然独立运行。
+可获取的来源由 GitHub Actions 定时刷新，页面会显示快照时间。来源暂时无法稳定获取时，目录仍保留它的原站入口。Reddit 和 X 需要各自的 API 授权；未启用时，它们以社区或账号链接呈现。
 
-GitHub 的定时工作流可能延迟；公开仓库若持续 60 天没有活动，定时工作流可能被自动停用。详情见 [GitHub 文档](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)。
+这个项目采用 **AI 参与维护、人工审核变更** 的方式。启用 AI 巡检后，它会检查来源是否失效、提出修复建议并创建待审核的修改；数据定时更新独立运行。看板中的标题、日期、简介和分类来自公开原站，不生成文章摘要，也不转载全文。
 
-## 本地运行
-
-不需要安装依赖。Python 3.9+；页面是原生 HTML、CSS 和 JavaScript。
-
-```bash
-python3 scripts/update.py --offline          # 初始化/保留本地快照
-python3 scripts/build.py                     # 校验来源并复制到 site/data
-python3 -m http.server 8000 -d site          # 打开 http://localhost:8000
-```
-
-联网刷新全部可抓取来源：
+想在本地浏览时，在仓库目录运行：
 
 ```bash
-python3 scripts/update.py
-python3 scripts/build.py
+python3 -m http.server 8000 -d site
 ```
 
-只重试一个来源：`python3 scripts/update.py --only openai-news`。它会保留其他来源的现有快照。
+然后打开 `http://localhost:8000`。项目使用原生 HTML、CSS 和 JavaScript，无需安装前端依赖。部署与维护细节见[维护说明](docs/MAINTENANCE.md)。
 
-验证：
+## 许可
 
-```bash
-python3 -m unittest discover -s tests
-python3 scripts/update.py --offline
-python3 scripts/build.py
-node --check site/assets/app.js
-```
-
-## 发布到 GitHub Pages
-
-将仓库推送到 GitHub，默认分支设为 `main`；在 Settings → Pages → Build and deployment 中选择 **GitHub Actions**。之后推送页面代码会部署站点；计划任务会继续刷新数据并部署。GitHub Actions 需要仓库允许写入 contents，工作流已声明所需权限。部署步骤使用 [GitHub 官方 Pages Actions](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
-
-## 维护来源
-
-编辑 [`data/sources.json`](data/sources.json) 后运行离线更新和构建。每个条目必须有稳定的原站入口。自动模式由 [`scripts/build.py`](scripts/build.py) 校验；只有确认官方列表可稳定解析时才将 `link` 改为自动模式。抓取器的网络失败不会删除来源。公众号尽量通过发布者官网中可访问的文章索引进入，不依赖非公开的第三方账号 API。
-
-## 许可与内容
-
-代码采用 [MIT](LICENSE)。来源名称、文章标题、官网导语或论文摘要、分类和链接仅用于索引；原文内容和版权属于各发布者。此项目不代表这些机构，也不重新发布它们的文章。
+项目代码采用 [MIT 许可](LICENSE)。来源名称、标题、简介和链接仅用于导航；原文及其版权属于各发布者。本项目不代表这些机构。
