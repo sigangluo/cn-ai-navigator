@@ -7,7 +7,7 @@
   <meta name="description" content="AI 导航台：浏览资讯、独立博客、研究、技术视频、论文与开源项目的最新更新，直达原站。">
   <title>AI 导航台 · 资讯、博客、视频与项目导航</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=20261107-3">
+  <link rel="stylesheet" href="assets/style.css?v=1cf31de0c2">
 </head>
 <body>
   <a class="skip" href="#content">跳到入口目录</a>
@@ -34,13 +34,15 @@
           <label class="search-wrap"><span class="sr-only">搜索入口和近期标题</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="搜索站点、机构、官网栏目或近期标题…"></label>
           <div class="language-filter"><button id="languageFilter" class="language-filter-trigger" type="button" aria-expanded="false" aria-controls="languagePanel"><span id="languageFilterLabel">全部语言</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg></button><div id="languagePanel" class="language-panel" role="group" aria-label="筛选语言" hidden><button class="language-option" type="button" data-language="all" aria-pressed="true">全部语言</button><button class="language-option" type="button" data-language="zh" aria-pressed="false">中文</button><button class="language-option" type="button" data-language="non_zh" aria-pressed="false">非中文</button></div></div>
           <div class="org-filter"><button id="orgFilter" class="org-filter-trigger" type="button" aria-expanded="false" aria-controls="orgPanel"><span id="orgFilterLabel">全部机构</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg></button><div id="orgPanel" class="org-panel" hidden><label class="org-search"><span class="sr-only">搜索机构</span><input id="orgSearch" type="search" placeholder="搜索机构…" autocomplete="off"></label><div id="orgOptions" class="org-options" role="group" aria-label="选择机构"></div></div></div>
-          <label class="today-switch"><input id="todayOnly" type="checkbox"><span class="switch-track"></span>只看今天更新</label>
+          <label class="today-switch"><input id="todayOnly" type="checkbox"><span class="switch-track"></span>只看今天更新<span id="todayCount" class="today-count"></span></label>
           <button id="resetFilters" class="reset-filters" type="button" hidden>清除筛选</button>
         </div>
       </div>
-      <div class="legend" aria-label="颜色说明"><span><i class="dot fresh"></i> 今天发布</span><span><i class="dot recent"></i> 此前发布</span><span><i class="dot manual"></i> 原站入口</span><span><i class="dot error"></i> 同步异常</span><span class="timezone">日期按新加坡时间</span></div>
+      <div class="legend" id="legend" aria-label="状态说明"></div>
       <div class="sync-notice" id="syncNotice" role="status" hidden></div>
-      <div id="sections" aria-live="polite"><div class="loading">正在整理目录…</div></div>
+      <div class="sync-notice" id="todayNotice" hidden></div>
+      <div id="resultStatus" class="sr-only" role="status"></div>
+      <div id="sections"><div class="loading">正在整理目录…</div></div>
     </div>
   </main>
   <dialog id="agentDialog" class="agent-dialog" aria-labelledby="agentDialogTitle">
@@ -56,7 +58,7 @@
     </form>
   </dialog>
   <footer><span>AI 导航台</span><span>信息导航，原文直达。内容与版权属于各发布者。 <a href="https://github.com/sigangluo/cn-ai-navigator" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></footer>
-  <script src="assets/app.js?v=20261107-3" defer></script>
-  <script src="assets/page-agent.js" defer></script>
+  <script src="assets/app.js?v=35491e6c1d" defer></script>
+  <script src="assets/page-agent.js?v=6309617083" defer></script>
 </body>
 </html>

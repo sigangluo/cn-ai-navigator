@@ -1,0 +1,41 @@
+{
+  "_comment": "Single source of truth for source modes and cadence. scripts/build.py validates data/sources.json against it; scripts/health.py reads cadence; site/assets/app.js reads `ranking` through the generated site/data/sources.json.",
+  "commonFields": ["id", "name", "org", "parent", "group", "kind", "language", "url", "note", "cadence", "mode", "sections", "relatedLinks", "directoryReason", "verifiedAt"],
+  "genericCategories": ["ai", "news", "blog", "资讯", "综合", "人工智能", "artificial intelligence", "research blog"],
+  "cadence": {
+    "daily": {"maxAgeDays": 4, "note": "每天"},
+    "weekly": {"maxAgeDays": 21, "note": "每周"},
+    "monthly": {"maxAgeDays": 75, "note": "每月"},
+    "quarterly": {"maxAgeDays": 150, "note": "每季度"},
+    "dormant": {"maxAgeDays": null, "note": "基本停更，不检查陈旧"}
+  },
+  "modes": {
+    "link": {"requires": [], "ranking": false, "note": "只保留原站入口，不抓取；必须写 directoryReason 与 verifiedAt"},
+    "feed": {"requires": ["feed"], "ranking": false, "note": "RSS/Atom；可选 feedCategories、allowEmpty", "options": ["feedCategories", "allowEmpty", "lenientXml", "noDescription", "categoryPage", "aiOnly"]},
+    "hn_feed": {"requires": ["feed"], "ranking": false},
+    "metr_feed": {"requires": ["feed"], "ranking": false},
+    "infoq_ai_feed": {"requires": ["feed"], "ranking": false},
+    "youtube": {"requires": ["feed"], "ranking": false},
+    "bluesky": {"requires": ["actor"], "ranking": false, "options": ["aiOnly"]},
+    "reddit": {"requires": ["subreddit"], "ranking": false},
+    "x_api": {"requires": ["username"], "ranking": false},
+    "qwen_blog": {"requires": [], "ranking": false},
+    "publisher_page": {"requires": [], "ranking": false},
+    "official_listing": {"requires": [], "ranking": false},
+    "stanford_listing": {"requires": [], "ranking": false},
+    "kimi_page": {"requires": [], "ranking": false},
+    "cohere_page": {"requires": [], "ranking": false},
+    "llamaindex_page": {"requires": [], "ranking": false},
+    "deepseek_updates": {"requires": [], "ranking": false},
+    "aa_articles": {"requires": [], "ranking": false},
+    "openai_cookbook": {"requires": [], "ranking": false},
+    "baai_news": {"requires": ["newsCategory"], "ranking": false},
+    "papers": {"requires": [], "ranking": false},
+    "papers_trending": {"requires": [], "ranking": true},
+    "hf_trending": {"requires": ["resource"], "ranking": true},
+    "github_trending": {"requires": [], "ranking": true},
+    "github_topic": {"requires": [], "ranking": true},
+    "aa_leaderboard": {"requires": [], "ranking": true},
+    "modelscope_models": {"requires": [], "ranking": true}
+  }
+}

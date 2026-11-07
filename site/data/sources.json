@@ -41,6 +41,24 @@
       "description": "代码仓库、模型、数据集、应用与相关榜单"
     }
   ],
+  "kinds": [
+    {
+      "id": "model-lab",
+      "name": "模型公司"
+    },
+    {
+      "id": "big-tech",
+      "name": "科技大厂研究院"
+    },
+    {
+      "id": "institute",
+      "name": "研究院与高校"
+    },
+    {
+      "id": "evaluator",
+      "name": "独立评测与研究"
+    }
+  ],
   "sources": [
     {
       "id": "qbitai",
@@ -52,7 +70,8 @@
       "note": "中文 AI 资讯与产品动态",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://www.qbitai.com/feed"
+      "feed": "https://www.qbitai.com/feed",
+      "ranking": false
     },
     {
       "id": "aiera",
@@ -70,7 +89,9 @@
         "ASI 启示录",
         "ASI 坐标",
         "ASI 新天地"
-      ]
+      ],
+      "lenientXml": true,
+      "ranking": false
     },
     {
       "id": "jiqizhixin",
@@ -79,9 +100,18 @@
       "group": "news",
       "language": "zh",
       "url": "https://www.jiqizhixin.com/articles",
-      "note": "研究与产业资讯；页面动态加载",
+      "note": "研究与产业资讯；专栏入口见下方",
       "cadence": "daily",
-      "mode": "link"
+      "mode": "link",
+      "directoryReason": "页面动态加载，/rss 返回数据服务页面，没有可靠的公开文章列表",
+      "verifiedAt": "2026-11",
+      "relatedLinks": [
+        {
+          "label": "专栏 ↗",
+          "url": "https://www.jiqizhixin.com/columns"
+        }
+      ],
+      "ranking": false
     },
     {
       "id": "infoq-ai",
@@ -99,7 +129,36 @@
           "label": "AI 前线公众号 ↗",
           "url": "https://www.infoq.cn/official/account"
         }
-      ]
+      ],
+      "ranking": false
+    },
+    {
+      "id": "geekpark",
+      "name": "极客公园",
+      "org": "极客公园",
+      "group": "news",
+      "language": "zh",
+      "url": "https://www.geekpark.net/",
+      "note": "科技媒体；仅保留标题含 AI 相关词的文章",
+      "cadence": "daily",
+      "mode": "feed",
+      "feed": "https://www.geekpark.net/rss",
+      "aiOnly": true,
+      "ranking": false
+    },
+    {
+      "id": "leiphone",
+      "name": "雷峰网",
+      "org": "雷峰网",
+      "group": "news",
+      "language": "zh",
+      "url": "https://www.leiphone.com/",
+      "note": "科技媒体；仅保留标题含 AI 相关词的文章",
+      "cadence": "daily",
+      "mode": "feed",
+      "feed": "https://www.leiphone.com/feed",
+      "aiOnly": true,
+      "ranking": false
     },
     {
       "id": "techcrunch-ai",
@@ -111,7 +170,8 @@
       "note": "AI 产业与创业新闻",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://techcrunch.com/category/artificial-intelligence/feed/"
+      "feed": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "ranking": false
     },
     {
       "id": "the-decoder",
@@ -123,7 +183,8 @@
       "note": "AI 研究与产品报道",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://the-decoder.com/feed/"
+      "feed": "https://the-decoder.com/feed/",
+      "ranking": false
     },
     {
       "id": "the-verge-ai",
@@ -135,7 +196,8 @@
       "note": "AI 产品与行业新闻",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+      "feed": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "ranking": false
     },
     {
       "id": "aa-articles",
@@ -146,7 +208,8 @@
       "url": "https://artificialanalysis.ai/articles",
       "note": "模型性能、成本与市场分析",
       "cadence": "weekly",
-      "mode": "aa_articles"
+      "mode": "aa_articles",
+      "ranking": false
     },
     {
       "id": "latent-space",
@@ -158,7 +221,8 @@
       "note": "AI 工程访谈与深度文章",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://latent.space/feed"
+      "feed": "https://latent.space/feed",
+      "ranking": false
     },
     {
       "id": "simon",
@@ -170,7 +234,8 @@
       "note": "AI 与 LLM 工具、开发观察",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://simonwillison.net/tags/ai.atom"
+      "feed": "https://simonwillison.net/tags/ai.atom",
+      "ranking": false
     },
     {
       "id": "su-jianlin",
@@ -182,7 +247,21 @@
       "note": "模型架构、优化与数学推导",
       "cadence": "monthly",
       "mode": "feed",
-      "feed": "https://kexue.fm/feed"
+      "feed": "https://kexue.fm/feed",
+      "ranking": false
+    },
+    {
+      "id": "baoyu",
+      "name": "宝玉的分享",
+      "org": "宝玉",
+      "group": "blogs",
+      "language": "zh",
+      "url": "https://baoyu.io/",
+      "note": "大语言模型、Prompt 与软件工程的文章和译文",
+      "cadence": "monthly",
+      "mode": "feed",
+      "feed": "https://baoyu.io/feed.xml",
+      "ranking": false
     },
     {
       "id": "lilian-weng",
@@ -192,9 +271,10 @@
       "language": "non_zh",
       "url": "https://lilianweng.github.io/",
       "note": "深度学习、智能体与前沿研究长文",
-      "cadence": "monthly",
+      "cadence": "quarterly",
       "mode": "feed",
-      "feed": "https://lilianweng.github.io/index.xml"
+      "feed": "https://lilianweng.github.io/index.xml",
+      "ranking": false
     },
     {
       "id": "eugene-yan",
@@ -204,9 +284,10 @@
       "language": "non_zh",
       "url": "https://eugeneyan.com/",
       "note": "应用机器学习、推荐系统与 AI 评测",
-      "cadence": "monthly",
+      "cadence": "quarterly",
       "mode": "feed",
-      "feed": "https://eugeneyan.com/rss/"
+      "feed": "https://eugeneyan.com/rss/",
+      "ranking": false
     },
     {
       "id": "sebastian-raschka",
@@ -218,7 +299,8 @@
       "note": "LLM 论文解读与模型实现",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://magazine.sebastianraschka.com/feed"
+      "feed": "https://magazine.sebastianraschka.com/feed",
+      "ranking": false
     },
     {
       "id": "nathan-lambert",
@@ -230,7 +312,8 @@
       "note": "前沿模型、开放权重与 AI 研究观察",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://www.interconnects.ai/feed"
+      "feed": "https://www.interconnects.ai/feed",
+      "ranking": false
     },
     {
       "id": "hamel-husain",
@@ -242,7 +325,8 @@
       "note": "AI 产品工程与评测实践",
       "cadence": "monthly",
       "mode": "feed",
-      "feed": "https://hamel.dev/index.xml"
+      "feed": "https://hamel.dev/index.xml",
+      "ranking": false
     },
     {
       "id": "chip-huyen",
@@ -252,9 +336,10 @@
       "language": "non_zh",
       "url": "https://huyenchip.com/blog/",
       "note": "机器学习系统与生成式 AI 应用",
-      "cadence": "monthly",
+      "cadence": "dormant",
       "mode": "feed",
-      "feed": "https://huyenchip.com/feed.xml"
+      "feed": "https://huyenchip.com/feed.xml",
+      "ranking": false
     },
     {
       "id": "andrej-karpathy-blog",
@@ -264,9 +349,10 @@
       "language": "non_zh",
       "url": "https://karpathy.github.io/",
       "note": "神经网络、LLM 与教学笔记",
-      "cadence": "monthly",
+      "cadence": "dormant",
       "mode": "feed",
-      "feed": "https://karpathy.github.io/feed.xml"
+      "feed": "https://karpathy.github.io/feed.xml",
+      "ranking": false
     },
     {
       "id": "hn-ai",
@@ -278,7 +364,8 @@
       "note": "从首页按标题筛选 AI 相关讨论；显示原帖与投票、评论数",
       "cadence": "daily",
       "mode": "hn_feed",
-      "feed": "https://news.ycombinator.com/rss"
+      "feed": "https://news.ycombinator.com/rss",
+      "ranking": false
     },
     {
       "id": "bsky-simon",
@@ -291,7 +378,8 @@
       "cadence": "daily",
       "mode": "bluesky",
       "actor": "simonwillison.net",
-      "aiOnly": true
+      "aiOnly": true,
+      "ranking": false
     },
     {
       "id": "bsky-ai2",
@@ -303,7 +391,8 @@
       "note": "开放模型、研究与社区发布的官方短帖",
       "cadence": "daily",
       "mode": "bluesky",
-      "actor": "ai2.bsky.social"
+      "actor": "ai2.bsky.social",
+      "ranking": false
     },
     {
       "id": "reddit-local-llama",
@@ -315,7 +404,8 @@
       "note": "本地与开放权重模型讨论；显示近 48 小时热帖",
       "cadence": "daily",
       "mode": "reddit",
-      "subreddit": "LocalLLaMA"
+      "subreddit": "LocalLLaMA",
+      "ranking": false
     },
     {
       "id": "reddit-machine-learning",
@@ -327,7 +417,8 @@
       "note": "机器学习论文、项目与研究讨论；显示近 48 小时热帖",
       "cadence": "daily",
       "mode": "reddit",
-      "subreddit": "MachineLearning"
+      "subreddit": "MachineLearning",
+      "ranking": false
     },
     {
       "id": "reddit-claudeai",
@@ -339,7 +430,8 @@
       "note": "Claude 使用、开发与产品讨论；显示近 48 小时热帖",
       "cadence": "daily",
       "mode": "reddit",
-      "subreddit": "ClaudeAI"
+      "subreddit": "ClaudeAI",
+      "ranking": false
     },
     {
       "id": "x-karpathy",
@@ -351,7 +443,8 @@
       "note": "深度学习与 AI 工程动态；每次最多读取 5 条原创帖",
       "cadence": "daily",
       "mode": "x_api",
-      "username": "karpathy"
+      "username": "karpathy",
+      "ranking": false
     },
     {
       "id": "x-sama",
@@ -363,25 +456,29 @@
       "note": "AI 产品与行业动态；每次最多读取 5 条原创帖",
       "cadence": "daily",
       "mode": "x_api",
-      "username": "sama"
+      "username": "sama",
+      "ranking": false
     },
     {
       "id": "epoch-ai",
       "name": "Epoch AI · Latest",
       "org": "Epoch AI",
       "group": "labs",
+      "kind": "evaluator",
       "language": "non_zh",
       "url": "https://epoch.ai/blog",
       "note": "AI 能力、算力与产业趋势的实证研究",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://epoch.ai/atom.xml"
+      "feed": "https://epoch.ai/atom.xml",
+      "ranking": false
     },
     {
       "id": "openai-news",
       "name": "OpenAI · News",
       "org": "OpenAI",
       "group": "labs",
+      "kind": "model-lab",
       "language": "non_zh",
       "url": "https://openai.com/news/",
       "note": "官方新闻；保留官网文章分类",
@@ -398,14 +495,18 @@
         "Intelligence Age",
         "Global Affairs",
         "AI Adoption",
-        "Applied AI"
-      ]
+        "Applied AI",
+        "Startup",
+        "Publication"
+      ],
+      "ranking": false
     },
     {
       "id": "openai-research",
       "name": "OpenAI · Research Index",
       "org": "OpenAI",
       "group": "labs",
+      "kind": "model-lab",
       "language": "non_zh",
       "url": "https://openai.com/research/index/",
       "note": "近期条目取自官网 RSS 的 Research 与 Publication 分类；其他栏目从原站浏览",
@@ -417,32 +518,43 @@
         "Publication"
       ],
       "sections": [
+        "Research",
         "Publication",
         "Conclusion",
         "Milestone",
         "Release"
-      ]
+      ],
+      "ranking": false
     },
     {
       "id": "anthropic-news",
       "name": "Anthropic · News",
       "org": "Anthropic",
       "group": "labs",
+      "kind": "model-lab",
       "language": "non_zh",
       "url": "https://www.anthropic.com/news",
       "note": "产品、公司与政策公告",
       "cadence": "weekly",
       "mode": "publisher_page",
       "sections": [
+        "Announcements",
         "Product",
+        "Features",
+        "Policy",
+        "Partnerships",
+        "Safeguards",
+        "Security",
         "Company"
-      ]
+      ],
+      "ranking": false
     },
     {
       "id": "anthropic-research",
       "name": "Anthropic · Research",
       "org": "Anthropic",
       "group": "labs",
+      "kind": "model-lab",
       "language": "non_zh",
       "url": "https://www.anthropic.com/research",
       "note": "研究成果与团队文章",
@@ -456,13 +568,16 @@
         "Interpretability",
         "Societal Impacts",
         "Science"
-      ]
+      ],
+      "ranking": false
     },
     {
       "id": "deepmind",
       "name": "Google DeepMind · Blog",
       "org": "Google DeepMind",
+      "parent": "Google",
       "group": "labs",
+      "kind": "model-lab",
       "language": "non_zh",
       "url": "https://deepmind.google/blog/",
       "note": "模型、科学与安全研究",
@@ -474,48 +589,59 @@
         "Research",
         "Science",
         "Responsibility & Safety"
-      ]
+      ],
+      "categoryPage": true,
+      "ranking": false
     },
     {
       "id": "google-research",
       "name": "Google Research · Blog",
       "org": "Google Research",
+      "parent": "Google",
       "group": "labs",
+      "kind": "big-tech",
       "language": "non_zh",
       "url": "https://research.google/blog/",
       "note": "Google 研究团队文章",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://research.google/blog/rss/"
+      "feed": "https://research.google/blog/rss/",
+      "ranking": false
     },
     {
       "id": "google-ai",
       "name": "Google · AI Blog",
       "org": "Google",
+      "parent": "Google",
       "group": "labs",
+      "kind": "big-tech",
       "language": "non_zh",
       "url": "https://blog.google/technology/ai/",
       "note": "Google AI 产品与技术动态",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://blog.google/technology/ai/rss/"
+      "feed": "https://blog.google/technology/ai/rss/",
+      "ranking": false
     },
     {
       "id": "meta-ai",
       "name": "Meta AI · Blog",
       "org": "Meta AI",
       "group": "labs",
+      "kind": "big-tech",
       "language": "non_zh",
       "url": "https://ai.meta.com/blog/",
       "note": "Meta 模型与研究发布",
-      "cadence": "weekly",
-      "mode": "official_listing"
+      "cadence": "quarterly",
+      "mode": "official_listing",
+      "ranking": false
     },
     {
       "id": "mistral",
       "name": "Mistral AI · News",
       "org": "Mistral AI",
       "group": "labs",
+      "kind": "model-lab",
       "language": "non_zh",
       "url": "https://mistral.ai/news/",
       "note": "产品与研究发布",
@@ -527,13 +653,15 @@
         "Engineering",
         "Research",
         "Product"
-      ]
+      ],
+      "ranking": false
     },
     {
       "id": "cohere",
       "name": "Cohere · Blog",
       "org": "Cohere",
       "group": "labs",
+      "kind": "model-lab",
       "language": "non_zh",
       "url": "https://cohere.com/blog",
       "note": "企业 AI 与开发者文章",
@@ -544,14 +672,22 @@
         "Research",
         "AI for Developers",
         "Product Launch",
-        "Company News"
-      ]
+        "Company News",
+        "Open Science",
+        "Sovereign AI",
+        "Technology",
+        "Partner",
+        "Financial Services",
+        "Energy & Utilities"
+      ],
+      "ranking": false
     },
     {
       "id": "ai2",
       "name": "Ai2 · Research",
       "org": "Ai2",
       "group": "labs",
+      "kind": "institute",
       "language": "non_zh",
       "url": "https://allenai.org/research",
       "note": "开放研究、模型与数据",
@@ -564,162 +700,248 @@
         "OlmoEarth",
         "Climate Modeling"
       ],
-      "feed": "https://allenai.org/rss.xml"
+      "feed": "https://allenai.org/rss.xml",
+      "ranking": false
     },
     {
       "id": "deepseek",
       "name": "DeepSeek · 更新日志",
       "org": "DeepSeek",
       "group": "labs",
+      "kind": "model-lab",
       "language": "zh",
       "url": "https://api-docs.deepseek.com/zh-cn/updates/",
       "note": "模型与 API 官方更新",
       "cadence": "monthly",
-      "mode": "deepseek_updates"
+      "mode": "deepseek_updates",
+      "ranking": false
     },
     {
       "id": "kimi",
       "name": "Kimi · Blog",
       "org": "Kimi",
       "group": "labs",
-      "language": "zh",
+      "kind": "model-lab",
+      "language": "non_zh",
       "url": "https://www.kimi.ai/zh-hans/blog/",
-      "note": "Kimi 模型与研究动态",
+      "note": "Kimi 模型与研究动态；官网文章为英文",
       "cadence": "monthly",
-      "mode": "kimi_page"
+      "mode": "kimi_page",
+      "ranking": false
     },
     {
       "id": "qwen",
       "name": "Qwen · Blog",
       "org": "Qwen",
       "group": "labs",
+      "kind": "model-lab",
       "language": "non_zh",
       "url": "https://qwen.ai/blog",
       "note": "官网英文博客；展示文章日期、栏目与原站导语",
       "cadence": "monthly",
-      "mode": "qwen_blog"
+      "mode": "qwen_blog",
+      "ranking": false
     },
     {
       "id": "baai",
       "name": "智源研究院 · 媒体报道",
       "org": "智源研究院",
-      "group": "labs",
+      "group": "news",
       "language": "zh",
       "url": "https://www.baai.ac.cn/zh-cn/news?formCategoryid=87",
-      "note": "智源官网收录的媒体报道；条目直达报道原文",
-      "cadence": "weekly",
+      "note": "智源官网收录的第三方媒体报道；条目直达报道原文",
+      "cadence": "quarterly",
       "mode": "baai_news",
       "newsCategory": "media",
       "sections": [
         "媒体报道"
-      ]
+      ],
+      "ranking": false
     },
     {
       "id": "baai-wechat",
       "name": "智源研究院 · 最新新闻",
       "org": "智源研究院",
       "group": "labs",
+      "kind": "institute",
       "language": "zh",
       "url": "https://www.baai.ac.cn/zh-cn/news?formCategoryid=86",
       "note": "智源官网最新新闻；条目直达公众号原文",
-      "cadence": "weekly",
+      "cadence": "quarterly",
       "mode": "baai_news",
       "newsCategory": "news",
       "sections": [
         "最新新闻"
-      ]
+      ],
+      "ranking": false
+    },
+    {
+      "id": "bytedance-seed",
+      "name": "字节跳动 Seed · Blog",
+      "org": "字节跳动",
+      "group": "labs",
+      "kind": "big-tech",
+      "language": "zh",
+      "url": "https://seed.bytedance.com/zh/blog",
+      "note": "Seed 团队的模型与研究发布",
+      "cadence": "monthly",
+      "mode": "link",
+      "directoryReason": "列表由页面脚本动态渲染，没有公开订阅源或接口，暂未接入",
+      "verifiedAt": "2026-11",
+      "ranking": false
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax · 新闻",
+      "org": "MiniMax",
+      "group": "labs",
+      "kind": "model-lab",
+      "language": "zh",
+      "url": "https://www.minimaxi.com/news",
+      "note": "MiniMax 模型与产品发布",
+      "cadence": "monthly",
+      "mode": "link",
+      "directoryReason": "列表由页面脚本动态渲染，没有公开订阅源或接口，暂未接入",
+      "verifiedAt": "2026-11",
+      "ranking": false
+    },
+    {
+      "id": "tencent-hunyuan",
+      "name": "腾讯混元",
+      "org": "腾讯",
+      "group": "labs",
+      "kind": "big-tech",
+      "language": "zh",
+      "url": "https://hunyuan.tencent.com/",
+      "note": "腾讯混元模型与研究动态",
+      "cadence": "monthly",
+      "mode": "link",
+      "directoryReason": "列表由页面脚本动态渲染，没有公开订阅源或接口，暂未接入",
+      "verifiedAt": "2026-11",
+      "ranking": false
+    },
+    {
+      "id": "baidu-ernie",
+      "name": "百度 ERNIE · Blog",
+      "org": "百度",
+      "group": "labs",
+      "kind": "big-tech",
+      "language": "non_zh",
+      "url": "https://ernie.baidu.com/blog",
+      "note": "文心 ERNIE 模型更新；官网文章为英文",
+      "cadence": "monthly",
+      "mode": "link",
+      "directoryReason": "列表由页面脚本动态渲染，没有公开订阅源或接口，暂未接入",
+      "verifiedAt": "2026-11",
+      "ranking": false
     },
     {
       "id": "shlab",
       "name": "上海人工智能实验室 · 新闻",
       "org": "上海人工智能实验室",
       "group": "labs",
+      "kind": "institute",
       "language": "zh",
       "url": "https://www.shlab.org.cn/info",
       "note": "研究进展与机构新闻",
       "cadence": "weekly",
-      "mode": "official_listing"
+      "mode": "official_listing",
+      "ranking": false
     },
     {
       "id": "ms-research",
       "name": "Microsoft Research · Blog",
       "org": "Microsoft Research",
       "group": "labs",
+      "kind": "big-tech",
       "language": "non_zh",
       "url": "https://www.microsoft.com/en-us/research/blog/",
       "note": "研究博客",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://www.microsoft.com/en-us/research/feed/"
+      "feed": "https://www.microsoft.com/en-us/research/feed/",
+      "ranking": false
     },
     {
       "id": "apple-ml",
       "name": "Apple Machine Learning Research",
       "org": "Apple",
       "group": "labs",
+      "kind": "big-tech",
       "language": "non_zh",
       "url": "https://machinelearning.apple.com/",
       "note": "Apple ML 研究",
       "cadence": "monthly",
       "mode": "feed",
-      "feed": "https://machinelearning.apple.com/rss.xml"
+      "feed": "https://machinelearning.apple.com/rss.xml",
+      "ranking": false
     },
     {
       "id": "amazon-science",
       "name": "Amazon Science",
       "org": "Amazon",
       "group": "labs",
+      "kind": "big-tech",
       "language": "non_zh",
       "url": "https://www.amazon.science/blog/?p=1",
       "note": "Amazon Science 官方博客的近期研究文章",
       "cadence": "weekly",
-      "mode": "official_listing"
+      "mode": "official_listing",
+      "ranking": false
     },
     {
       "id": "ibm-research",
       "name": "IBM Research · AI",
       "org": "IBM Research",
       "group": "labs",
+      "kind": "big-tech",
       "language": "non_zh",
       "url": "https://research.ibm.com/blog?tag=artificial-intelligence",
       "note": "IBM Research 官网 AI 标签下的近期文章",
       "cadence": "monthly",
-      "mode": "official_listing"
+      "mode": "official_listing",
+      "ranking": false
     },
     {
       "id": "bair",
       "name": "BAIR Blog",
       "org": "Berkeley AI Research",
       "group": "labs",
+      "kind": "institute",
       "language": "non_zh",
       "url": "https://bair.berkeley.edu/blog/",
       "note": "Berkeley AI 研究博客",
-      "cadence": "monthly",
+      "cadence": "quarterly",
       "mode": "feed",
-      "feed": "https://bair.berkeley.edu/blog/feed.xml"
+      "feed": "https://bair.berkeley.edu/blog/feed.xml",
+      "ranking": false
     },
     {
       "id": "stanford-hai",
       "name": "Stanford HAI · News",
       "org": "Stanford HAI",
       "group": "labs",
+      "kind": "institute",
       "language": "non_zh",
       "url": "https://hai.stanford.edu/news",
       "note": "研究、政策与 AI Index",
-      "cadence": "weekly",
-      "mode": "stanford_listing"
+      "cadence": "monthly",
+      "mode": "stanford_listing",
+      "ranking": false
     },
     {
       "id": "metr",
       "name": "METR · Blog",
       "org": "METR",
       "group": "labs",
+      "kind": "evaluator",
       "language": "non_zh",
       "url": "https://metr.org/blog/",
       "note": "前沿 AI 能力与风险独立评测",
       "cadence": "monthly",
       "mode": "metr_feed",
-      "feed": "https://metr.org/blog/rss.xml"
+      "feed": "https://metr.org/blog/rss.xml",
+      "ranking": false
     },
     {
       "id": "openai-dev-blog",
@@ -729,7 +951,7 @@
       "language": "non_zh",
       "url": "https://developers.openai.com/blog",
       "note": "API 与开发实践",
-      "cadence": "weekly",
+      "cadence": "monthly",
       "mode": "publisher_page",
       "sections": [
         "General",
@@ -738,7 +960,8 @@
         "Audio",
         "Codex",
         "Life sciences"
-      ]
+      ],
+      "ranking": false
     },
     {
       "id": "openai-cookbook",
@@ -749,7 +972,8 @@
       "url": "https://developers.openai.com/cookbook",
       "note": "示例与实践配方",
       "cadence": "weekly",
-      "mode": "openai_cookbook"
+      "mode": "openai_cookbook",
+      "ranking": false
     },
     {
       "id": "openai-release-notes",
@@ -765,7 +989,10 @@
         "ChatGPT",
         "Codex",
         "API"
-      ]
+      ],
+      "directoryReason": "脚本访问返回 403",
+      "verifiedAt": "2026-11",
+      "ranking": false
     },
     {
       "id": "openai-api-changelog",
@@ -776,7 +1003,24 @@
       "url": "https://developers.openai.com/api/docs/changelog",
       "note": "API 变更记录",
       "cadence": "weekly",
-      "mode": "link"
+      "mode": "link",
+      "directoryReason": "页面缺少已确认的逐条稳定链接",
+      "verifiedAt": "2026-11",
+      "ranking": false
+    },
+    {
+      "id": "zhipu-releases",
+      "name": "智谱 · 模型与产品发布记录",
+      "org": "智谱",
+      "group": "engineering",
+      "language": "zh",
+      "url": "https://docs.bigmodel.cn/cn/update/new-releases",
+      "note": "智谱开放平台的模型与产品更新日志",
+      "cadence": "monthly",
+      "mode": "link",
+      "directoryReason": "文档站更新记录，尚未核实逐条的稳定链接与发布日期，暂未接入",
+      "verifiedAt": "2026-11",
+      "ranking": false
     },
     {
       "id": "hf-blog",
@@ -788,7 +1032,8 @@
       "note": "模型、数据与社区技术文章",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://huggingface.co/blog/feed.xml"
+      "feed": "https://huggingface.co/blog/feed.xml",
+      "ranking": false
     },
     {
       "id": "pytorch",
@@ -800,7 +1045,8 @@
       "note": "框架更新与开发实践",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://pytorch.org/blog/feed/"
+      "feed": "https://pytorch.org/blog/feed/",
+      "ranking": false
     },
     {
       "id": "nvidia",
@@ -812,7 +1058,8 @@
       "note": "AI 硬件、软件与开发文章",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://blogs.nvidia.com/feed/"
+      "feed": "https://blogs.nvidia.com/feed/",
+      "ranking": false
     },
     {
       "id": "vllm",
@@ -824,7 +1071,8 @@
       "note": "推理系统开发与发布",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://vllm.ai/blog/atom.xml"
+      "feed": "https://vllm.ai/blog/atom.xml",
+      "ranking": false
     },
     {
       "id": "ollama",
@@ -836,7 +1084,8 @@
       "note": "本地模型运行更新",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://ollama.com/blog/rss.xml"
+      "feed": "https://ollama.com/blog/rss.xml",
+      "ranking": false
     },
     {
       "id": "langchain",
@@ -848,7 +1097,8 @@
       "note": "Agent 与应用开发",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://www.langchain.com/blog/rss.xml"
+      "feed": "https://www.langchain.com/blog/rss.xml",
+      "ranking": false
     },
     {
       "id": "llamaindex",
@@ -859,7 +1109,8 @@
       "url": "https://www.llamaindex.ai/blog",
       "note": "数据连接与 Agent 实践；仅展示官网标注日期的文章",
       "cadence": "weekly",
-      "mode": "llamaindex_page"
+      "mode": "llamaindex_page",
+      "ranking": false
     },
     {
       "id": "modal",
@@ -871,7 +1122,8 @@
       "note": "模型部署与基础设施实践",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://modal.com/blog/atom.xml"
+      "feed": "https://modal.com/blog/atom.xml",
+      "ranking": false
     },
     {
       "id": "cloudflare-ai",
@@ -883,7 +1135,8 @@
       "note": "AI 平台与边缘工程",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://blog.cloudflare.com/tag/ai/rss/"
+      "feed": "https://blog.cloudflare.com/tag/ai/rss/",
+      "ranking": false
     },
     {
       "id": "meituan-tech",
@@ -892,21 +1145,17 @@
       "group": "engineering",
       "language": "zh",
       "url": "https://tech.meituan.com/",
-      "note": "工程实践与 AI 相关技术文章",
+      "note": "工程实践与 AI 相关技术文章；公众号 ID：meituantech（入口见下方）",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://tech.meituan.com/rss.xml"
-    },
-    {
-      "id": "meituan-wechat",
-      "name": "美团技术团队 · 公众号",
-      "org": "美团",
-      "group": "engineering",
-      "language": "zh",
-      "url": "https://tech.meituan.com/about.html",
-      "note": "公众号 ID：meituantech；官网同步技术文章",
-      "cadence": "weekly",
-      "mode": "link"
+      "feed": "https://tech.meituan.com/rss.xml",
+      "relatedLinks": [
+        {
+          "label": "关于与公众号 ↗",
+          "url": "https://tech.meituan.com/about.html"
+        }
+      ],
+      "ranking": false
     },
     {
       "id": "mindspore",
@@ -922,7 +1171,10 @@
         "版本更新",
         "新闻",
         "技术博客"
-      ]
+      ],
+      "directoryReason": "原文只标注更新时间，无法直接作为发布日期",
+      "verifiedAt": "2026-11",
+      "ranking": false
     },
     {
       "id": "bilibili-li-mu",
@@ -933,7 +1185,10 @@
       "url": "https://space.bilibili.com/1567748478",
       "note": "论文精读、模型讲解与动手实践",
       "cadence": "monthly",
-      "mode": "link"
+      "mode": "link",
+      "directoryReason": "频道请求返回 HTTP 412，暂无可靠的公开方式",
+      "verifiedAt": "2026-11",
+      "ranking": false
     },
     {
       "id": "bilibili-zihao",
@@ -944,7 +1199,10 @@
       "url": "https://space.bilibili.com/1900783",
       "note": "计算机视觉、论文精读与 AI 公开课",
       "cadence": "weekly",
-      "mode": "link"
+      "mode": "link",
+      "directoryReason": "频道请求返回 HTTP 412，暂无可靠的公开方式",
+      "verifiedAt": "2026-11",
+      "ranking": false
     },
     {
       "id": "youtube-karpathy",
@@ -954,9 +1212,10 @@
       "language": "non_zh",
       "url": "https://www.youtube.com/@AndrejKarpathy/videos",
       "note": "LLM 与深度学习系统教学",
-      "cadence": "monthly",
+      "cadence": "dormant",
       "mode": "youtube",
-      "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ"
+      "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ",
+      "ranking": false
     },
     {
       "id": "youtube-two-minute-papers",
@@ -968,19 +1227,22 @@
       "note": "AI 与计算机图形学论文视频解读",
       "cadence": "weekly",
       "mode": "youtube",
-      "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg"
+      "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg",
+      "ranking": false
     },
     {
       "id": "youtube-deepmind",
       "name": "Google DeepMind · YouTube",
       "org": "Google DeepMind",
+      "parent": "Google",
       "group": "video",
       "language": "non_zh",
       "url": "https://www.youtube.com/@GoogleDeepMind/videos",
       "note": "研究展示、模型演示与科学应用",
       "cadence": "weekly",
       "mode": "youtube",
-      "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCP7jMXSY2xbc3KCAE0MHQ-A"
+      "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCP7jMXSY2xbc3KCAE0MHQ-A",
+      "ranking": false
     },
     {
       "id": "youtube-openai",
@@ -992,7 +1254,8 @@
       "note": "产品演示、研究介绍与活动录像",
       "cadence": "weekly",
       "mode": "youtube",
-      "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A"
+      "feed": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A",
+      "ranking": false
     },
     {
       "id": "arxiv-ai",
@@ -1004,7 +1267,9 @@
       "note": "人工智能预印本；含交叉收录与更新",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://rss.arxiv.org/atom/cs.AI"
+      "feed": "https://rss.arxiv.org/atom/cs.AI",
+      "allowEmpty": true,
+      "ranking": false
     },
     {
       "id": "arxiv-cl",
@@ -1016,7 +1281,9 @@
       "note": "计算语言学预印本",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://rss.arxiv.org/atom/cs.CL"
+      "feed": "https://rss.arxiv.org/atom/cs.CL",
+      "allowEmpty": true,
+      "ranking": false
     },
     {
       "id": "arxiv-lg",
@@ -1028,7 +1295,9 @@
       "note": "机器学习预印本",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://rss.arxiv.org/atom/cs.LG"
+      "feed": "https://rss.arxiv.org/atom/cs.LG",
+      "allowEmpty": true,
+      "ranking": false
     },
     {
       "id": "arxiv-cv",
@@ -1040,7 +1309,9 @@
       "note": "计算机视觉预印本",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://rss.arxiv.org/atom/cs.CV"
+      "feed": "https://rss.arxiv.org/atom/cs.CV",
+      "allowEmpty": true,
+      "ranking": false
     },
     {
       "id": "arxiv-ro",
@@ -1052,7 +1323,9 @@
       "note": "机器人预印本",
       "cadence": "daily",
       "mode": "feed",
-      "feed": "https://rss.arxiv.org/atom/cs.RO"
+      "feed": "https://rss.arxiv.org/atom/cs.RO",
+      "allowEmpty": true,
+      "ranking": false
     },
     {
       "id": "hf-papers",
@@ -1063,7 +1336,8 @@
       "url": "https://huggingface.co/papers",
       "note": "社区每日论文精选",
       "cadence": "daily",
-      "mode": "papers"
+      "mode": "papers",
+      "ranking": false
     },
     {
       "id": "hf-trending-papers",
@@ -1074,18 +1348,8 @@
       "url": "https://huggingface.co/papers/trending",
       "note": "当前热门论文",
       "cadence": "daily",
-      "mode": "papers_trending"
-    },
-    {
-      "id": "paperweekly",
-      "name": "PaperWeekly",
-      "org": "PaperWeekly",
-      "group": "papers",
-      "language": "zh",
-      "url": "https://www.jiqizhixin.com/columns",
-      "note": "机器之心专栏入口；近期更新待核实",
-      "cadence": "weekly",
-      "mode": "link"
+      "mode": "papers_trending",
+      "ranking": true
     },
     {
       "id": "openreview",
@@ -1096,7 +1360,10 @@
       "url": "https://openreview.net/",
       "note": "会议投稿与同行评审",
       "cadence": "daily",
-      "mode": "link"
+      "mode": "link",
+      "directoryReason": "需要先限定会议或期刊范围，才有可核对的列表",
+      "verifiedAt": "2026-11",
+      "ranking": false
     },
     {
       "id": "acl",
@@ -1108,7 +1375,9 @@
       "note": "自然语言处理正式论文库",
       "cadence": "weekly",
       "mode": "feed",
-      "feed": "https://aclanthology.org/papers/index.xml"
+      "feed": "https://aclanthology.org/papers/index.xml",
+      "noDescription": true,
+      "ranking": false
     },
     {
       "id": "github-ai-topics",
@@ -1119,7 +1388,8 @@
       "url": "https://github.com/topics/artificial-intelligence",
       "note": "人工智能主题仓库；展示当前官网列表与 Star",
       "cadence": "daily",
-      "mode": "github_topic"
+      "mode": "github_topic",
+      "ranking": true
     },
     {
       "id": "github-llm-topics",
@@ -1130,7 +1400,8 @@
       "url": "https://github.com/topics/llm",
       "note": "大语言模型主题仓库；展示当前官网列表与 Star",
       "cadence": "daily",
-      "mode": "github_topic"
+      "mode": "github_topic",
+      "ranking": true
     },
     {
       "id": "hf-models",
@@ -1142,7 +1413,8 @@
       "note": "模型目录及当前趋势",
       "cadence": "daily",
       "mode": "hf_trending",
-      "resource": "models"
+      "resource": "models",
+      "ranking": true
     },
     {
       "id": "hf-datasets",
@@ -1154,7 +1426,8 @@
       "note": "数据集目录及当前趋势",
       "cadence": "daily",
       "mode": "hf_trending",
-      "resource": "datasets"
+      "resource": "datasets",
+      "ranking": true
     },
     {
       "id": "hf-spaces",
@@ -1166,7 +1439,8 @@
       "note": "社区应用及当前趋势",
       "cadence": "daily",
       "mode": "hf_trending",
-      "resource": "spaces"
+      "resource": "spaces",
+      "ranking": true
     },
     {
       "id": "modelscope",
@@ -1177,7 +1451,8 @@
       "url": "https://www.modelscope.cn/models",
       "note": "按官网公开累计下载量排序的模型快照",
       "cadence": "daily",
-      "mode": "modelscope_models"
+      "mode": "modelscope_models",
+      "ranking": true
     },
     {
       "id": "github-trending",
@@ -1188,7 +1463,8 @@
       "url": "https://github.com/trending",
       "note": "当前热门仓库，非今日创建仓库",
       "cadence": "daily",
-      "mode": "github_trending"
+      "mode": "github_trending",
+      "ranking": true
     },
     {
       "id": "aa-leaderboard",
@@ -1199,7 +1475,18 @@
       "url": "https://artificialanalysis.ai/leaderboards/models",
       "note": "按官网 Intelligence Index 排序；还可比较速度与价格",
       "cadence": "daily",
-      "mode": "aa_leaderboard"
+      "mode": "aa_leaderboard",
+      "ranking": true
     }
+  ],
+  "genericCategories": [
+    "ai",
+    "news",
+    "blog",
+    "资讯",
+    "综合",
+    "人工智能",
+    "artificial intelligence",
+    "research blog"
   ]
 }

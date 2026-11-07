@@ -4,6 +4,7 @@
 import argparse
 import base64
 from concurrent.futures import ThreadPoolExecutor
+from contextlib import contextmanager
 import gzip
 import io
 import json
@@ -33,6 +34,11 @@ MAX_PREVIEW = 1_800
 MAX_ABSTRACT = 5_000
 MAX_CATEGORIES = 64
 FEED_PARSER_VERSION = 4
+WORKERS = 12                 # sources refreshed in parallel
+HOST_CONCURRENCY = 3         # simultaneous requests to one host, however many sources share it
+REQUEST_DEADLINE = 40        # wall-clock seconds for one response body
+ERROR_AFTER_FAILURES = 2     # a source shows as "error" only after this many consecutive failed refreshes
+TRANSIENT_STATUSES = frozenset({408, 500, 502, 503, 504})
 
 
 def now():
@@ -93,12 +99,16 @@ def safe_url(value, base=""):
     return url if parsed.scheme in ("http", "https") and parsed.netloc else ""
 
 
-def read_response(response, max_bytes=MAX_BYTES):
+class DeadlineExceeded(TimeoutError):
+    """The response body kept streaming past REQUEST_DEADLINE; not worth retrying."""
+
+
+def read_response(response, max_bytes=MAX_BYTES, deadline=REQUEST_DEADLINE):
     chunks, size = [], 0
-    deadline = time.monotonic() + 60
+    limit = time.monotonic() + deadline
     while True:
-        if time.monotonic() > deadline:
-            raise TimeoutError("response exceeded 60 seconds")
+        if time.monotonic() > limit:
+            raise DeadlineExceeded(f"response exceeded {deadline} seconds")
         chunk = response.read(min(65536, max_bytes + 1 - size))
         if not chunk:
             break
@@ -109,6 +119,46 @@ def read_response(response, max_bytes=MAX_BYTES):
     return b"".join(chunks)
 
 
+_host_slots, _host_lock = {}, threading.Lock()
+
+
+@contextmanager
+def host_slot(url):
+    """Bound parallel requests per host so a wide thread pool stays polite."""
+    host = urlparse(url).netloc.lower()
+    with _host_lock:
+        slot = _host_slots.setdefault(host, threading.BoundedSemaphore(HOST_CONCURRENCY))
+    with slot:
+        yield
+
+
+def request_bytes(request, timeout=22, max_bytes=MAX_BYTES, retry_statuses=TRANSIENT_STATUSES, attempts=2):
+    """Send one request; retry transient HTTP and network failures; return (body, headers).
+
+    Gzip bodies are decoded whether or not the server declares Content-Encoding.
+    """
+    for attempt in range(1, attempts + 1):
+        try:
+            with host_slot(request.full_url), urllib.request.urlopen(request, timeout=timeout) as response:
+                body = read_response(response, max_bytes)
+                headers = response.headers
+            if body.startswith(b"\x1f\x8b"):
+                with gzip.GzipFile(fileobj=io.BytesIO(body)) as compressed:
+                    body = compressed.read(max_bytes + 1)
+                if len(body) > max_bytes:
+                    raise ValueError(f"decompressed response exceeds {max_bytes} bytes")
+            return body, headers
+        except urllib.error.HTTPError as exc:
+            if attempt == attempts or exc.code not in retry_statuses or exc.headers.get("Retry-After"):
+                raise
+        except DeadlineExceeded:
+            raise
+        except OSError:  # URLError, TLS EOF, resets and socket timeouts
+            if attempt == attempts:
+                raise
+        time.sleep(0.5 * attempt)
+
+
 def fetch(url, timeout=22, headers=None, data=None, max_bytes=MAX_BYTES, compressed=False):
     request_headers = {
         "User-Agent": USER_AGENT,
@@ -117,45 +167,25 @@ def fetch(url, timeout=22, headers=None, data=None, max_bytes=MAX_BYTES, compres
     if compressed:
         request_headers["Accept-Encoding"] = "gzip"
     request_headers.update(headers or {})
-    req = urllib.request.Request(url, data=data, headers=request_headers)
-    with urllib.request.urlopen(req, timeout=timeout) as response:
-        body = read_response(response, max_bytes)
-        if response.headers.get("Content-Encoding", "").lower() == "gzip":
-            body = gzip.decompress(body)
-            if len(body) > max_bytes:
-                raise ValueError(f"decompressed response exceeds {max_bytes} bytes")
-        return body
+    return request_bytes(urllib.request.Request(url, data=data, headers=request_headers), timeout, max_bytes)[0]
 
 
-def fetch_feed(url, previous):
-    """Revalidate a saved publisher feed and retry one transient failure."""
+def fetch_feed(url, previous, retry_statuses=TRANSIENT_STATUSES):
+    """Revalidate a saved publisher feed. Returns (body, validators); body is None on 304."""
     validators = previous.get("httpValidators", {})
     headers = {"User-Agent": USER_AGENT, "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml"}
     if validators.get("etag") and previous.get("items"):
         headers["If-None-Match"] = validators["etag"]
     if validators.get("lastModified") and previous.get("items"):
         headers["If-Modified-Since"] = validators["lastModified"]
-    for attempt in range(2):
-        try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=22) as response:
-                body = read_response(response)
-                if body.startswith(b"\x1f\x8b"):
-                    with gzip.GzipFile(fileobj=io.BytesIO(body)) as compressed:
-                        body = compressed.read(MAX_BYTES + 1)
-                    if len(body) > MAX_BYTES:
-                        raise ValueError(f"decompressed response exceeds {MAX_BYTES} bytes")
-                fresh = {"etag": response.headers.get("ETag", ""),
-                         "lastModified": response.headers.get("Last-Modified", "")}
-                return body, {key: value for key, value in fresh.items() if value}
-        except urllib.error.HTTPError as exc:
-            if exc.code == 304 and previous.get("items"):
-                return None, validators
-            if attempt or exc.code not in {408, 500, 502, 503, 504} or exc.headers.get("Retry-After"):
-                raise
-        except (TimeoutError, urllib.error.URLError):
-            if attempt:
-                raise
-        time.sleep(0.5)
+    try:
+        body, response_headers = request_bytes(urllib.request.Request(url, headers=headers), retry_statuses=retry_statuses)
+    except urllib.error.HTTPError as exc:
+        if exc.code == 304 and previous.get("items"):
+            return None, validators
+        raise
+    fresh = {"etag": response_headers.get("ETag", ""), "lastModified": response_headers.get("Last-Modified", "")}
+    return body, {key: value for key, value in fresh.items() if value}
 
 
 def date_iso(value):
@@ -215,11 +245,15 @@ def feed_authors(entry, arxiv=False):
     return authors[:20]
 
 
+class EmptyFeed(ValueError):
+    """A well-formed feed with no entries (arXiv publishes none on weekends)."""
+
+
 def parse_feed(raw, base, required_categories=None):
     root = ET.fromstring(raw)
     entries = [node for node in root.iter() if node.tag.rsplit("}", 1)[-1].lower() in ("item", "entry")]
     if not entries:
-        raise ValueError("feed contains no entries")
+        raise EmptyFeed("feed contains no entries")
     items = []
     seen = set()
     for entry in entries:
@@ -655,9 +689,12 @@ def parse_baai_news(raw, category):
         if record.get("category") != category or not record.get("is_published"):
             continue
         title = clean(record.get("title"), 240)
-        published = date_iso(record.get("published_at", ""))
+        raw_date = str(record.get("published_at", ""))
+        # Microsecond stamps (…07.536172Z) are bulk-import times, not publication dates: keep the item, leave it undated.
+        import_stamp = bool(re.search(r"\.\d{6}", raw_date))
+        published = "" if import_stamp else date_iso(raw_date)
         url = safe_url(record.get("source_url", ""))
-        if not title or not published or not url:
+        if not title or not url or not (published or import_stamp):
             continue
         items.append({"title": title, "url": url, "publishedAt": published,
                       "categories": ["最新新闻" if category == "news" else "媒体报道"],
@@ -870,8 +907,12 @@ def parse_official_listing(raw, source_id, base):
     return sorted(items, key=lambda item: item["publishedAt"], reverse=True)[:MAX_ITEMS]
 
 
-def parse_stanford_listing(raw, base, article_fetch=fetch):
-    """Confirm the year on each original article before indexing a month/day card."""
+def parse_stanford_listing(raw, base, article_fetch=fetch, known=None):
+    """Confirm the year on each original article before indexing a month/day card.
+
+    `known` maps URL -> publishedAt confirmed by an earlier refresh, which skips the article request.
+    """
+    known = known or {}
     html = raw.decode("utf-8", errors="replace")
     rows = re.findall(r'<div class="ContentItem_root__[^" ]+[^\"]*"(.*?)(?=<div class="ContentItem_root__|$)', html, re.S)
     items, seen = [], set()
@@ -883,6 +924,11 @@ def parse_stanford_listing(raw, base, article_fetch=fetch):
         if not url or url in seen or not title or not re.fullmatch(r'[A-Za-z]{3} \d{1,2}', short_date):
             continue
         seen.add(url)
+        if url in known:
+            items.append({"title": title, "url": url, "publishedAt": known[url], "categories": [], "description": ""})
+            if len(items) >= MAX_ITEMS:
+                break
+            continue
         try:
             detail = article_fetch(url).decode("utf-8", errors="replace")
         except (OSError, ValueError):
@@ -979,8 +1025,16 @@ class _MetaDescription(HTMLParser):
             self.description = clean(attributes.get("content", ""), MAX_PREVIEW)
 
 
-def enrich_descriptions(items, limit=MAX_ITEMS):
-    """Use only the publisher's own article metadata, with bounded extra requests."""
+def enrich_descriptions(items, known=None, limit=MAX_ITEMS):
+    """Fill missing teasers from the publisher's own article metadata.
+
+    `known` maps URL -> teaser saved by an earlier refresh, so only new articles cost a request.
+    """
+    known = known or {}
+    for item in items:
+        if not item.get("description") and known.get(item["url"]):
+            item["description"] = known[item["url"]]
+
     def description(item):
         try:
             parser = _MetaDescription()
@@ -997,11 +1051,14 @@ def enrich_descriptions(items, limit=MAX_ITEMS):
     return items
 
 
-INFOQ_AI_TERMS = re.compile(r'AI|大模型|智能体|机器学习|深度学习|神经网络|算力|多模态|模型|Agent|LLM|GPT|Claude|Gemini|DeepSeek|Qwen|Kimi|OpenAI|Anthropic|MCP|推理|提示词|生成式', re.I)
+AI_TITLE_TERMS = re.compile(
+    r"大模型|智能体|机器学习|深度学习|神经网络|算力|多模态|模型|推理|提示词|生成式"
+    r"|(?-i:(?<![A-Za-z])AI(?![a-z]))"  # case-sensitive: matches AI / AICon, not maintain / mail
+    r"|(?<![A-Za-z])(?:Agents?|LLMs?|GPT|Claude|Gemini|DeepSeek|Qwen|Kimi|OpenAI|Anthropic|MCP)(?![A-Za-z])", re.I)
 
 
 def parse_infoq_ai_feed(raw, base):
-    items = [item for item in parse_feed(raw, base) if INFOQ_AI_TERMS.search(item["title"])]
+    items = [item for item in parse_feed(raw, base) if AI_TITLE_TERMS.search(item["title"])]
     if not items:
         raise ValueError("InfoQ feed has no AI-related titles")
     for item in items:
@@ -1175,159 +1232,282 @@ def redact_social_snapshot():
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+class Credentials:
+    """Optional social API credentials, read from the environment when a refresh starts."""
+
+    def __init__(self, environ):
+        self.reddit_id = environ.get("REDDIT_CLIENT_ID", "")
+        self.reddit_secret = environ.get("REDDIT_CLIENT_SECRET", "")
+        self.reddit_agent = environ.get("REDDIT_USER_AGENT", "")
+        self.x_token = environ.get("X_BEARER_TOKEN", "")
+        self.reddit_ready = bool(self.reddit_id and self.reddit_secret and self.reddit_agent)
+        self.x_ready = environ.get("X_API_ENABLED", "").lower() == "true" and bool(self.x_token)
+        self._reddit_token, self._lock = None, threading.Lock()
+
+    def reddit_token(self):
+        with self._lock:
+            if self._reddit_token is None:
+                self._reddit_token = reddit_oauth_token(self.reddit_id, self.reddit_secret, self.reddit_agent)
+            return self._reddit_token
+
+    def allows(self, mode):
+        return {"reddit": self.reddit_ready, "x_api": self.x_ready}.get(mode, True)
+
+
+class Run:
+    """What a fetcher gets: its source, the previous snapshot entry, credentials, and a place for extra fields."""
+
+    def __init__(self, source, old, credentials):
+        self.source, self.old, self.credentials = source, old, credentials
+        self.extra = {}  # snapshot fields to persist next to `items`, e.g. HTTP validators
+
+    def known(self, field):
+        """URL -> saved value from the previous snapshot, skipping empty values."""
+        return {item["url"]: item[field] for item in self.old.get("items", []) if item.get(field)}
+
+
+# mode -> function(run) -> items. Every mode in data/schema.json needs an entry (tests enforce it).
+FETCHERS = {}
+
+
+def fetcher(*modes):
+    def register(function):
+        for mode in modes:
+            FETCHERS[mode] = function
+        return function
+    return register
+
+
+@fetcher("feed")
+def fetch_feed_source(run):
+    source, old = run.source, run.old
+    # Reparse once after a parser upgrade, even when the feed URL returns 304.
+    saved = old if old.get("feedParserVersion") == FEED_PARSER_VERSION else {}
+    body, validators = fetch_feed(source["feed"], saved)
+    run.extra["feedParserVersion"] = FEED_PARSER_VERSION
+    if validators:
+        run.extra["httpValidators"] = validators
+    if body is None:
+        items = old["items"]
+    else:
+        try:
+            items = (parse_aiera_feed(body, source["url"]) if source.get("lenientXml") else
+                     parse_feed(body, source["url"], set(source.get("feedCategories", []))))
+        except EmptyFeed:
+            if not source.get("allowEmpty"):
+                raise
+            items = old.get("items", [])  # no new entries today; keep showing the last ones
+    if source.get("aiOnly"):
+        items = [item for item in items if AI_TITLE_TERMS.search(item["title"])]
+        if not items:
+            raise ValueError("feed has no AI-related titles")
+    if source.get("noDescription"):
+        for item in items:  # the feed's description is a citation, not a teaser
+            item["description"] = ""
+    if source.get("categoryPage"):
+        try:
+            items = enrich_deepmind_categories(items, fetch(source["url"]), source["url"])
+        except (OSError, ValueError):
+            pass
+    return items
+
+
+@fetcher("qwen_blog")
+def fetch_qwen(run):
+    return parse_qwen_blog(fetch(
+        "https://qwen.ai/api/v2/article/retrieval?" + urlencode({"language": "en-US", "type": "qwen_ai"}),
+        max_bytes=8_000_000, compressed=True))
+
+
+@fetcher("hn_feed")
+def fetch_hn(run):
+    return enrich_hn_metrics(parse_hn_feed(fetch(run.source["feed"])))
+
+
+@fetcher("bluesky")
+def fetch_bluesky(run):
+    actor = run.source["actor"]
+    url = "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?" + urlencode(
+        {"actor": actor, "limit": 30, "filter": "posts_no_replies"})
+    return parse_bluesky_feed(fetch(url), actor, run.source.get("aiOnly", False))
+
+
+@fetcher("reddit")
+def fetch_reddit(run):
+    subreddit, creds = run.source["subreddit"], run.credentials
+    url = f"https://oauth.reddit.com/r/{subreddit}/hot?limit=25&raw_json=1"
+    return parse_reddit_listing(fetch(url, headers={
+        "Authorization": f"Bearer {creds.reddit_token()}", "User-Agent": creds.reddit_agent}), subreddit)
+
+
+@fetcher("x_api")
+def fetch_x(run):
+    username = run.source["username"]
+    headers = {"Authorization": f"Bearer {run.credentials.x_token}"}
+    user_id = run.old.get("userId")
+    if not isinstance(user_id, str) or not re.fullmatch(r"[0-9]{1,19}", user_id):
+        user_id = parse_x_user_id(fetch(f"https://api.x.com/2/users/by/username/{username}", headers=headers), username)
+    run.extra["userId"] = user_id
+    query = urlencode({"max_results": 5, "exclude": "replies,retweets", "post.fields": "created_at,public_metrics,referenced_posts"})
+    return parse_x_posts(fetch(f"https://api.x.com/2/users/{user_id}/tweets?{query}", headers=headers), username)
+
+
+@fetcher("metr_feed")
+def fetch_metr(run):
+    return parse_metr_feed(fetch(run.source["feed"]), run.source["url"])
+
+
+@fetcher("infoq_ai_feed")
+def fetch_infoq(run):
+    return enrich_descriptions(parse_infoq_ai_feed(fetch(run.source["feed"]), run.source["url"]), run.known("description"))
+
+
+@fetcher("youtube")
+def fetch_youtube(run):
+    # YouTube's Atom endpoint intermittently answers 404 for a channel that exists; retry it once.
+    body, _ = fetch_feed(run.source["feed"], {}, retry_statuses=TRANSIENT_STATUSES | {404})
+    return parse_youtube_feed(body, run.source["url"])
+
+
+@fetcher("papers")
+def fetch_daily_papers(run):
+    return parse_papers(fetch(f"https://huggingface.co/api/daily_papers?limit={MAX_ITEMS}"))
+
+
+@fetcher("papers_trending")
+def fetch_trending_papers(run):
+    return parse_papers(fetch(f"https://huggingface.co/api/daily_papers?sort=trending&limit={MAX_ITEMS}"))
+
+
+@fetcher("hf_trending")
+def fetch_hf_trending(run):
+    resource = run.source["resource"]
+    return parse_hf_trending(fetch(f"https://huggingface.co/api/{resource}?sort=trendingScore&direction=-1&limit={MAX_RANKING_ITEMS}"), resource)
+
+
+@fetcher("modelscope_models")
+def fetch_modelscope(run):
+    return parse_modelscope_models(fetch(f"https://modelscope.cn/openapi/v1/models?sort=downloads&page_size={MAX_RANKING_ITEMS}"))
+
+
+@fetcher("baai_news")
+def fetch_baai(run):
+    return parse_baai_news(fetch("https://www.baai.ac.cn/api/news?page=1&size=200"), run.source["newsCategory"])
+
+
+@fetcher("github_trending")
+def fetch_github_trending(run):
+    return parse_trending(fetch(run.source["url"]))
+
+
+@fetcher("github_topic")
+def fetch_github_topic(run):
+    return parse_github_topic(fetch(run.source["url"]))
+
+
+@fetcher("aa_leaderboard")
+def fetch_aa_leaderboard(run):
+    return parse_aa_leaderboard(fetch(run.source["url"]))
+
+
+@fetcher("aa_articles")
+def fetch_aa_articles(run):
+    return parse_aa_articles(fetch(run.source["url"]), run.source["url"])
+
+
+@fetcher("openai_cookbook")
+def fetch_cookbook(run):
+    return enrich_descriptions(parse_openai_cookbook(fetch(run.source["url"]), run.source["url"]), run.known("description"))
+
+
+@fetcher("publisher_page")
+def fetch_publisher_page(run):
+    return parse_publisher_page(fetch(run.source["url"]), run.source["id"], run.source["url"])
+
+
+@fetcher("official_listing")
+def fetch_official_listing(run):
+    return parse_official_listing(fetch(run.source["url"], max_bytes=6_000_000), run.source["id"], run.source["url"])
+
+
+@fetcher("stanford_listing")
+def fetch_stanford(run):
+    return parse_stanford_listing(fetch(run.source["url"]), run.source["url"], known=run.known("publishedAt"))
+
+
+@fetcher("kimi_page")
+def fetch_kimi(run):
+    return enrich_descriptions(parse_kimi_page(fetch(run.source["url"]), run.source["url"]), run.known("description"))
+
+
+@fetcher("cohere_page")
+def fetch_cohere(run):
+    return enrich_descriptions(parse_cohere_page(fetch(run.source["url"]), run.source["url"]), run.known("description"))
+
+
+@fetcher("llamaindex_page")
+def fetch_llamaindex(run):
+    return parse_llamaindex_page(fetch(run.source["url"]), run.source["url"])
+
+
+@fetcher("deepseek_updates")
+def fetch_deepseek(run):
+    return parse_deepseek_updates(fetch(run.source["url"]), run.source["url"])
+
+
+KEPT_ON_FAILURE = ("httpValidators", "feedParserVersion", "userId")
+
+
+def refresh(source, old, credentials, checked):
+    """Fetch one source and return (id, snapshot entry, log line). Never raises for network or parse errors."""
+    source_id, mode = source["id"], source["mode"]
+    run = Run(source, old, credentials)
+    try:
+        if mode not in FETCHERS:
+            raise ValueError("unknown mode")
+        items = FETCHERS[mode](run)
+        result = {"status": "ok", "checkedAt": checked, "lastSuccessAt": checked, "items": items, **run.extra}
+        return source_id, result, f"OK   {source_id}: {len(items)}"
+    except (OSError, ET.ParseError, ValueError, TypeError, KeyError) as exc:
+        failures = old.get("failures", 0) + 1
+        # One failed refresh of a source that was healthy is usually transient: keep it "ok" until it repeats.
+        status = "ok" if old.get("status") == "ok" and failures < ERROR_AFTER_FAILURES else "error"
+        items = old.get("items", [])
+        result = {"status": status, "checkedAt": checked, "lastSuccessAt": old.get("lastSuccessAt", ""),
+                  "items": recent_reddit_items(items) if mode == "reddit" else items,
+                  "failures": failures, "error": clean(str(exc), 120)}
+        result.update({key: old[key] for key in KEPT_ON_FAILURE if old.get(key)})
+        return source_id, result, f"ERR  {source_id} ({failures}x): {exc}"
+
+
 def update(offline=False, only=None):
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
     previous_payload = load_previous()
     previous = previous_payload.get("results", {})
-    results = {}
-    checked = now()
-    pending = []
-    reddit_client = os.environ.get("REDDIT_CLIENT_ID", "")
-    reddit_secret = os.environ.get("REDDIT_CLIENT_SECRET", "")
-    reddit_agent = os.environ.get("REDDIT_USER_AGENT", "")
-    reddit_ready = bool(reddit_client and reddit_secret and reddit_agent)
-    x_token = os.environ.get("X_BEARER_TOKEN", "")
-    x_ready = os.environ.get("X_API_ENABLED", "").lower() == "true" and bool(x_token)
-    token_lock = threading.Lock()
-    reddit_token = None
+    credentials = Credentials(os.environ)
+    results, pending, checked = {}, [], now()
     for source in registry["sources"]:
-        source_id = source["id"]
-        mode = source["mode"]
-        old = previous.get(source_id, {})
-        if mode == "link" or (mode == "reddit" and not reddit_ready) or (mode == "x_api" and not x_ready):
+        source_id, mode, old = source["id"], source["mode"], previous.get(source["id"], {})
+        if mode == "link" or not credentials.allows(mode):
             results[source_id] = {"status": "directory", "items": []}
-            continue
-        if offline or (only and source_id not in only):
+        elif offline or (only and source_id not in only):
             result = old.copy() if old else {"status": "pending", "items": []}
             if mode == "reddit":
                 result["items"] = recent_reddit_items(result.get("items", []))
             results[source_id] = result
-            continue
-        pending.append(source)
+        else:
+            pending.append(source)
 
-    def refresh(source):
-        nonlocal reddit_token
-        source_id = source["id"]
-        mode = source["mode"]
-        old = previous.get(source_id, {})
-        try:
-            if mode == "feed":
-                # Reparse once after a parser upgrade, even when the feed URL returns 304.
-                body, validators = fetch_feed(source["feed"], old if old.get("feedParserVersion") == FEED_PARSER_VERSION else {})
-                items = old["items"] if body is None else (
-                    parse_aiera_feed(body, source["url"]) if source_id == "aiera" else
-                    parse_feed(body, source["url"], set(source.get("feedCategories", []))))
-                if source_id == "acl":
-                    # The RSS description is a citation, not a paper abstract or teaser.
-                    for item in items:
-                        item["description"] = ""
-                if source_id == "deepmind":
-                    try:
-                        items = enrich_deepmind_categories(items, fetch(source["url"]), source["url"])
-                    except (OSError, ValueError):
-                        pass
-            elif mode == "qwen_blog":
-                items = parse_qwen_blog(fetch(
-                    "https://qwen.ai/api/v2/article/retrieval?" + urlencode({"language": "en-US", "type": "qwen_ai"}),
-                    max_bytes=8_000_000, compressed=True))
-            elif mode == "hn_feed":
-                items = enrich_hn_metrics(parse_hn_feed(fetch(source["feed"])))
-            elif mode == "bluesky":
-                actor = source["actor"]
-                url = "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?" + urlencode(
-                    {"actor": actor, "limit": 30, "filter": "posts_no_replies"})
-                items = parse_bluesky_feed(fetch(url), actor, source.get("aiOnly", False))
-            elif mode == "reddit":
-                with token_lock:
-                    if reddit_token is None:
-                        reddit_token = reddit_oauth_token(reddit_client, reddit_secret, reddit_agent)
-                subreddit = source["subreddit"]
-                url = f"https://oauth.reddit.com/r/{subreddit}/hot?limit=25&raw_json=1"
-                items = parse_reddit_listing(fetch(url, headers={
-                    "Authorization": f"Bearer {reddit_token}", "User-Agent": reddit_agent,
-                }), subreddit)
-            elif mode == "x_api":
-                username = source["username"]
-                headers = {"Authorization": f"Bearer {x_token}"}
-                user_id = old.get("userId")
-                if not isinstance(user_id, str) or not re.fullmatch(r"[0-9]{1,19}", user_id):
-                    lookup = f"https://api.x.com/2/users/by/username/{username}"
-                    user_id = parse_x_user_id(fetch(lookup, headers=headers), username)
-                query = urlencode({"max_results": 5, "exclude": "replies,retweets",
-                                   "post.fields": "created_at,public_metrics,referenced_posts"})
-                items = parse_x_posts(fetch(f"https://api.x.com/2/users/{user_id}/tweets?{query}",
-                                            headers=headers), username)
-            elif mode == "metr_feed":
-                items = parse_metr_feed(fetch(source["feed"]), source["url"])
-            elif mode == "infoq_ai_feed":
-                items = enrich_descriptions(parse_infoq_ai_feed(fetch(source["feed"]), source["url"]))
-            elif mode == "youtube":
-                body, _ = fetch_feed(source["feed"], {})
-                items = parse_youtube_feed(body, source["url"])
-            elif mode == "papers":
-                items = parse_papers(fetch(f"https://huggingface.co/api/daily_papers?limit={MAX_ITEMS}"))
-            elif mode == "papers_trending":
-                items = parse_papers(fetch(f"https://huggingface.co/api/daily_papers?sort=trending&limit={MAX_ITEMS}"))
-            elif mode == "hf_trending":
-                resource = source["resource"]
-                items = parse_hf_trending(fetch(f"https://huggingface.co/api/{resource}?sort=trendingScore&direction=-1&limit={MAX_RANKING_ITEMS}"), resource)
-            elif mode == "modelscope_models":
-                items = parse_modelscope_models(fetch(
-                    f"https://modelscope.cn/openapi/v1/models?sort=downloads&page_size={MAX_RANKING_ITEMS}"))
-            elif mode == "baai_news":
-                items = parse_baai_news(fetch("https://www.baai.ac.cn/api/news?page=1&size=200"), source["newsCategory"])
-            elif mode == "github_trending":
-                items = parse_trending(fetch(source["url"]))
-            elif mode == "github_topic":
-                items = parse_github_topic(fetch(source["url"]))
-            elif mode == "aa_leaderboard":
-                items = parse_aa_leaderboard(fetch(source["url"]))
-            elif mode == "aa_articles":
-                items = parse_aa_articles(fetch(source["url"]), source["url"])
-            elif mode == "openai_cookbook":
-                items = enrich_descriptions(parse_openai_cookbook(fetch(source["url"]), source["url"]))
-            elif mode == "publisher_page":
-                items = parse_publisher_page(fetch(source["url"]), source_id, source["url"])
-            elif mode == "official_listing":
-                items = parse_official_listing(fetch(source["url"], max_bytes=6_000_000), source_id, source["url"])
-            elif mode == "stanford_listing":
-                items = parse_stanford_listing(fetch(source["url"]), source["url"])
-            elif mode == "kimi_page":
-                items = enrich_descriptions(parse_kimi_page(fetch(source["url"]), source["url"]))
-            elif mode == "cohere_page":
-                items = enrich_descriptions(parse_cohere_page(fetch(source["url"]), source["url"]))
-            elif mode == "llamaindex_page":
-                items = parse_llamaindex_page(fetch(source["url"]), source["url"])
-            elif mode == "deepseek_updates":
-                items = parse_deepseek_updates(fetch(source["url"]), source["url"])
-            else:
-                raise ValueError("unknown mode")
-            result = {"status": "ok", "checkedAt": checked,
-                      "lastSuccessAt": checked, "items": items}
-            if mode == "feed" and validators:
-                result["httpValidators"] = validators
-            if mode == "feed":
-                result["feedParserVersion"] = FEED_PARSER_VERSION
-            if mode == "x_api":
-                result["userId"] = user_id
-            return source_id, result, f"OK   {source_id}: {len(items)}"
-        except (OSError, ET.ParseError, ValueError, TypeError, KeyError) as exc:
-            result = {"status": "error", "checkedAt": checked,
-                      "lastSuccessAt": old.get("lastSuccessAt", ""),
-                      "items": recent_reddit_items(old.get("items", [])) if mode == "reddit" else old.get("items", []),
-                      "error": clean(str(exc), 120)}
-            if mode == "feed" and old.get("httpValidators"):
-                result["httpValidators"] = old["httpValidators"]
-            if mode == "x_api" and old.get("userId"):
-                result["userId"] = old["userId"]
-            return source_id, result, f"ERR  {source_id}: {exc}"
-
-    with ThreadPoolExecutor(max_workers=4) as pool:
-        for source_id, result, message in pool.map(refresh, pending):
+    with ThreadPoolExecutor(max_workers=WORKERS) as pool:
+        for source_id, result, message in pool.map(
+                lambda source: refresh(source, previous.get(source["id"], {}), credentials, checked), pending):
             results[source_id] = result
             print(message, file=sys.stderr)
     results = {source["id"]: results[source["id"]] for source in registry["sources"]}
-    payload = {"generatedAt": previous_payload.get("generatedAt", "") if offline else checked, "results": results}
+    # A partial refresh (--only) must not make the whole snapshot look newer than it is.
+    keep_time = offline or bool(only)
+    payload = {"generatedAt": previous_payload.get("generatedAt", "") if keep_time and previous_payload.get("generatedAt") else checked,
+               "results": results}
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {OUTPUT.relative_to(ROOT)} ({len(results)} sources)")

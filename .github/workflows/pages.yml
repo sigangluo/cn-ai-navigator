@@ -3,7 +3,7 @@ name: Refresh sources and deploy Pages
 on:
   push:
     branches: [main]
-    paths: ["data/**", "scripts/**", "site/**", ".github/workflows/pages.yml"]
+    paths: ["data/**", "scripts/**", "tests/**", "site/**", ".github/workflows/pages.yml"]
   schedule:
     # 09:17 and 21:17 Asia/Singapore; avoid the busy top of the hour.
     - cron: "17 1,13 * * *"
@@ -28,6 +28,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+      - name: Run tests
+        run: python3 -m unittest discover -s tests
       - name: Refresh public sources
         if: github.event_name != 'push'
         env:
@@ -37,6 +39,10 @@ jobs:
           X_API_ENABLED: ${{ vars.X_API_ENABLED }}
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
         run: python3 scripts/update.py
+      - name: Check refresh health (blocks deploy when most sources failed)
+        if: github.event_name != 'push'
+        shell: bash
+        run: python3 scripts/health.py --markdown --max-error-ratio 0.34 | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Initialize snapshot on source pushes
         if: github.event_name == 'push'
         run: python3 scripts/update.py --offline

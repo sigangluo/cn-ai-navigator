@@ -1,0 +1,36 @@
+name: Checks
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"   # the documented minimum
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests
+      - name: Registry, snapshot and generated files
+        run: |
+          python3 scripts/update.py --offline
+          python3 scripts/build.py
+          # Generated files must be committed: sources.json copy and ?v= asset stamps.
+          git diff --exit-code -- site/data/sources.json site/index.html
+      - name: Frontend syntax
+        run: |
+          node --check site/assets/app.js
+          node --check site/assets/page-agent.js
+      - name: Whitespace
+        run: git diff --check
+      - name: Health report (informational)
+        run: python3 scripts/health.py --markdown | tee -a "$GITHUB_STEP_SUMMARY"
