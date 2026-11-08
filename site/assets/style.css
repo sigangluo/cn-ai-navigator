@@ -309,7 +309,6 @@ footer span:first-child { color: var(--accent-strong); font: 500 11px var(--mono
   .search-wrap { grid-column: 1 / -1; width: 100%; }
   .language-filter { grid-column: 1; width: 100%; }
   .org-filter { grid-column: 2; width: 100%; }
-  .org-panel { left: 0; right: auto; }
   .today-switch { grid-column: 1 / -1; justify-self: start; margin-left: 0; }
   .reset-filters { grid-column: 1 / -1; justify-self: end; min-height: 24px; padding: 0; }
   .legend { gap: 9px 12px; }

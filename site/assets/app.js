@@ -310,6 +310,7 @@ function closeLanguagePanel(returnFocus = false) {
 }
 
 function renderOrgOptions() {
+  if (!state.catalog) return; // 目录尚未加载完成时，面板先保持为空
   const query = lower($('#orgSearch').value.trim());
   const options = $('#orgOptions'); options.replaceChildren();
   const names = ['all', ...[...orgCounts.keys()].sort(new Intl.Collator('zh-CN').compare)];
