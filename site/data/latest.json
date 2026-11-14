@@ -1,6 +1,10 @@
 {
   "generatedAt": "2026-11-14T07:36:25Z",
   "results": {
+    "aihot": {
+      "status": "directory",
+      "items": []
+    },
     "qbitai": {
       "status": "ok",
       "checkedAt": "2026-11-14T07:36:25Z",

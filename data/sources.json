@@ -16,6 +16,7 @@
     {"id":"evaluator","name":"独立评测与研究"}
   ],
   "sources": [
+    {"id":"aihot","name":"AIHOT 日报","org":"AIHOT","group":"news","language":"zh","url":"https://aihot.news/daily","note":"中文 AI 行业日报，含模型发布、产品更新与研究动态。","cadence":"daily","mode":"link","directoryReason":"目录直达 AIHOT 的编辑日报，正文、摘要与原始报道链接在发布者页面阅读。","verifiedAt":"2026-11"},
     {"id":"qbitai","name":"量子位","org":"量子位","group":"news","language":"zh","url":"https://www.qbitai.com/","note":"中文 AI 资讯与产品动态","cadence":"daily","mode":"feed","feed":"https://www.qbitai.com/feed"},
     {"id":"aiera","name":"新智元","org":"新智元","group":"news","language":"zh","url":"https://aiera.com.cn/","note":"中文 AI 新闻、访谈与评论","cadence":"daily","mode":"feed","feed":"https://aiera.com.cn/feed/","sections":["ASI 爆点","ASI 启示录","ASI 坐标","ASI 新天地"],"lenientXml":true},
     {"id":"jiqizhixin","name":"机器之心 · 文章","org":"机器之心","group":"news","language":"zh","url":"https://www.jiqizhixin.com/articles","note":"研究与产业资讯；专栏入口见下方","cadence":"daily","mode":"link","directoryReason":"页面动态加载，/rss 返回数据服务页面，没有可靠的公开文章列表","verifiedAt":"2026-11","relatedLinks":[{"label":"专栏 ↗","url":"https://www.jiqizhixin.com/columns"}]},
