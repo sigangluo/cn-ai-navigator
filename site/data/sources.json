@@ -61,6 +61,20 @@
   ],
   "sources": [
     {
+      "id": "aihot",
+      "name": "AIHOT 日报",
+      "org": "AIHOT",
+      "group": "news",
+      "language": "zh",
+      "url": "https://aihot.news/daily",
+      "note": "中文 AI 行业日报，含模型发布、产品更新与研究动态。",
+      "cadence": "daily",
+      "mode": "link",
+      "directoryReason": "目录直达 AIHOT 的编辑日报，正文、摘要与原始报道链接在发布者页面阅读。",
+      "verifiedAt": "2026-11",
+      "ranking": false
+    },
+    {
       "id": "qbitai",
       "name": "量子位",
       "org": "量子位",
